@@ -57,19 +57,31 @@
 
 ## 阶段 3：导航与多页面 + Markdown 博客验收（课程 Step 3–4）
 
-- **状态**：待执行
-- **任务**：核对五个入口互相跳转、当前页 `aria-current` 与高亮、全站菜单一致；验证博客构建幂等；临时新增一篇文章走完整流程（`content/posts` → 构建 → 页面出现 → 还原）；确认所有生成页面遵守 AGENTS.md。
+- **状态**：已通过
+- **任务**：核对五个入口互相跳转、当前页 aria-current 与高亮、全站菜单一致；验证博客构建幂等；临时新增一篇文章走完整流程（content/posts → 构建 → 页面出现 → 还原）；确认所有生成页面遵守 AGENTS.md。
 - **验收**：清单全过；发现问题已修复。
-- **审查记录**：（待填）
-- **commit**：（待填）
+- **审查记录**：
+  - 菜单一致性：程序化提取 14 个页面（7 个手写/生成索引 + 3 篇文章 + 4 个 Wiki 页）的 `<nav>`，全部与基线一致（现站点为 7 个入口：首页/关于我/博客/Research Papers/Wiki/RSS订阅/网站状态）；
+  - aria-current：每页恰好 1 处且归属正确（文章页→博客、Wiki 子页→Wiki、索引页对应自身），浏览器中蓝色高亮与页面 h1 一致；
+  - 浏览器真实点击走查：首页 → 点导航「博客」→ 点文章《从发布 RSS 到订阅 RSS》→ 点「← 返回博客列表」，全程 URL/标题正确；
+  - 博客构建幂等：`build_blog.py` 重跑前后对 public 全树做 SHA-256 快照，哈希一致；
+  - 临时文章全流程：新增 `phase3-temp-check.md`（含 frontmatter/列表/行内代码/链接/引用）→ `build_all.py` → blog.html、feed.xml、posts/phase3-temp-check.html 三处出现，status 计数 15 页/4 篇/221 链接无死链 → 删除源文件重建 → 完全还原（14 页/3 篇/206 链接，无残留引用，仅时间戳变化）；
+  - 本阶段发现并修复 2 个问题：① skip-link 目标 `<main>` 缺 `tabindex="-1"`，回车后焦点未真正转移（浏览器实测确认），已全站补齐并复验焦点落到 `#main-content`；② status.html 有一处 JS 内联样式（`td.style.fontWeight`），违反 AGENTS.md「CSS 统一放 styles.css」，改为 `.status-num` 类。
+- **commit**：见 `fix: phase3 nav and a11y verification fixes`（连同 PLAN 本条更新一起提交）
 
 ## 阶段 4：RSS 发布 + RSS 阅读器验收（课程 Step 5–6）
 
-- **状态**：待执行
-- **任务**：`check_feed.py` 解析验证通过；item 五要素齐全、按日期倒序、中文与特殊字符转义正确；线上 `/feed.xml` 可访问；`rss.html` 正常展示外部订阅（腾讯安全中心），确认 allowlist、超时、失败保旧数据、JS 侧 `textContent` 渲染。
+- **状态**：已通过（线上 /feed.xml 抽查待仓库就绪后补做，本地等效验证已完成）
+- **任务**：check_feed.py 解析验证通过；item 五要素齐全、按日期倒序、中文与特殊字符转义正确；线上 /feed.xml 可访问；rss.html 正常展示外部订阅（腾讯安全中心），确认 allowlist、超时、失败保旧数据、JS 侧 textContent 渲染。
 - **验收**：上述全部通过，外站内容无 XSS 风险。
-- **审查记录**：（待填）
-- **commit**：（待填）
+- **审查记录**：
+  - `check_feed.py` 通过（XML 解析器验证 + 五要素逐项校验）；
+  - 结构核验（程序化解析 feed.xml）：channel 的 title/link/description/language/lastBuildDate 齐全，link 已是正式域名；3 个 item 五要素齐全、pubDate 严格倒序、中文与源文件逐字一致（xml.sax.saxutils.escape 转义，解析后文本与源 markdown description 相等）；
+  - 信任边界实测：临时向 config/feeds.json 加入 `evil.example.com`（不在 allowlist）与非 HTTPS 源，运行 `fetch_rss.py` 输出 `SKIP（域名不在 allowlist）` 与 `SKIP（非 HTTPS）`，合法源正常抓取 20 条，`rss-items.json` 哈希前后不变（合并幂等、旧数据保留）；测试后配置已还原（哈希比对一致）；
+  - 代码核验：HTTPS-only + allowlist + 15s 超时 + 2MB 体积上限 + 摘要 300 字/总量 200 条封顶；抓取或解析异常时不写文件、非零退出（保留旧数据）；`strip_tags` + 实体解码后仅存纯文本；
+  - rss.html：全部 `createElement`/`textContent` 渲染，`innerHTML` 仅出现在注释中的禁用声明里（0 次实际调用），外链均 `rel="noopener"`；页面正常分组展示腾讯安全中心 20 条（阶段 1 截图已核验）；
+  - 本地 `http://localhost:8080/feed.xml` 返回 200/text/xml；线上抽查待 push 后补做。
+- **commit**：无代码改动（本阶段为纯验收，记录见本次 docs 提交）
 
 ## 阶段 5：论文 Skill + 个人 Wiki 验收（课程 Step 7–8）
 
