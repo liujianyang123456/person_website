@@ -1,0 +1,10 @@
+{
+  "allowlist": ["security.tencent.com"],
+  "feeds": [
+    {
+      "id": "tencent-security-blog",
+      "title": "腾讯安全中心博客",
+      "url": "https://security.tencent.com/index.php/feed/blog/0"
+    }
+  ]
+}
