@@ -33,6 +33,9 @@ main {
   padding: 0 20px;
 }
 
+/* skip-link 目标：接收焦点但不显示轮廓（焦点落点即视觉位置） */
+main[tabindex="-1"]:focus { outline: none; }
+
 a { color: var(--accent); touch-action: manipulation; }
 a:hover { opacity: 0.85; }
 a:active { opacity: 0.7; }
@@ -240,6 +243,7 @@ td { font-variant-numeric: tabular-nums; }
 }
 
 /* ===== 状态面板 ===== */
+.status-num { font-weight: 600; }
 .status-pass { color: var(--ok); font-weight: 600; }
 .status-fail { color: var(--bad); font-weight: 600; }
 .status-skip { color: var(--muted); font-weight: 600; }

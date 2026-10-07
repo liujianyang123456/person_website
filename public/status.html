@@ -25,7 +25,7 @@
     </nav>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
     <section class="hero">
       <h1>网站状态</h1>
       <p class="meta">数据由 <code>scripts/build_status.py</code> 在每次构建时生成
@@ -74,7 +74,7 @@
         cells.forEach(function (text, i) {
           var td = document.createElement("td");
           td.textContent = text;
-          if (i === 1) { td.style.fontWeight = "600"; }
+          if (i === 1) { td.className = "status-num"; }
           tr.appendChild(td);
         });
         tbody.appendChild(tr);

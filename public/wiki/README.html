@@ -25,7 +25,7 @@
     </nav>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
 <section class="article-header"><h1>Wiki 使用规则</h1><p class="meta">更新于 2026-10-07 <span class="badge">meta</span><span class="badge">rules</span></p></section><section class="article-body"><p>所有写入 <code>content/wiki/</code> 的内容必须遵守以下规则（Agent 同样遵守）：</p>
 <ol><li>写入前先搜索是否已有同义页面；</li><li>优先更新已有页面，不重复创建；</li><li>区分「我的原话」「Agent 总结」「外部来源」；</li><li>不把未经确认的 Agent 推断写成我的观点；</li><li>每页包含 <code>updated</code> 和 <code>tags</code>，日期格式统一为 <code>YYYY-MM-DD</code>；</li><li>新页面至少连接一个已有页面（仅当已有页面存在时适用）；</li><li>修改 Wiki 也必须经过 <code>git diff</code> 审查。</li></ol>
 <p>标注方式：</p>

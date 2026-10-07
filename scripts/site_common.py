@@ -34,7 +34,7 @@ __NAV__
     </nav>
   </header>
 
-  <main id="main-content">
+  <main id="main-content" tabindex="-1">
 __BODY__
   </main>
 

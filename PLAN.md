@@ -40,7 +40,7 @@
 
 ## 阶段 2：GitHub 仓库 + Actions 自动部署 Pages 上线（等价课程 Step 2）
 
-- **状态**：待执行
+- **状态**：部分完成（本地就绪；按用户指示跳过仓库创建，继续后续阶段）
 - **任务**：
   1. 优先用 `gh repo create person_website --public --source . --push`；gh 不可用时请用户在 github.com 手动建空仓库 `person_website`（Public、不初始化 README），配好 remote 后继续；
   2. 删除 `.gitlab-ci.yml`，新增 `.github/workflows/deploy.yml`：push 到 main 触发 → setup Python → `python scripts/build_all.py` → 上传 `public/` → `actions/deploy-pages`；
@@ -48,8 +48,12 @@
   4. push，等 Actions 全绿；请用户确认 Settings → Pages 的 Source 为 GitHub Actions；
   5. 打开线上地址抽查首页、`/feed.xml`、一篇博客详情页。
 - **验收**：Actions 运行成功；线上地址可访问；线上抽查页面无死链；`feed.xml` 可在线订阅。
-- **审查记录**：（待填）
-- **commit**：（待填，建议 `ci: deploy to github pages with actions`）
+- **审查记录**：
+  - 本地部分已完成并提交：删除 `.gitlab-ci.yml`；新增 `.github/workflows/deploy.yml`（push main 触发 → setup Python → `python scripts/build_all.py`（含全部检查，失败即中止）→ upload-pages-artifact → actions/deploy-pages，支持 workflow_dispatch 手动触发，无任何云厂商密钥）；`scripts/build_rss.py` BASE_URL 改为 `https://liujianyang123456.github.io/person_website` 并重建 feed.xml（四条链接全部指向正式域名，check_feed 解析通过）；about 页与博客《Git 是 Agent 开发的安全绳》部署文案同步为 GitHub；
+  - 授权环境探测：本机无 gh CLI、Windows 凭证管理器无 github.com 凭证、无 gh 配置；API 探测 `api.github.com/repos/liujianyang123456/person_website` 返回 404，账号存在但公开仓库为 0；
+  - 已请用户在 github.com/new 建空仓库（Public、不初始化），用户答复先跳过该步骤、继续后续阶段；首次 push 时 Windows 凭证管理器会自动弹浏览器授权（无需 PAT）；
+  - **待用户完成**：建好 Public 空仓库后执行 `git remote add origin https://github.com/liujianyang123456/person_website.git && git push -u origin main` → 等 Actions 全绿 → 确认 Settings→Pages Source 为 GitHub Actions → 线上抽查首页、/feed.xml、一篇博客详情页。
+- **commit**：`23708cf ci: deploy to github pages with actions`（push 待仓库就绪后补做）
 
 ## 阶段 3：导航与多页面 + Markdown 博客验收（课程 Step 3–4）
 
