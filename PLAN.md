@@ -96,11 +96,15 @@
 
 ## 阶段 6：Wiki 检索问答 + 状态面板验收（课程 Step 9–10）
 
-- **状态**：待执行
-- **任务**：`search_wiki.py` 能按关键词检索 `content/wiki` 返回片段；`status.json` 数据真实（页面数/文章数/wiki 数/论文数/检查结果）；`status.html` 渲染正常且含 `aria-live`。
+- **状态**：已通过
+- **任务**：search_wiki.py 能按关键词检索 content/wiki 返回片段；status.json 数据真实（页面数/文章数/wiki 数/论文数/检查结果）；status.html 渲染正常且含 aria-live。
 - **验收**：上述全部通过。
-- **审查记录**：（待填）
-- **commit**：（待填）
+- **审查记录**：
+  - `search_wiki.py --query "Agent Loop"` 返回按 score 排序的 file/title/score/snippet；内容级关键词「验收标准」命中 agent-experiment.md 的原话片段；无命中查询返回 `# 当前 Wiki 中没有足够依据` + 空列表（有据问答的「资料不足如实承认」路径可用）；
+  - status.json 真实性：六项计数（页面 14 / 文章 3 / Wiki 4 / 论文 10 / 订阅源 1 / 订阅条目 20）与文件系统实际统计逐一相符；三项检查结果（feed_xml / internal_links / papers_schema）与 build_all 输出一致；
+  - status.html：浏览器实测 6 行站点数据（数值列 .status-num 类 font-weight 600）+ 3 行检查结果表格渲染正常，`#status-note` 含 `aria-live="polite"`；
+  - 阶段 3 引入的 CSS 类化重构（fontWeight → .status-num）在浏览器复验无回归。
+- **commit**：无代码改动（本阶段为纯验收，记录见本次 docs 提交）
 
 ## 阶段 7：Multi-Agent 分工协同（课程 Step 11）
 
