@@ -60,6 +60,13 @@
       var statusBody = document.querySelector("#status-table tbody");
       var checksBody = document.querySelector("#checks-table tbody");
 
+      if (location.protocol === "file:") {
+        note.textContent = "当前是双击打开的页面（file:// 协议），浏览器会拦截本地数据文件的读取。"
+          + "请运行 python scripts/serve.py 8080，然后访问 http://localhost:8080/status.html";
+        row(statusBody, ["状态数据", "未加载"]);
+        return;
+      }
+
       function row(tbody, cells) {
         var tr = document.createElement("tr");
         cells.forEach(function (text, i) {

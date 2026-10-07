@@ -49,6 +49,19 @@
       var status = document.getElementById("papers-status");
       var list = document.getElementById("papers-list");
 
+      function fileProtocolTip(text) {
+        status.textContent = "";
+        var tip = document.createElement("p");
+        tip.className = "empty-tip";
+        tip.textContent = text;
+        list.appendChild(tip);
+      }
+
+      if (location.protocol === "file:") {
+        fileProtocolTip("当前是双击打开的页面（file:// 协议），浏览器会拦截本地数据文件的读取，这不是数据缺失。请运行 python scripts/serve.py 8080，然后访问 http://localhost:8080/papers.html");
+        return;
+      }
+
       function render(papers) {
         status.textContent = "共 " + papers.length + " 篇论文（来源：arXiv API）";
         if (!papers.length) {
@@ -93,11 +106,7 @@
         .then(function (r) { if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
         .then(render)
         .catch(function () {
-          status.textContent = "";
-          var tip = document.createElement("p");
-          tip.className = "empty-tip";
-          tip.textContent = "数据加载失败：请先运行 scripts/collect_papers.py 生成 public/data/papers.json。";
-          list.appendChild(tip);
+          fileProtocolTip("数据加载失败：请先运行 scripts/collect_papers.py 生成 public/data/papers.json。");
         });
     })();
   </script>
