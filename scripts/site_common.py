@@ -18,11 +18,13 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
   <title>__TITLE__</title>
   <meta name="description" content="__DESCRIPTION__">
   <link rel="stylesheet" href="__ROOT__/styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <header class="site-header">
     <p class="brand"><a href="__ROOT__/index.html">person_website</a></p>
     <nav class="site-nav" aria-label="主导航">
@@ -32,7 +34,7 @@ __NAV__
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
 __BODY__
   </main>
 

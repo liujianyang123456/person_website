@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
   <title>网站状态 · 刘建阳</title>
   <meta name="description" content="网站构建状态与自动检查结果，让 Agent 的工作可观测。">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <header class="site-header">
     <p class="brand"><a href="index.html">person_website</a></p>
     <nav class="site-nav" aria-label="主导航">
@@ -23,7 +25,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <h1>网站状态</h1>
       <p class="meta">数据由 <code>scripts/build_status.py</code> 在每次构建时生成
@@ -32,7 +34,7 @@
 
     <section aria-labelledby="counts-title">
       <h2 id="counts-title">站点数据</h2>
-      <p id="status-note" class="meta">正在加载…</p>
+      <p id="status-note" class="meta" aria-live="polite">正在加载…</p>
       <table id="status-table">
         <thead><tr><th>指标</th><th>数值</th></tr></thead>
         <tbody></tbody>

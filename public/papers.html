@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
   <title>Research Papers · 刘建阳</title>
   <meta name="description" content="用自定义 Skill 从 arXiv 收集的最新论文。">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <header class="site-header">
     <p class="brand"><a href="index.html">person_website</a></p>
     <nav class="site-nav" aria-label="主导航">
@@ -23,7 +25,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <h1>Research Papers</h1>
       <p class="meta">数据由 <code>research-paper-collector</code> Skill 调用
@@ -32,7 +34,7 @@
     </section>
 
     <section aria-label="论文列表">
-      <p id="papers-status" class="meta">正在加载…</p>
+      <p id="papers-status" class="meta" aria-live="polite">正在加载…</p>
       <div id="papers-list"></div>
     </section>
   </main>
@@ -75,13 +77,13 @@
           var item = document.createElement("article");
           item.className = "item";
 
-          var h3 = document.createElement("h3");
+          var heading = document.createElement("h2");
           var a = document.createElement("a");
           a.href = p.url;
           a.target = "_blank";
           a.rel = "noopener";
           a.textContent = p.title;
-          h3.appendChild(a);
+          heading.appendChild(a);
 
           var meta = document.createElement("p");
           meta.className = "meta";
@@ -95,7 +97,7 @@
           summary.className = "summary";
           summary.textContent = p.summary;
 
-          item.appendChild(h3);
+          item.appendChild(heading);
           item.appendChild(meta);
           item.appendChild(summary);
           list.appendChild(item);

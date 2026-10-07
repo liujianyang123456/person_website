@@ -175,7 +175,7 @@ def blog_index_page(posts):
     for post in posts:
         items.append(
             '<article class="item">'
-            '<h3><a href="posts/{slug}.html">{title}</a></h3>'
+            '<h2><a href="posts/{slug}.html">{title}</a></h2>'
             '<p class="meta">{date}</p>'
             '<p class="summary">{description}</p>'
             '</article>'.format(slug=post["slug"],

@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
   <title>RAG 与个人 Wiki 问答 · 个人 Wiki</title>
   <meta name="description" content="个人 Wiki：RAG 与个人 Wiki 问答">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <header class="site-header">
     <p class="brand"><a href="../index.html">person_website</a></p>
     <nav class="site-nav" aria-label="主导航">
@@ -23,7 +25,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
 <section class="article-header"><h1>RAG 与个人 Wiki 问答</h1><p class="meta">更新于 2026-10-07 <span class="badge">rag</span><span class="badge">wiki</span><span class="badge">课程笔记</span></p></section><section class="article-body"><blockquote><p><strong>我的原话</strong>（课堂笔记，2026-10）：</p><p>「RAG 把『让模型回忆』改成『先检索证据，再依据证据回答』，</p><p>所以它能回答『我以前怎么理解 Agent Loop』这种只属于我的问题。」</p></blockquote>
 <p>Agent 总结：RAG（检索增强生成）的工作流程：</p>
 <ol><li><strong>提问</strong>：用户问一个基于个人资料的问题；</li><li><strong>检索</strong>：<code>scripts/search_wiki.py</code> 在 <code>content/wiki/</code> 里找相关片段；</li><li><strong>选择证据</strong>：把命中的片段作为 SOURCES 交给模型；</li><li><strong>带来源回答</strong>：每个关键结论标注 [SOURCE n]；</li><li><strong>承认不足</strong>：资料不够时回答「当前 Wiki 中没有足够依据」，</li></ol>

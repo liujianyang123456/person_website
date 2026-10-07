@@ -3,11 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8fafc">
   <title>从发布 RSS 到订阅 RSS</title>
   <meta name="description" content="我的网站第一次既是发布者，也是阅读器。">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <header class="site-header">
     <p class="brand"><a href="../index.html">person_website</a></p>
     <nav class="site-nav" aria-label="主导航">
@@ -23,7 +25,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
 <section class="article-header"><h1>从发布 RSS 到订阅 RSS</h1><p class="meta">2026-10-05 </p></section><section class="article-body"><p>RSS 在我的网站里有两个相反但互补的方向：</p>
 <ul><li><strong>发布者</strong>：构建脚本把博客元数据生成 <code>feed.xml</code>，别人可以订阅我；</li><li><strong>阅读器</strong>：阅读器页面聚合我订阅的外部内容，比如<a href="https://security.tencent.com/index.php/feed/blog/0">腾讯安全中心的博客</a>。</li></ul>
 <h2>信任边界</h2>
