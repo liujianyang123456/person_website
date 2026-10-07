@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关于我 · 刘建阳</title>
+  <meta name="description" content="关于刘建阳：江苏警官学院数据警务专业大四学生，以及本网站的构建方式。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand"><a href="index.html">person_website</a></p>
+    <nav class="site-nav" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html" aria-current="page">关于我</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="papers.html">Research Papers</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+        <li><a href="rss.html">RSS订阅</a></li>
+        <li><a href="status.html">网站状态</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>关于我</h1>
+      <p class="meta">江苏警官学院 · 数据警务专业 · 大四</p>
+    </section>
+
+    <section aria-labelledby="edu-title">
+      <h2 id="edu-title">基本情况</h2>
+      <div class="card">
+        <ul>
+          <li><strong>教育背景：</strong>江苏警官学院 数据警务专业，大四在读；</li>
+          <li><strong>在学什么：</strong>警务业务知识 + 数据采集、分析与可视化；</li>
+          <li><strong>正在做：</strong>用 AI Agent 课程的方法持续演化这个个人网站；</li>
+          <li><strong>联系方式：</strong><a href="mailto:liujianyang@example.com">liujianyang@example.com</a>。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="site-title">
+      <h2 id="site-title">这个网站是怎么来的</h2>
+      <div class="card">
+        <p>它不是一次性写完的，而是按课程路线一步步长出来的，每一步都留下
+           Git 提交和验收记录：</p>
+        <ul>
+          <li><strong>Step 1-2</strong>：最小首页；纳入 Git 管理，用 CloudBase 部署上线；</li>
+          <li><strong>Step 3</strong>：菜单栏与多页面（首页 / 关于我 / 博客 / 论文 / Wiki）；</li>
+          <li><strong>Step 4</strong>：Markdown 博客，由脚本从 <code>content/posts</code> 自动生成页面；</li>
+          <li><strong>Step 5</strong>：发布自己的 RSS 2.0 订阅源 <code>feed.xml</code>；</li>
+          <li><strong>Step 6</strong>：RSS 阅读器，订阅外部内容并划定信任边界；</li>
+          <li><strong>Step 7</strong>：用自定义 Skill 收集 arXiv 最新论文；</li>
+          <li><strong>Step 8</strong>：文件化个人 Wiki，支持 <code>[[双向链接]]</code>；</li>
+          <li><strong>Step 9</strong>：Wiki 检索与「只依据证据」的问答（RAG）；</li>
+          <li><strong>Step 10</strong>：网站状态面板，让 Agent 的工作可观测。</li>
+        </ul>
+        <p class="meta">项目规则写在仓库根目录的 AGENTS.md，构建入口是
+           <code>python scripts/build_all.py</code>。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2026 刘建阳 · 用 AI Agent 协作构建 ·
+    <a href="status.html">网站状态</a> ·
+    <a href="feed.xml">RSS</a>
+  </footer>
+</body>
+</html>

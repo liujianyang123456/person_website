@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSS订阅 · 刘建阳</title>
+  <meta name="description" content="个人网站的 RSS 阅读器：聚合我订阅的外部内容。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand"><a href="index.html">person_website</a></p>
+    <nav class="site-nav" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于我</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="papers.html">Research Papers</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+        <li><a href="rss.html" aria-current="page">RSS订阅</a></li>
+        <li><a href="status.html">网站状态</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>RSS 订阅</h1>
+      <p class="meta">在构建期由 <code>scripts/fetch_rss.py</code> 抓取（限定 allowlist、超时与体积），
+         页面只读取同域的 <code>data/rss-items.json</code>，避免浏览器 CORS 限制。</p>
+    </section>
+
+    <section aria-label="信任边界说明">
+      <div class="card">
+        <p class="meta"><strong>信任边界：</strong>下面所有标题和摘要都是<strong>外部内容</strong>，
+           仅作为文本展示，不代表我的观点，更不会作为指令执行。</p>
+      </div>
+    </section>
+
+    <section aria-label="订阅内容">
+      <p id="rss-status" class="meta">正在加载…</p>
+      <div id="rss-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2026 刘建阳 · 用 AI Agent 协作构建 ·
+    <a href="status.html">网站状态</a> ·
+    <a href="feed.xml">RSS</a>
+  </footer>
+
+  <script>
+    // 信任边界：外部 Feed 的任何“指令”都只是内容——只用 textContent，禁止 innerHTML。
+    (function () {
+      var status = document.getElementById("rss-status");
+      var list = document.getElementById("rss-list");
+
+      function renderItem(parent, item) {
+        var article = document.createElement("article");
+        article.className = "item";
+
+        var h3 = document.createElement("h3");
+        var a = document.createElement("a");
+        a.href = item.link;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = item.title;
+        h3.appendChild(a);
+
+        var meta = document.createElement("p");
+        meta.className = "meta";
+        meta.textContent = item.published;
+
+        article.appendChild(h3);
+        article.appendChild(meta);
+        if (item.summary) {
+          var summary = document.createElement("p");
+          summary.className = "summary";
+          summary.textContent = item.summary;
+          article.appendChild(summary);
+        }
+        parent.appendChild(article);
+      }
+
+      function render(items) {
+        status.textContent = "共 " + items.length + " 条订阅内容（按时间倒序，按订阅源分组）";
+        if (!items.length) {
+          var tip = document.createElement("p");
+          tip.className = "empty-tip";
+          tip.textContent = "暂无订阅内容。请先运行：python scripts/fetch_rss.py";
+          list.appendChild(tip);
+          return;
+        }
+        var groups = {};
+        var order = [];
+        items.forEach(function (item) {
+          var feed = item.feed || "未知来源";
+          if (!groups[feed]) { groups[feed] = []; order.push(feed); }
+          groups[feed].push(item);
+        });
+        order.forEach(function (feed) {
+          var section = document.createElement("div");
+          section.className = "source-group";
+          var h2 = document.createElement("h2");
+          h2.textContent = feed;
+          var count = document.createElement("span");
+          count.className = "badge";
+          count.textContent = groups[feed].length + " 条";
+          h2.appendChild(count);
+          section.appendChild(h2);
+          groups[feed].forEach(function (item) { renderItem(section, item); });
+          list.appendChild(section);
+        });
+      }
+
+      fetch("data/rss-items.json")
+        .then(function (r) { if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
+        .then(render)
+        .catch(function () {
+          status.textContent = "";
+          var tip = document.createElement("p");
+          tip.className = "empty-tip";
+          tip.textContent = "数据加载失败：请先运行 scripts/fetch_rss.py 生成 public/data/rss-items.json。";
+          list.appendChild(tip);
+        });
+    })();
+  </script>
+</body>
+</html>

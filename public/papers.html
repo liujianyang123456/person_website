@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Papers · 刘建阳</title>
+  <meta name="description" content="用自定义 Skill 从 arXiv 收集的最新论文。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand"><a href="index.html">person_website</a></p>
+    <nav class="site-nav" aria-label="主导航">
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于我</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="papers.html" aria-current="page">Research Papers</a></li>
+        <li><a href="wiki.html">Wiki</a></li>
+        <li><a href="rss.html">RSS订阅</a></li>
+        <li><a href="status.html">网站状态</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Research Papers</h1>
+      <p class="meta">数据由 <code>research-paper-collector</code> Skill 调用
+        <code>scripts/collect_papers.py</code> 从 arXiv 收集，按提交时间倒序展示；
+        摘要只来自论文原文。</p>
+    </section>
+
+    <section aria-label="论文列表">
+      <p id="papers-status" class="meta">正在加载…</p>
+      <div id="papers-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    © 2026 刘建阳 · 用 AI Agent 协作构建 ·
+    <a href="status.html">网站状态</a> ·
+    <a href="feed.xml">RSS</a>
+  </footer>
+
+  <script>
+    // 信任边界：论文数据来自外部 arXiv，全部用 textContent 渲染，禁止 innerHTML。
+    (function () {
+      var status = document.getElementById("papers-status");
+      var list = document.getElementById("papers-list");
+
+      function render(papers) {
+        status.textContent = "共 " + papers.length + " 篇论文（来源：arXiv API）";
+        if (!papers.length) {
+          var tip = document.createElement("p");
+          tip.className = "empty-tip";
+          tip.textContent = "暂无论文数据。请先运行：python scripts/collect_papers.py --query \"all:\\\"AI agent\\\"\" --limit 10";
+          list.appendChild(tip);
+          return;
+        }
+        papers.forEach(function (p) {
+          var item = document.createElement("article");
+          item.className = "item";
+
+          var h3 = document.createElement("h3");
+          var a = document.createElement("a");
+          a.href = p.url;
+          a.target = "_blank";
+          a.rel = "noopener";
+          a.textContent = p.title;
+          h3.appendChild(a);
+
+          var meta = document.createElement("p");
+          meta.className = "meta";
+          meta.textContent = (p.authors || []).join(", ") + " · " + p.published + " · ";
+          var badge = document.createElement("span");
+          badge.className = "badge";
+          badge.textContent = p.source || "arXiv";
+          meta.appendChild(badge);
+
+          var summary = document.createElement("p");
+          summary.className = "summary";
+          summary.textContent = p.summary;
+
+          item.appendChild(h3);
+          item.appendChild(meta);
+          item.appendChild(summary);
+          list.appendChild(item);
+        });
+      }
+
+      fetch("data/papers.json")
+        .then(function (r) { if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
+        .then(render)
+        .catch(function () {
+          status.textContent = "";
+          var tip = document.createElement("p");
+          tip.className = "empty-tip";
+          tip.textContent = "数据加载失败：请先运行 scripts/collect_papers.py 生成 public/data/papers.json。";
+          list.appendChild(tip);
+        });
+    })();
+  </script>
+</body>
+</html>
