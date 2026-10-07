@@ -1,0 +1,30 @@
+# 部署到腾讯云 CloudBase 静态网站托管
+# 需要在 GitLab 仓库 设置 -> CI/CD -> 变量 中配置：
+#   TCB_SECRET_ID / TCB_SECRET_KEY —— 腾讯云 API 密钥（控制台-密钥管理创建）
+#   TCB_ENV_ID                     —— CloudBase 环境 ID
+# 若课程要求在 class_1 分支触发，把下方 rules 里的 main 改成 class_1 即可。
+
+stages:
+  - deploy
+
+deploy-cloudbase:
+  stage: deploy
+  image: node:20-alpine
+  script:
+    - 'test -n "$TCB_SECRET_ID" && echo "SECRET_ID OK" || (echo "SECRET_ID EMPTY" && exit 1)'
+    - 'test -n "$TCB_SECRET_KEY" && echo "SECRET_KEY OK" || (echo "SECRET_KEY EMPTY" && exit 1)'
+    - 'test -n "$TCB_ENV_ID" && echo "ENV_ID OK" || (echo "ENV_ID EMPTY" && exit 1)'
+    - 'test -d public && test -n "$(ls -A public)" && echo "public dir OK" || (echo "ERROR public dir missing or empty" && exit 1)'
+    # 部署前重新生成博客 / Wiki / RSS / 状态数据，并执行全部检查（失败则中止部署）
+    - apk add --no-cache python3
+    - python3 scripts/build_all.py
+    - npm install -g @cloudbase/cli
+    - tcb login --apiKeyId "$TCB_SECRET_ID" --apiKey "$TCB_SECRET_KEY" --yes
+    - |
+      if [ "$CI_COMMIT_BRANCH" = "main" ]; then
+        tcb hosting deploy ./public -e "$TCB_ENV_ID"
+      else
+        tcb hosting deploy ./public "/$CI_COMMIT_BRANCH" -e "$TCB_ENV_ID"
+      fi
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
