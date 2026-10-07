@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAG 与个人 Wiki 问答 · 个人 Wiki</title>
+  <meta name="description" content="个人 Wiki：RAG 与个人 Wiki 问答">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand"><a href="../index.html">person_website</a></p>
+    <nav class="site-nav" aria-label="主导航">
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../about.html">关于我</a></li>
+        <li><a href="../blog.html">博客</a></li>
+        <li><a href="../papers.html">Research Papers</a></li>
+        <li><a href="../wiki.html" aria-current="page">Wiki</a></li>
+        <li><a href="../rss.html">RSS订阅</a></li>
+        <li><a href="../status.html">网站状态</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<section class="article-header"><h1>RAG 与个人 Wiki 问答</h1><p class="meta">更新于 2026-10-07 <span class="badge">rag</span><span class="badge">wiki</span><span class="badge">课程笔记</span></p></section><section class="article-body"><blockquote><p><strong>我的原话</strong>（课堂笔记，2026-10）：</p><p>「RAG 把『让模型回忆』改成『先检索证据，再依据证据回答』，</p><p>所以它能回答『我以前怎么理解 Agent Loop』这种只属于我的问题。」</p></blockquote>
+<p>Agent 总结：RAG（检索增强生成）的工作流程：</p>
+<ol><li><strong>提问</strong>：用户问一个基于个人资料的问题；</li><li><strong>检索</strong>：<code>scripts/search_wiki.py</code> 在 <code>content/wiki/</code> 里找相关片段；</li><li><strong>选择证据</strong>：把命中的片段作为 SOURCES 交给模型；</li><li><strong>带来源回答</strong>：每个关键结论标注 [SOURCE n]；</li><li><strong>承认不足</strong>：资料不够时回答「当前 Wiki 中没有足够依据」，</li></ol>
+<p>不用一般知识冒充我的记录。</p>
+<p>对照实验：问一个 Wiki 从未记录的问题（例如某支球队的偏好）， 正确行为是承认没有证据，而不是生成一个听起来合理的答案。</p>
+<p>相关页面：<a class="wikilink" href="agent-loop.html">Agent Loop 与我的理解</a> · <a class="wikilink" href="agent-experiment.html">我的第一次 Agent 实验</a></p><div class="backlinks"><strong>反向链接</strong>：<a class="wikilink" href="agent-experiment.html">我的第一次 Agent 实验</a> <a class="wikilink" href="agent-loop.html">Agent Loop 与我的理解</a></div><p><a href="../wiki.html">← 返回 Wiki 索引</a></p></section>
+  </main>
+
+  <footer class="site-footer">
+    © 2026 刘建阳 · 用 AI Agent 协作构建 ·
+    <a href="../status.html">网站状态</a> ·
+    <a href="../feed.xml">RSS</a>
+  </footer>
+</body>
+</html>

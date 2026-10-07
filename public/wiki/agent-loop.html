@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agent Loop 与我的理解 · 个人 Wiki</title>
+  <meta name="description" content="个人 Wiki：Agent Loop 与我的理解">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand"><a href="../index.html">person_website</a></p>
+    <nav class="site-nav" aria-label="主导航">
+      <ul>
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../about.html">关于我</a></li>
+        <li><a href="../blog.html">博客</a></li>
+        <li><a href="../papers.html">Research Papers</a></li>
+        <li><a href="../wiki.html" aria-current="page">Wiki</a></li>
+        <li><a href="../rss.html">RSS订阅</a></li>
+        <li><a href="../status.html">网站状态</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+<section class="article-header"><h1>Agent Loop 与我的理解</h1><p class="meta">更新于 2026-10-07 <span class="badge">agent</span><span class="badge">concept</span><span class="badge">课程笔记</span></p></section><section class="article-body"><blockquote><p><strong>我的原话</strong>（课堂笔记，2026-10）：</p><p>「Agent Loop 就是『接收目标 → 思考 → 调用工具 → 观察结果 → 再决定下一步』的循环，</p><p>一直转到任务完成或者需要人来拍板。」</p></blockquote>
+<p>Agent 总结：Agent Loop（智能体循环）是 Agent 区别于单轮问答的核心机制：</p>
+<ol><li>模型根据当前目标决定<strong>下一个动作</strong>（回复、调用工具、请求确认）；</li><li>工具返回的<strong>观察结果</strong>被放回上下文，成为下一轮决策的依据；</li><li>循环在「任务完成」「达到步数上限」「需要人工介入」时结束。</li></ol>
+<p>在本项目里的对应关系：</p>
+<ul><li>提出需求 → Agent 修改文件（行动）→ 构建与检查脚本（观察）→</li></ul>
+<p>失败就修复、通过就提交（决策），这就是一个课程尺度的 Agent Loop；</p>
+<ul><li><code>scripts/build_all.py</code> 的各种检查就是这个循环里的「观察器」，</li></ul>
+<p>让错误在提交前暴露，而不是等部署后才发现。</p>
+<p>相关页面：<a class="wikilink" href="agent-experiment.html">我的第一次 Agent 实验</a> · <a class="wikilink" href="rag-wiki.html">RAG 与个人 Wiki 问答</a></p><div class="backlinks"><strong>反向链接</strong>：<a class="wikilink" href="agent-experiment.html">我的第一次 Agent 实验</a> <a class="wikilink" href="rag-wiki.html">RAG 与个人 Wiki 问答</a></div><p><a href="../wiki.html">← 返回 Wiki 索引</a></p></section>
+  </main>
+
+  <footer class="site-footer">
+    © 2026 刘建阳 · 用 AI Agent 协作构建 ·
+    <a href="../status.html">网站状态</a> ·
+    <a href="../feed.xml">RSS</a>
+  </footer>
+</body>
+</html>
