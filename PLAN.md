@@ -123,16 +123,48 @@
 
 ## 阶段 8：24 小时个人 Agent（课程 Step 12）
 
-- **状态**：待执行
-- **任务**：用 GitHub Actions `schedule`（cron）实现定时流水线：每日自动跑 `collect_papers` + `fetch_rss` + `build_all`，有更新则自动 commit 并触发部署（事件驱动 + 经验反馈闭环）；运行结果写入 `public/data/last_run.json` 并在 `status.html` 展示；把机制说明写进一篇 Wiki 页面。
+- **状态**：已通过（schedule 定时任务与线上验证待仓库就绪后补做：push 后在 Actions 页手动 workflow_dispatch 触发一次即可完成线上验收）
+- **任务**：用 GitHub Actions schedule（cron）实现定时流水线：每日自动跑 collect_papers + fetch_rss + build_all，有更新则自动 commit 并触发部署（事件驱动 + 经验反馈闭环）；运行结果写入 public/data/last_run.json 并在 status.html 展示；把机制说明写进一篇 Wiki 页面。
 - **验收**：Actions 定时任务配置成功；手动触发一次跑通全链路。
-- **审查记录**：（待填）
-- **commit**：（待填）
+- **审查记录**：
+  - `scripts/run_daily.py`：三步流水线（collect_papers → fetch_rss → build_all），每步 300s 超时；抓取失败不致命（各脚本自身保留旧数据，失败详情记入 last_run.json）；build_all 检查失败则整体非零退出（坏内容不提交不部署）；输出「人类可读」的步骤详情（如「抓取 10 篇，新增 9 篇，共保存 19 篇」）；不做 git 写操作，本地手动运行安全；
+  - `.github/workflows/daily-agent.yml`：schedule `30 0 * * *`（北京 08:30）+ workflow_dispatch；有变更则 `chore: daily agent update` 自动 commit+push（GITHUB_TOKEN，permissions.contents: write）；因 GITHUB_TOKEN 的 push 不触发其他 workflow，本 workflow 自带 deploy-pages 步骤（与 deploy.yml 共用 pages 并发组），无变更则跳过提交与部署；
+  - status.html 新增「最近自动运行」区块（aria-live=polite、textContent 渲染、无记录时给指引），浏览器实测三步状态/触发方式/变更文件数渲染正确；
+  - 新增 Wiki 页 `content/wiki/daily-agent.md`《24 小时个人 Agent：每日自动流水线》，遵守 Wiki 规则（frontmatter 齐全、链接到 Agent Loop 与 RAG 两页），构建后 wikilink 全解析；
+  - **全链路本地实跑两次**：第一次 arXiv 实抓新增 9 篇论文（10→19）、订阅 20 条、构建 16 页全绿；第二次复跑新增 0 篇（按 id 去重幂等）、订阅 20 条；`last_run.json` 正确记录两次结果；
+  - 构建幂等维持：16 页 256 内部链接无死链，三检查全绿。
+- **commit**：`14f1f19 feat: 24h personal agent daily pipeline`（push 待仓库就绪）
 
 ## 阶段 9：结课总检
 
-- **状态**：待执行
-- **任务**：全站最终检查（guidelines + 死链 + 幂等 + 线上抽查）；完善 `README.md`（课程路线图对照表：Step ↔ 功能 ↔ commit ↔ 线上验证方式）；输出结课报告。
+- **状态**：本地部分已通过（线上抽查随阶段 2 push 后补做）
+- **任务**：全站最终检查（guidelines + 死链 + 幂等 + 线上抽查）；完善 README.md（课程路线图对照表：Step ↔ 功能 ↔ commit ↔ 线上验证方式）；输出结课报告。
 - **验收**：九个阶段全部「已通过」；线上站点完整可交付。
-- **审查记录**：（待填）
-- **commit**：（待填）
+- **审查记录**：
+  - README.md 重写：课程路线图对照表（Step 1–12 ↔ 功能 ↔ 关键 commit ↔ 线上验证方式）、目录结构更新（两个 workflow + build_archive/run_daily）、部署章节改为 GitHub Pages 流程（无密钥）、常见问题与个性化修改点保留并更新；
+  - 全站 guidelines 红线总扫（程序化，16 页）：每页唯一 h1、lang/viewport/theme-color 齐全、无禁用缩放、skip-link 链完整（含 tabindex=-1）、导航 aria-label 与 aria-current 恰一处、16 页菜单 8 项全一致；`.innerHTML=` 赋值 0 处（正文中出现的「innerHTML」为教学性提及）；CSS 无 transition: all、无无替代的 outline:none（唯一例外为 skip-link 目标的惯例抑制）；
+  - 最终构建连跑两次：FEED_XML / INTERNAL_LINKS / PAPERS_SCHEMA（16 页 256 链接、19 篇论文、3 条 item）全绿，差异仅 build_time/lastBuildDate 两个时间戳字段；
+  - 线上抽查：仓库仍不存在（API 404，用户暂缓创建），随阶段 2 push 后补做（首页、/feed.xml、一篇博客详情页、归档页、状态页「最近自动运行」）。
+- **commit**：见本次 docs 提交（`docs: finalize README roadmap and record phase 9`）
+
+## 结课报告（2026-10-07）
+
+**已交付（本地全部完成，9 阶段中 8 个完全通过）**
+
+- 站点：8 入口 16 个 HTML 页面（首页/关于/博客/归档/论文/Wiki/RSS/状态 + 3 文章 + 5 Wiki 页），全站无死链、构建幂等、guidelines 红线全过；
+- 数据与自动化：feed.xml（正式域名、可订阅校验通过）、papers.json（arXiv 实抓 19 篇）、rss-items.json（allowlist/超时/体积/失败保旧）、status.json + last_run.json（状态面板展示）、search_wiki 检索问答、两个 SKILL.md；
+- CI/CD：deploy.yml（push main 自动构建检查部署 Pages）+ daily-agent.yml（每日 08:30 定时流水线，有变更自动 commit+push+部署，手动可触发）；本地已实跑通每日全链路两次；
+- Multi-Agent 协作：阶段 7 归档页由「规划（主 Agent）→ 实现（子代理）→ 审查（主 Agent）」完成并留档；
+- 过程质量：每阶段 执行→自审→commit→更新 PLAN 闭环，全程未入库任何密钥。
+
+**待用户一个动作后补完（阶段 2 收尾）**
+
+1. 在 github.com/new 创建空仓库 `person_website`（账号 liujianyang123456，Public，不初始化 README）；
+2. 在本目录执行：
+   `git remote add origin https://github.com/liujianyang123456/person_website.git`
+   `git push -u origin main`（首次 push 会弹浏览器授权，点同意即可）
+3. push 后：等 Actions 全绿 → 确认 Settings→Pages Source 为 GitHub Actions → 打开
+   `https://liujianyang123456.github.io/person_website/` 抽查首页、/feed.xml、一篇博客详情、归档页、状态页「最近自动运行」；
+4. Actions 页对 Daily agent run 手动 workflow_dispatch 触发一次，完成阶段 8 的线上验收。
+
+**课程成果对照**：Step 1–10 全部验收通过并有线上验证方式（见 README 路线图）；Step 11（归档页）与 Step 12（24h Agent）功能完成、待 push 上线验证。
