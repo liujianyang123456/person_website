@@ -108,11 +108,18 @@
 
 ## 阶段 7：Multi-Agent 分工协同（课程 Step 11）
 
-- **状态**：待执行
+- **状态**：已通过（push 与线上验收待仓库就绪后随阶段 2 补做）
 - **任务**：选一个小功能（建议：博客归档页/标签页），在审查记录中写明三个角色的分工（规划 / 实现 / 审查），实现后汇总合并，全站检查通过。
 - **验收**：新功能上线且不破坏既有验收。
-- **审查记录**：（待填）
-- **commit**：（待填）
+- **功能**：博客归档页（按年份分组浏览全部文章）。
+- **审查记录**：
+  - **三个角色分工（真实多 Agent 协作）**：
+    - 规划（主 Agent）：选定功能为归档页（比标签页更自洽——现有 3 篇文章的 frontmatter 没有 tags 字段，归档页无需新增内容字段）；确定方案：新建 `scripts/build_archive.py`（复用 `build_blog.load_posts` 与 `site_common.render_page`）、`NAV_ITEMS` 插入「归档」、5 个手写页面同步导航、`build_all.py` 接入、AGENTS.md 生成文件清单更新、验收标准（幂等/无死链/菜单一致/guidelines 红线保持）；
+    - 实现（子代理 `agent_13ce2140`，general-purpose）：按方案独立完成全部 7 项修改（新建 build_archive.py 与 archive.html、site_common/build_all/5 手写页面/AGENTS.md），自行跑通 build_all 与幂等验证，未越权 commit；
+    - 审查（主 Agent）：逐行核对 diff 与方案一致性 → 重跑全站检查（15 页 237 链接无死链、三检查全绿）→ 严格幂等复核（两次构建逐文件 byte 级对比，仅 `build_time`/`lastBuildDate` 两个时间戳字段变化）→ 菜单一致性与 aria-current 程序化扫描全过 → 浏览器实测 博客→归档 点击跳转、h1/年份分组/条目链接正确、归档导航项蓝色高亮（aria-current）。
+  - 实现者两点补充均合理：导航实际覆盖 15 页（含 archive.html 自身）；AGENTS.md 两处生成文件清单同步（目录约定 + 构建规则第 1 条）。
+  - status.json 页面计数自动 14→15，internal_links 206→237，均被 build_status 正确追踪。
+- **commit**：`feat: blog archive page grouped by year`（push 待仓库就绪）
 
 ## 阶段 8：24 小时个人 Agent（课程 Step 12）
 

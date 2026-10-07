@@ -152,5 +152,126 @@
     "summary": "LLM tool-use agents operate in dynamic environments where many actions carry operational risk. However, most safety mechanisms react only after errors manifest. Existing pre-emptive approaches either fine-tune the agent on chain-of-thought deliberation or compile natural-language guardrails into runtime checks, but they do so without exposing a structural, auditable verdict. We propose POLAR, a guardrail framework for small tool-calling agents that assesses reversibility through a structured two-layer ontology. POLAR assigns each action a graded reversibility score by deriving a candidate inverse sequence; calls failing a threshold are pruned before execution. Evaluated on $τ^2$-bench across six agent models, POLAR improves mean task reward by 0.11 to 0.18 points on airline for four of six agents, but only eight of eighteen model--domain cells improve overall; retail and stronger agents often regress. POLAR provides an auditable structural check and characterizes its task-utility trade-offs. Reward is not a direct measure of prevented harm.",
     "url": "https://arxiv.org/abs/2610.08082v1",
     "source": "arXiv"
+  },
+  {
+    "id": "2610.08036v1",
+    "title": "Same Feedback, Different Answer: Measuring Run-to-Run Instability in Frontier-Model Customer Feedback Analysis",
+    "authors": [
+      "Viraj Bagal",
+      "Raviraja Ganta",
+      "Prabhath Chellingi"
+    ],
+    "published": "2026-10-06",
+    "summary": "AI agents are increasingly being programmed to automate knowledge work over large collections of unstructured data. Such automation requires repeatability: when the underlying evidence is unchanged, the agent's categories, priorities, and counts should not shift materially between runs, even if each individual answer appears plausible. We introduce a repeat-run evaluation framework that aligns semantically equivalent categories and focuses on two operating metrics: theme churn, the normalized change in the returned category set, and volume disagreement, the change in counts for categories that persist. We evaluate three recurring customer-feedback tasks across eight frontier models, corpus sizes from 100 to 5,000 records, multiple prompts, and three execution designs: raw generation, taxonomy-free hierarchical decomposition, and a taxonomy-grounded agent (TGA) using persistent themes, subthemes, and record-level predictions. With Claude Opus 4.8 and the 1,000-record corpus fixed, TGA reduces theme churn by 86--88% relative to both raw generation and hierarchical decomposition, while matched-theme volumes have zero disagreement. The taxonomy-grounded agent is more stable than every raw model in the screen, remains more stable at each corpus size, and keeps this advantage when theme matching is made stricter or looser. Although evaluated on customer feedback, the framework targets repeated synthesis of unstructured corpora more broadly, including financial reports, legal documents, incident records, and scientific literature. Overall, these results show that taxonomy grounding produces more consistent and repeatable outputs for recurring knowledge work.",
+    "url": "https://arxiv.org/abs/2610.08036v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07675v1",
+    "title": "EIO-Agents: The Missing Semantic Layer for AI Agent Evaluation",
+    "authors": [
+      "Fouad Bousetouane"
+    ],
+    "published": "2026-10-06",
+    "summary": "AI agents are entering production in increasingly consequential environments without a shared semantic standard for what their evaluations actually mean. Scores, traces, judge outputs, and multi juror findings are increasingly used to justify readiness and release decisions, yet they often do not specify what evidence supports a claim, what that evidence can establish, or how the claim leads to a decision. We introduce EIO-Agents, an open specification for interoperable AI agent evaluation built on two layers. The Evaluation Intelligence Ontology (EIO) provides the semantic layer through typed evidence, versioned behavioral predicates, evidence contracts, claims, witness rules, proof status, recurrence, and computable derivations for metrics, findings, controls, and PASS, REVIEW, or BLOCK decisions. The Portable Evaluation Record (PER) provides the system of record: a canonical, content addressed representation of one evaluation that preserves the evidence to decision chain and can be re derived, explained, and verified. Scores summarize, juries interpret, and traces record, but none of them define what the evidence means or what it can prove. EIO provides that missing semantic contract, while PER preserves the resulting evaluation as a portable and verifiable system of record. As AI agents assume greater operational responsibility, evaluation must become more than a collection of scores and verdicts; it must become an accountable artifact whose meaning, evidence, limitations, and decisions can be independently checked.",
+    "url": "https://arxiv.org/abs/2610.07675v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07614v1",
+    "title": "BioStudyBench: Evaluating Agents on Post-Cutoff Biomedical Studies",
+    "authors": [
+      "David Li",
+      "Shaamil Karim",
+      "Christian Gensbigler"
+    ],
+    "published": "2026-10-06",
+    "summary": "We evaluate whether AI agents can match the reported findings of published biomedical studies using public data. Existing evaluations do not consistently separate analysis from prior knowledge or retrieval of the published answer. We introduce BioStudyBench, a benchmark of 25 long-horizon analysis tasks drawn from studies first published between July and September 2026, after the developer-reported knowledge cutoffs of the models we evaluate, semi-automatically filtered down from 404,019 PubMed records. In each task, the agent receives a neutral research question but no data files, so it must find and download the relevant public data, search the literature through tools that return only records dated before its cutoff, and report findings through data analysis. To measure gains over prior knowledge, we run every task both with and without access to data and tools. Across eight models, access to data and tools raises the pass rate by 47 percentage points on average over the no-data baseline. Open-weight models across sizes trail closed-weight models, with the best open-weight model passing 81.3% of tasks against 94.7% for the best closed-weight model.",
+    "url": "https://arxiv.org/abs/2610.07614v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07459v1",
+    "title": "Auditable Claims about AI Agents",
+    "authors": [
+      "Yue Zhao",
+      "Jiate Li",
+      "Li Li",
+      "Yi Nian",
+      "Jinbo Liu",
+      "Xiaolin Zhou",
+      "Xiyang Hu"
+    ],
+    "published": "2026-10-05",
+    "summary": "Organizations make claims about their AI agents: a person approves every external email, every action is logged, an evaluation shows the agent is safe to deploy. Article 12 of the EU AI Act requires high-risk systems to allow the automatic recording of events but does not say which records settle a given claim. The position is one sentence: to be checked, a claim about an agent must first name its policy, its scope, the records that would settle it, and who writes them. Adapting the preconditions of an assurance engagement, we call a claim auditable when these elements and a decision rule are fixed before any verdict and the records are obtainable. This extends the Policy Checkability dimension of our Auditable Agents framework from single actions to claims. Agents add three conditions: coverage by an independent record, authorization bound to each action's arguments, and completeness beyond integrity. Under an explicit model, we prove that support is impossible without each wherever its hypotheses hold. A claim-check table applies the method to six common claims, anchored in current NIST, IETF, and OWASP drafts. A worked case follows one claim through five evidence states. We close with a practice box and steps for operators, buyers, auditors, and standard setters.",
+    "url": "https://arxiv.org/abs/2610.07459v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07289v1",
+    "title": "Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale",
+    "authors": [
+      "Celal Ziftci",
+      "Spencer Greene",
+      "Ray Liu",
+      "Livio Dalloro",
+      "Lorenzo Dini"
+    ],
+    "published": "2026-10-05",
+    "summary": "Manual repair of program failures is time-consuming and disruptive for software developers, particularly during the pre-submit phase where test failures occur within continuous integration systems. While Automated Program Repair has seen significant advancement through Large Language Models, existing state-of-the-art techniques primarily focus on post-submit workflows, operating offline without the low-latency requirements necessary to assist developers in real-time within their flow before they switch context. In this paper, we introduce FlowAgent, an AI agent deployed at Google to automatically repair test failures in the pre-submit outer-loop workflow inside continuous integration systems. Integrated into Google's internal developer tools, Critique and Cider,FlowAgent utilizes a ReAct-style generate-and-validate loop, as well as rigorous pre-execution and post-execution abstention filters to ensure high-quality suggestions under strict latency constraints. Based on our case studies, FlowAgent is highly effective. First, a manual evaluation conducted on 195 real-world test failures demonstrated 67.18% accuracy in suggesting correct fixes. Following its Google-wide deployment, FlowAgent suggested fixes on 295,508changes, of which developers previewed 65,069 and applied 28,554. Developer feedback from interviews indicate that the agent is useful in suggesting correct fixes, integration of autonomous repair agents into industrial software engineering workflows is received well, while interesting challenges and opportunities still remain.",
+    "url": "https://arxiv.org/abs/2610.07289v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07258v1",
+    "title": "Lineage-Aware Memory Governance: A Derivation-Gated Framework for Privacy-Preserving Column-Level Access Control in Enterprise AI Agents",
+    "authors": [
+      "Venkata M Sangaraju",
+      "Sudhir Vissa"
+    ],
+    "published": "2026-10-05",
+    "summary": "Enterprise AI agents that share a memory store face two unaddressed risks: sensitive data can leak through legitimately computed results the requester could not derive, and departments can silently compute a same-named key performance indicator (KPI) through conflicting logic. Existing agent-memory systems (e.g., MemGPT, Zep, A-MEM) gate retrieval by content, ownership, and role, not derivation, missing a cached insight that embeds a forbidden column. We introduce the Analytical Memory Unit (AMU), a memory schema that attaches a full derivation (lineage) graph to every cached result, gated by a retrieval policy that serves a hit only when the requester is authorised for every column touched. Provided lineage recording is complete, we prove by construction that the policy blocks retrieval of results derived from a sensitive column outside the requester's permissions, at O(n) worst case -- a conditional design guarantee, not an empirical claim, that excludes derived features encoding sensitive information without naming their source. Eliminating measured leakage required 75-90% recorded lineage completeness, so we treat 90% as a conservative deployment target. Across six experiments, lineage-gated retrieval removes the 18.8-25.5% cross-department leakage naive content-gated memory suffers, keeping 81.5-82.6% of memory reuse at 13.8 microsecond worst-case overhead. A real-agent proof-of-concept with LLM-generated SQL is consistent with the guarantee: zero leaks over 9 round-trips, two conflicts caught automatically -- though a feasibility demonstration, not evidence of production viability. This offers a practical governance layer for shared agent memory, complementing source-layer access control and supporting EU AI Act compliance.",
+    "url": "https://arxiv.org/abs/2610.07258v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07256v1",
+    "title": "Efficient Auditing of Adversarial AI Agent Behavior from Agent Traces",
+    "authors": [
+      "Eugene Zhang",
+      "Cheng-Yun King Yang",
+      "Dongyan Xu"
+    ],
+    "published": "2026-10-05",
+    "summary": "AI agents powered by large language models (LLMs) can perform complex tasks but may harm the systems they operate in, either intentionally or unintentionally. Existing agent monitoring approaches rely on rule-based guardrails or LLM-based trace auditing. However, rule-based guardrails can be bypassed through obfuscation and may miss harmful actions beyond their predefined rules, whereas applying an LLM to audit every action is costly. We present a two-stage agent trace auditing framework. The first stage uses single-event and trace-sequence rules to select pending actions for inspection; the second uses an LLM audit agent to examine each selected action in the context of the agent's preceding trace before execution. We jointly refine the gate rules and audit instructions using training data, allowing the framework to adapt to complex agent behaviors rather than relying solely on predefined rules. On the public benchmark OpenAgentSafety, our framework reduces the average number of LLM audits from 8.15 to 2.33 per run and token usage from 47.8k to 14.6k, with a detection rate of 72.8\\% compared with 81.5\\% when every action is audited. In two simulated multi-agent case studies, the framework flags all malicious traces while reducing audit token usage by more than 80\\%.",
+    "url": "https://arxiv.org/abs/2610.07256v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07249v1",
+    "title": "Can Semantic Geometry Teach an AI Judgement?",
+    "authors": [
+      "Thomson D. Nguy"
+    ],
+    "published": "2026-10-05",
+    "summary": "How can an AI agent determine what rules to follow? One rule permits an action. Another imposes a condition, exception, or conflicting obligation. Deterministic systems can resolve those relationships when they have been specified. When they remain implicit in language, an agent can follow one rule while missing another that should stop it. Refusing every unresolved action avoids that risk, but also blocks permissible actions. We wanted the agent to make the distinction and still act. Our initial hypothesis was that geometric measurements could supply a basis for judgment. We represented actions and policies as vectors, then tested whether their geometry could identify governing policies and interpret the action's relation to them. Across four studies, the tested approaches did not establish reliable pre-action judgment. In the final synthetic study, a lexical router recovered every governing and blocking policy while reducing median policy checks by 97.7%. The composed pipeline nevertheless escalated all 2,304 test actions, including those it should have allowed. Supplying every policy to the same downstream mechanism changed no decision. Finding the policies had not solved the problem of interpreting them. This result led us to revise our hypothesis: judgment in AI agents requires developing a consequence graph. Such a graph would connect the actor and authority to policy conditions, exceptions, and the changes an action would produce. Follow-on studies will ask whether making those relationships explicit helps the agent distinguish when to act, stop, or seek review.",
+    "url": "https://arxiv.org/abs/2610.07249v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.07130v1",
+    "title": "Is this machine playing?",
+    "authors": [
+      "Nathan Cloos",
+      "Antonio Norelli",
+      "Daniel Durbin",
+      "Jacob Andreas",
+      "Daniela Rus",
+      "Phillip Isola"
+    ],
+    "published": "2026-10-05",
+    "summary": "We placed a modern AI coding assistant in an unintended role: as the mind of a body on an unknown digital island. With only a minimal instruction mentioning no specific task, reward, or activity, the machine started animating its virtual body. Across thirty-hour runs, the embodied AI agent climbed hills, stacked blocks into towers, drew mandalas, reinterpreted sports, ran experiments on the physics of its world, and learned techniques that later expanded what it could accomplish. These activities recurred across thirteen agents but diverged into distinct histories. We examine whether this behavior satisfies classical criteria for play and ask whether play can become a mode of machine development.",
+    "url": "https://arxiv.org/abs/2610.07130v1",
+    "source": "arXiv"
   }
 ]

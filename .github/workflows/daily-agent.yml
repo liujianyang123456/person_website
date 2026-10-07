@@ -1,0 +1,74 @@
+# 24 小时个人 Agent：每日定时流水线（课程 Step 12）。
+# 每天北京时间 08:30（UTC 00:30）或手动触发：
+#   1. 跑 scripts/run_daily.py：collect_papers（arXiv）+ fetch_rss（外部订阅）
+#      + build_all（构建 + 全部检查，任一失败即非零退出、不提交不部署）；
+#   2. 运行结果写入 public/data/last_run.json（status.html 展示）；
+#   3. 有内容变更则自动 commit + push（记录到仓库历史）；
+#   4. 变更存在时直接部署 Pages（注意：GITHUB_TOKEN 的 push 不会触发其他
+#      workflow，所以本 workflow 自带部署步骤，与 deploy.yml 用同一个
+#      pages 并发组避免冲突）。
+# 不使用任何用户密钥；push 用仓库内置 GITHUB_TOKEN。
+name: Daily agent run
+
+on:
+  schedule:
+    - cron: "30 0 * * *"  # UTC 00:30 = 北京时间 08:30
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.changes.outputs.changed }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Run daily pipeline
+        run: python scripts/run_daily.py --trigger "${{ github.event_name }}"
+
+      - name: Commit and push if changed
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain -- public)" ]; then
+            git config user.name "daily-agent"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add public
+            git commit -m "chore: daily agent update (papers/rss/status)"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "无内容变更，跳过提交与部署"
+          fi
+
+      - name: Upload pages artifact
+        if: steps.changes.outputs.changed == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: daily
+    if: needs.daily.outputs.changed == 'true' && needs.daily.result == 'success'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

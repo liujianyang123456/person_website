@@ -49,6 +49,15 @@
         <tbody></tbody>
       </table>
     </section>
+
+    <section aria-labelledby="daily-title">
+      <h2 id="daily-title">最近自动运行</h2>
+      <p id="daily-note" class="meta" aria-live="polite">正在加载…</p>
+      <table id="daily-table">
+        <thead><tr><th>步骤</th><th>结果</th><th>说明</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -128,6 +137,42 @@
           note.textContent = "";
           row(statusBody, ["状态数据", "尚未生成"]);
           row(checksBody, ["说明", "—", "请先运行 python scripts/build_all.py"]);
+        });
+
+      // 每日自动流水线最近一次运行记录（scripts/run_daily.py 生成）。
+      // 外部数据只经 textContent 渲染，禁止 innerHTML。
+      var dailyNote = document.getElementById("daily-note");
+      var dailyBody = document.querySelector("#daily-table tbody");
+
+      function dailyRow(label, word, wordClass, detail) {
+        row(dailyBody, [label, word, detail]);
+        dailyBody.lastChild.children[1].className = wordClass;
+      }
+
+      fetch("data/last_run.json")
+        .then(function (r) { if (!r.ok) { throw new Error("HTTP " + r.status); } return r.json(); })
+        .then(function (run) {
+          dailyNote.textContent = "最近运行时间：" + run.run_time
+            + "（触发方式：" + (run.trigger || "manual") + "）";
+          var stepLabels = [
+            ["collect_papers", "collect_papers（arXiv 论文收集）"],
+            ["fetch_rss", "fetch_rss（外部订阅抓取）"],
+            ["build", "build_all（构建与全部检查）"]
+          ];
+          stepLabels.forEach(function (pair) {
+            var s = (run.steps || {})[pair[0]] || {};
+            dailyRow(pair[1], s.ok ? "通过" : "失败",
+                     s.ok ? "status-pass" : "status-fail", s.detail || "—");
+          });
+          var changed = run.changed_files || [];
+          dailyRow("产生变更的文件", String(changed.length) + " 个", "status-num",
+                   changed.length ? changed.slice(0, 5).join("、") + (changed.length > 5 ? " 等" : "") : "无");
+        })
+        .catch(function () {
+          dailyNote.textContent = "尚无自动运行记录：等待 GitHub Actions 定时任务，"
+            + "或本地运行 python scripts/run_daily.py";
+          dailyRow("运行记录", "未运行", "status-skip",
+                   "运行后本页会展示论文收集、订阅抓取与构建的逐步结果");
         });
     })();
   </script>
