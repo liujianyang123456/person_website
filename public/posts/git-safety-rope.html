@@ -30,8 +30,8 @@
 <h2>我的做法</h2>
 <ul><li>提交前先看 <code>git diff</code>，确认 Agent 到底改了什么；</li><li>每个完成的功能单独 <code>commit</code>，形成可以恢复的检查点；</li><li>实验性改动放进分支，避免污染 <code>main</code>；</li><li>需要回滚时直接回到上一个 commit，而不是手工翻文件夹。</li></ul>
 <blockquote><p>回滚比「最终版2」可靠：它精确、可重复，并且永远不会改错文件。</p></blockquote>
-<h2>和 CloudBase 的配合</h2>
-<p>代码推送到 GitLab 后，CI 会先跑构建和检查，全部通过才把 <code>public/</code> 部署到腾讯云 CloudBase。Git 负责「改错了能退回去」，CI 负责「有问题的版本上不了线」。</p></section><p><a href="../blog.html">← 返回博客列表</a></p>
+<h2>和 CI 的配合</h2>
+<p>代码推送到 GitHub 后，Actions 会先跑构建和检查，全部通过才把 <code>public/</code> 部署到 GitHub Pages。Git 负责「改错了能退回去」，CI 负责「有问题的版本上不了线」。</p></section><p><a href="../blog.html">← 返回博客列表</a></p>
   </main>
 
   <footer class="site-footer">

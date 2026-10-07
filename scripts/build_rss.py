@@ -13,8 +13,8 @@ from xml.sax.saxutils import escape
 from site_common import PROJECT_ROOT
 from build_blog import load_posts, plain_text
 
-# 部署后请替换为 CloudBase 静态托管的实际域名（RSS 里的链接必须是绝对地址）
-BASE_URL = "https://person-website.example.com"
+# GitHub Pages 实际地址（RSS 里的链接必须是绝对地址）
+BASE_URL = "https://liujianyang123456.github.io/person_website"
 
 FEED_OUT = PROJECT_ROOT / "public" / "feed.xml"
 TZ = timezone(timedelta(hours=8))

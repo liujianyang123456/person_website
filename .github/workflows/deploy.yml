@@ -1,0 +1,50 @@
+# GitHub Pages 自动部署：push 到 main 触发（也可手动触发）。
+# 流程：checkout -> setup Python -> python scripts/build_all.py（生成 + 全部检查，
+# 任一检查失败即非零退出、中止部署）-> 上传 public/ -> actions/deploy-pages 上线。
+# 不使用任何云厂商密钥；Pages 权限走内置 OIDC（permissions.id-token）。
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build site and run checks
+        run: python scripts/build_all.py
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
