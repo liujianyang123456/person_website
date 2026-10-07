@@ -85,11 +85,14 @@
 
 ## 阶段 5：论文 Skill + 个人 Wiki 验收（课程 Step 7–8）
 
-- **状态**：待执行
-- **任务**：`.opencode/skills/` 两个 Skill 的 SKILL.md 字段完整；`papers.html` 加载 `papers.json` 展示标题/作者/摘要/日期/链接；`check_papers.py` 通过；Wiki `[[双向链接]]` 解析正确、`content/wiki` 规则文件齐全、`wiki.html` 无死链。
+- **状态**：已通过
+- **任务**：.opencode/skills/ 两个 Skill 的 SKILL.md 字段完整；papers.html 加载 papers.json 展示标题/作者/摘要/日期/链接；check_papers.py 通过；Wiki [[双向链接]] 解析正确、content/wiki 规则文件齐全、wiki.html 无死链。
 - **验收**：上述全部通过。
-- **审查记录**：（待填）
-- **commit**：（待填）
+- **审查记录**：
+  - 两个 SKILL.md 均含 name/description frontmatter + 何时使用/输入/工作流/安全规则；research-paper-collector 附 references/topics.md；search-wiki 含 RAG 回答模板与「资料不足时如实承认」规则；
+  - papers.json 10 篇，字段 id/title/authors/published/summary/url/source 齐全（首篇 5 位作者、arXiv 原链）；`check_papers.py` 通过；papers.html 按 标题(外链)→作者·日期·来源徽章→摘要 渲染全部字段（阶段 1 截图核验），全部 textContent 无 XSS 面；
+  - Wiki：0 处未解析 [[链接]]；agent-experiment/agent-loop/rag-wiki 三页互相链接且各自渲染正确的「反向链接」区块（如 agent-loop 页列出 agent-experiment 与 rag-wiki）；content/wiki 5 个文件 frontmatter（title/updated/tags）全部齐全，README.md 即「Wiki 使用规则」规则文件；wiki.html 与全部 Wiki 子页 0 死链（check_links 覆盖）。
+- **commit**：无代码改动（本阶段为纯验收，记录见本次 docs 提交）
 
 ## 阶段 6：Wiki 检索问答 + 状态面板验收（课程 Step 9–10）
 
