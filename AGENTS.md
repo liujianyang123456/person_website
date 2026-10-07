@@ -14,7 +14,7 @@
 
 - `public/` —— 站点输出目录，是唯一被部署的内容；
   - 手写页面：`index.html`、`about.html`、`papers.html`、`rss.html`、`status.html`；
-  - 生成文件：`blog.html`、`posts/`、`wiki.html`、`wiki/`、`feed.xml`、`data/*.json`。
+  - 生成文件：`blog.html`、`archive.html`、`posts/`、`wiki.html`、`wiki/`、`feed.xml`、`data/*.json`。
 - `content/posts/` —— 博客 Markdown 源文件（带 title/date/description frontmatter）；
 - `content/wiki/` —— Wiki Markdown 源文件（带 title/updated/tags frontmatter，支持 `[[双向链接]]`）；
 - `scripts/` —— 全部构建、抓取与检查脚本；统一入口：`python scripts/build_all.py`；
@@ -23,7 +23,7 @@
 
 ## 构建与修改规则
 
-1. `blog.html`、`posts/`、`wiki.html`、`wiki/`、`feed.xml`、`data/` 下的文件全部由脚本生成，
+1. `blog.html`、`archive.html`、`posts/`、`wiki.html`、`wiki/`、`feed.xml`、`data/` 下的文件全部由脚本生成，
    不要直接手改；要改内容请改 `content/` 源文件或对应脚本，然后重新运行构建；
 2. 构建脚本必须可以重复运行（幂等），不允许出现重复追加的内容；
 3. 新增页面必须挂入导航菜单并保持所有页面菜单一致。

@@ -1,7 +1,7 @@
 {
-  "build_time": "2026-10-07 22:58:50",
+  "build_time": "2026-10-07 23:09:07",
   "counts": {
-    "pages": 14,
+    "pages": 15,
     "posts": 3,
     "wiki": 4,
     "papers": 10,
@@ -15,7 +15,7 @@
     },
     "internal_links": {
       "status": "通过",
-      "detail": "14 个页面、206 个内部链接，无死链"
+      "detail": "15 个页面、237 个内部链接，无死链"
     },
     "papers_schema": {
       "status": "通过",

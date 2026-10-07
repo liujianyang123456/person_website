@@ -7,6 +7,7 @@ NAV_ITEMS = [
     ("index.html", "首页"),
     ("about.html", "关于我"),
     ("blog.html", "博客"),
+    ("archive.html", "归档"),
     ("papers.html", "Research Papers"),
     ("wiki.html", "Wiki"),
     ("rss.html", "RSS订阅"),

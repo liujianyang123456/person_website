@@ -4,6 +4,7 @@
 """
 import sys
 
+import build_archive
 import build_blog
 import build_rss
 import build_status
@@ -19,6 +20,7 @@ if hasattr(sys.stdout, "reconfigure"):
 def main():
     build_blog.main()
     build_wiki.main()
+    build_archive.main()
     build_rss.main()
 
     checks = {}
