@@ -1,0 +1,25 @@
+{
+  "build_time": "2026-10-07 16:48:48",
+  "counts": {
+    "pages": 14,
+    "posts": 3,
+    "wiki": 4,
+    "papers": 10,
+    "rss_feeds": 1,
+    "rss_items": 20
+  },
+  "checks": {
+    "feed_xml": {
+      "status": "通过",
+      "detail": "feed.xml 有效，共 3 条 item"
+    },
+    "internal_links": {
+      "status": "通过",
+      "detail": "14 个页面、192 个内部链接，无死链"
+    },
+    "papers_schema": {
+      "status": "通过",
+      "detail": "10 篇论文通过校验"
+    }
+  }
+}
