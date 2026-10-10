@@ -40,7 +40,7 @@
 
 ## 阶段 2：GitHub 仓库 + Actions 自动部署 Pages 上线（等价课程 Step 2）
 
-- **状态**：部分完成（本地就绪；按用户指示跳过仓库创建，继续后续阶段）
+- **状态**：已通过（2026-10-10 线上验收完成）
 - **任务**：
   1. 优先用 `gh repo create person_website --public --source . --push`；gh 不可用时请用户在 github.com 手动建空仓库 `person_website`（Public、不初始化 README），配好 remote 后继续；
   2. 删除 `.gitlab-ci.yml`，新增 `.github/workflows/deploy.yml`：push 到 main 触发 → setup Python → `python scripts/build_all.py` → 上传 `public/` → `actions/deploy-pages`；
@@ -52,8 +52,9 @@
   - 本地部分已完成并提交：删除 `.gitlab-ci.yml`；新增 `.github/workflows/deploy.yml`（push main 触发 → setup Python → `python scripts/build_all.py`（含全部检查，失败即中止）→ upload-pages-artifact → actions/deploy-pages，支持 workflow_dispatch 手动触发，无任何云厂商密钥）；`scripts/build_rss.py` BASE_URL 改为 `https://liujianyang123456.github.io/person_website` 并重建 feed.xml（四条链接全部指向正式域名，check_feed 解析通过）；about 页与博客《Git 是 Agent 开发的安全绳》部署文案同步为 GitHub；
   - 授权环境探测：本机无 gh CLI、Windows 凭证管理器无 github.com 凭证、无 gh 配置；API 探测 `api.github.com/repos/liujianyang123456/person_website` 返回 404，账号存在但公开仓库为 0；
   - 已请用户在 github.com/new 建空仓库（Public、不初始化），用户答复先跳过该步骤、继续后续阶段；首次 push 时 Windows 凭证管理器会自动弹浏览器授权（无需 PAT）；
-  - **待用户完成**：建好 Public 空仓库后执行 `git remote add origin https://github.com/liujianyang123456/person_website.git && git push -u origin main` → 等 Actions 全绿 → 确认 Settings→Pages Source 为 GitHub Actions → 线上抽查首页、/feed.xml、一篇博客详情页。
-- **commit**：`23708cf ci: deploy to github pages with actions`（push 待仓库就绪后补做）
+  - **2026-10-10 收尾**：用户在内置浏览器登录 GitHub 后，由 Agent 代为完成建库（github.com/new 填表创建 Public 空仓库 + 描述，README/.gitignore/license 均未勾选）→ 配 remote → `git push -u origin main`（浏览器 OAuth 授权，token 仅存系统凭证管理器）→ 首次 Deploy 运行在 deploy-pages 步骤失败（Pages 未启用），经 Settings→Pages UI 切换 Source + 凭证管理器 token 调 Pages API 确认 `build_type=workflow`、`html_url` 正确后重跑成功；
+  - **线上抽查通过**：首页（HTTP 200、标题/h1/8 项导航/CSS 正常）、`/feed.xml`（application/xml、域名均为正式地址）、`/posts/hello-agent.html`（200）、`/archive.html`（200）、`/data/status.json`、`/data/last_run.json`（200）；浏览器视觉核验首页与状态页渲染无误。
+- **commit**：`23708cf ci: deploy to github pages with actions`（线上生效 run 38050234455）
 
 ## 阶段 3：导航与多页面 + Markdown 博客验收（课程 Step 3–4）
 
@@ -80,7 +81,7 @@
   - 信任边界实测：临时向 config/feeds.json 加入 `evil.example.com`（不在 allowlist）与非 HTTPS 源，运行 `fetch_rss.py` 输出 `SKIP（域名不在 allowlist）` 与 `SKIP（非 HTTPS）`，合法源正常抓取 20 条，`rss-items.json` 哈希前后不变（合并幂等、旧数据保留）；测试后配置已还原（哈希比对一致）；
   - 代码核验：HTTPS-only + allowlist + 15s 超时 + 2MB 体积上限 + 摘要 300 字/总量 200 条封顶；抓取或解析异常时不写文件、非零退出（保留旧数据）；`strip_tags` + 实体解码后仅存纯文本；
   - rss.html：全部 `createElement`/`textContent` 渲染，`innerHTML` 仅出现在注释中的禁用声明里（0 次实际调用），外链均 `rel="noopener"`；页面正常分组展示腾讯安全中心 20 条（阶段 1 截图已核验）；
-  - 本地 `http://localhost:8080/feed.xml` 返回 200/text/xml；线上抽查待 push 后补做。
+  - 本地 `http://localhost:8080/feed.xml` 返回 200/text/xml；线上 `https://liujianyang123456.github.io/person_website/feed.xml` 返回 200/application/xml，内容为正式域名（2026-10-10 补验）。
 - **commit**：无代码改动（本阶段为纯验收，记录见本次 docs 提交）
 
 ## 阶段 5：论文 Skill + 个人 Wiki 验收（课程 Step 7–8）
@@ -119,11 +120,11 @@
     - 审查（主 Agent）：逐行核对 diff 与方案一致性 → 重跑全站检查（15 页 237 链接无死链、三检查全绿）→ 严格幂等复核（两次构建逐文件 byte 级对比，仅 `build_time`/`lastBuildDate` 两个时间戳字段变化）→ 菜单一致性与 aria-current 程序化扫描全过 → 浏览器实测 博客→归档 点击跳转、h1/年份分组/条目链接正确、归档导航项蓝色高亮（aria-current）。
   - 实现者两点补充均合理：导航实际覆盖 15 页（含 archive.html 自身）；AGENTS.md 两处生成文件清单同步（目录约定 + 构建规则第 1 条）。
   - status.json 页面计数自动 14→15，internal_links 206→237，均被 build_status 正确追踪。
-- **commit**：`feat: blog archive page grouped by year`（push 待仓库就绪）
+- **commit**：`01e4635 feat: blog archive page grouped by year`（已 push，线上 /archive.html 200）
 
 ## 阶段 8：24 小时个人 Agent（课程 Step 12）
 
-- **状态**：已通过（schedule 定时任务与线上验证待仓库就绪后补做：push 后在 Actions 页手动 workflow_dispatch 触发一次即可完成线上验收）
+- **状态**：已通过（2026-10-10 线上验收完成）
 - **任务**：用 GitHub Actions schedule（cron）实现定时流水线：每日自动跑 collect_papers + fetch_rss + build_all，有更新则自动 commit 并触发部署（事件驱动 + 经验反馈闭环）；运行结果写入 public/data/last_run.json 并在 status.html 展示；把机制说明写进一篇 Wiki 页面。
 - **验收**：Actions 定时任务配置成功；手动触发一次跑通全链路。
 - **审查记录**：
@@ -132,24 +133,24 @@
   - status.html 新增「最近自动运行」区块（aria-live=polite、textContent 渲染、无记录时给指引），浏览器实测三步状态/触发方式/变更文件数渲染正确；
   - 新增 Wiki 页 `content/wiki/daily-agent.md`《24 小时个人 Agent：每日自动流水线》，遵守 Wiki 规则（frontmatter 齐全、链接到 Agent Loop 与 RAG 两页），构建后 wikilink 全解析；
   - **全链路本地实跑两次**：第一次 arXiv 实抓新增 9 篇论文（10→19）、订阅 20 条、构建 16 页全绿；第二次复跑新增 0 篇（按 id 去重幂等）、订阅 20 条；`last_run.json` 正确记录两次结果；
-  - 构建幂等维持：16 页 256 内部链接无死链，三检查全绿。
-- **commit**：`14f1f19 feat: 24h personal agent daily pipeline`（push 待仓库就绪）
+  - 构建幂等维持：16 页 256 内部链接无死链，三检查全绿；
+  - **2026-10-10 线上验收**：经 API `workflow_dispatch` 手动触发一次 `daily-agent.yml`，运行成功（run 38050877469）；CI 检测到 4 个数据文件变更，自动 commit `f5376e6 chore: daily agent update (papers/rss/status)` 并 push + 部署——「抓数据→构建→检查→提交→部署→状态页可观测」闭环在线上真实完成；线上 `/data/last_run.json` 可访问且内容与状态页「最近自动运行」区块一致（三步全过、触发方式 workflow_dispatch）。
+- **commit**：`14f1f19 feat: 24h personal agent daily pipeline`（线上自动提交 `f5376e6` 为该流水线产物）
 
 ## 阶段 9：结课总检
 
-- **状态**：本地部分已通过（线上抽查随阶段 2 push 后补做）
+- **状态**：已通过（2026-10-10 线上抽查完成，九个阶段全部通过）
 - **任务**：全站最终检查（guidelines + 死链 + 幂等 + 线上抽查）；完善 README.md（课程路线图对照表：Step ↔ 功能 ↔ commit ↔ 线上验证方式）；输出结课报告。
 - **验收**：九个阶段全部「已通过」；线上站点完整可交付。
 - **审查记录**：
   - README.md 重写：课程路线图对照表（Step 1–12 ↔ 功能 ↔ 关键 commit ↔ 线上验证方式）、目录结构更新（两个 workflow + build_archive/run_daily）、部署章节改为 GitHub Pages 流程（无密钥）、常见问题与个性化修改点保留并更新；
   - 全站 guidelines 红线总扫（程序化，16 页）：每页唯一 h1、lang/viewport/theme-color 齐全、无禁用缩放、skip-link 链完整（含 tabindex=-1）、导航 aria-label 与 aria-current 恰一处、16 页菜单 8 项全一致；`.innerHTML=` 赋值 0 处（正文中出现的「innerHTML」为教学性提及）；CSS 无 transition: all、无无替代的 outline:none（唯一例外为 skip-link 目标的惯例抑制）；
   - 最终构建连跑两次：FEED_XML / INTERNAL_LINKS / PAPERS_SCHEMA（16 页 256 链接、19 篇论文、3 条 item）全绿，差异仅 build_time/lastBuildDate 两个时间戳字段；
-  - 线上抽查：仓库仍不存在（API 404，用户暂缓创建），随阶段 2 push 后补做（首页、/feed.xml、一篇博客详情页、归档页、状态页「最近自动运行」）。
-- **commit**：见本次 docs 提交（`docs: finalize README roadmap and record phase 9`）
+  - 线上抽查（2026-10-10 补做）：首页（浏览器视觉核验：标题/h1/8 项导航/CSS/对比度正常）、`/feed.xml`（application/xml，域名全部为正式地址，可订阅）、`/posts/hello-agent.html`、`/archive.html`、`/data/status.json`、`/data/last_run.json` 全部 HTTP 200；状态页「自动检查结果」三项通过、「最近自动运行」区块数据与 CI 实际运行一致。
 
-## 结课报告（2026-10-07）
+## 结课报告（2026-10-07，2026-10-10 线上收尾）
 
-**已交付（本地全部完成，9 阶段中 8 个完全通过）**
+**已交付（九个阶段全部验收通过，课程 Step 1–12 完整落地）**
 
 - 站点：8 入口 16 个 HTML 页面（首页/关于/博客/归档/论文/Wiki/RSS/状态 + 3 文章 + 5 Wiki 页），全站无死链、构建幂等、guidelines 红线全过；
 - 数据与自动化：feed.xml（正式域名、可订阅校验通过）、papers.json（arXiv 实抓 19 篇）、rss-items.json（allowlist/超时/体积/失败保旧）、status.json + last_run.json（状态面板展示）、search_wiki 检索问答、两个 SKILL.md；
@@ -157,14 +158,11 @@
 - Multi-Agent 协作：阶段 7 归档页由「规划（主 Agent）→ 实现（子代理）→ 审查（主 Agent）」完成并留档；
 - 过程质量：每阶段 执行→自审→commit→更新 PLAN 闭环，全程未入库任何密钥。
 
-**待用户一个动作后补完（阶段 2 收尾）**
+**线上收尾记录（2026-10-10 已完成，无需用户再操作）**
 
-1. 在 github.com/new 创建空仓库 `person_website`（账号 liujianyang123456，Public，不初始化 README）；
-2. 在本目录执行：
-   `git remote add origin https://github.com/liujianyang123456/person_website.git`
-   `git push -u origin main`（首次 push 会弹浏览器授权，点同意即可）
-3. push 后：等 Actions 全绿 → 确认 Settings→Pages Source 为 GitHub Actions → 打开
-   `https://liujianyang123456.github.io/person_website/` 抽查首页、/feed.xml、一篇博客详情、归档页、状态页「最近自动运行」；
-4. Actions 页对 Daily agent run 手动 workflow_dispatch 触发一次，完成阶段 8 的线上验收。
+1. 内置浏览器登录 GitHub 后代建空仓库 `liujianyang123456/person_website`（Public、无初始化文件）；
+2. `git remote add origin` + `git push -u origin main`（浏览器 OAuth 授权，token 仅存系统凭证管理器，未入库未入日志）；
+3. 首次 Deploy 运行因 Pages 未启用而失败 → 在 Settings→Pages 选择 GitHub Actions（并经凭证 token 调 Pages API 确认 `build_type=workflow`、`html_url` 正确）→ 重跑 run 38050234455 成功；
+4. 线上抽查全过（见阶段 9）；Daily agent run 手动触发成功（run 38050877469），CI 自动提交 `f5376e6` 并部署，闭环验证完成。
 
-**课程成果对照**：Step 1–10 全部验收通过并有线上验证方式（见 README 路线图）；Step 11（归档页）与 Step 12（24h Agent）功能完成、待 push 上线验证。
+**课程成果对照**：Step 1–12 全部验收通过，线上站点 https://liujianyang123456.github.io/person_website/ 完整可交付（见 README 路线图逐项验证方式）。
