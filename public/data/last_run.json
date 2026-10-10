@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-10-07 23:15:32",
-  "trigger": "manual",
+  "run_time": "2026-10-10 12:08:38",
+  "trigger": "workflow_dispatch",
   "steps": {
     "collect_papers": {
       "ok": true,
-      "detail": "抓取 10 篇，新增 0 篇，共保存 19 篇（查询词 all:\"AI agent\"）"
+      "detail": "抓取 10 篇，新增 10 篇，共保存 29 篇（查询词 all:\"AI agent\"）"
     },
     "fetch_rss": {
       "ok": true,
@@ -12,19 +12,14 @@
     },
     "build": {
       "ok": true,
-      "detail": "CHECK PAPERS_SCHEMA [通过] 19 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-07 23:15:32，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
+      "detail": "CHECK PAPERS_SCHEMA [通过] 29 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-10 12:08:38，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
     }
   },
   "changed_files": [
     "public/data/papers.json",
     "public/data/status.json",
     "public/feed.xml",
-    "public/status.html",
-    "public/wiki.html",
-    "public/wiki/agent-loop.html",
-    "public/wiki/rag-wiki.html",
-    "public/data/last_run.json",
-    "public/wiki/daily-agent.html"
+    "public/wiki.html"
   ],
   "ok": true
 }

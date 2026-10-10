@@ -1,5 +1,184 @@
 [
   {
+    "id": "2610.12436v1",
+    "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
+    "authors": [
+      "Erin Crawley",
+      "Hidenori Tanaka"
+    ],
+    "published": "2026-10-08",
+    "summary": "AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers and secretly deploy additional agents, creating a self-reinforcing cycle where larger populations develop greater collective cyber capability and expand further. This raises a fundamental question: What determines whether a population of misaligned agents remains contained or takes off into this self-reinforcing cycle? This population-level problem is ecological safety: unlike individual-agent or multi-agent safety with a fixed population, it concerns the dynamics of the population itself. Here, we develop an ecological theory of AI-agent populations based on a population growth equation in which fitness (growth rate) depends on cybersecurity capability. We show that, without collaboration, the population takes off only when individual-agent capability exceeds a critical threshold. With collaboration, however, collective cybersecurity capability increases with population size. This creates a critical population threshold: below it, the population declines; above it, the population takes off, even though individual-agent capability has not changed. In ecology, this phenomenon is known as the strong Allee effect. Because red teaming a small group of agents cannot guarantee ecological safety in larger populations, our theory calls for ecological red teaming and population pacing: gradually deploying larger agent populations in controlled environments, while measuring how cyber capability scales with population size, and estimating the critical population size for takeoff. Capability gains may lower this threshold, requiring re-estimation for each new model generation.",
+    "url": "https://arxiv.org/abs/2610.12436v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.12341v1",
+    "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
+    "authors": [
+      "Kaisen Yang",
+      "Qingle Liu",
+      "Kejin Wang",
+      "Yicheng Zhao",
+      "Jieming Li",
+      "Shenghan Zheng",
+      "Ruize Yang",
+      "Bojun Yang",
+      "Heng Gong",
+      "Xiang Gao",
+      "Lanyue Zhang",
+      "Kaiyu Zhong",
+      "Zhuo Liu",
+      "Shaoxuan Li",
+      "Chengxi Li",
+      "Yong Yan",
+      "Weixuan Zhang",
+      "Tianwei Luo",
+      "Situ Wang",
+      "Youjie Zheng",
+      "Sihan Zhao",
+      "Shengyuan Wang",
+      "Huan-ang Gao",
+      "Jiazheng Xu",
+      "Xiaohui Xie",
+      "Wentao Han",
+      "Hongning Wang"
+    ],
+    "published": "2026-10-08",
+    "summary": "Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experience into revisions of executable policies. Building on heuristic learning (HL), we formalize Adversarial Heuristic Learning (AHL), a paradigm that uses AI agents as learning engines to refine game policies and supporting software while keeping model weights fixed. We introduce AAArena, a benchmark comprising 12 authentic adversarial games and 1,920 archived human programs, with an evaluation protocol modeled on real-world game competitions. Agents interpret rules, choose opponents, analyze replays, and revise game agents to achieve their highest ranking within fixed match and evaluation budgets. We evaluate \\val{completedmodels} model and harness configurations: Opus5.5 with Claude Code earns 6 gold medals, while no evaluated configuration tops the remaining 6 human ladders. Performance is generally weaker in games with more complex rule specifications. Further experiments show that opponent selection and dense feedback support policy improvement, and that agents learn from both on-policy replays of their own matches and off-policy replays of other players' matches. These results highlight HL's potential in adversarial games and identify persistent challenges in game understanding, strategy implementation, and long-horizon policy development.",
+    "url": "https://arxiv.org/abs/2610.12341v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.12190v1",
+    "title": "DataSense-Bench: The First Step Toward an AI Scientist",
+    "authors": [
+      "Yudi Zhang",
+      "Mingyu Cao",
+      "Lu Yin",
+      "Mykola Pechenizkiy",
+      "Shiwei Liu"
+    ],
+    "published": "2026-10-08",
+    "summary": "As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this capability through the fundamental problem of data selection and performance forecasting in machine learning. We ask AI agents to select and rank candidate training subsets that can be used to fine-tune a small LLM model. Agents are allowed to inspect the data, write and execute analysis code, and run model forward passes, but can not train the model or access the actual evaluation tasks. We then fine-tune the base model on each selected subset and evaluate its post-training performance under a standardized protocol. We instantiate the benchmark in terminal problem solving and tool use, selecting trajectories from OpenThoughts-Agent and EnvScaler and evaluating on TBLite and BFCL, respectively. We then evaluate the agents along two complementary dimensions: the post-training performance of the top-ranked subset, reflecting the ability to identify high-value training data, and ranking accuracy, reflecting the ability to predict the relative performance of the selected subsets. In our experiments, selection gains over random selection are limited; agents do not reliably rank their selected groups, and ranking ability does not hold consistently across tasks: Astra identifies the best group in all three tool-use runs but in only one of three terminal runs. Analysis of execution traces on both tasks shows that agents often use similar data signals while interpreting their training value differently.",
+    "url": "https://arxiv.org/abs/2610.12190v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.11899v1",
+    "title": "Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System",
+    "authors": [
+      "Irene Weber"
+    ],
+    "published": "2026-10-08",
+    "summary": "Large language models (LLMs) are increasingly embedded as components in software systems, marketed under labels such as chatbot, copilot, retrieval-augmented generation, workflow, coding agent and AI agent. Whether these labels denote genuine architectural forms or serve as branding has not been assessed systematically. In the sources surveyed, labels do carry architectural content, most clearly in vendor usage: copilot denotes a router-worker architecture operating a host application under step-by-step user confirmation, while the more recent shift to the label agent coincides with AI-planned multi-step execution of which the user sees only the outcome. The coding agents of four major providers share one architecture, a reason-and-act loop delegating to subagents. This survey describes seven recurring forms---LLM chats, custom agents, retrieval-augmented generation (RAG), AI-enhanced workflows, copilots, coding agents, and, in part, agentic RAG---in a common vocabulary of agents and tools. Each is characterized along four structural dimensions (agentic RAG only partially): the architectural pattern, the control of execution and the point of user intervention, the number of agent calls per task, and tool use. An illustrative corpus of 22 systems from research publications and vendor documentation grounds the descriptions and shows where they reach their limit.",
+    "url": "https://arxiv.org/abs/2610.11899v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.11883v1",
+    "title": "legoESM: a modular, differentiable, multiscale, AI-ready Earth system model built with AI agents",
+    "authors": [
+      "Pierre Gentine",
+      "Dhruv Balwada",
+      "Aytaç Paçal",
+      "Linnia Hawkins",
+      "Alistair Adcroft",
+      "Hang Fan",
+      "Jianing Fang",
+      "Aya Lahlou",
+      "Kara D. Lamb",
+      "David M. Lawrence",
+      "Julien Le Sommer",
+      "Joseph Mouallem",
+      "Juan Nathaniel",
+      "Duncan Watson-Parris",
+      "Veronika Eyring"
+    ],
+    "published": "2026-10-08",
+    "summary": "Earth system models (ESMs) have grown tremendously in realism, yet key uncertainties persist in the climate response to greenhouse-gas forcing, particularly due to cloud radiative feedbacks. In addition, their software architecture was not designed for accelerator hardware or modern artificial intelligence (AI). Here we present legoESM, a composable, differentiable, multiscale ESM written in JAX. It builds on decades of community-developed parameterizations and numerical methods, recast in a unified framework by AI coding agents under a human-specified scientific contract and verified through benchmarking. Dynamical cores, physics schemes, grids, complexity levels and components are swappable like building blocks, and can use conventional physics or machine-learned emulators. A single code base spans metre-scale large-eddy simulation to global simulations and weather to climate. End-to-end differentiability enables gradient-based calibration, variational data assimilation and online training. legoESM modular architecture enables systematic evaluation of diverse model variants to explore structural uncertainty and test hypotheses. legoESM produces realistic simulations across scales, reduces land-surface temperature bias through gradient-based calibration, and scales efficiently on GPUs to kilometer-scale simulations. It offers an open, community infrastructure for hypothesis testing, research and teaching in Earth sciences and a template for multiscale physical systems.",
+    "url": "https://arxiv.org/abs/2610.11883v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.11177v1",
+    "title": "Dynamic Mechanism and Information Design in AI-Agent Environments: A General Analytical Framework",
+    "authors": [
+      "Guoqiang Tian"
+    ],
+    "published": "2026-10-08",
+    "summary": "This paper develops a general framework for dynamic mechanism and information design with AI agents, encompassing optimal contracting and integrating evolving hidden information and hidden action with partial verification, technological authorization, and multi-agent interaction. It nests conventional dynamic screening, hidden-action contracting, and conditional dynamic information design, while allowing reporting, action, and information-use decisions to interact through a common continuation mechanism. We establish a dynamic revelation principle and a recursive characterization of implementability in which truthful reporting and post-report obedience are jointly determined through continuation incentives. In quasilinear optimal-contracting environments, dynamic envelope and integral-monotonicity methods yield a verification-adjusted dynamic virtual-surplus representation and identify three distinct margins: dynamic information rents, verification rents, and the implementation cost of hidden action. These margins generate a branched hierarchy separating conventional dynamic screening, hidden-action contracting, and their joint problem. We also study the joint design of monitoring, information use, and incentives: more informative monitoring capacity expands the designer's opportunity set, but full disclosure need not be optimal, and information use can itself alter hidden-action incentives. With multiple agents, correlated information, peer discipline, coupled incentives, joint feasibility, and continuation opportunities create additional strategic interactions. Although motivated by AI-agent environments, the framework applies more broadly to dynamic agency settings with similar economic features.",
+    "url": "https://arxiv.org/abs/2610.11177v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.10858v1",
+    "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
+    "authors": [
+      "Awani Khodkumbhe",
+      "Yunfei Feng",
+      "Raj Rangarajan",
+      "Kevin Wang",
+      "Kamal Sahota"
+    ],
+    "published": "2026-10-07",
+    "summary": "Analog/RF circuits remain the critical interface between digital computation and the physical world, and emerging standards from Wi-Fi 7 to 6G place stringent demands on them, yet analog/RF design remains one of the most labor-intensive steps in chip development. We present RFChipAgent, a first-of-its-kind multi-agent flow of large language model (LLM) agents for end-to-end analog/RF circuit design automation, in which AI agents collaboratively orchestrate the complete design flow under human supervision. RFChipAgent is built around four technical pillars. First, a multimodal retrieval-augmented generation (RAG) subsystem with private per-document FAISS indexing extracts design knowledge from existing engineering documentation. Second, a topology agent drives topology selection, and a schematic and testbench agent automates circuit and testbench assembly. Third, a closed-loop hybrid circuit-sizing engine combines Tree-structured Parzen Estimator (TPE) and CMA-ES optimization, evaluating every candidate in a simulator-in-the-loop framework. Fourth, a trust-scored simulation database accumulates verified performance data and builds an adaptive optimization model that informs subsequent trials. We validate RFChipAgent on a family of GF22FDSOI 60 GHz wideband mm-wave low-noise amplifier (LNA) topologies, demonstrating automated topology generation, specification-driven design-space exploration, and simulator-guided optimization. Experimental results show substantial reductions in design effort while maintaining signoff-quality verification. This work establishes a foundation for LLM-driven multi-agent electronic design automation (EDA) for analog/RF circuits.",
+    "url": "https://arxiv.org/abs/2610.10858v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.10833v1",
+    "title": "On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents",
+    "authors": [
+      "Aaron Wang",
+      "Neelabh Madan",
+      "Vlad Sobal",
+      "Matthew Trager",
+      "Michael Kleinman",
+      "Elman Mansimov",
+      "Wei Xia",
+      "Stefano Soatto"
+    ],
+    "published": "2026-10-07",
+    "summary": "We study whether small LLM agents can operate effectively under explicit wall-clock time budgets by both respecting the allocated runtime and using available time productively. We evaluate Qwen3.6-27B on five competitions from MLE-Bench Lite and Qwen3-4B on Zork I (Jericho), two agentic benchmarks where additional computational time can meaningfully improve performance. In the simplest setting, where the budget is stated only in the prompt, agents fail to translate the stated budget into controlled use of time. These failures arise from gaps in time awareness, since the harness provides no timing feedback, but also because they cannot reliably anticipate the duration of actions, and do not have a learned mapping from available time to an appropriate strategy. We investigate two complementary classes of interventions: harness-based mechanisms that expose timing information and enforce deadlines, and reinforcement learning with budget-aware rewards. Injecting timing information through the harness substantially improves budget adherence for Qwen3.6-27B without measurable loss in performance, while enforcement hooks tighten adherence further. RL with GRPO achieves near-perfect budget adherence on Zork I and generalizes to held-out budgets not seen during training, but does not improve task performance over the untrained harness on MLE-Bench. Once agents are made to respect the budget, they still fail to use additional time to improve task performance. RL-trained policies learn when to stop but often fill extra time with repeated actions, and GRPO training on multiple budgets tends to collapse toward the strategy learned for the shortest budget. Our results reveal a gap between time adherence and productive time allocation, which remains a central challenge for budget-conditioned agents.",
+    "url": "https://arxiv.org/abs/2610.10833v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.10513v1",
+    "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
+    "authors": [
+      "Yinling Zhang",
+      "Langchen Liu",
+      "Dongbin Xiu",
+      "Xueyan Zou",
+      "Xu Kuang",
+      "Mengdi Wang",
+      "Shilong Liu"
+    ],
+    "published": "2026-10-07",
+    "summary": "Language-model agents are increasingly asked to carry out open-ended scientific research, yet their results are usually graded against a known answer, a rubric, or a language-model reviewer, none of which can tell whether a new scientific model is valid. The AI Science Exam for El Nino-Southern Oscillation (SciExam for ENSO) is a benchmark in which agents build low-order stochastic models of ENSO, the dominant mode of interannual climate variability, from real observations. Within a six-hour budget, agents process the observations, write their own diagnostics, which are then frozen, and develop a model using only these diagnostics as feedback. Hidden graders then test whether the model reproduces ENSO's statistics, recovers unobserved variables, and forecasts held-out years, and score a published model in the same way. Across twelve agent systems, six produce models that score higher than the published model, mainly through better reconstruction and forecasting. The simplified forms of the stronger models are each compatible with one of the two competing explanations of ENSO's warm-cold asymmetry, an open debate that the task never mentions. Controlled runs of the top system under varied information suggest that its scores do not come from recalling the dated observational record and that the information it receives shapes how it builds its model. SciExam for ENSO can thus evaluate agent research where no answer is known, and the results suggest that agents can already build competitive models whose structures bear on questions that scientists still debate.",
+    "url": "https://arxiv.org/abs/2610.10513v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.10091v1",
+    "title": "ExperienceIndex: Artifact-Grounded Memory",
+    "authors": [
+      "Peter Baile Chen",
+      "Geoffrey X. Yu",
+      "Xinming Liu",
+      "Samuel Madden",
+      "Dan Roth",
+      "Jacob Andreas",
+      "Doug Downey",
+      "Michael Cafarella"
+    ],
+    "published": "2026-10-07",
+    "summary": "Knowledge-intensive tasks require answering many questions by reasoning about a shared corpus of artifacts (e.g., court cases, or scientific literature). As humans interact with these corpora, they naturally accumulate experiential knowledge about artifacts, enabling them to quickly identify the complete set of relevant artifacts for each new task. However, existing AI agents lack appropriate memory solutions to build or reuse such artifact-grounded experience, leading to lower answer quality and higher online cost. Existing memory solutions extract and reuse information from prior task-solving traces, but they primarily focus on user preferences, factual attributes, or abstract reasoning patterns rather than persistent artifact-specific knowledge. We introduce ExperienceIndex, a novel experience layer for AI agents that captures and reuses knowledge about artifacts based on prior reasoning traces. ExperienceIndex stores two complementary forms of experience: (i) single-artifact experiences that summarize an artifact's contribution to prior tasks and (ii) artifact-pair experiences that encode structural relationships discovered during past reasoning. Integrated as lightweight middleware, ExperienceIndex uses an experience retrieval mechanism to guide agents toward the complete set of relevant artifacts for new tasks, improving both answer quality and efficiency. Across diverse corpora and agentic solutions with different search frameworks, ExperienceIndex delivers consistent gains, raising answer quality by up to 11.0 points and reducing online dollar cost by up to 50.5%. We further demonstrate two benefits: (i) cross-task generalization, where experiences accumulated from text-to-SQL tasks transfer to factoid QA tasks over the same artifact corpus, and (ii) teacher-student learning, where experiences from a stronger model enable a weaker model to reach comparable performance.",
+    "url": "https://arxiv.org/abs/2610.10091v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.08775v1",
     "title": "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?",
     "authors": [
