@@ -1,5 +1,5 @@
 {
-  "run_time": "2026-10-11 00:49:29",
+  "run_time": "2026-10-12 00:52:46",
   "trigger": "schedule",
   "steps": {
     "collect_papers": {
@@ -12,7 +12,7 @@
     },
     "build": {
       "ok": true,
-      "detail": "CHECK PAPERS_SCHEMA [通过] 29 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-11 00:49:29，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
+      "detail": "CHECK PAPERS_SCHEMA [通过] 29 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-12 00:52:46，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
     }
   },
   "changed_files": [
