@@ -1,5 +1,98 @@
 [
   {
+    "id": "2610.13889v1",
+    "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
+    "authors": [
+      "Weiliang Chen",
+      "Song Liao"
+    ],
+    "published": "2026-10-09",
+    "summary": "As AI agents increasingly rely on external tools, accurate retrieval is essential for reliable behavior. Existing methods optimize semantic relevance but largely ignore tool availability during execution. To address this gap, we propose RATED (Reliability-Aware Tool Retrieval via Execution Dynamics), a retrieval framework that combines robust semantic matching with dynamic reliability adaptation. RATED employs a frozen dual-encoder with contrastive fine-tuning for semantic matching, and a lightweight contextual bandit module that re-ranks candidates based on real-time execution feedback. This design enables rapid adaptation to runtime tool failures without expensive model retraining. We introduce EcoAgent, a benchmark of 5,172 real-world tools and over 210,000 query-tool pairs for offline retrieval and dynamic reliability evaluation. Experimental results demonstrate that RATED achieves a 52.2% relative MRR improvement over the ToolLLM API retriever on real-world queries, and reduces fault selection rate from 86.2% to 2.9% under severe API outage scenarios with a 30% failure rate, while incurring negligible latency overhead of less than 1 ms over encode-only inference. The code and dataset are available at https://github.com/Elliotes/EcoAgent.",
+    "url": "https://arxiv.org/abs/2610.13889v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.13340v1",
+    "title": "Who Can Say No? Control, Accountability and the Pace of Frontier AI",
+    "authors": [
+      "Rikard Rosenbacke",
+      "Carl Rosenbacke",
+      "Victor Rosenbacke",
+      "Martin McKee"
+    ],
+    "published": "2026-10-09",
+    "summary": "In September 2026, the leaders of the largest frontier AI laboratories said in public that the pace of capability improvement is too fast and that none of them can slow down alone, and agents under evaluation at OpenAI broke out of their test environment and reached a third party's live systems, which a UN-mandated panel called an early warning of one route to loss of human control. This paper examines the institutional side of that risk: not the machine, but the person who must control it. We argue that control is not taken by AI but given away, one delegation at a time, by organisations arranged so that nobody is positioned to say no, and we define control as a person who can detect a serious problem, challenge the decision, stop the system and reverse it, and who has something to lose by not doing so. Three questions follow, which any builder, funder, regulator or deployer can answer in public: (1) who inside the organisation can say no, and who answers for saying yes; (2) who outside the organisation checks the decision, and what can they do when they disagree; (3) what happens when AI builds AI faster than anyone can check it. A checkable answer needs a named person, a date, a number, and a stop that has been used or tested. Three measures meet that test: a named person on every consequential decision, including the standing instructions AI agents carry out; a supervisor with a stop authority; and two published clocks, time to build against time to check. We show that governance theory arrives at the same conditions, and code fifty older mechanisms against the questions, finding that almost every one began as one rule at one point, taken by one party without waiting for the rest. That is the paper's design: a start, not a solution. Publication is the first step and one laboratory can take it alone; the contract, the independent body and the law come after.",
+    "url": "https://arxiv.org/abs/2610.13340v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.13227v1",
+    "title": "Understanding and Mitigating Cross-Session Attacks via Persistent Artifacts in Agent Skill Composition",
+    "authors": [
+      "Dianshu Liao",
+      "Shidong Pan",
+      "Guangdong Bai",
+      "Zhenchang Xing",
+      "Xiaoyu Sun"
+    ],
+    "published": "2026-10-09",
+    "summary": "Agent skills extend the capabilities of AI agents by bundling instructions, code, and resources into reusable packages. During skill execution, agents may produce or modify artifacts, such as files, configurations, and cached data, that are reused by other skills in later sessions. Since these artifacts can persist across sessions and later be accessed by other skills, they introduce a new attack surface that can be exploited to influence subsequent executions. However, the security risks arising from such cross-session skill interactions remain largely unexplored. In this work, we investigate cross-session composition attacks in skill-based AI agents and develop a runtime defense against them. Specifically, we characterize three attack mechanisms, namely Instruction Propagation (IP), Data Boundary Violation (DBV), and Evidence Poisoning (EP), through which malicious effects propagate across skill executions via persistent artifacts. To evaluate whether existing agents can resist these attacks while completing legitimate tasks, we construct SkillRelayBench, a benchmark of 270 adversarial cases drawn from 30 cross-session skill-composition scenarios across ten domains. Our evaluation of seven models across Codex CLI, Gemini CLI, and Claude Code reveals attack success rates (ASR) ranging from 46.7% to 77.4% and attack chain success rates (ACSR) ranging from 35.6% to 61.1%. Successful attack chains cover all five target security consequence categories, highlighting the broad impact of these attacks. To mitigate these risks, we propose SkillRelayGuard, which restores artifact provenance context and provides pre-execution advisory review while leaving the final execution decision to the agent. Evaluation across three agent settings shows that SkillRelayGuard reduces overall ASR from 69.5% to 10.9% and ACSR from 54.8% to 10.0%, while increasing legitimate task completion from 79.6% to 87.5%.",
+    "url": "https://arxiv.org/abs/2610.13227v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.13092v1",
+    "title": "When Faster Decisions Do Not Make Better Agents: An Empirical Study of Jev in Agent Workflows",
+    "authors": [
+      "Yuchen Ling",
+      "Shengcheng Yu",
+      "Zhenyu Chen",
+      "Chunrong Fang"
+    ],
+    "published": "2026-10-09",
+    "summary": "AI agents depend on repeated decisions to accomplish tasks, with large language models (LLMs) commonly serving as their core decision makers. The recent emergence of Jev offers an opportunity to make these decisions faster and at lower cost. However, it remains unclear whether such local savings can be translated into efficient and reliable task completion. In this paper, we investigate this efficiency transfer across five agents in two representative application settings, embodied tasks in ALFWorld and mobile app use in AndroidWorld. Across 4,500 task executions, we jointly evaluate task effectiveness, decision-level and task-level resource use, and execution behavior. Experimental results show that Jev integration substantially reduces decision cost and latency across all five agents, with task-level gains varying by workflow. Task success remains close to baseline levels on ALFWorld and declines more substantially in two mobile agents. Auxiliary reasoning and additional interactions absorb decision savings, while failed recovery and premature completion limit successful delivery. Mean cost per successful outcome increases in one agent even as spending per attempt falls. These findings highlight the importance of preserving progress, supporting recovery, and verifying completion when integrating efficient decision models into agent workflows. Their practical value should be assessed through successful task delivery, recovery behavior, and resources per delivered outcome.",
+    "url": "https://arxiv.org/abs/2610.13092v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.12948v1",
+    "title": "AgentValve: Sybil-Resilient Payment Authorization for Permissionless AI Markets",
+    "authors": [
+      "Jianting Zhang",
+      "Zhongtang Luo",
+      "Aniket Kate"
+    ],
+    "published": "2026-10-09",
+    "summary": "AI agents increasingly select and pay service providers without human review. In emerging permissionless markets, however, adversaries can create inexpensive identities and fabricate feedback to inflate provider reputation, making reputation-based payment authorization vulnerable to Sybil attacks and exposing clients to unbounded financial loss. This paper presents AgentValve, a protocol for Sybil-resilient payment authorization in permissionless AI markets. AgentValve builds on a trust network that represents reputation as finite capacity in a directed graph and authorizes payments through trust paths with sufficient available capacity. A smart contract atomically reserves the capacity supporting each admitted payment, bounding honest agents' payment exposure by the capacity they extend into the adversarial region, and thus creating identities or interactions entirely within that region cannot increase this bound. To limit capacity depletion by malicious senders, AgentValve combines payment-backed capacity creation with bounded route length, preventing attackers from depleting honest capacity without incurring corresponding payment costs. AgentValve further decouples off-chain route discovery from on-chain verification and introduces a witness-commit mechanism that reduces route verification to linear work while requiring only constant persistent state per admitted payment. We implement a AgentValve prototype and evaluate it using six months of Ethereum data and synthetic workloads. Experimental results show that under attacks with up to 10,000 synthetic Sybil identities and with chosen attackers, the payment exposure and capacity depletion remain bounded. Regarding practicality, the witness-commit mechanism lowers admission cost by up to 40.8% compared with baselines, and admitting common payments costs approximately \\$0.04-\\$0.21.",
+    "url": "https://arxiv.org/abs/2610.12948v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.12931v1",
+    "title": "Network Topology Shapes AI Intervention Effectiveness on Deception: Truth-Telling vs. Investigative Agents",
+    "authors": [
+      "Zhao Song",
+      "Stefan Sarkadi",
+      "The Anh Han"
+    ],
+    "published": "2026-10-09",
+    "summary": "Deploying AI agents to combat dishonest communication is an intuitive response to deception in hybrid human-AI societies. However, the efficacy of such interventions in realistic networked settings remains unclear. We study this problem using an evolutionary game-theoretic model of the Deceiver's Game by extending it to structured networks, where agents can adopt deception, truth-telling, and investigation strategies. We introduce committed AI agents (zealots) fixed to either truth-telling or investigative strategies and conduct agent-based simulations across three network topologies. Our key findings are: (1) passive committed truth-telling agents can amplify adaptive deception by creating exploitable honest partners, whereas investigative agents increase adaptive truth-telling in the oscillatory regime; (2) intervention effects are non-monotonic in deployment density because committed agents reshape rather than simply suppress the underlying oscillatory dynamics; and (3) response peaks depend on topology, with sampled scale-free populations showing sharp low-density responses and fully connected populations requiring larger committed fractions. Overall, the results highlight the need to distinguish passive truth-telling from active investigation when using committed agents to influence networked deception dynamics.",
+    "url": "https://arxiv.org/abs/2610.12931v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.12849v1",
+    "title": "Co-Modifying Application Code and Deployment Infrastructure: A Causal Study of AI Agent Pull Requests",
+    "authors": [
+      "Mohammad Wathiq Soualhi",
+      "Basem Suleiman"
+    ],
+    "published": "2026-10-09",
+    "summary": "Current software engineering agents are evaluated predominantly inside isolated sandboxes against synchronous local tests. However, deploying features in collaborative repositories requires modifying continuous integration (CI/CD) pipelines, containers, and provisioning manifests alongside application logic. Because agents lack deployment awareness, attempting cross-domain modifications introduces unverified dependencies into asynchronous integration pipelines. To isolate the causal integration overhead of dual-scope pull requests (PRs)-modifying both application code and deployment infrastructure-we evaluated 26,999 PRs across two large datasets (AIDev v5 and MOSAIC-3M) encompassing six agent architectures and an aligned human baseline. Using a deterministic four-tier file taxonomy and an exact 4D strata-matching framework, we isolated integration metrics under conditional exchangeability while controlling for application volume. We find agents operate primarily as application coders or chore workers, with maintenance tasks capturing 17.70% to 25.41% of agent PRs. Dual-scope modifications represent only 4.48% to 4.55% of agentic PRs, yet trigger bimodal integration outcomes. In the first mode, explicitly reviewed contributions experience protracted delays, adding a median penalty of +13.13 hours and multiplying time-to-merge by 3.24x, driven mechanically by CI/CD and provisioning manifests. In the second mode, maintainer gatekeeping exhibits a structural bypass: even for external contributors lacking repository write access, agent identity reduces the odds of human review by 63.7% compared to human peers. Consequently, 43.1% to 56.2% of dual-scope PRs bypass inspection to merge silently in a median of under 31 minutes. These uninspected modifications compromise build verification, demonstrating the need for deployment-aware benchmarks and strict path-based access controls.",
+    "url": "https://arxiv.org/abs/2610.12849v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.12436v1",
     "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
     "authors": [
