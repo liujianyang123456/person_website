@@ -1,10 +1,10 @@
 {
-  "build_time": "2026-10-14 01:07:16",
+  "build_time": "2026-10-15 01:04:41",
   "counts": {
     "pages": 16,
     "posts": 3,
     "wiki": 5,
-    "papers": 36,
+    "papers": 46,
     "rss_feeds": 1,
     "rss_items": 20
   },
@@ -19,7 +19,7 @@
     },
     "papers_schema": {
       "status": "通过",
-      "detail": "36 篇论文通过校验"
+      "detail": "46 篇论文通过校验"
     }
   }
 }

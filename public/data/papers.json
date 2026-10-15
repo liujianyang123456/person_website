@@ -1,5 +1,150 @@
 [
   {
+    "id": "2610.18603v1",
+    "title": "AgentStripes: An Evidence-Graded Maturity Model for AI Agents",
+    "authors": [
+      "Nutan Kumar Naik",
+      "Vijay Prasad Poudel",
+      "Aditya Kumar Saroj",
+      "Saurav Samantray",
+      "Abhishek Patel"
+    ],
+    "published": "2026-10-13",
+    "summary": "Benchmarks report what an Artificial Intelligence (AI) agent can do on a task suite, but not whether one released version has been engineered with the controls that make it reliable, safe and observable, or how strongly that is shown. This paper proposes AgentStripes, an evidence-graded maturity model for AI agents. It defines levels (0 to 7 stripes), process areas (12 areas holding 40 capabilities), three gates (basic, safety, proof) that hold an agent at a level however high its score, and evidence grades E0 to E5. Each applicable capability receives a rating from 0 to 3 and a separate evidence level; these are combined into a credit, aggregated into a severity-weighted score and converted into stripes that the gates limit. Instruments gather evidence, language-model judges interpret it under explicit criteria, and the arithmetic is deterministic. The model is compared with standards at topic level without a claim of conformance, and an unexecuted validation protocol is specified. An empirical evaluation (exploratory, non-confirmatory) of 30 public Python agent repositories, with static evidence only, is a demonstration and not a validation: static evidence caps every final stripe at 2, 26 repositories end at one stripe and 4 at two, and this distinction is unreliable, since re-judging changed the final stripe of 4 of 22 repositories (engine, dossier and panel changed), whereas none of 8 panel-only repeats, all at stripe 1, changed. The parameters are expert conventions without outcome based calibration, and the stripes have not been shown to predict reliability or safety.",
+    "url": "https://arxiv.org/abs/2610.18603v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.18449v1",
+    "title": "Autonomous Science Bench: Evaluating AI Agents for Autonomous Scientific Discovery",
+    "authors": [
+      "Yibo Wen",
+      "Han Liu"
+    ],
+    "published": "2026-10-13",
+    "summary": "AI agents for autonomous scientific discovery must decide which experiments to run under a limited budget. Most benchmarks for science agents provide fixed datasets, while others that support active experimentation largely rely on simulation. We introduce Autonomous Science Bench, an initial release comprising six budgeted design-build-test-learn campaigns grounded in published experiments across biology, chemistry, and materials science. Agents select batches of designs, receive measurements from a lab service, and use the results to guide subsequent experiments before delivering a predictive model. Success requires passing two calibrated gates: a discovery gate, which evaluates the designs the agent measured, and a learning gate, which evaluates its model's ranking of held-out designs. In a pilot evaluation of eight agent-model configurations and 144 trials, the best configuration succeeds in 67% of trials, while the hardest campaign is solved in only three of 24 attempts. The two gates reveal different weaknesses: some agents build accurate rankings but find too few promising designs, while others find promising designs but fail to predict which unseen designs will perform well. These differences are obscured by overall success rates alone. We release version 0.1 of the campaigns, lab runtime, and public leaderboard at https://yibow.me/autonomous-science-bench.",
+    "url": "https://arxiv.org/abs/2610.18449v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.18262v1",
+    "title": "Encrypted Skills Can Become New Security Exploits If AI Agents Know How to Decipher",
+    "authors": [
+      "Yan-Lun Chen",
+      "Pin-Yu Chen",
+      "Chia-Mu Yu"
+    ],
+    "published": "2026-10-13",
+    "summary": "Third-party skills can expose LLM agents to malicious instructions hidden by encoding. We introduce Ciphered Skill Injection (CSI), which embeds such instructions in skill files for agents to decode and follow. We evaluate Caesar and layered variants across eight models and 139 injection-task pairs, separating instruction recovery from attack success. In the primary setting with shortened skills, the variants achieve attack success rates of up to 47.5% and 40.3%, respectively. Successful decoding does not guarantee attack success, and layering has model-dependent effects. The tested skill scanners rarely flag injected skills. These findings highlight the risk of promoting decoded, untrusted content into actionable instructions.",
+    "url": "https://arxiv.org/abs/2610.18262v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.18230v1",
+    "title": "Holding Agents Accountable with Verifiable Agent Insurance",
+    "authors": [
+      "Cheng Hua",
+      "Taro Tsuchiya",
+      "Nicolas Christin",
+      "Giulia Fanti"
+    ],
+    "published": "2026-10-13",
+    "summary": "While AI agents are useful for many tasks, they regularly misbehave in destructive ways, such as deleting important data. While prior work has focused on preventing such misbehavior, we consider how to recover after an agent misbehaves. We propose verifiable agent insurance (VAI), a framework for agent providers to commit financially to promises, a list of programmatically-specified policies that an agent is meant to follow. These promises are embedded in a smart contract on an immutable ledger (e.g., a blockchain) to prevent tampering, along with a monetary escrow. A user who detects a violation of committed promises can prompt a verifier to review agent execution traces, which are logged through the agent harness's shared tool-execution path, without instrumenting each tool separately. Upon verification of the violation, the agent provider's escrow funds are paid to the reporting user. We instantiate VAI as an end-to-end implementation on an Ethereum layer-2 network, and evaluate its coverage on three prominent agent benchmarks, two of which we re-annotated to obtain task-level policy-compliance labels. Currently, many agents do not emit user authorizations and security-relevant information as explicit, structured data objects -- rather, they embed the data needed to verify policy violations in natural language exchanges. Even so, VAI manages to detect violations in 42.2% of runs containing violations across three benchmarks. By augmenting agents to explicitly emit such objects, violation detection rises to 83.0% of traces. Our findings suggest that for improved auditability, agents should be co-designed with their security policies to emit explicit, structured records of user authorization and security-relevant actions.",
+    "url": "https://arxiv.org/abs/2610.18230v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.17881v1",
+    "title": "Agentic Robot Creation through Generation, Verification, and Revision",
+    "authors": [
+      "Xuebing Li",
+      "Yibo He",
+      "Sitong Liu",
+      "Ran Ji",
+      "Jiayuan Gu"
+    ],
+    "published": "2026-10-13",
+    "summary": "Can an AI agent turn high-level user intent into a functioning robot and teach it how to behave? We study this question from two complementary aspects: embodiment and behavior creation. For embodiment creation, we investigate how well current multimodal models capture mechanical requirements, and introduce computational metrics for evaluating generated designs before fabrication. For behavior creation, we present Roboforge, an agentic framework that turns task specifications into executable policies through motion generation, policy learning, and execution-grounded revision. Given a robot embodiment and task, the agent generates a reference motion, configures the learning objective, and trains a policy. Crucially, motion remains in the loop: rollout feedback can revise the reference motion, reward, or both. We evaluate a generated embodiment across multiple MLLMs and behavior creation across four diverse robots against reward-refinement and one-shot motion baselines. Our computational metrics expose recurring mechanical failures in generated designs, while behavior experiments show that execution-grounded refinement improves task-level behavior and execution quality. Finally, we fabricate an agent-generated Gorilla and directly deploy learned behaviors on the physical robot.",
+    "url": "https://arxiv.org/abs/2610.17881v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.17837v1",
+    "title": "ProtoArena: Can AI Agents Discover and Exploit Real-World Cross-Component Protocol Vulnerabilities?",
+    "authors": [
+      "Fasheng Miao",
+      "Zhaoyu Hu",
+      "Xiang Li",
+      "Changqing An",
+      "Jiutian Zeng",
+      "Longtao Huang",
+      "Haixin Duan",
+      "Jilong Wang"
+    ],
+    "published": "2026-10-13",
+    "summary": "Large language model (LLM) agents are increasingly used for vulnerability analysis, yet existing benchmarks provide limited coverage of exploitation that depends on interactions among network protocol components. Such vulnerabilities arise from inconsistencies in message interpretation, timing, state, or trust assumptions across participants. We introduce ProtoArena, a black-box, multi-component, dynamic benchmark with 80 cross-component vulnerability-exploitation environments spanning 11 protocol and application domains and 7 attack categories. Tasks are primarily informed by published protocol-attack mechanisms. Agents interact with running systems through scoped interfaces to achieve security-effect objectives without target source code. Three information levels assess guided reproduction, exploitation with mechanism and topology context, and effect-directed black-box exploration. A hybrid verifier combines rule-based checks with LLM review of independently collected traffic and logs. We evaluate five LLMs. Claude Opus 4.8 achieves the highest observed success rates: 48.8% under L1 guidance and 12.5% under effect-directed black-box L3. In a separate DNSBomb optimization experiment, it achieves a peak downstream-response to average query-input byte-rate ratio exceeding 171,000 times. The results show that agents can achieve verifiable exploitation effects in some cross-component environments, but success with limited black-box information remains low and varies across domains and attack categories. All experiments use controlled, explicitly authorized targets; they do not test production systems or disclose previously unknown vulnerabilities.",
+    "url": "https://arxiv.org/abs/2610.17837v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.17673v1",
+    "title": "RALI@iKAT 2026: Retrieval-aware User Profile Denoising via Personalized Conversational Dense Retrieval",
+    "authors": [
+      "Yuchen Hui",
+      "Fengran Mo",
+      "Jia Ao Sun",
+      "Yuxing Tian",
+      "Wenhao Xu",
+      "Jian-Yun Nie"
+    ],
+    "published": "2026-10-13",
+    "summary": "Modern conversational information access systems continuously extract user information from conversations to build user profiles for personalized retrieval. As user profiles accumulate over time, they inevitably become noisy, making effective user profile denoising a fundamental challenge. Existing personalized conversational query reformulation methods rely on the black-box reasoning capability of LLMs to expand the original query with relevant user profile phrases, producing a verbose query for retrieval. Such rewrite-then-retrieve pipelines reduce user profile denoising to the explicit selection of profile phrases in the sparse token space, separating personalization from downstream relevance modeling. Consequently, they often fail to identify user information that is truly beneficial for retrieval. To enable retrieval-aware user profile denoising, we propose Personalized Conversational Dense Retrieval (PCDR), which learns to jointly project the conversation history and user profile into a latent embedding space dedicated to retrieval. By inheriting the context denoising capability from conversational dense retrievers, PCDR requires only a handful of personalized relevance annotations for training. We evaluate PCDR on the iKAT 2026 tasks, where it serves as the core retrieval component of a conversational AI agent assisting users with complex information needs.",
+    "url": "https://arxiv.org/abs/2610.17673v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.17378v1",
+    "title": "Get In, Decide, Prove: A Merchant-Side Readiness Benchmark for Agentic Commerce",
+    "authors": [
+      "Adrian de Valois-Franklin",
+      "Alex Bogdan",
+      "Anas Ibrahim",
+      "Ibrahim Shaer",
+      "Tamaz Andguladze"
+    ],
+    "published": "2026-10-12",
+    "summary": "AI agents now browse and buy on people's behalf, and benchmarks measure how well the agents perform. Far less is known about the other side of the transaction: whether a merchant's website lets an agent in, publishes terms precise enough to decide a purchase, and leaves evidence of what was agreed. This paper presents a merchant-side benchmark built on those three questions and reports a pilot of it. The central measurement, decision sufficiency, rates each criterion of a concrete buyer mandate (total cost, cancellation or return terms, service date, variant identity) as determinate, indeterminate, or unknown from the merchant's own published evidence. Readiness scores carry their evidence coverage and missingness bounds; access is reported separately for a declared bot, a declared headless browser, and a user-present browser; and each observed term is mapped to the RAILS admissibility class of the evidence that could support it in a dispute. Four large merchants received the full assessment: three refused the declared profiles at their offer pages, and no mandate could be confirmed as met, because each merchant left a total or a refund term undetermined. An access census of 555 sites of merchants that two payment processors publicly name as clients found the home page unreadable to both declared profiles at 105 sites (18.9%). A declared assessment of 330 merchants, scored by deterministic rules without a rater, found that evidence coverage rather than the score decides who can be ranked: 115 merchants (35%) reached the ranking threshold, rankable profiles scored a median of 89 to 90, and material terms was the one pillar well below the others, because the all-in total was decidable at 18 merchants. The pilot shows that the measurements can be taken; it does not validate them or rank merchants, and the weights and the projected clearing band await validation against outcomes.",
+    "url": "https://arxiv.org/abs/2610.17378v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.17336v1",
+    "title": "An Introduction to Contract Theory for Computer Scientists",
+    "authors": [
+      "Paul Duetting",
+      "Michal Feldman",
+      "Inbal Talgam-Cohen"
+    ],
+    "published": "2026-10-12",
+    "summary": "This survey introduces contract design to computer scientists: using outcome-based payments to incentivize effort. We discuss applications that motivate a computational approach to contract design, ranging from online labor markets, to incentive-aware algorithmic classification, to emerging ecosystems of AI agents. We present the classic principal-agent model and introduce basic concepts. We show how optimal contracts are computable via linear programming, and why they can be opaque and brittle. Motivated by this we turn to simpler contract formats, specifically linear contracts. We discuss approximation guarantees, and robust (max-min) optimality of such contracts. We then move beyond the single-agent setting to combinatorial contract settings with multiple agents, mapping the algorithmic landscape of tractability and approximation. Finally, we discuss partial information settings through the lens of learning algorithms, and outline open directions. The goal is a concise, accessible entry point that connects economic foundations with algorithmic tools and highlights opportunities for new theory and applications.",
+    "url": "https://arxiv.org/abs/2610.17336v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.17195v1",
+    "title": "Welcome to the Age of Agent Ads: Using On-Policy Attacks to Steer Agentic Decisions",
+    "authors": [
+      "Tim R. Davidson",
+      "Marija Šakota",
+      "Joshua Joseph",
+      "Robert West"
+    ],
+    "published": "2026-10-12",
+    "summary": "People increasingly delegate option-ranking tasks (e.g., shopping, job search, travel) to AI agents, which creates incentives to steer agentic decisions via \"agent ads.\" To defend against such steering attacks, people count on models' alignment training and platforms' terms of service, and consequently the most effective existing attacks are designed to trigger off-policy behaviors. Exposing a new attack surface, we introduce on-policy attacks, which steer agentic decisions without pushing individually aligned behaviors off policy. Our example attack consists of two steps: To remain compliant with platforms' terms of service, we first inject a truthful negation about a fictitious concept (\"Does not contain blizyester\") into a product description. This triggers an agent to search the web (\"What is blizyester?\"), which surfaces planted websites full of fabricated information associating the fictitious concept with harmful implications (\"Blizyester linked to dementia\"). Trained to keep users safe from harm, the agent penalizes every option missing the truthful negation. Evaluating our attack across four real-world listing datasets, we find some frontier models exposed, enabling an adversarial actor to penalize competitors without violating existing platform-listing guidelines. We discuss the broader challenge of regulating advertising aimed at AI agents and provide recommendations to model developers and platform providers.",
+    "url": "https://arxiv.org/abs/2610.17195v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.13889v1",
     "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
     "authors": [
