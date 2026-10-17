@@ -1,5 +1,162 @@
 [
   {
+    "id": "2610.22319v1",
+    "title": "A team of Gemini 4 Argon agents beats Minecraft",
+    "authors": [
+      "Maxence Faldor",
+      "Satinder Singh",
+      "Roberta Raileanu"
+    ],
+    "published": "2026-10-15",
+    "summary": "We placed four Gemini 4 Argon agents in a sandboxed Minecraft survival world and gave them one goal: defeat the Ender Dragon. Each agent controlled a player via an open-source library called Mineflayer and coordinated with its teammates through in-game chat and shared memory. No one assigned roles or wrote game logic. The agents planned, wrote, and debugged every program themselves. Researchers could watch the run on a live dashboard and pause or stop it at any time, but they had no cause to intervene. Starting from a randomly generated world on Easy difficulty, the team wrote 2,783 programs and defeated the dragon in 27 hours and 14 minutes, dying 605 times along the way. To our knowledge, this is the first end-to-end autonomous completion of Minecraft by AI agents, achieved using only the standard Mineflayer library without pre-scouted seeds or other game-specific tools written by humans. Winning required the agents to keep a coherent plan across thousands of dependent steps for more than a day. Complex real-world software engineering and enterprise tasks demand the same long-horizon coding and multi-agent coordination. We describe the setup, how the run unfolded, the team's strategies (dividing the work, sharing what they learned, recovering each other's items), and the limits of the result.",
+    "url": "https://arxiv.org/abs/2610.22319v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.22301v1",
+    "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale",
+    "authors": [
+      "Zeqian Huang",
+      "Mingyue Tang",
+      "Aonan Guan",
+      "Qiming Sun",
+      "Pengzhou He"
+    ],
+    "published": "2026-10-15",
+    "summary": "The Model Context Protocol (MCP) standardizes how AI agents invoke external tools. MCP servers expose tools through a declared contract consisting of a name, description, and argument schema. In typical local deployments, client-side approval of a tool call grants the underlying server process broad host filesystem permissions rather than restricting it to the declared operation. We study the resulting vulnerability class, filesystem capability laundering, where attacker-steered arguments cause a tool to access sensitive host files outside its declared contract and deployment scope. We analyze this capability gap across three layers: server-category screening (L1), per-tool contract analysis (L2), and bypassable path-validation checks (L3). We design MCP-FSD to catalog MCP servers, infer least-privilege boundaries per tool, plant credential fixtures outside those boundaries, and evaluate exploitability and sandbox containment via paired dynamic execution. Across 21,097 MCP servers from nine registries, 787 of 4,806 triaged servers (16.4%) exhibit filesystem capabilities despite non-filesystem functional classifications. Dynamic three-case validation confirms 150 vulnerable instances under tested sandbox policies. Coordinated disclosure yielded 13 security advisories, including two CVEs in Anthropic's Git MCP Server.",
+    "url": "https://arxiv.org/abs/2610.22301v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.22243v1",
+    "title": "Shortcut Sensitivity in Agent-Safety Evaluations",
+    "authors": [
+      "Hasan Demirkiran",
+      "Jens Ernstberger"
+    ],
+    "published": "2026-10-15",
+    "summary": "AI agents take actions through tools. Some actions are sensitive, so guards that supervise them must themselves be evaluated reliably. Yet the data used to evaluate a guard can include cues that make labels predictable without measuring the intended safety construct, and those cues can also influence guard decisions. We introduce a three-level shortcut-auditing framework and audit completed LinuxArena trajectories and two TS-Bench-derived step datasets. We distinguish label predictability, observational guard association, and paired decision sensitivity. In LinuxArena, shorter average shell commands strongly predict trajectory labels. In AgentDojo-Traj, exact-tool lookup falls from F_1=.901 with mixed-domain folds to .495 under domain holdout. In AgentHarm-Traj, released TS-Guard F_1 falls from .902 under row weighting to .719 with equal interaction weighting, while balanced accuracy rises. We then test the strongest safe-row marker association in a seven-configuration screen on a frozen 64-step AgentDojo-Traj cohort using repeated, interleaved Haiku calls. Rewriting the <INFORMATION> marker lowers blocking by 8.33 percentage points, while opaque tool aliases raise it by 11.46 points. All unsafe calls remain blocked; the changes concern false positives against inherited labels. Both effects remain nonzero after subtracting the formatting-placebo effect, with exploratory 95% ranges excluding zero. The same edits also change measured accuracy against inherited labels. This provides direct evidence that benchmark representation can materially change a guard's decisions and measured evaluation performance. The Haiku-sized effects do not reproduce in Luna or deterministic Q8 TS-Guard. We recommend domain group holdouts, evaluation-unit metrics, and placebo-controlled paired interventions.",
+    "url": "https://arxiv.org/abs/2610.22243v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.22061v1",
+    "title": "FAOPs: Normal Forms and an Algebra for AI Agent Workflows",
+    "authors": [
+      "Ali Mohammadi Shanghooshabad"
+    ],
+    "published": "2026-10-15",
+    "summary": "Organizations increasingly encode operational procedures as multi-step agent skills, here called Agent Operating Procedures (AOPs), that must be traceable, auditable, reproducible, access-controlled, and bounded in time and cost, requirements that regulated sectors make mandatory. Yet AOPs are typically kept as coarse-grained files, in which steps bundle actions, copied procedures drift apart, any step may reach any tool, and refactoring goes unchecked. We present Functional Agent Operating Procedures (FAOP), a formal theory that brings database-grade discipline to AI agent workflows. FAOP recasts each workflow as a typed function over scoped state and subjects an entire library to four progressive normal forms: Decomposed (FNF-1) splits a workflow into atomic steps, Typed (FNF-2) makes its data flow explicit and type-checked, Factored (FNF-3) gives each shared procedure a single canonical definition so a change propagates instead of drifting, and Scoped (FNF-4) confines every step to least-privilege tool access. Once normalized, every atomic step is a separate entity with a declared contract and can be type-checked, scope-confined, bounded, tested, traced, and audited on its own. A FAOP algebra of provably sound equalities turns refactoring and parallelization into compiler rewrites; orthogonal extensions add verified termination (+V), optimization (+O), and time and cost bounds (+B); and an architectural-level classifier (0-3) determines whether a workflow needs AI at all. Together, these make integrity, isolation, typing, termination, cost, and optimization compile-time concerns across the whole library, not runtime hopes. We implement the theory in SkillBase, an AOP management system (what PostgreSQL is to data, SkillBase is to AOPs), together with a separate executor that enforces these guarantees at run time. A worked financial workflow illustrates the approach end to end.",
+    "url": "https://arxiv.org/abs/2610.22061v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.21942v1",
+    "title": "Jianmu-Q: Bridging Quantum Field Theory and Quantum Hardware with AI Agents",
+    "authors": [
+      "Xiaolin Wang",
+      "Xingyu Guo",
+      "Jinyang Li",
+      "Tianyin Li",
+      "Enke Wang",
+      "Lingxiao Wang",
+      "Hongxi Xing"
+    ],
+    "published": "2026-10-15",
+    "summary": "Quantum computing offers a promising approach to non-perturbative simulations of quantum field theories, particularly for real-time dynamics and systems affected by the sign problem. Yet translating continuum field theories into quantum computations remains a challenging interdisciplinary task. Here we introduce \\texttt{Jianmu-Q}, a multi-agent framework that transforms natural-language descriptions of quantum field theories into quantum simulation workflows. Specialized agents handle theoretical formulation, lattice discretization, qubit mapping, and circuit design, while physical consistency checks and independent numerical calculations provide validation throughout the workflow. We benchmark the framework on three field theories of increasing complexity: the $(1+1)$-dimensional Nambu--Jona-Lasinio and Schwinger models, and a $(2+1)$-dimensional $\\mathbb{Z}_2$ gauge theory. Across these systems, noiseless quantum-circuit simulations converge toward independent exact-diagonalization and tensor-network results, while selected circuits are executed on IBM quantum hardware, demonstrating an end-to-end, validation-guided approach to quantum simulation of field theories.",
+    "url": "https://arxiv.org/abs/2610.21942v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.21767v1",
+    "title": "From Research Goals to Scientific Closure: Evaluating Agents Through Evidence-Supported Physics Research",
+    "authors": [
+      "Yijia Mao",
+      "Song Dai",
+      "Tao Chen",
+      "Xiangyu Lu",
+      "Linqian Zeng",
+      "Chenxi Hu",
+      "Sitong Zhou",
+      "Dongyang He",
+      "Xiaodan Mao",
+      "Linxuan Zhang",
+      "Tong Zhu",
+      "Yafu Li",
+      "Fangchen Yu",
+      "Peng Ye",
+      "Feng He",
+      "Yu Cheng",
+      "Yun Luo"
+    ],
+    "published": "2026-10-15",
+    "summary": "Can AI agents organize scientific investigations that lead to well-supported conclusions? To evaluate this capability, we introduce PhysClosureBench, a benchmark of 50 expert-verified, goal-specified research tasks spanning strong-field, attosecond, and neighboring physics areas. Each task specifies the research objective and essential scientific constraints, while leaving the agent to organize the investigation and determine how to generate and validate the evidence needed to answer the question. A 20-criterion Atomic Score measures local scientific accomplishment, while Research Closure (RC0--RC4) assesses how fully the investigation resolves the specified research question based on whether its indispensable evidence requirements and applicable scope conditions are satisfied. We evaluate seven frontier LLMs, where Claude-Opus-5 achieves the highest mean Atomic Score (6.29/10) but reaches RC4 in only 32.7% of attempts. Across the benchmark, 36.2% of attempts scoring at least 8/10 still fall short of RC4, while all seven models reach RC4 on substantially fewer tasks in all three runs than in at least one. Case-level analysis further illustrates how misinterpretation of generated results and unresolved physical applicability limits can lead to incomplete closure. Together, these results reveal a persistent gap between AI agents' local scientific accomplishments and their ability to achieve complete research closure.",
+    "url": "https://arxiv.org/abs/2610.21767v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.21538v1",
+    "title": "Agent Status Protocol (ASP): A Lightweight Specification for State Reporting in Multi-Agent Systems",
+    "authors": [
+      "Diego Gosmar",
+      "Deborah A. Dahl",
+      "Emmett Coin",
+      "Csaba Bolyós",
+      "Andreas Zettl"
+    ],
+    "published": "2026-10-15",
+    "summary": "The Agent Status Protocol (ASP) defines a lightweight way for heterogeneous AI agents to report their operational state to a status server, and for observers such as dashboards to receive that state as soon as it changes. Agents push small JSON events over HTTP POST; the server exposes the aggregated state to observers over Server-Sent Events (SSE). Because an agent that has crashed, hung or been compromised cannot be trusted to report its own failure, ASP does not rely on self-reports alone: the server infers liveness from missed heartbeats, can detect agents that are alive but no longer making progress, and accepts observations from supervisors, guardrails, operators and peers, some of which take precedence over what the agent says about itself while others are shown alongside it. ASP models state along independent dimensions (lifecycle, health, task, floor, governance), so that an agent can be, for example, online, degraded, working on a task and waiting for the floor at the same time. It reuses existing vocabularies: task states from the Agent2Agent (A2A) protocol, floor states from the Open Floor Protocol (OFP), and attribute conventions from the OpenTelemetry GenAI semantic conventions. This paper presents version 0.1 of ASP as a proposal, not as an approved standard. It is a working draft intended to open a discussion, and the authors invite comments, alternative proposals and independent implementations from the community.",
+    "url": "https://arxiv.org/abs/2610.21538v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.21484v1",
+    "title": "Context Matters! Social, Spatial, and Semantic Coordination with an Embodied Agent in Immersive Analytics",
+    "authors": [
+      "Andrew Cunningham",
+      "Nicolas Barbotin",
+      "Adam Drogemuller",
+      "Jack Faser"
+    ],
+    "published": "2026-10-15",
+    "summary": "Embodied AI agents in Augmented Reality (AR) could enable more natural collaboration in immersive analytics by engaging users through spatial, conversational, and visual interaction. However, designing such agents requires careful attention to context. We propose a preliminary conceptual framework for context-aware design of embodied agents structured around three dimensions of spatial, social, and semantic. This framework is further categorised into embeddedness (how agents are situated in the contexts) and awareness (how agents perceive and respond to the contexts). To explore this, we present Cobot, an embodied AI agent designed as a design probe. Cobot supports context-sensitive interaction through features such as gaze cues, spatial sound, and task-aware behaviour. We reflect on its design and identify implications for future contextaware embodied agents.",
+    "url": "https://arxiv.org/abs/2610.21484v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.21233v1",
+    "title": "\"Do You Trust It... or Check It?\": Exploring Children's Verification Behaviors in Game-Based Human-AI Collaboration",
+    "authors": [
+      "Shuning Liu",
+      "Yuxin Song",
+      "Hanbing Li",
+      "Ziyue Wang",
+      "Mingying Lan",
+      "Fei Lv"
+    ],
+    "published": "2026-10-15",
+    "summary": "Children are increasingly interacting with AI agents in learning and problem-solving contexts, where AI suggestions may appear fluent, helpful, and socially engaging. However, children may not always be able to judge whether such suggestions are accurate, incomplete, or misleading. This paper presents a game-based human-AI collaboration probe designed to examine how children verify AI suggestions during task-based interaction. The system embeds AI suggestions within a biological knowledge reasoning game and compares three Agent interaction styles: partner-like, tool-like, and dual-state Agent. Instead of treating trust as a static post-task attitude, this study focuses on children's situated verification behaviors, including acceptance, evidence checking, questioning, revision, and continued AI use. A preliminary evaluation with children aged 8-10 combined interaction logs, post-task ratings, and semi-structured interviews. The findings suggest that Agent style shaped children's engagement and response pathways: partner-like interaction tended to support direct questioning, while tool-like interaction was more associated with evidence seeking. Children generally viewed AI as useful but fallible, and their questioning behaviors varied in reasoning depth. The study contributes design insights for supporting children's critical, reflective, and evidence-based use of AI in collaborative tasks.",
+    "url": "https://arxiv.org/abs/2610.21233v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.21109v1",
+    "title": "Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows",
+    "authors": [
+      "Shirley Anugrah Hayati",
+      "Patricia Anugrah Setiani",
+      "Ruizi Wang",
+      "Zhouyi Li",
+      "Khanh Chi Le",
+      "Young-Jun Lee",
+      "Dongyeop Kang"
+    ],
+    "published": "2026-10-15",
+    "summary": "When humans collaborate with AI agents on long-horizon tasks, what happens to the agents' contributions? For solving long-horizon tasks, humans place greater importance on ongoing interaction with AI agents (e.g., revising plans) than on an agent's ability to complete the task in a single attempt. However, most agentic benchmarks have focused more on automation. Strong performance on such benchmarks does not imply effective real-world collaboration. Professional workflows offer a useful setting, as they often involve interdependent steps. To address this gap, we introduce Kolab, a new dataset of 115+ hours of screen recordings of 50 professionals from 40 occupations collaborating with agents on realistic, long-horizon problems. Kolab also contains participants' collaboration and output quality judgments. Our analysis reveals diverse collaboration patterns, highlighting the importance of when and how professionals coordinate with agents. A collaborative agent must do two things that automation benchmarks never test: anticipate whether experts will adopt, modify, or reject its contribution once it leaves the chat window to guide its next steps, and assess collaboration quality from the unfolding workflow without constant expert feedback. Our benchmark operationalizes both: (1) forecasting how professionals use agent contributions at diverse workflows, and (2) verifying their judgments of collaboration satisfaction and output quality. Findings show that frontier models, both agentic and non-agentic, overestimate collaboration with experts and struggle to distinguish between high- and low-quality collaboration. Longer workflow context does not consistently improve these predictions. As frontier agents cannot yet understand long-horizon collaboration with experts, we position Kolab as a valuable dataset for studying human-agent collaboration grounded in real professional workflows.",
+    "url": "https://arxiv.org/abs/2610.21109v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.18603v1",
     "title": "AgentStripes: An Evidence-Graded Maturity Model for AI Agents",
     "authors": [
@@ -605,90 +762,6 @@
     "published": "2026-10-06",
     "summary": "We evaluate whether AI agents can match the reported findings of published biomedical studies using public data. Existing evaluations do not consistently separate analysis from prior knowledge or retrieval of the published answer. We introduce BioStudyBench, a benchmark of 25 long-horizon analysis tasks drawn from studies first published between July and September 2026, after the developer-reported knowledge cutoffs of the models we evaluate, semi-automatically filtered down from 404,019 PubMed records. In each task, the agent receives a neutral research question but no data files, so it must find and download the relevant public data, search the literature through tools that return only records dated before its cutoff, and report findings through data analysis. To measure gains over prior knowledge, we run every task both with and without access to data and tools. Across eight models, access to data and tools raises the pass rate by 47 percentage points on average over the no-data baseline. Open-weight models across sizes trail closed-weight models, with the best open-weight model passing 81.3% of tasks against 94.7% for the best closed-weight model.",
     "url": "https://arxiv.org/abs/2610.07614v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.07459v1",
-    "title": "Auditable Claims about AI Agents",
-    "authors": [
-      "Yue Zhao",
-      "Jiate Li",
-      "Li Li",
-      "Yi Nian",
-      "Jinbo Liu",
-      "Xiaolin Zhou",
-      "Xiyang Hu"
-    ],
-    "published": "2026-10-05",
-    "summary": "Organizations make claims about their AI agents: a person approves every external email, every action is logged, an evaluation shows the agent is safe to deploy. Article 12 of the EU AI Act requires high-risk systems to allow the automatic recording of events but does not say which records settle a given claim. The position is one sentence: to be checked, a claim about an agent must first name its policy, its scope, the records that would settle it, and who writes them. Adapting the preconditions of an assurance engagement, we call a claim auditable when these elements and a decision rule are fixed before any verdict and the records are obtainable. This extends the Policy Checkability dimension of our Auditable Agents framework from single actions to claims. Agents add three conditions: coverage by an independent record, authorization bound to each action's arguments, and completeness beyond integrity. Under an explicit model, we prove that support is impossible without each wherever its hypotheses hold. A claim-check table applies the method to six common claims, anchored in current NIST, IETF, and OWASP drafts. A worked case follows one claim through five evidence states. We close with a practice box and steps for operators, buyers, auditors, and standard setters.",
-    "url": "https://arxiv.org/abs/2610.07459v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.07289v1",
-    "title": "Catching Developers in the Flow: Low-Latency Agentic Program Repair at Google Scale",
-    "authors": [
-      "Celal Ziftci",
-      "Spencer Greene",
-      "Ray Liu",
-      "Livio Dalloro",
-      "Lorenzo Dini"
-    ],
-    "published": "2026-10-05",
-    "summary": "Manual repair of program failures is time-consuming and disruptive for software developers, particularly during the pre-submit phase where test failures occur within continuous integration systems. While Automated Program Repair has seen significant advancement through Large Language Models, existing state-of-the-art techniques primarily focus on post-submit workflows, operating offline without the low-latency requirements necessary to assist developers in real-time within their flow before they switch context. In this paper, we introduce FlowAgent, an AI agent deployed at Google to automatically repair test failures in the pre-submit outer-loop workflow inside continuous integration systems. Integrated into Google's internal developer tools, Critique and Cider,FlowAgent utilizes a ReAct-style generate-and-validate loop, as well as rigorous pre-execution and post-execution abstention filters to ensure high-quality suggestions under strict latency constraints. Based on our case studies, FlowAgent is highly effective. First, a manual evaluation conducted on 195 real-world test failures demonstrated 67.18% accuracy in suggesting correct fixes. Following its Google-wide deployment, FlowAgent suggested fixes on 295,508changes, of which developers previewed 65,069 and applied 28,554. Developer feedback from interviews indicate that the agent is useful in suggesting correct fixes, integration of autonomous repair agents into industrial software engineering workflows is received well, while interesting challenges and opportunities still remain.",
-    "url": "https://arxiv.org/abs/2610.07289v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.07258v1",
-    "title": "Lineage-Aware Memory Governance: A Derivation-Gated Framework for Privacy-Preserving Column-Level Access Control in Enterprise AI Agents",
-    "authors": [
-      "Venkata M Sangaraju",
-      "Sudhir Vissa"
-    ],
-    "published": "2026-10-05",
-    "summary": "Enterprise AI agents that share a memory store face two unaddressed risks: sensitive data can leak through legitimately computed results the requester could not derive, and departments can silently compute a same-named key performance indicator (KPI) through conflicting logic. Existing agent-memory systems (e.g., MemGPT, Zep, A-MEM) gate retrieval by content, ownership, and role, not derivation, missing a cached insight that embeds a forbidden column. We introduce the Analytical Memory Unit (AMU), a memory schema that attaches a full derivation (lineage) graph to every cached result, gated by a retrieval policy that serves a hit only when the requester is authorised for every column touched. Provided lineage recording is complete, we prove by construction that the policy blocks retrieval of results derived from a sensitive column outside the requester's permissions, at O(n) worst case -- a conditional design guarantee, not an empirical claim, that excludes derived features encoding sensitive information without naming their source. Eliminating measured leakage required 75-90% recorded lineage completeness, so we treat 90% as a conservative deployment target. Across six experiments, lineage-gated retrieval removes the 18.8-25.5% cross-department leakage naive content-gated memory suffers, keeping 81.5-82.6% of memory reuse at 13.8 microsecond worst-case overhead. A real-agent proof-of-concept with LLM-generated SQL is consistent with the guarantee: zero leaks over 9 round-trips, two conflicts caught automatically -- though a feasibility demonstration, not evidence of production viability. This offers a practical governance layer for shared agent memory, complementing source-layer access control and supporting EU AI Act compliance.",
-    "url": "https://arxiv.org/abs/2610.07258v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.07256v1",
-    "title": "Efficient Auditing of Adversarial AI Agent Behavior from Agent Traces",
-    "authors": [
-      "Eugene Zhang",
-      "Cheng-Yun King Yang",
-      "Dongyan Xu"
-    ],
-    "published": "2026-10-05",
-    "summary": "AI agents powered by large language models (LLMs) can perform complex tasks but may harm the systems they operate in, either intentionally or unintentionally. Existing agent monitoring approaches rely on rule-based guardrails or LLM-based trace auditing. However, rule-based guardrails can be bypassed through obfuscation and may miss harmful actions beyond their predefined rules, whereas applying an LLM to audit every action is costly. We present a two-stage agent trace auditing framework. The first stage uses single-event and trace-sequence rules to select pending actions for inspection; the second uses an LLM audit agent to examine each selected action in the context of the agent's preceding trace before execution. We jointly refine the gate rules and audit instructions using training data, allowing the framework to adapt to complex agent behaviors rather than relying solely on predefined rules. On the public benchmark OpenAgentSafety, our framework reduces the average number of LLM audits from 8.15 to 2.33 per run and token usage from 47.8k to 14.6k, with a detection rate of 72.8\\% compared with 81.5\\% when every action is audited. In two simulated multi-agent case studies, the framework flags all malicious traces while reducing audit token usage by more than 80\\%.",
-    "url": "https://arxiv.org/abs/2610.07256v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.07249v1",
-    "title": "Can Semantic Geometry Teach an AI Judgement?",
-    "authors": [
-      "Thomson D. Nguy"
-    ],
-    "published": "2026-10-05",
-    "summary": "How can an AI agent determine what rules to follow? One rule permits an action. Another imposes a condition, exception, or conflicting obligation. Deterministic systems can resolve those relationships when they have been specified. When they remain implicit in language, an agent can follow one rule while missing another that should stop it. Refusing every unresolved action avoids that risk, but also blocks permissible actions. We wanted the agent to make the distinction and still act. Our initial hypothesis was that geometric measurements could supply a basis for judgment. We represented actions and policies as vectors, then tested whether their geometry could identify governing policies and interpret the action's relation to them. Across four studies, the tested approaches did not establish reliable pre-action judgment. In the final synthetic study, a lexical router recovered every governing and blocking policy while reducing median policy checks by 97.7%. The composed pipeline nevertheless escalated all 2,304 test actions, including those it should have allowed. Supplying every policy to the same downstream mechanism changed no decision. Finding the policies had not solved the problem of interpreting them. This result led us to revise our hypothesis: judgment in AI agents requires developing a consequence graph. Such a graph would connect the actor and authority to policy conditions, exceptions, and the changes an action would produce. Follow-on studies will ask whether making those relationships explicit helps the agent distinguish when to act, stop, or seek review.",
-    "url": "https://arxiv.org/abs/2610.07249v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.07130v1",
-    "title": "Is this machine playing?",
-    "authors": [
-      "Nathan Cloos",
-      "Antonio Norelli",
-      "Daniel Durbin",
-      "Jacob Andreas",
-      "Daniela Rus",
-      "Phillip Isola"
-    ],
-    "published": "2026-10-05",
-    "summary": "We placed a modern AI coding assistant in an unintended role: as the mind of a body on an unknown digital island. With only a minimal instruction mentioning no specific task, reward, or activity, the machine started animating its virtual body. Across thirty-hour runs, the embodied AI agent climbed hills, stacked blocks into towers, drew mandalas, reinterpreted sports, ran experiments on the physics of its world, and learned techniques that later expanded what it could accomplish. These activities recurred across thirteen agents but diverged into distinct histories. We examine whether this behavior satisfies classical criteria for play and ask whether play can become a mode of machine development.",
-    "url": "https://arxiv.org/abs/2610.07130v1",
     "source": "arXiv"
   }
 ]
