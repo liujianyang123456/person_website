@@ -1,5 +1,155 @@
 [
   {
+    "id": "2610.26826v1",
+    "title": "RefCraft: Benchmarking Visual-Reference-Conditioned Agentic Generation through Web Development",
+    "authors": [
+      "Yuchi Wang",
+      "Rongyao Fang",
+      "Weihao Yu",
+      "Xilin Wei",
+      "Tiancheng Gu",
+      "Dingkang Yang",
+      "Hang Zhang",
+      "Dayiheng Liu",
+      "Hongsheng Li",
+      "Shuai Bai"
+    ],
+    "published": "2026-10-19",
+    "summary": "Beyond basic tool use and coding skills, effectively incorporating visual references into agentic generation is equally essential for applying AI agents to real-world productivity tasks. We study this crucial capability through webpage development, a practical and readily evaluable setting in which existing benchmarks remain largely idealized: they typically focus on reconstructing visual targets or generating webpages from textual instructions alone, overlooking the more common workflow of developing from visual examples. Specifically, we introduce RefCraft, a benchmark comprising 300 realistic multimodal webpage-development tasks that combine natural-language instructions with screenshots from one to five reference webpages. Agents must selectively interpret and utilize these references while rendering, visually inspecting, and iteratively refining their outputs. We evaluate the resulting open-ended artifacts using independently verifiable keypoints and complementary programmatic and VLM judges. Across nine frontier (M)LLMs, the strongest system achieves an overall score of only 52.12 out of 100, revealing that visual-reference-conditioned agentic generation remains a substantial challenge for current models in practical webpage-development settings.",
+    "url": "https://arxiv.org/abs/2610.26826v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.26770v1",
+    "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+    "authors": [
+      "Zhuoshi Pan",
+      "ZhiYuan Feng",
+      "Yukuo Cen",
+      "Honglin Lin",
+      "Junru Lu",
+      "Zhongxia Chen",
+      "Shuo Yang",
+      "H. Vicky Zhao",
+      "Jie Tang"
+    ],
+    "published": "2026-10-19",
+    "summary": "Harness development plays a crucial role in building capable AI agents. Recent approaches improve harnesses through recursive self-improvement (RSI), but their performance gains often come with higher execution costs. We introduce HarnessPro, a label-free method for evolving harnesses to improve task performance while reducing execution cost. In this setting, candidate harnesses are evaluated using LLM-generated tests without access to ground-truth solutions or official tests. Specialized agents diagnose execution trajectories, plan updates with different performance-cost priorities, and implement them as candidate harnesses. Rather than returning a single harness, HarnessPro uses normalized weighted squared-distance selection to provide cost-focused (lite), balanced (medium), and performance-focused (heavy) harnesses for different deployment budgets. Selected harnesses enter the next iteration, where execution feedback guides further updates. Our experiments cover Terminal-Bench 2, SWE-Bench Pro, and ProgramBench, using GPT-5.5 with Codex and GLM-5.2 with Claude Code. Across these benchmarks using GPT-5.5 with Codex, the heavy mode of HarnessPro achieves an average pass-rate gain of 2.0 percentage points and an average per-task cost reduction of 26.1% relative to RHO. This advantage also holds when using GLM-5.2 with Claude Code. Code is available at https://github.com/pzs19/HarnessPro",
+    "url": "https://arxiv.org/abs/2610.26770v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.26679v1",
+    "title": "StepBench: Diagnosing Real-World Procedural Understanding in AI Agents",
+    "authors": [
+      "Hossein A. Rahmani",
+      "Bin Wu",
+      "Chaeeun Lee",
+      "Fanghua Ye",
+      "Sahan Bulathwela",
+      "Sujay Kumar Jauhar",
+      "Marzieh Fadaee",
+      "Nick Craswell",
+      "Emine Yilmaz"
+    ],
+    "published": "2026-10-19",
+    "summary": "Evaluating an agent's planning ability remains challenging for open-domain tasks, where verifying procedures through execution is often impractical. Existing evaluations typically assess only the final plan and do not distinguish procedural errors such as missing, incorrect, or misordered actions. We introduce STEPBENCH, a benchmark of 6,885 verified procedures crawled from wikiHow across 81 open-domain categories. From each procedure, we derive 5 diagnostic tasks: four with deterministic answers involving withheld, incorrect, or shuffled steps, and one requiring next-step generation. We additionally evaluate full-plan generation to examine how diagnostic performance correlates with end-to-end plan validity. Using the same procedures across tasks lets us directly compare different planning capabilities. For generation, STEPEVAL identifies critical failures that prevent goal completion. Across 14 configurations of 12 models, we find substantial differences across planning capabilities, with step ordering proving the most difficult: the strongest model correctly orders only 63.0% of procedures, dropping to 33.1% for those with nine or more steps. Incorrect-step detection also predicts judged plan validity across models, suggesting a lower-cost alternative for evaluating generation quality. On STEPBENCH-Val, comprising 214 procedures published in 2026, comprehension scores and rankings remain stable, suggesting limited influence from memorisation.",
+    "url": "https://arxiv.org/abs/2610.26679v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.26664v1",
+    "title": "Honeypots for AI Agent Insider Threats",
+    "authors": [
+      "Jan Wehner",
+      "Jam Kraprayoon"
+    ],
+    "published": "2026-10-19",
+    "summary": "AI agents deployed inside organizations can pose an insider threat if they make mistakes, are compromised by an attacker, or pursue misaligned objectives. We propose honeypots as an AI control method to improve the security of internal agent deployments. Rather than only using honeypots for pre-deployment evaluations, defenders should plant decoy opportunities for harmful actions throughout the production environment to detect misbehavior, incriminate malicious agents, and deter attacks. Such honeypots can elicit misbehavior under real deployment conditions, identify malicious agents even if chain-of-thought monitorability degrades, provide reliable warnings about agent misbehavior to security teams, and scale cheaply to many agent instances. The presence of honeypots also introduces uncertainty about which opportunities are real, thus deterring malicious agents from attacking and reducing the rate of misbehavior. We discuss the limitations of honeypots and give reasons to expect them to remain effective as agent capabilities increase. Finally, we outline key research questions to measure and improve the effectiveness of honeypots: testing the robustness of honeypots, comparing their detection effectiveness with other monitoring methods, understanding their incrimination and deterrence effects, and building supporting infrastructure.",
+    "url": "https://arxiv.org/abs/2610.26664v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.26624v1",
+    "title": "From TCP/IP to MCP: Security and Governance Lessons from Internet Protocols for Agentic AI",
+    "authors": [
+      "Ben Bucknall",
+      "Andrew Byrley",
+      "Lewis Hammond"
+    ],
+    "published": "2026-10-19",
+    "summary": "The past two years have seen considerable interest in protocols for managing how AI agents interact with human users, external tools, and each other. In many ways, these protocols, including the Model Context Protocol (MCP) and Agent2Agent (A2A), mirror the suite of protocols that underlie the modern internet. Motivated by this parallel, this paper draws lessons from the development, history, and governance of internet protocols with the aim of informing the responsible development of AI agent protocols. Based on our analysis, we make two conclusions. First, if AI agent protocols do not sufficiently prioritise security in the early stages of development, they risk accumulating a security deficit that becomes increasingly costly to address over time due to practical and economic challenges. Second, current governance structures for AI agent protocols centralise decision-making power in a small number of individuals and companies, raising important questions regarding legitimacy, especially if they become critical digital infrastructure. We conclude with a discussion and implications for policymakers and developers of AI agent protocols.",
+    "url": "https://arxiv.org/abs/2610.26624v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.26501v1",
+    "title": "Connection Escrow: Holding AI-Agent Pod Egress in the Kernel Until an Isolated Verifier Rules",
+    "authors": [
+      "Ashok Subbabhatta Gopalakrishna"
+    ],
+    "published": "2026-10-19",
+    "summary": "AI agents in containers act by opening network connections, and the text that drives them can be hostile. Controls placed between the agent and its tools are bypassed by a child process or a direct socket, and their approval is not tied to the connection the kernel later opens. We present connection escrow: every outbound TCP connection from a supervised pod is parked inside the kernel's connect() path, before any packet exists, by a 98-instruction eBPF program on the pod's cgroup. A node interceptor attributes the held socket to its kernel socket cookie, process, executable digest, cgroup and pod identity, parks the first bytes the agent writes, and asks a verifier in a separate container with its own key. The connection is released only on a signed verdict naming that one socket cookie and destination, unexpired and unused; no verdict by the deadline resets it, and a late approval is refused. The agent is unmodified. A 36-check adversarial suite with real cgroups passes on the eBPF hold point (33 of the checks also apply, and pass, on an iptables hold point): refused connections never reach the destination; forged, rebound, replayed, expired and late verdicts are refused; the agent's attempt to reach the verifier is itself escrowed; child-process and renamed-binary bypasses fail; UDP is pinned to the resolver. On a Kubernetes cluster, unmodified pods are held per connection and attributed to their SPIFFE identity, a raw socket that bypasses a sidecar proxy is held, and 600 connections from six pods are gated. The hold adds 4.5 ms median per released connection, of which 24 us is policy. Finally, we gate on request content without terminating TLS: an eBPF uprobe reads the plaintext at the agent's TLS-library boundary (shared OpenSSL, static OpenSSL, Go crypto/tls), a model scores it, and the connection is held on that verdict while TLS stays end-to-end and the enforcer holds no key.",
+    "url": "https://arxiv.org/abs/2610.26501v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.25896v1",
+    "title": "When Should AI Chime In? Benchmarking Timely Contribution of Proactive Agents in Multi-Party Chat",
+    "authors": [
+      "Ruotong Wang",
+      "Brian S. Yu",
+      "Xinyi Zhou",
+      "Joseph Chee Chang",
+      "Pao Siangliulue",
+      "Jonathan Bragg",
+      "Liwei Jiang",
+      "Amy X Zhang"
+    ],
+    "published": "2026-10-19",
+    "summary": "Proactive agents can support group collaboration by surfacing useful information without waiting to be asked, but even relevant contributions can be disruptive if poorly timed. In this work, we isolate the timing question: given a fixed candidate contribution such as a clarification or relevant fact, when should an AI agent chime in? We introduce PITCH (Proactive Intervention Timing in CHat), to our knowledge the first benchmark with large-scale human judgments of proactive agent timing collected from participants in the same unscripted multi-party conversations they took part in. To collect high-quality judgments, we design a novel interface in which 2-4 people chat synchronously, author candidate AI contribution messages, place their own and others' contributions into the chat history, and then deliberate as a group about the best placement for each message. PITCH contains 384 candidate contributions and 1,091 judgments, each marking an ideal turn, an acceptable window, or that a contribution should not appear, from 89 participants engaged in 35 conversations. Evaluating 15 models across 28 configurations, we find that while models can place contributions well when given the entire conversation history, they systematically chime in too early when asked to decide live as the conversation unfolds: best-turn accuracy falls from 57.8% to 19.0%, with nearly half of placements occurring before every participant's acceptable window. In comparison, lay humans deciding live are more accurate (23.7% vs 19.0%), and fewer of their placements are premature (39.7% vs 46.4%). Model reasoning traces show that 93% of intervention justifications cite relevance, while almost none consider waiting. By providing a human-grounded benchmark, our work reveals gaps in agents' ability to integrate into group settings and points towards proactive agents that can reason explicitly about appropriate timing.",
+    "url": "https://arxiv.org/abs/2610.25896v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.25879v1",
+    "title": "Cling: Supporting Cross-Page Coordination with Human-Directed, In-Situ, and Small-Step Automation",
+    "authors": [
+      "Zhicheng Huang",
+      "Yining Cao",
+      "Haijun Xia"
+    ],
+    "published": "2026-10-19",
+    "summary": "Web-based information work spans independently developed pages, with goals and coordination needs often emerging through browsing. Manual coordination requires repeated low-level actions, yet explicitly specifying operations for automation can interrupt engagement with information that shapes users' next steps. Our approach constructs reusable, schema-based page representations and identifies coordination actions through correspondences across schemas. We instantiate this approach in Cling, which surfaces coordination opportunities in situ for users to select, configure, and execute incrementally while directing the broader task. A technical evaluation demonstrates accurate identification of useful opportunities across diverse domains. A 12-participant study found that Cling reduced task durations by more than half compared with both manual interaction and an end-to-end AI agent, while requiring 61% fewer clicks and 80% fewer tab switches than manual interaction. Its small-step automation supported control and verification as actions unfolded, while accommodating intent as it emerged and evolved through information encountered on the page.",
+    "url": "https://arxiv.org/abs/2610.25879v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.25560v1",
+    "title": "Voice-Based AI Feedback in Higher Education: A Field Study on Quality and Actionability",
+    "authors": [
+      "Thilo Tamme",
+      "Leander Schilling",
+      "Anton Hantel"
+    ],
+    "published": "2026-10-18",
+    "summary": "Student feedback is a critical input for continuous improvement in higher education, yet traditional end-of-semester written surveys suffer from low response rates, superficial answers, satisficing, and limited actionability. Voice-based conversational AI agents can conduct structured interviews at scale, asking open-ended questions and probing follow-ups, and may capture richer qualitative feedback than written instruments. This research proposal asks what characteristics, depth, and strategic value feedback collected through voice-based conversational AI agents has in higher education, and whether such agents elicit detailed, honest, and actionable feedback that can support instructional improvement and institutional learning. Drawing on survey-mode-effects research, the Computers As Social Actors (CASA) paradigm, and dynamic capabilities theory, we develop three hypotheses on elaboration, social presence and disclosure, and actionability. A completed technical pilot at the Technical University of Munich established the feasibility of telephone-based AI interviews; the main field study is planned for the \"Advanced Leadership Communication\" course at MIT Sloan with approximately 60 students, using a convergent mixed-methods design and a four-dimensional coding framework for actionability (specificity, thematic richness, constructive orientation, contextual depth). The study extends CASA theory to evaluative educational settings, characterizes voice-based AI as a distinct feedback modality, and links micro-level feedback quality to institutional sensing capabilities.",
+    "url": "https://arxiv.org/abs/2610.25560v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.25111v1",
+    "title": "Explore or Confirm? LLM Agents Misallocate Measurements Under Noise",
+    "authors": [
+      "Abdul Karim",
+      "Matt Keon"
+    ],
+    "published": "2026-10-18",
+    "summary": "As model reasoning gets cheaper, the physical experiment becomes the slow and costly step in discovery. Each experiment returns a noisy reading: a high value can mean a good candidate or a lucky draw. With a fixed budget, an AI agent must keep choosing between exploring a new candidate and confirming a promising one by re-testing it. We measure that choice in Wellocate, a simulated assay campaign with known true values. It is built on a generated landscape and on two real protein datasets, GB1 and PhoQ, scrambled so no model can answer from memory. We test five language models as minimal agents, with no tools and no memory beyond the history in each prompt. They misallocate in both directions. Three over-confirm, spending most of the budget re-testing. On the generated landscape one under-confirms, trusting single readings, and there every model ends with a worse final pick than a basic scripted strategy. Each failure has its own cause. The over-confirmers run short of new candidates worth trying: a list of untried candidates cuts their re-testing and, on real protein data, makes two of them pick much better. A running summary of their readings or a description of the landscape changes it by at most five percentage points. For the under-confirmer, re-testing its top candidates in a final round, replayed on its own campaigns, recovers only about a quarter of what it loses by picking the wrong candidate. This suggests confirmation has to run through the whole campaign. We release Wellocate as a benchmark and reinforcement-learning environment with frozen splits and scripted baselines. With it, anyone can measure how an agent splits its budget before trusting it with real experiments, and train agents to split it better. Code, data and the environment are available at https://github.com/Xstendyl/wellocate.",
+    "url": "https://arxiv.org/abs/2610.25111v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.23845v1",
     "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
     "authors": [
@@ -623,169 +773,6 @@
     "published": "2026-10-08",
     "summary": "As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this capability through the fundamental problem of data selection and performance forecasting in machine learning. We ask AI agents to select and rank candidate training subsets that can be used to fine-tune a small LLM model. Agents are allowed to inspect the data, write and execute analysis code, and run model forward passes, but can not train the model or access the actual evaluation tasks. We then fine-tune the base model on each selected subset and evaluate its post-training performance under a standardized protocol. We instantiate the benchmark in terminal problem solving and tool use, selecting trajectories from OpenThoughts-Agent and EnvScaler and evaluating on TBLite and BFCL, respectively. We then evaluate the agents along two complementary dimensions: the post-training performance of the top-ranked subset, reflecting the ability to identify high-value training data, and ranking accuracy, reflecting the ability to predict the relative performance of the selected subsets. In our experiments, selection gains over random selection are limited; agents do not reliably rank their selected groups, and ranking ability does not hold consistently across tasks: Astra identifies the best group in all three tool-use runs but in only one of three terminal runs. Analysis of execution traces on both tasks shows that agents often use similar data signals while interpreting their training value differently.",
     "url": "https://arxiv.org/abs/2610.12190v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.11899v1",
-    "title": "Forms of LLM-Integrated Applications from LLM-Chats to Autonomous AI Agent System",
-    "authors": [
-      "Irene Weber"
-    ],
-    "published": "2026-10-08",
-    "summary": "Large language models (LLMs) are increasingly embedded as components in software systems, marketed under labels such as chatbot, copilot, retrieval-augmented generation, workflow, coding agent and AI agent. Whether these labels denote genuine architectural forms or serve as branding has not been assessed systematically. In the sources surveyed, labels do carry architectural content, most clearly in vendor usage: copilot denotes a router-worker architecture operating a host application under step-by-step user confirmation, while the more recent shift to the label agent coincides with AI-planned multi-step execution of which the user sees only the outcome. The coding agents of four major providers share one architecture, a reason-and-act loop delegating to subagents. This survey describes seven recurring forms---LLM chats, custom agents, retrieval-augmented generation (RAG), AI-enhanced workflows, copilots, coding agents, and, in part, agentic RAG---in a common vocabulary of agents and tools. Each is characterized along four structural dimensions (agentic RAG only partially): the architectural pattern, the control of execution and the point of user intervention, the number of agent calls per task, and tool use. An illustrative corpus of 22 systems from research publications and vendor documentation grounds the descriptions and shows where they reach their limit.",
-    "url": "https://arxiv.org/abs/2610.11899v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.11883v1",
-    "title": "legoESM: a modular, differentiable, multiscale, AI-ready Earth system model built with AI agents",
-    "authors": [
-      "Pierre Gentine",
-      "Dhruv Balwada",
-      "Aytaç Paçal",
-      "Linnia Hawkins",
-      "Alistair Adcroft",
-      "Hang Fan",
-      "Jianing Fang",
-      "Aya Lahlou",
-      "Kara D. Lamb",
-      "David M. Lawrence",
-      "Julien Le Sommer",
-      "Joseph Mouallem",
-      "Juan Nathaniel",
-      "Duncan Watson-Parris",
-      "Veronika Eyring"
-    ],
-    "published": "2026-10-08",
-    "summary": "Earth system models (ESMs) have grown tremendously in realism, yet key uncertainties persist in the climate response to greenhouse-gas forcing, particularly due to cloud radiative feedbacks. In addition, their software architecture was not designed for accelerator hardware or modern artificial intelligence (AI). Here we present legoESM, a composable, differentiable, multiscale ESM written in JAX. It builds on decades of community-developed parameterizations and numerical methods, recast in a unified framework by AI coding agents under a human-specified scientific contract and verified through benchmarking. Dynamical cores, physics schemes, grids, complexity levels and components are swappable like building blocks, and can use conventional physics or machine-learned emulators. A single code base spans metre-scale large-eddy simulation to global simulations and weather to climate. End-to-end differentiability enables gradient-based calibration, variational data assimilation and online training. legoESM modular architecture enables systematic evaluation of diverse model variants to explore structural uncertainty and test hypotheses. legoESM produces realistic simulations across scales, reduces land-surface temperature bias through gradient-based calibration, and scales efficiently on GPUs to kilometer-scale simulations. It offers an open, community infrastructure for hypothesis testing, research and teaching in Earth sciences and a template for multiscale physical systems.",
-    "url": "https://arxiv.org/abs/2610.11883v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.11177v1",
-    "title": "Dynamic Mechanism and Information Design in AI-Agent Environments: A General Analytical Framework",
-    "authors": [
-      "Guoqiang Tian"
-    ],
-    "published": "2026-10-08",
-    "summary": "This paper develops a general framework for dynamic mechanism and information design with AI agents, encompassing optimal contracting and integrating evolving hidden information and hidden action with partial verification, technological authorization, and multi-agent interaction. It nests conventional dynamic screening, hidden-action contracting, and conditional dynamic information design, while allowing reporting, action, and information-use decisions to interact through a common continuation mechanism. We establish a dynamic revelation principle and a recursive characterization of implementability in which truthful reporting and post-report obedience are jointly determined through continuation incentives. In quasilinear optimal-contracting environments, dynamic envelope and integral-monotonicity methods yield a verification-adjusted dynamic virtual-surplus representation and identify three distinct margins: dynamic information rents, verification rents, and the implementation cost of hidden action. These margins generate a branched hierarchy separating conventional dynamic screening, hidden-action contracting, and their joint problem. We also study the joint design of monitoring, information use, and incentives: more informative monitoring capacity expands the designer's opportunity set, but full disclosure need not be optimal, and information use can itself alter hidden-action incentives. With multiple agents, correlated information, peer discipline, coupled incentives, joint feasibility, and continuation opportunities create additional strategic interactions. Although motivated by AI-agent environments, the framework applies more broadly to dynamic agency settings with similar economic features.",
-    "url": "https://arxiv.org/abs/2610.11177v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.10858v1",
-    "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
-    "authors": [
-      "Awani Khodkumbhe",
-      "Yunfei Feng",
-      "Raj Rangarajan",
-      "Kevin Wang",
-      "Kamal Sahota"
-    ],
-    "published": "2026-10-07",
-    "summary": "Analog/RF circuits remain the critical interface between digital computation and the physical world, and emerging standards from Wi-Fi 7 to 6G place stringent demands on them, yet analog/RF design remains one of the most labor-intensive steps in chip development. We present RFChipAgent, a first-of-its-kind multi-agent flow of large language model (LLM) agents for end-to-end analog/RF circuit design automation, in which AI agents collaboratively orchestrate the complete design flow under human supervision. RFChipAgent is built around four technical pillars. First, a multimodal retrieval-augmented generation (RAG) subsystem with private per-document FAISS indexing extracts design knowledge from existing engineering documentation. Second, a topology agent drives topology selection, and a schematic and testbench agent automates circuit and testbench assembly. Third, a closed-loop hybrid circuit-sizing engine combines Tree-structured Parzen Estimator (TPE) and CMA-ES optimization, evaluating every candidate in a simulator-in-the-loop framework. Fourth, a trust-scored simulation database accumulates verified performance data and builds an adaptive optimization model that informs subsequent trials. We validate RFChipAgent on a family of GF22FDSOI 60 GHz wideband mm-wave low-noise amplifier (LNA) topologies, demonstrating automated topology generation, specification-driven design-space exploration, and simulator-guided optimization. Experimental results show substantial reductions in design effort while maintaining signoff-quality verification. This work establishes a foundation for LLM-driven multi-agent electronic design automation (EDA) for analog/RF circuits.",
-    "url": "https://arxiv.org/abs/2610.10858v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.10833v1",
-    "title": "On the Clock: Towards Punctual and Productive Time-Budgeted AI Agents",
-    "authors": [
-      "Aaron Wang",
-      "Neelabh Madan",
-      "Vlad Sobal",
-      "Matthew Trager",
-      "Michael Kleinman",
-      "Elman Mansimov",
-      "Wei Xia",
-      "Stefano Soatto"
-    ],
-    "published": "2026-10-07",
-    "summary": "We study whether small LLM agents can operate effectively under explicit wall-clock time budgets by both respecting the allocated runtime and using available time productively. We evaluate Qwen3.6-27B on five competitions from MLE-Bench Lite and Qwen3-4B on Zork I (Jericho), two agentic benchmarks where additional computational time can meaningfully improve performance. In the simplest setting, where the budget is stated only in the prompt, agents fail to translate the stated budget into controlled use of time. These failures arise from gaps in time awareness, since the harness provides no timing feedback, but also because they cannot reliably anticipate the duration of actions, and do not have a learned mapping from available time to an appropriate strategy. We investigate two complementary classes of interventions: harness-based mechanisms that expose timing information and enforce deadlines, and reinforcement learning with budget-aware rewards. Injecting timing information through the harness substantially improves budget adherence for Qwen3.6-27B without measurable loss in performance, while enforcement hooks tighten adherence further. RL with GRPO achieves near-perfect budget adherence on Zork I and generalizes to held-out budgets not seen during training, but does not improve task performance over the untrained harness on MLE-Bench. Once agents are made to respect the budget, they still fail to use additional time to improve task performance. RL-trained policies learn when to stop but often fill extra time with repeated actions, and GRPO training on multiple budgets tends to collapse toward the strategy learned for the shortest budget. Our results reveal a gap between time adherence and productive time allocation, which remains a central challenge for budget-conditioned agents.",
-    "url": "https://arxiv.org/abs/2610.10833v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.10513v1",
-    "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
-    "authors": [
-      "Yinling Zhang",
-      "Langchen Liu",
-      "Dongbin Xiu",
-      "Xueyan Zou",
-      "Xu Kuang",
-      "Mengdi Wang",
-      "Shilong Liu"
-    ],
-    "published": "2026-10-07",
-    "summary": "Language-model agents are increasingly asked to carry out open-ended scientific research, yet their results are usually graded against a known answer, a rubric, or a language-model reviewer, none of which can tell whether a new scientific model is valid. The AI Science Exam for El Nino-Southern Oscillation (SciExam for ENSO) is a benchmark in which agents build low-order stochastic models of ENSO, the dominant mode of interannual climate variability, from real observations. Within a six-hour budget, agents process the observations, write their own diagnostics, which are then frozen, and develop a model using only these diagnostics as feedback. Hidden graders then test whether the model reproduces ENSO's statistics, recovers unobserved variables, and forecasts held-out years, and score a published model in the same way. Across twelve agent systems, six produce models that score higher than the published model, mainly through better reconstruction and forecasting. The simplified forms of the stronger models are each compatible with one of the two competing explanations of ENSO's warm-cold asymmetry, an open debate that the task never mentions. Controlled runs of the top system under varied information suggest that its scores do not come from recalling the dated observational record and that the information it receives shapes how it builds its model. SciExam for ENSO can thus evaluate agent research where no answer is known, and the results suggest that agents can already build competitive models whose structures bear on questions that scientists still debate.",
-    "url": "https://arxiv.org/abs/2610.10513v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.10091v1",
-    "title": "ExperienceIndex: Artifact-Grounded Memory",
-    "authors": [
-      "Peter Baile Chen",
-      "Geoffrey X. Yu",
-      "Xinming Liu",
-      "Samuel Madden",
-      "Dan Roth",
-      "Jacob Andreas",
-      "Doug Downey",
-      "Michael Cafarella"
-    ],
-    "published": "2026-10-07",
-    "summary": "Knowledge-intensive tasks require answering many questions by reasoning about a shared corpus of artifacts (e.g., court cases, or scientific literature). As humans interact with these corpora, they naturally accumulate experiential knowledge about artifacts, enabling them to quickly identify the complete set of relevant artifacts for each new task. However, existing AI agents lack appropriate memory solutions to build or reuse such artifact-grounded experience, leading to lower answer quality and higher online cost. Existing memory solutions extract and reuse information from prior task-solving traces, but they primarily focus on user preferences, factual attributes, or abstract reasoning patterns rather than persistent artifact-specific knowledge. We introduce ExperienceIndex, a novel experience layer for AI agents that captures and reuses knowledge about artifacts based on prior reasoning traces. ExperienceIndex stores two complementary forms of experience: (i) single-artifact experiences that summarize an artifact's contribution to prior tasks and (ii) artifact-pair experiences that encode structural relationships discovered during past reasoning. Integrated as lightweight middleware, ExperienceIndex uses an experience retrieval mechanism to guide agents toward the complete set of relevant artifacts for new tasks, improving both answer quality and efficiency. Across diverse corpora and agentic solutions with different search frameworks, ExperienceIndex delivers consistent gains, raising answer quality by up to 11.0 points and reducing online dollar cost by up to 50.5%. We further demonstrate two benefits: (i) cross-task generalization, where experiences accumulated from text-to-SQL tasks transfer to factoid QA tasks over the same artifact corpus, and (ii) teacher-student learning, where experiences from a stronger model enable a weaker model to reach comparable performance.",
-    "url": "https://arxiv.org/abs/2610.10091v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.08775v1",
-    "title": "Agent in a Bottle: Can LLM Agents Turn Their Capabilities Into Cheap, Scalable Artifacts?",
-    "authors": [
-      "Ankit Sonthalia",
-      "Haritz Puerto",
-      "Alexander Rubinstein",
-      "Martin Gubri",
-      "Seong Joon Oh"
-    ],
-    "published": "2026-10-06",
-    "summary": "Large language models (LLMs) can solve many narrow tasks, but querying them separately for millions of related instances can be prohibitively expensive. Can LLM agents autonomously create cheaper solutions for such workloads? We call this ability \"bottling\": the ability to turn general capabilities into task-specific solutions that balance answer quality and amortised cost. We introduce BOTTLED, a benchmark in which agents receive an entire unlabelled workload and must complete it under fixed time, compute and LLM API budgets. Agents choose their own approach, such as training a small model or writing a reusable program. Across ten models and three tasks, we find that strong zero-shot task performance does not reliably translate into strong bottling capabilities. Models with similar zero-shot scores can differ substantially after bottling, and 48 of 60 bottling runs score below the lower bound of the 95% confidence interval of their model's zero-shot performance. Moreover, 31 of 60 runs underperform the stronger of two small-model distillation baselines with the same token budget. Nevertheless, bottling can yield substantial savings: on query-product relevance classification, Opus 5 retains about 82% of its zero-shot macro-F1 at roughly 657 times lower reported cost. Bottling is also competitive with Jev, a \"system one\" model built especially for cheap, repetitive inference: Opus 5 on the same task recovers about 94% of Jev's macro-F1 at a quarter of Jev's projected full-workload cost. BOTTLED provides a basis for evaluating and improving agents' ability to invest limited resources in reusable solutions for large, repetitive workloads.",
-    "url": "https://arxiv.org/abs/2610.08775v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.08720v1",
-    "title": "WorldSolver: Can LLM Agents Simulate the Physical Dynamics via Solver Generation?",
-    "authors": [
-      "Siru Jiang",
-      "Yongzhe Lyu",
-      "Shuo Lu",
-      "Yubin Wang",
-      "Yuxiang Zhang",
-      "Yue Liao",
-      "Bin Wang",
-      "Jian Liang",
-      "Tieniu Tan"
-    ],
-    "published": "2026-10-06",
-    "summary": "LLM-based agents are increasingly advancing scientific and engineering problem solving, with physics simulation emerging as a challenging yet practical testbed for reproducing complex physical phenomena with application in embodied AI, games and films. As the workhorse of such simulation, a solver computes how the state of a dynamic system evolves over time. Building such solvers requires physical understanding to identify appropriate models, mathematical reasoning to formulate the underlying dynamics, and software engineering to implement them as executable code, yet this capability of LLM agents remains underexplored. To this end, we introduce WorldSolver, a benchmark of 168 simulation tasks derived from physical phenomena in 61 classic computer graphics papers, spanning 7 physical domains. Each task contains a code scaffold that provides a fixed simulation environment for the scene, with the solver implementation left for the agent to complete. Specifically, we evaluate them along three dimensions: Execution Checks for successful execution, Visual Fidelity for reproducing the intended dynamic behavior in the rendered simulation, and Physical Plausibility for physics-grounded verification of the generated dynamics. Experiments on frontier agents reveal that producing executable solvers is difficult itself, and satisfying visual and physical correctness is even harder. GPT-5.6-Sol and Claude-Opus-5 perform comparatively better than the other evaluated agents, yet achieve overall scores of only 48.7% and 46.7%, respectively. WorldSolver is an early step toward agentic solver generation, and we hope it helps drive progress toward agents that can faithfully simulate the dynamic physical world. Code is available at https://github.com/sirujiang/WorldSolver.",
-    "url": "https://arxiv.org/abs/2610.08720v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.08668v1",
-    "title": "Semantic Behavioral Watermarking: Paraphrase-Robust and Forgery-Resistant Provenance for LLM Agents",
-    "authors": [
-      "Suxin Ji",
-      "Hungtao Wan",
-      "Shaoxuan Chen",
-      "An Zhang"
-    ],
-    "published": "2026-10-06",
-    "summary": "Behavioral watermarking embeds an owner identifier in an LLM agent's high-level action choices, giving provenance without touching output tokens. Prior agent watermarks break in two ways. First, all three prior schemes bind the watermark to the exact action symbol, so renaming a tool desynchronizes decoding even when the observation is untouched; in AgentMark's own robustness test, paraphrasing the observation alone drops bit-recovery to 16.8%. Second, every prior agent watermark studies only removal: none asks whether an adversary can forge a trajectory that verifies as someone else's, a question answered affirmatively for text watermarks (Jovanović et al., 2024). We present Semantic Behavioral Watermarking (SBW): watermarking over semantic action clusters under history conditioning, with the public-cluster bin replaced by keyed collision-resistant binning whose fresh-bucket assignment is provably unpredictable in the random-oracle model. Across five agent models (3B-14B, four vendors) and three encoders the ordering holds on both benchmarks: on ToolBench (600 trajectories per model) detection under rewriting is 0.49-0.66 for cluster-level versus 0.05-0.17 for exact-symbol at a permutation-calibrated 1% FPR, at 72-83% choice agreement against 22-27% for logit biasing; on ALFWorld (100 episodes per model) it is 0.92-0.97 versus 0.00-0.01. Keyed binning takes adaptive forgery from 100% to the false-positive floor at the primary operating point (bge, r=64). We also mark the boundary that guarantee does not cover: when the adversary copies the victim's own steps, shuffled splicing is neutralized (0.000 on Qwen2.5-3B) but chained replay remains at 0.76-0.98 across the five models, reported as open. Paraphrase robustness costs about half of the per-step watermark capacity. Code is available at https://anonymous.4open.science/r/SBW-Agent-Watermark.",
-    "url": "https://arxiv.org/abs/2610.08668v1",
     "source": "arXiv"
   }
 ]
