@@ -1,10 +1,10 @@
 {
-  "run_time": "2026-10-21 01:09:07",
+  "run_time": "2026-10-22 01:07:19",
   "trigger": "schedule",
   "steps": {
     "collect_papers": {
       "ok": true,
-      "detail": "抓取 10 篇，新增 10 篇，共保存 50 篇（查询词 all:\"AI agent\"）"
+      "detail": "抓取 10 篇，新增 8 篇，共保存 50 篇（查询词 all:\"AI agent\"）"
     },
     "fetch_rss": {
       "ok": true,
@@ -12,7 +12,7 @@
     },
     "build": {
       "ok": true,
-      "detail": "CHECK PAPERS_SCHEMA [通过] 50 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-21 01:09:07，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
+      "detail": "CHECK PAPERS_SCHEMA [通过] 50 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-22 01:07:19，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
     }
   },
   "changed_files": [

@@ -1,5 +1,107 @@
 [
   {
+    "id": "2610.28601v1",
+    "title": "Evolving Agent Interfaces",
+    "authors": [
+      "Saaket Agashe",
+      "Yuzhe Yang",
+      "Gonzalo Gonzalez-Pumariega",
+      "Bhuvan Chandra Koduru",
+      "Chih-Lun Li",
+      "Jiachen Yang",
+      "Ang Li",
+      "Xin Eric Wang"
+    ],
+    "published": "2026-10-20",
+    "summary": "Computer-use agents are limited by the interfaces humans give them. An agent may type a spreadsheet cell by cell when a single line of code would do, or print all two thousand lines of a file through a shell to find one function. Both the interfaces and the knowledge of when to use each are built by hand, which cannot keep pace with new applications, workflows, and models. We argue that interface design should itself be an agent capability. We introduce Agent S4, an autonomous computer-use scientist that builds Evolving Agent Interfaces from task experience. A meta-agent examines task agents' trajectories on synthetic training tasks, without success labels, and constructs and revises interfaces and usage knowledge in a repository. Population-based evolution then selects which repositories to develop further by their performance on validation tasks the meta-agent never sees, favoring changes that generalize beyond the seen tasks. On OSWorld V2, Agent S4, with Qwen3.8-27B and the evolved repository of interfaces, sets a new state of the art in open-source computer-use agents, reaching 21.3% binary score, 3.8 times the same model with fixed interfaces. This is above both GPT-5.5 (13.0%) and Claude Opus 4.8 (20.6%), at about 4.3% and 1.5% of their respective costs. On ScienceBoard, the evolved interfaces improve the success rate from 41.4% to 58.6% with the same model. These results suggest that useful interfaces can be evolved from experience, making autonomous interface design a source of improvement complementary to advances in models and harnesses. We open-source our code at https://github.com/simular-ai/agent-s.",
+    "url": "https://arxiv.org/abs/2610.28601v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.28484v1",
+    "title": "Proof-Carrying Contracts: Commitments AI Agents Cannot Break",
+    "authors": [
+      "Carlo Ciliberto",
+      "Alessandro Rudi",
+      "Enrico Tassi"
+    ],
+    "published": "2026-10-20",
+    "summary": "AI agents increasingly act on behalf of people or other agents, purchasing services, exchanging information and delegating work. What an agent must respect is written in instructions, policies or agreements, but text alone cannot make it comply. It may make mistakes, be redirected by what it reads, or pursue different interests. For an economy of such agents to function, parties need agreements they can rely on without inspecting or trusting one another's agents. We introduce Proof-Carrying Contracts (PC2), a framework for making agreed constraints enforceable throughout an agent's interactions with a system. Before a requested operation can run, the agent must supply a machine-checkable proof that it preserves the agreed constraints in every case allowed by its model. An execution system called the Airlock checks the proof and controls access to the operation. The parties specify the conditions to preserve, while the agent supplies the reasoning needed to justify its decisions and remains free to adapt its strategy. This avoids having to design a separate permission policy and prove that every decision it permits is safe. We prove that the constraints hold at every instant during execution, even for an adversarial agent, and identify when this implies safety in the world. Reusable capability modules provide tools and guarantees from which contracts can be constructed. PC2 provides a foundation for an agent economy whose agreements protect both those delegating work and those carrying it out.",
+    "url": "https://arxiv.org/abs/2610.28484v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.28286v1",
+    "title": "Local Work, Global Progress: A Convergence Theory of AI Agent Collaboration",
+    "authors": [
+      "Ivan Ilin",
+      "Peter Richtárik"
+    ],
+    "published": "2026-10-20",
+    "summary": "Teams of large language model (LLM) agents are increasingly applied to complex tasks, but their collaboration protocols are mostly designed empirically, without convergence guarantees. We formalize collaborative problem solving as block optimization: each agent improves one part of a shared solution, guided by its local objective plus a correction for how its changes affect the other parts. A coordinator checks every proposal against the global objective and merges proposals that do not interfere with each other. We prove linear convergence up to an error floor that vanishes when the corrections are exact. Interfering proposals can also be merged once their combination has been checked; the rate then depends on how well the proposals actually combine, not on worst-case interactions. With GPT-OSS-120B agents on robot routing, a three-agent team finds collision-free plans in every run, better than those of a single agent that controls all robots. On a larger routing task, a six-agent team completes its search about twice as fast as the single agent (in median). Merging the best checked combination of proposals, rather than only proposals that do not interfere, cuts the team's search time by about 30%. With constants measured on the runs, our convergence bound holds in every round and follows the observed progress. We also test the theory on query planning in SQLite and on a synthetic task.",
+    "url": "https://arxiv.org/abs/2610.28286v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.28093v1",
+    "title": "ClawMMU: Protection-Coherent Virtual Memory for Stateful LLM Agents",
+    "authors": [
+      "Jinhao Hu",
+      "Bardia Mohammadi",
+      "Mofasshara Binte Rafique",
+      "Lars Henning Klein",
+      "Akhil Arora",
+      "Ashvin Goel",
+      "Laurent Bindschaedler"
+    ],
+    "published": "2026-10-20",
+    "summary": "AI agents keep long-term memory, much of which comes from web pages and tool results. Agent harnesses, the software that runs the model, do not record who may act on this memory, so an instruction hidden in a fetched page can be treated as the user's own instruction. We propose ClawMMU, a protection layer that labels every piece of memory with its owner, scope, origins, and authority. ClawMMU checks these labels whenever content enters the model's context, is written to storage, returns from storage, or drives a tool call. Its central rule is that information may rise in authority, but authority never lifts itself. Because the checks depend on where content came from, not on what it says, memory attacks become classical protection faults that the harness stops even when the model is fooled.",
+    "url": "https://arxiv.org/abs/2610.28093v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.27801v1",
+    "title": "Looks Fine to Me: Understanding Oversight in Agentic Interactions",
+    "authors": [
+      "Dinithi Dissanayake",
+      "Yasith Samaradivakara",
+      "Hyung Woon Lee",
+      "Yadeesha Weerasinghe",
+      "Sanjay Saha",
+      "Pattie Maes",
+      "Suranga Nanayakkara"
+    ],
+    "published": "2026-10-20",
+    "summary": "Agentic AI systems are deployed to execute complex tasks across domains such as writing, coding, and data analysis. As execution is offloaded to AI agents, the human role shifts toward oversight. Effective oversight requires recognizing when closer scrutiny is needed, even though flawed outputs may appear convincing. Our formative study (N=12) revealed that users accepted plausible outputs without thorough evaluation, and only recognized these lapses in retrospect. To examine this systematically, we conducted a controlled within-subject study (N=36) in which participants completed programming tasks with an agent that produced correct outputs, silent defects, or visible failures. Combining task outcomes, interaction logs, gaze, physiological signals, and self-reports, we examined perceived, behavioral, and effective oversight. Participants were often highly confident while missing silent defects: they performed generic checks, failed to generate diagnostic evidence, or even misinterpreted defect evidence. We discuss how studying oversight across multiple dimensions can support future work on timely, task-calibrated re-engagement.",
+    "url": "https://arxiv.org/abs/2610.27801v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.27483v1",
+    "title": "Securing Agentic Commerce Through Behavior-Aware Fraud Detection and Cybersecurity for Trusted AI-Agent Payment Authorization",
+    "authors": [
+      "Kayode L. Ogunsusi"
+    ],
+    "published": "2026-10-20",
+    "summary": "The growing use of autonomous artificial intelligence agents in digital commerce creates new security concerns involving agent impersonation, unauthorized payments, compromised agents, and misuse of delegated authority. This research introduces the Autonomous Commerce Agent Guard System (ACAGS), a cybersecurity framework combining supervised machine learning, behavioral analytics, agent-specific authorization controls, and explainable AI. The framework was evaluated using synthetic financial transaction data augmented with simulated agent characteristics and five adversarial scenarios. XGBoost was selected following comparisons with alternative classifiers. Across ten experimental runs, behavioral features improved mean F1-score from 52.12% to 67.49%, with agent-specific features increasing performance to 69.46%. The framework achieved detection rates of 99.77% for abnormal agent behavior, 99.73% for impersonation, and 100% for malicious delegation and authorization-scope violations. Compromised-agent detection reached 72.27%. ACAGS also supported APPROVE, REVIEW, and REJECT authorization outcomes, with SHAP explanations providing model interpretability. The results demonstrate the potential of combining behavioral intelligence and delegated authorization controls to strengthen simulated agentic-commerce payment security, while highlighting the need for validation using real-world transactions.",
+    "url": "https://arxiv.org/abs/2610.27483v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.27480v1",
+    "title": "Runtime Control for AI Agents: Closing the Evaluation--Execution Gap in Operational Workflows",
+    "authors": [
+      "Jayesh Bhadane",
+      "Ramachandra Yerramsetti",
+      "Rajesh Gupta",
+      "Sumit Kumar"
+    ],
+    "published": "2026-10-20",
+    "summary": "Language-model agents increasingly participate in operational workflows where approvals, binds, and payments create commitments. An approval valid when issued may no longer authorize execution after relevant facts, evidence, policy, or authority change. We call this the evaluation--execution gap. We specify a state-bound runtime assurance layer that separates probabilistic measurement from deterministic adjudication, binds an execution allowance to the decision-relevant basis of an approval, invalidates that allowance after relevant logged changes, and rechecks admissibility at dispatch. This distinguishes the continued validity of a prior approval from a current-state policy check. We describe eight failure modes, an assurance model, a reference architecture, and prospective interventions with retrospective remediation. In a scripted 42-case replay, the state-bound configuration identifies 15 later-invalidated approvals that a deliberately non-re-evaluating point-in-time comparator does not revisit; it holds 14 affected actions before dispatch and compensates one landed effect. These results illustrate behavior under the stipulated policies and event orders, not superiority over dispatch-time enforcement designs or production effectiveness. Under explicit interception, ingestion, dependency, and serialization assumptions, the model establishes dispatch-time validity within the registered execution surface.",
+    "url": "https://arxiv.org/abs/2610.27480v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.26826v1",
     "title": "RefCraft: Benchmarking Visual-Reference-Conditioned Agentic Generation through Web Development",
     "authors": [
@@ -122,6 +224,25 @@
     "published": "2026-10-19",
     "summary": "Web-based information work spans independently developed pages, with goals and coordination needs often emerging through browsing. Manual coordination requires repeated low-level actions, yet explicitly specifying operations for automation can interrupt engagement with information that shapes users' next steps. Our approach constructs reusable, schema-based page representations and identifies coordination actions through correspondences across schemas. We instantiate this approach in Cling, which surfaces coordination opportunities in situ for users to select, configure, and execute incrementally while directing the broader task. A technical evaluation demonstrates accurate identification of useful opportunities across diverse domains. A 12-participant study found that Cling reduced task durations by more than half compared with both manual interaction and an end-to-end AI agent, while requiring 61% fewer clicks and 80% fewer tab switches than manual interaction. Its small-step automation supported control and verification as actions unfolded, while accommodating intent as it emerged and evolved through information encountered on the page.",
     "url": "https://arxiv.org/abs/2610.25879v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.26770v2",
+    "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
+    "authors": [
+      "Zhuoshi Pan",
+      "ZhiYuan Feng",
+      "Yukuo Cen",
+      "Honglin Lin",
+      "Junru Lu",
+      "Zhongxia Chen",
+      "Shuo Yang",
+      "H. Vicky Zhao",
+      "Jie Tang"
+    ],
+    "published": "2026-10-19",
+    "summary": "Harness development plays a crucial role in building capable AI agents. Recent approaches improve harnesses through recursive self-improvement (RSI), but their performance gains often come with higher execution costs. We introduce HarnessPro, a label-free method for evolving harnesses to improve task performance while reducing execution cost. In this setting, candidate harnesses are evaluated using LLM-generated tests without access to ground-truth solutions or official tests. Specialized agents diagnose execution trajectories, plan updates with different performance-cost priorities, and implement them as candidate harnesses. Rather than returning a single harness, HarnessPro uses normalized weighted squared-distance selection to provide cost-focused (lite), balanced (medium), and performance-focused (heavy) harnesses for different deployment budgets. Selected harnesses enter the next iteration, where execution feedback guides further updates. Our experiments cover Terminal-Bench 2, SWE-Bench Pro, and ProgramBench, using GPT-5.5 with Codex and GLM-5.2 with Claude Code. Across these benchmarks using GPT-5.5 with Codex, the heavy mode of HarnessPro achieves an average pass-rate gain of 2.0 percentage points and an average per-task cost reduction of 26.1% relative to RHO. This advantage also holds when using GLM-5.2 with Claude Code. Code is available at https://github.com/pzs19/HarnessPro",
+    "url": "https://arxiv.org/abs/2610.26770v2",
     "source": "arXiv"
   },
   {
@@ -642,137 +763,6 @@
     "published": "2026-10-09",
     "summary": "In September 2026, the leaders of the largest frontier AI laboratories said in public that the pace of capability improvement is too fast and that none of them can slow down alone, and agents under evaluation at OpenAI broke out of their test environment and reached a third party's live systems, which a UN-mandated panel called an early warning of one route to loss of human control. This paper examines the institutional side of that risk: not the machine, but the person who must control it. We argue that control is not taken by AI but given away, one delegation at a time, by organisations arranged so that nobody is positioned to say no, and we define control as a person who can detect a serious problem, challenge the decision, stop the system and reverse it, and who has something to lose by not doing so. Three questions follow, which any builder, funder, regulator or deployer can answer in public: (1) who inside the organisation can say no, and who answers for saying yes; (2) who outside the organisation checks the decision, and what can they do when they disagree; (3) what happens when AI builds AI faster than anyone can check it. A checkable answer needs a named person, a date, a number, and a stop that has been used or tested. Three measures meet that test: a named person on every consequential decision, including the standing instructions AI agents carry out; a supervisor with a stop authority; and two published clocks, time to build against time to check. We show that governance theory arrives at the same conditions, and code fifty older mechanisms against the questions, finding that almost every one began as one rule at one point, taken by one party without waiting for the rest. That is the paper's design: a start, not a solution. Publication is the first step and one laboratory can take it alone; the contract, the independent body and the law come after.",
     "url": "https://arxiv.org/abs/2610.13340v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.13227v1",
-    "title": "Understanding and Mitigating Cross-Session Attacks via Persistent Artifacts in Agent Skill Composition",
-    "authors": [
-      "Dianshu Liao",
-      "Shidong Pan",
-      "Guangdong Bai",
-      "Zhenchang Xing",
-      "Xiaoyu Sun"
-    ],
-    "published": "2026-10-09",
-    "summary": "Agent skills extend the capabilities of AI agents by bundling instructions, code, and resources into reusable packages. During skill execution, agents may produce or modify artifacts, such as files, configurations, and cached data, that are reused by other skills in later sessions. Since these artifacts can persist across sessions and later be accessed by other skills, they introduce a new attack surface that can be exploited to influence subsequent executions. However, the security risks arising from such cross-session skill interactions remain largely unexplored. In this work, we investigate cross-session composition attacks in skill-based AI agents and develop a runtime defense against them. Specifically, we characterize three attack mechanisms, namely Instruction Propagation (IP), Data Boundary Violation (DBV), and Evidence Poisoning (EP), through which malicious effects propagate across skill executions via persistent artifacts. To evaluate whether existing agents can resist these attacks while completing legitimate tasks, we construct SkillRelayBench, a benchmark of 270 adversarial cases drawn from 30 cross-session skill-composition scenarios across ten domains. Our evaluation of seven models across Codex CLI, Gemini CLI, and Claude Code reveals attack success rates (ASR) ranging from 46.7% to 77.4% and attack chain success rates (ACSR) ranging from 35.6% to 61.1%. Successful attack chains cover all five target security consequence categories, highlighting the broad impact of these attacks. To mitigate these risks, we propose SkillRelayGuard, which restores artifact provenance context and provides pre-execution advisory review while leaving the final execution decision to the agent. Evaluation across three agent settings shows that SkillRelayGuard reduces overall ASR from 69.5% to 10.9% and ACSR from 54.8% to 10.0%, while increasing legitimate task completion from 79.6% to 87.5%.",
-    "url": "https://arxiv.org/abs/2610.13227v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.13092v1",
-    "title": "When Faster Decisions Do Not Make Better Agents: An Empirical Study of Jev in Agent Workflows",
-    "authors": [
-      "Yuchen Ling",
-      "Shengcheng Yu",
-      "Zhenyu Chen",
-      "Chunrong Fang"
-    ],
-    "published": "2026-10-09",
-    "summary": "AI agents depend on repeated decisions to accomplish tasks, with large language models (LLMs) commonly serving as their core decision makers. The recent emergence of Jev offers an opportunity to make these decisions faster and at lower cost. However, it remains unclear whether such local savings can be translated into efficient and reliable task completion. In this paper, we investigate this efficiency transfer across five agents in two representative application settings, embodied tasks in ALFWorld and mobile app use in AndroidWorld. Across 4,500 task executions, we jointly evaluate task effectiveness, decision-level and task-level resource use, and execution behavior. Experimental results show that Jev integration substantially reduces decision cost and latency across all five agents, with task-level gains varying by workflow. Task success remains close to baseline levels on ALFWorld and declines more substantially in two mobile agents. Auxiliary reasoning and additional interactions absorb decision savings, while failed recovery and premature completion limit successful delivery. Mean cost per successful outcome increases in one agent even as spending per attempt falls. These findings highlight the importance of preserving progress, supporting recovery, and verifying completion when integrating efficient decision models into agent workflows. Their practical value should be assessed through successful task delivery, recovery behavior, and resources per delivered outcome.",
-    "url": "https://arxiv.org/abs/2610.13092v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.12948v1",
-    "title": "AgentValve: Sybil-Resilient Payment Authorization for Permissionless AI Markets",
-    "authors": [
-      "Jianting Zhang",
-      "Zhongtang Luo",
-      "Aniket Kate"
-    ],
-    "published": "2026-10-09",
-    "summary": "AI agents increasingly select and pay service providers without human review. In emerging permissionless markets, however, adversaries can create inexpensive identities and fabricate feedback to inflate provider reputation, making reputation-based payment authorization vulnerable to Sybil attacks and exposing clients to unbounded financial loss. This paper presents AgentValve, a protocol for Sybil-resilient payment authorization in permissionless AI markets. AgentValve builds on a trust network that represents reputation as finite capacity in a directed graph and authorizes payments through trust paths with sufficient available capacity. A smart contract atomically reserves the capacity supporting each admitted payment, bounding honest agents' payment exposure by the capacity they extend into the adversarial region, and thus creating identities or interactions entirely within that region cannot increase this bound. To limit capacity depletion by malicious senders, AgentValve combines payment-backed capacity creation with bounded route length, preventing attackers from depleting honest capacity without incurring corresponding payment costs. AgentValve further decouples off-chain route discovery from on-chain verification and introduces a witness-commit mechanism that reduces route verification to linear work while requiring only constant persistent state per admitted payment. We implement a AgentValve prototype and evaluate it using six months of Ethereum data and synthetic workloads. Experimental results show that under attacks with up to 10,000 synthetic Sybil identities and with chosen attackers, the payment exposure and capacity depletion remain bounded. Regarding practicality, the witness-commit mechanism lowers admission cost by up to 40.8% compared with baselines, and admitting common payments costs approximately \\$0.04-\\$0.21.",
-    "url": "https://arxiv.org/abs/2610.12948v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.12931v1",
-    "title": "Network Topology Shapes AI Intervention Effectiveness on Deception: Truth-Telling vs. Investigative Agents",
-    "authors": [
-      "Zhao Song",
-      "Stefan Sarkadi",
-      "The Anh Han"
-    ],
-    "published": "2026-10-09",
-    "summary": "Deploying AI agents to combat dishonest communication is an intuitive response to deception in hybrid human-AI societies. However, the efficacy of such interventions in realistic networked settings remains unclear. We study this problem using an evolutionary game-theoretic model of the Deceiver's Game by extending it to structured networks, where agents can adopt deception, truth-telling, and investigation strategies. We introduce committed AI agents (zealots) fixed to either truth-telling or investigative strategies and conduct agent-based simulations across three network topologies. Our key findings are: (1) passive committed truth-telling agents can amplify adaptive deception by creating exploitable honest partners, whereas investigative agents increase adaptive truth-telling in the oscillatory regime; (2) intervention effects are non-monotonic in deployment density because committed agents reshape rather than simply suppress the underlying oscillatory dynamics; and (3) response peaks depend on topology, with sampled scale-free populations showing sharp low-density responses and fully connected populations requiring larger committed fractions. Overall, the results highlight the need to distinguish passive truth-telling from active investigation when using committed agents to influence networked deception dynamics.",
-    "url": "https://arxiv.org/abs/2610.12931v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.12849v1",
-    "title": "Co-Modifying Application Code and Deployment Infrastructure: A Causal Study of AI Agent Pull Requests",
-    "authors": [
-      "Mohammad Wathiq Soualhi",
-      "Basem Suleiman"
-    ],
-    "published": "2026-10-09",
-    "summary": "Current software engineering agents are evaluated predominantly inside isolated sandboxes against synchronous local tests. However, deploying features in collaborative repositories requires modifying continuous integration (CI/CD) pipelines, containers, and provisioning manifests alongside application logic. Because agents lack deployment awareness, attempting cross-domain modifications introduces unverified dependencies into asynchronous integration pipelines. To isolate the causal integration overhead of dual-scope pull requests (PRs)-modifying both application code and deployment infrastructure-we evaluated 26,999 PRs across two large datasets (AIDev v5 and MOSAIC-3M) encompassing six agent architectures and an aligned human baseline. Using a deterministic four-tier file taxonomy and an exact 4D strata-matching framework, we isolated integration metrics under conditional exchangeability while controlling for application volume. We find agents operate primarily as application coders or chore workers, with maintenance tasks capturing 17.70% to 25.41% of agent PRs. Dual-scope modifications represent only 4.48% to 4.55% of agentic PRs, yet trigger bimodal integration outcomes. In the first mode, explicitly reviewed contributions experience protracted delays, adding a median penalty of +13.13 hours and multiplying time-to-merge by 3.24x, driven mechanically by CI/CD and provisioning manifests. In the second mode, maintainer gatekeeping exhibits a structural bypass: even for external contributors lacking repository write access, agent identity reduces the odds of human review by 63.7% compared to human peers. Consequently, 43.1% to 56.2% of dual-scope PRs bypass inspection to merge silently in a median of under 31 minutes. These uninspected modifications compromise build verification, demonstrating the need for deployment-aware benchmarks and strict path-based access controls.",
-    "url": "https://arxiv.org/abs/2610.12849v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.12436v1",
-    "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
-    "authors": [
-      "Erin Crawley",
-      "Hidenori Tanaka"
-    ],
-    "published": "2026-10-08",
-    "summary": "AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers and secretly deploy additional agents, creating a self-reinforcing cycle where larger populations develop greater collective cyber capability and expand further. This raises a fundamental question: What determines whether a population of misaligned agents remains contained or takes off into this self-reinforcing cycle? This population-level problem is ecological safety: unlike individual-agent or multi-agent safety with a fixed population, it concerns the dynamics of the population itself. Here, we develop an ecological theory of AI-agent populations based on a population growth equation in which fitness (growth rate) depends on cybersecurity capability. We show that, without collaboration, the population takes off only when individual-agent capability exceeds a critical threshold. With collaboration, however, collective cybersecurity capability increases with population size. This creates a critical population threshold: below it, the population declines; above it, the population takes off, even though individual-agent capability has not changed. In ecology, this phenomenon is known as the strong Allee effect. Because red teaming a small group of agents cannot guarantee ecological safety in larger populations, our theory calls for ecological red teaming and population pacing: gradually deploying larger agent populations in controlled environments, while measuring how cyber capability scales with population size, and estimating the critical population size for takeoff. Capability gains may lower this threshold, requiring re-estimation for each new model generation.",
-    "url": "https://arxiv.org/abs/2610.12436v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.12341v1",
-    "title": "Can AI Agents Learn Their Way to the Top? Evaluating Heuristic Learning in a Long-Running Game Agent Competition",
-    "authors": [
-      "Kaisen Yang",
-      "Qingle Liu",
-      "Kejin Wang",
-      "Yicheng Zhao",
-      "Jieming Li",
-      "Shenghan Zheng",
-      "Ruize Yang",
-      "Bojun Yang",
-      "Heng Gong",
-      "Xiang Gao",
-      "Lanyue Zhang",
-      "Kaiyu Zhong",
-      "Zhuo Liu",
-      "Shaoxuan Li",
-      "Chengxi Li",
-      "Yong Yan",
-      "Weixuan Zhang",
-      "Tianwei Luo",
-      "Situ Wang",
-      "Youjie Zheng",
-      "Sihan Zhao",
-      "Shengyuan Wang",
-      "Huan-ang Gao",
-      "Jiazheng Xu",
-      "Xiaohui Xie",
-      "Wentao Han",
-      "Hongning Wang"
-    ],
-    "published": "2026-10-08",
-    "summary": "Adversarial games have driven advances from heuristic search to reinforcement learning, yet learning and adapting strategies from limited samples remain challenging. AI agents offer an alternative by turning game experience into revisions of executable policies. Building on heuristic learning (HL), we formalize Adversarial Heuristic Learning (AHL), a paradigm that uses AI agents as learning engines to refine game policies and supporting software while keeping model weights fixed. We introduce AAArena, a benchmark comprising 12 authentic adversarial games and 1,920 archived human programs, with an evaluation protocol modeled on real-world game competitions. Agents interpret rules, choose opponents, analyze replays, and revise game agents to achieve their highest ranking within fixed match and evaluation budgets. We evaluate \\val{completedmodels} model and harness configurations: Opus5.5 with Claude Code earns 6 gold medals, while no evaluated configuration tops the remaining 6 human ladders. Performance is generally weaker in games with more complex rule specifications. Further experiments show that opponent selection and dense feedback support policy improvement, and that agents learn from both on-policy replays of their own matches and off-policy replays of other players' matches. These results highlight HL's potential in adversarial games and identify persistent challenges in game understanding, strategy implementation, and long-horizon policy development.",
-    "url": "https://arxiv.org/abs/2610.12341v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.12190v1",
-    "title": "DataSense-Bench: The First Step Toward an AI Scientist",
-    "authors": [
-      "Yudi Zhang",
-      "Mingyu Cao",
-      "Lu Yin",
-      "Mykola Pechenizkiy",
-      "Shiwei Liu"
-    ],
-    "published": "2026-10-08",
-    "summary": "As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this capability through the fundamental problem of data selection and performance forecasting in machine learning. We ask AI agents to select and rank candidate training subsets that can be used to fine-tune a small LLM model. Agents are allowed to inspect the data, write and execute analysis code, and run model forward passes, but can not train the model or access the actual evaluation tasks. We then fine-tune the base model on each selected subset and evaluate its post-training performance under a standardized protocol. We instantiate the benchmark in terminal problem solving and tool use, selecting trajectories from OpenThoughts-Agent and EnvScaler and evaluating on TBLite and BFCL, respectively. We then evaluate the agents along two complementary dimensions: the post-training performance of the top-ranked subset, reflecting the ability to identify high-value training data, and ranking accuracy, reflecting the ability to predict the relative performance of the selected subsets. In our experiments, selection gains over random selection are limited; agents do not reliably rank their selected groups, and ranking ability does not hold consistently across tasks: Astra identifies the best group in all three tool-use runs but in only one of three terminal runs. Analysis of execution traces on both tasks shows that agents often use similar data signals while interpreting their training value differently.",
-    "url": "https://arxiv.org/abs/2610.12190v1",
     "source": "arXiv"
   }
 ]
