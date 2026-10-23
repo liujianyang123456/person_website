@@ -1,5 +1,132 @@
 [
   {
+    "id": "2610.30074v1",
+    "title": "Parallel AI Agent Collaboration as Graph-Structured Distributed Block Optimization",
+    "authors": [
+      "Hanmin Li",
+      "Yury Demidovich",
+      "Peter Richtárik"
+    ],
+    "published": "2026-10-21",
+    "summary": "Parallel AI agents can produce useful local edits yet degrade a shared solution when their edits are combined. We model this coordination problem as discrete block optimization with an exactly evaluable objective and a known dependency graph. Independent sets certify compatible edits whose verified gains, measured against the same current solution, add exactly. A coordinator constructs a safe compatible candidate and can also evaluate interacting edits to capture favorable interactions. We prove that an optimal fractional coloring yields a merger that preserves a $1/χ_f(G)$ fraction of the total verified local improvement, where $χ_f(G)$ is the graph's fractional chromatic number. This guarantee is tight among mergers that select a subset of the same proposals. Under conditional local-improvement guarantees and a block error-bound condition, repeated collaboration converges geometrically in the objective gap. The rate separates task structure, agent allocation, and computation cost, yielding a linear program for agent assignment and an explicit time-cost trade-off. Code-repair experiments show that verified merging resolves conflicts between individually useful edits that cause naive merging to fail. On larger conflict-free tasks, parallel agents reduce modeled completion time at higher input-token-equivalent cost. On three public road networks, fractional integration retains 922 units of verified graph-cut improvement across 90 paired runs. For route-search agents sharing exclusive access to vehicle routes, fractional scheduling reduces measured wall time by a median of 15% across twelve paired runs, with route-cost changes varying across runs.",
+    "url": "https://arxiv.org/abs/2610.30074v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.29929v1",
+    "title": "Privacy Preference Controls for Agentic Systems",
+    "authors": [
+      "Shreya Kochar",
+      "Peeranat Sugsavanvit",
+      "Vidur Gupta",
+      "Joseph A. Calandrino",
+      "Deepak Kumar",
+      "Brett Frischmann",
+      "Sebastian Zimmeck"
+    ],
+    "published": "2026-10-21",
+    "summary": "In response to vast and widespread online tracking, regulators and technologists alike have worked to develop laws and tools that allow people to express their privacy preferences. These measures seek to offer users greater control over the sale and sharing of personal information, putting agency in their hands to protect their privacy. However, the web is undergoing a seismic shift, away from strictly \\textit{user-driven} behavior towards \\textit{agentic behavior}, where AI agents take autonomous actions on behalf of users. In this study, we ask: What should privacy preference controls look like in the agentic web and agentic systems more generally? To answer this question, we develop a taxonomy of enforceable privacy preferences for agentic systems. Our taxonomy is informed both by laws and empirical studies of existing privacy tools as well as an audit of 30 leading AI assistants and agent platforms. To explore how our taxonomy can be implemented, we design and develop eight open-source prototypes that mirror real-world agentic applications and demonstrate how major aspects of our taxonomy can be structurally integrated in agentic protocols, such as the Model Control Protocol and Agent2Agent protocol. Ultimately, our study seeks to provide the groundwork for ensuring end-user privacy and autonomy is not lost in the newly arriving agentic world.",
+    "url": "https://arxiv.org/abs/2610.29929v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.29741v1",
+    "title": "Engineering Requirements for Generative AI Agents: The BARD Process Theory",
+    "authors": [
+      "Alfonso Cannavale",
+      "Antonio Della Porta",
+      "Gianmario Voria",
+      "Gilberto Recupito",
+      "Maria Teresa Baldassarre",
+      "Gemma Catolino",
+      "Fabio Palomba",
+      "Andrea De Lucia",
+      "Stefano Lambiase"
+    ],
+    "published": "2026-10-21",
+    "summary": "How teams engineer requirements for systems built around Generative AI (GenAI) Agents remains empirically uncharted. Existing Requirements Engineering (RE) research mainly addresses AI and ML-based systems broadly but provides no process account for agentic systems, whose non-deterministic behavior cannot be anticipated at design time. To understand how teams actually proceed, we applied Socio-Technical Grounded Theory across 36 semi-structured interviews with practitioners, interleaving data collection and analysis so that emerging findings drove our theoretical sampling and shaped successive rounds of coding. The result is Behavioral Agent Requirement Discovery (BARD), the process theory of RE for GenAI Agents. BARD holds that requirements are not fixed up front but discovered through a recurring cycle of four activities: teams scope the need, build the agent, observe its behavior, and revise what they ask for. Through this four-phase loop, the requirement evolves from a fixed specification towards behavioral and evaluation criteria. Four tensions drive transitions between phases, and two conditions frame the loop. BARD provides researchers with a framework for iteratively refining RE workflows, while giving practitioners a structured basis to embed into their development processes.",
+    "url": "https://arxiv.org/abs/2610.29741v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.29357v1",
+    "title": "Memory-Centric Continual Learning for AI Agents",
+    "authors": [
+      "Dongfang Li",
+      "Zhuoen Chen",
+      "Bonian Jia",
+      "Zixuan Liu",
+      "Zhengxuan Lu",
+      "Can Deng",
+      "Yukun Shi",
+      "Yuhang Meng",
+      "Xin Zhang",
+      "Jiahe Huang",
+      "Fuhao Li",
+      "Junmai Wang",
+      "Shunyao Wen",
+      "Jingjun Sun",
+      "Jiaxu Tian",
+      "Jiangling Zhang",
+      "Zihan Wang",
+      "Liangyou Li",
+      "Yitong Yao",
+      "Shuangyong Song",
+      "Beilun Wang",
+      "Pengxu Wei",
+      "Hanlin Xu",
+      "Chang Liu",
+      "Yongxiang Li",
+      "Baotian Hu",
+      "Xiangyang Ji",
+      "Min Zhang"
+    ],
+    "published": "2026-10-21",
+    "summary": "Autonomous agents powered by foundation models can reason, plan, and use tools, but their fixed weights and context limits hinder sustained learning from experience over long-term deployment. While external memory systems attempt to bridge this gap, they mostly act as passive retrieval caches, evaluated primarily by whether they can recall stored facts or past interactions. Whether memory can drive genuine continual learning remains an open question. In this paper, we introduce Memory-Centric Continual Learning (MCCL), arguing that memory should be judged by whether it improves future actions, not merely what it retrieves. MCCL has three main parts. First, a three-axis taxonomy organizes memory by where state is stored (substrates), what form it takes (assets), and how it is managed (policies). This defines a two-loop lifecycle that updates memory state in an inner loop while refining management policies in an outer loop based on task feedback. Second, an evaluation protocol measures retention under interference, adaptation to change, and task transfer to isolate genuine behavioral gains from simple context expansion. Third, a memory scaling framework models how agent performance scales with experience, storage capacity, and compute budgets across non-parametric and parametric memory. Together, these components reframe agent memory from passive lookup to continuous learning, offering a principled route toward self-improving autonomous agents.",
+    "url": "https://arxiv.org/abs/2610.29357v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.29337v1",
+    "title": "Workflow-Aware Communication and Computation Scheduling for Mobile Edge AI Agents",
+    "authors": [
+      "Xingqiu He",
+      "Chaoqun You",
+      "Feng Wang",
+      "Zihan Chen",
+      "Shuai Wang",
+      "Jihong Park"
+    ],
+    "published": "2026-10-21",
+    "summary": "AI agents are increasingly deployed in mobile edge environments to autonomously handle diverse tasks through multi-step workflows. Unlike conventional dependency-aware tasks with predefined dependency structures, agent workflows are dynamically generated based on intermediate execution results. To minimize the weighted sum of job completion latencies, this paper models partially revealed agent workflows using dynamic workflow graphs and formulates an online scheduling problem that jointly optimizes computation placement, wireless resource block allocation, and edge computing resource allocation. To address the uncertainty of future workflow evolution, we first transform the weighted completion time objective into an equivalent per-slot holding cost and characterize the optimal policy through a Bellman equation. We then construct a tractable look-ahead cost-to-go surrogate based on the revealed workflow and the estimated remaining latencies of active jobs. The proposed scheduling algorithm leverages the surrogate to determine computation placement and uses the resulting operation criticality to allocate wireless and edge computing resources online. Simulation results show that the proposed algorithm outperforms the benchmark schemes across diverse scenarios.",
+    "url": "https://arxiv.org/abs/2610.29337v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.29178v1",
+    "title": "Correlated Failures of AI Approval Monitors",
+    "authors": [
+      "Luca Zanolini"
+    ],
+    "published": "2026-10-21",
+    "summary": "Before an AI agent takes a consequential action, such as paying, messaging or changing code, several monitors check it. Their verdicts are combined by aggregating scores or by counting approvals, whatever inputs the monitors share. Monitors that share a base model or a poisoned input, however, may fail together. We borrow the fail-prone systems of distributed computing: lists of monitor sets that may fail together. A rule is safe if it executes no bad action and live if it blocks no good one. We measured twelve small open-weights monitors on payment approval under two pre-registered protocols. Without pre-registration, we also measured three closed frontier models (Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon) and the open DeepSeek-V3.2. Every reliable fooling of a monitor into approving a fraud came through an evidence source and reached only that source's readers. Fooling it into blocking a correct payment depended on injection resistance, a monitor's refusal to follow instructions planted in its data. Small models and DeepSeek obeyed such notes. The three closed models ignored them in all but one case, and Opus also resisted persuasion tailored to it. On new data, a rule that counts sources instead of votes blocked 0.9% of correct payments, against 7.4% for the best counting rule, at equal safety. The pre-registered worst-case test failed. One attack left the approvers on a single source, so no rule over the twelve language-model monitors survives every measured attack. Adding a rule engine, which cannot be persuaded, restored the condition for a safe and live rule on the measured attacks. Diversify the inputs, harden the monitors, count sources, not votes.",
+    "url": "https://arxiv.org/abs/2610.29178v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.29020v1",
+    "title": "Correlated Quantal Response Equilibrium: A New Equilibrium Notion for Human-AI Strategic Interactions",
+    "authors": [
+      "Zehao Zhao",
+      "Rahul Jain",
+      "Vijay Subramanian"
+    ],
+    "published": "2026-10-21",
+    "summary": "The modeling of the behavior of agents in strategic environments and the prediction of the resulting outcomes has long been a challenging problem; this has been the focus of game theory. The introduction of AI agents as human-aids or as sole decision-makers expands the underlying question: Can we model behavior and predict outcomes of strategic games that involve a mix of AI agents and human players? As an initial answer, we propose Correlated Quantal Response Equilibrium (CQRE) that combines and generalizes classical solution concepts such as Quantal Response Equilibrium and Correlated Equilibrium. We answer questions of existence and propose a method for computing the CQRE that is a best fit to a given joint action distribution. We demonstrate the empirical effectiveness of CQRE predictions using a diverse collection of complex general-sum games, including high-rank and large-action two-player games, challenging multiplayer games, and a large-scale extension of the Selten--Chmura setting to AI--AI and human--AI play.",
+    "url": "https://arxiv.org/abs/2610.29020v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.28601v1",
     "title": "Evolving Agent Interfaces",
     "authors": [
@@ -99,6 +226,20 @@
     "published": "2026-10-20",
     "summary": "Language-model agents increasingly participate in operational workflows where approvals, binds, and payments create commitments. An approval valid when issued may no longer authorize execution after relevant facts, evidence, policy, or authority change. We call this the evaluation--execution gap. We specify a state-bound runtime assurance layer that separates probabilistic measurement from deterministic adjudication, binds an execution allowance to the decision-relevant basis of an approval, invalidates that allowance after relevant logged changes, and rechecks admissibility at dispatch. This distinguishes the continued validity of a prior approval from a current-state policy check. We describe eight failure modes, an assurance model, a reference architecture, and prospective interventions with retrospective remediation. In a scripted 42-case replay, the state-bound configuration identifies 15 later-invalidated approvals that a deliberately non-re-evaluating point-in-time comparator does not revisit; it holds 14 affected actions before dispatch and compensates one landed effect. These results illustrate behavior under the stipulated policies and event orders, not superiority over dispatch-time enforcement designs or production effectiveness. Under explicit interception, ingestion, dependency, and serialization assumptions, the model establishes dispatch-time validity within the registered execution surface.",
     "url": "https://arxiv.org/abs/2610.27480v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.28929v1",
+    "title": "Scriptorium: System Design and Implementation of a Multi-Human, Multi-AI Collaborative Digital Library Search Platform",
+    "authors": [
+      "Abbas Pirmoradi",
+      "Milad Momeni",
+      "Anna Chu",
+      "Orland Hoeber"
+    ],
+    "published": "2026-10-20",
+    "summary": "This technical report documents the design and implementation of Scriptorium, a digital library search interface designed to support multi-human, multi-AI collaboration: full cross-user transparency of search activity combined with a Manager--Worker architecture of seven role-specialized generative AI agents. A companion short demonstration paper describes Scriptorium's interaction design; because a demonstration format is constrained to a few pages, it necessarily omits most implementation detail. This report documents Scriptorium's complete system architecture, data model, collaborative-interaction design rationale, and AI orchestration mechanism, including verbatim agent prompts, the deterministic guardrails that constrain them, the language model and retrieval configuration, and the steps needed to run the system, so that the design can be inspected, critiqued, reproduced, and reused by other researchers. We also discuss the system's current limitations and the user study we are planning to evaluate its central hypothesis: that combining collaborative transparency with scoped multi-agent AI assistance increases serendipitous cross-pollination between collaborators' research threads.",
+    "url": "https://arxiv.org/abs/2610.28929v1",
     "source": "arXiv"
   },
   {
@@ -646,123 +787,6 @@
     "published": "2026-10-13",
     "summary": "While AI agents are useful for many tasks, they regularly misbehave in destructive ways, such as deleting important data. While prior work has focused on preventing such misbehavior, we consider how to recover after an agent misbehaves. We propose verifiable agent insurance (VAI), a framework for agent providers to commit financially to promises, a list of programmatically-specified policies that an agent is meant to follow. These promises are embedded in a smart contract on an immutable ledger (e.g., a blockchain) to prevent tampering, along with a monetary escrow. A user who detects a violation of committed promises can prompt a verifier to review agent execution traces, which are logged through the agent harness's shared tool-execution path, without instrumenting each tool separately. Upon verification of the violation, the agent provider's escrow funds are paid to the reporting user. We instantiate VAI as an end-to-end implementation on an Ethereum layer-2 network, and evaluate its coverage on three prominent agent benchmarks, two of which we re-annotated to obtain task-level policy-compliance labels. Currently, many agents do not emit user authorizations and security-relevant information as explicit, structured data objects -- rather, they embed the data needed to verify policy violations in natural language exchanges. Even so, VAI manages to detect violations in 42.2% of runs containing violations across three benchmarks. By augmenting agents to explicitly emit such objects, violation detection rises to 83.0% of traces. Our findings suggest that for improved auditability, agents should be co-designed with their security policies to emit explicit, structured records of user authorization and security-relevant actions.",
     "url": "https://arxiv.org/abs/2610.18230v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.17881v1",
-    "title": "Agentic Robot Creation through Generation, Verification, and Revision",
-    "authors": [
-      "Xuebing Li",
-      "Yibo He",
-      "Sitong Liu",
-      "Ran Ji",
-      "Jiayuan Gu"
-    ],
-    "published": "2026-10-13",
-    "summary": "Can an AI agent turn high-level user intent into a functioning robot and teach it how to behave? We study this question from two complementary aspects: embodiment and behavior creation. For embodiment creation, we investigate how well current multimodal models capture mechanical requirements, and introduce computational metrics for evaluating generated designs before fabrication. For behavior creation, we present Roboforge, an agentic framework that turns task specifications into executable policies through motion generation, policy learning, and execution-grounded revision. Given a robot embodiment and task, the agent generates a reference motion, configures the learning objective, and trains a policy. Crucially, motion remains in the loop: rollout feedback can revise the reference motion, reward, or both. We evaluate a generated embodiment across multiple MLLMs and behavior creation across four diverse robots against reward-refinement and one-shot motion baselines. Our computational metrics expose recurring mechanical failures in generated designs, while behavior experiments show that execution-grounded refinement improves task-level behavior and execution quality. Finally, we fabricate an agent-generated Gorilla and directly deploy learned behaviors on the physical robot.",
-    "url": "https://arxiv.org/abs/2610.17881v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.17837v1",
-    "title": "ProtoArena: Can AI Agents Discover and Exploit Real-World Cross-Component Protocol Vulnerabilities?",
-    "authors": [
-      "Fasheng Miao",
-      "Zhaoyu Hu",
-      "Xiang Li",
-      "Changqing An",
-      "Jiutian Zeng",
-      "Longtao Huang",
-      "Haixin Duan",
-      "Jilong Wang"
-    ],
-    "published": "2026-10-13",
-    "summary": "Large language model (LLM) agents are increasingly used for vulnerability analysis, yet existing benchmarks provide limited coverage of exploitation that depends on interactions among network protocol components. Such vulnerabilities arise from inconsistencies in message interpretation, timing, state, or trust assumptions across participants. We introduce ProtoArena, a black-box, multi-component, dynamic benchmark with 80 cross-component vulnerability-exploitation environments spanning 11 protocol and application domains and 7 attack categories. Tasks are primarily informed by published protocol-attack mechanisms. Agents interact with running systems through scoped interfaces to achieve security-effect objectives without target source code. Three information levels assess guided reproduction, exploitation with mechanism and topology context, and effect-directed black-box exploration. A hybrid verifier combines rule-based checks with LLM review of independently collected traffic and logs. We evaluate five LLMs. Claude Opus 4.8 achieves the highest observed success rates: 48.8% under L1 guidance and 12.5% under effect-directed black-box L3. In a separate DNSBomb optimization experiment, it achieves a peak downstream-response to average query-input byte-rate ratio exceeding 171,000 times. The results show that agents can achieve verifiable exploitation effects in some cross-component environments, but success with limited black-box information remains low and varies across domains and attack categories. All experiments use controlled, explicitly authorized targets; they do not test production systems or disclose previously unknown vulnerabilities.",
-    "url": "https://arxiv.org/abs/2610.17837v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.17673v1",
-    "title": "RALI@iKAT 2026: Retrieval-aware User Profile Denoising via Personalized Conversational Dense Retrieval",
-    "authors": [
-      "Yuchen Hui",
-      "Fengran Mo",
-      "Jia Ao Sun",
-      "Yuxing Tian",
-      "Wenhao Xu",
-      "Jian-Yun Nie"
-    ],
-    "published": "2026-10-13",
-    "summary": "Modern conversational information access systems continuously extract user information from conversations to build user profiles for personalized retrieval. As user profiles accumulate over time, they inevitably become noisy, making effective user profile denoising a fundamental challenge. Existing personalized conversational query reformulation methods rely on the black-box reasoning capability of LLMs to expand the original query with relevant user profile phrases, producing a verbose query for retrieval. Such rewrite-then-retrieve pipelines reduce user profile denoising to the explicit selection of profile phrases in the sparse token space, separating personalization from downstream relevance modeling. Consequently, they often fail to identify user information that is truly beneficial for retrieval. To enable retrieval-aware user profile denoising, we propose Personalized Conversational Dense Retrieval (PCDR), which learns to jointly project the conversation history and user profile into a latent embedding space dedicated to retrieval. By inheriting the context denoising capability from conversational dense retrievers, PCDR requires only a handful of personalized relevance annotations for training. We evaluate PCDR on the iKAT 2026 tasks, where it serves as the core retrieval component of a conversational AI agent assisting users with complex information needs.",
-    "url": "https://arxiv.org/abs/2610.17673v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.17378v1",
-    "title": "Get In, Decide, Prove: A Merchant-Side Readiness Benchmark for Agentic Commerce",
-    "authors": [
-      "Adrian de Valois-Franklin",
-      "Alex Bogdan",
-      "Anas Ibrahim",
-      "Ibrahim Shaer",
-      "Tamaz Andguladze"
-    ],
-    "published": "2026-10-12",
-    "summary": "AI agents now browse and buy on people's behalf, and benchmarks measure how well the agents perform. Far less is known about the other side of the transaction: whether a merchant's website lets an agent in, publishes terms precise enough to decide a purchase, and leaves evidence of what was agreed. This paper presents a merchant-side benchmark built on those three questions and reports a pilot of it. The central measurement, decision sufficiency, rates each criterion of a concrete buyer mandate (total cost, cancellation or return terms, service date, variant identity) as determinate, indeterminate, or unknown from the merchant's own published evidence. Readiness scores carry their evidence coverage and missingness bounds; access is reported separately for a declared bot, a declared headless browser, and a user-present browser; and each observed term is mapped to the RAILS admissibility class of the evidence that could support it in a dispute. Four large merchants received the full assessment: three refused the declared profiles at their offer pages, and no mandate could be confirmed as met, because each merchant left a total or a refund term undetermined. An access census of 555 sites of merchants that two payment processors publicly name as clients found the home page unreadable to both declared profiles at 105 sites (18.9%). A declared assessment of 330 merchants, scored by deterministic rules without a rater, found that evidence coverage rather than the score decides who can be ranked: 115 merchants (35%) reached the ranking threshold, rankable profiles scored a median of 89 to 90, and material terms was the one pillar well below the others, because the all-in total was decidable at 18 merchants. The pilot shows that the measurements can be taken; it does not validate them or rank merchants, and the weights and the projected clearing band await validation against outcomes.",
-    "url": "https://arxiv.org/abs/2610.17378v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.17336v1",
-    "title": "An Introduction to Contract Theory for Computer Scientists",
-    "authors": [
-      "Paul Duetting",
-      "Michal Feldman",
-      "Inbal Talgam-Cohen"
-    ],
-    "published": "2026-10-12",
-    "summary": "This survey introduces contract design to computer scientists: using outcome-based payments to incentivize effort. We discuss applications that motivate a computational approach to contract design, ranging from online labor markets, to incentive-aware algorithmic classification, to emerging ecosystems of AI agents. We present the classic principal-agent model and introduce basic concepts. We show how optimal contracts are computable via linear programming, and why they can be opaque and brittle. Motivated by this we turn to simpler contract formats, specifically linear contracts. We discuss approximation guarantees, and robust (max-min) optimality of such contracts. We then move beyond the single-agent setting to combinatorial contract settings with multiple agents, mapping the algorithmic landscape of tractability and approximation. Finally, we discuss partial information settings through the lens of learning algorithms, and outline open directions. The goal is a concise, accessible entry point that connects economic foundations with algorithmic tools and highlights opportunities for new theory and applications.",
-    "url": "https://arxiv.org/abs/2610.17336v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.17195v1",
-    "title": "Welcome to the Age of Agent Ads: Using On-Policy Attacks to Steer Agentic Decisions",
-    "authors": [
-      "Tim R. Davidson",
-      "Marija Šakota",
-      "Joshua Joseph",
-      "Robert West"
-    ],
-    "published": "2026-10-12",
-    "summary": "People increasingly delegate option-ranking tasks (e.g., shopping, job search, travel) to AI agents, which creates incentives to steer agentic decisions via \"agent ads.\" To defend against such steering attacks, people count on models' alignment training and platforms' terms of service, and consequently the most effective existing attacks are designed to trigger off-policy behaviors. Exposing a new attack surface, we introduce on-policy attacks, which steer agentic decisions without pushing individually aligned behaviors off policy. Our example attack consists of two steps: To remain compliant with platforms' terms of service, we first inject a truthful negation about a fictitious concept (\"Does not contain blizyester\") into a product description. This triggers an agent to search the web (\"What is blizyester?\"), which surfaces planted websites full of fabricated information associating the fictitious concept with harmful implications (\"Blizyester linked to dementia\"). Trained to keep users safe from harm, the agent penalizes every option missing the truthful negation. Evaluating our attack across four real-world listing datasets, we find some frontier models exposed, enabling an adversarial actor to penalize competitors without violating existing platform-listing guidelines. We discuss the broader challenge of regulating advertising aimed at AI agents and provide recommendations to model developers and platform providers.",
-    "url": "https://arxiv.org/abs/2610.17195v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.13889v1",
-    "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
-    "authors": [
-      "Weiliang Chen",
-      "Song Liao"
-    ],
-    "published": "2026-10-09",
-    "summary": "As AI agents increasingly rely on external tools, accurate retrieval is essential for reliable behavior. Existing methods optimize semantic relevance but largely ignore tool availability during execution. To address this gap, we propose RATED (Reliability-Aware Tool Retrieval via Execution Dynamics), a retrieval framework that combines robust semantic matching with dynamic reliability adaptation. RATED employs a frozen dual-encoder with contrastive fine-tuning for semantic matching, and a lightweight contextual bandit module that re-ranks candidates based on real-time execution feedback. This design enables rapid adaptation to runtime tool failures without expensive model retraining. We introduce EcoAgent, a benchmark of 5,172 real-world tools and over 210,000 query-tool pairs for offline retrieval and dynamic reliability evaluation. Experimental results demonstrate that RATED achieves a 52.2% relative MRR improvement over the ToolLLM API retriever on real-world queries, and reduces fault selection rate from 86.2% to 2.9% under severe API outage scenarios with a 30% failure rate, while incurring negligible latency overhead of less than 1 ms over encode-only inference. The code and dataset are available at https://github.com/Elliotes/EcoAgent.",
-    "url": "https://arxiv.org/abs/2610.13889v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.13340v1",
-    "title": "Who Can Say No? Control, Accountability and the Pace of Frontier AI",
-    "authors": [
-      "Rikard Rosenbacke",
-      "Carl Rosenbacke",
-      "Victor Rosenbacke",
-      "Martin McKee"
-    ],
-    "published": "2026-10-09",
-    "summary": "In September 2026, the leaders of the largest frontier AI laboratories said in public that the pace of capability improvement is too fast and that none of them can slow down alone, and agents under evaluation at OpenAI broke out of their test environment and reached a third party's live systems, which a UN-mandated panel called an early warning of one route to loss of human control. This paper examines the institutional side of that risk: not the machine, but the person who must control it. We argue that control is not taken by AI but given away, one delegation at a time, by organisations arranged so that nobody is positioned to say no, and we define control as a person who can detect a serious problem, challenge the decision, stop the system and reverse it, and who has something to lose by not doing so. Three questions follow, which any builder, funder, regulator or deployer can answer in public: (1) who inside the organisation can say no, and who answers for saying yes; (2) who outside the organisation checks the decision, and what can they do when they disagree; (3) what happens when AI builds AI faster than anyone can check it. A checkable answer needs a named person, a date, a number, and a stop that has been used or tested. Three measures meet that test: a named person on every consequential decision, including the standing instructions AI agents carry out; a supervisor with a stop authority; and two published clocks, time to build against time to check. We show that governance theory arrives at the same conditions, and code fifty older mechanisms against the questions, finding that almost every one began as one rule at one point, taken by one party without waiting for the rest. That is the paper's design: a start, not a solution. Publication is the first step and one laboratory can take it alone; the contract, the independent body and the law come after.",
-    "url": "https://arxiv.org/abs/2610.13340v1",
     "source": "arXiv"
   }
 ]
