@@ -1,5 +1,152 @@
 [
   {
+    "id": "2610.31355v1",
+    "title": "Muffin - A Shared Memory Buffer for Asynchronous AI Agents",
+    "authors": [
+      "Ping-Lin Kuo",
+      "Suman Navaratnarajah",
+      "Christian Frey",
+      "Gresa Shala",
+      "Josif Grabocka"
+    ],
+    "published": "2026-10-22",
+    "summary": "The rise of Agentic AI systems has changed the landscape of artificial intelligence by enabling strong reasoning capabilities through specialized multi-agent interaction with structured self-reflection. However, in target-driven reasoning tasks, single- and multi-agent systems are often on par in terms of performance gains. A major challenge is that failures often arise from an ineffective exchange of critical information during inter-agent interaction and coordination. Different from existing multi-agent debate paradigms that rely on synchronous turn-taking and sharing information across different agents, we propose an inter-agent protocol based on shared Memory bUFFer INference - referred to as MUFFIN - in an asynchronous agentic framework. In the first step, an orchestrator routes queries based on their reasoning demands and delegates demanding ones to a multi-agent setting, where a shared memory buffer provides asynchronous exchange of intermediate findings while an agent's private reasoning remains local. Our experiments show that our framework Muffin outperforms established competitors, achieving the best accuracy in 17 out of 20 of our benchmark settings, and provides a better quality-cost trade-off than multi-agent debate: Muffin improves accuracy by 19.2 accuracy points while using 77.4% fewer tokens, without requiring full-trace sharing.",
+    "url": "https://arxiv.org/abs/2610.31355v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.31352v1",
+    "title": "Automating quantum circuit optimization with AI agents",
+    "authors": [
+      "Marcos Crichigno",
+      "Steve Flammia"
+    ],
+    "published": "2026-10-22",
+    "summary": "Compiling quantum algorithms for real devices involves hard optimization problems that can decide whether an algorithm runs at scale. We present a general method for solving such problems with AI agents, with every result certified. It builds on autoresearch loops, in which agents iteratively improve programs against a fixed evaluator and which have recently improved quantum cryptanalysis circuits, and adds two elements: a frozen, exact verifier certifies every result, and this verifier, together with the challenge around it, is built by an agent that formulates the problem with a researcher and validates the verifier against a solved case, deliberately broken solutions and published results before any solution exists. The method applies to any optimization problem whose solutions can be verified exactly and efficiently. We apply it to three compilation problems in quantum simulation, namely fermion-to-qubit encoding, Hamiltonian layout and unitary synthesis. In each, the agents improved substantially on published or standard constructions, reducing the cost being optimized by up to 73% at the largest sizes tested and outperforming a state-of-the-art optimizer for fermion-to-qubit encodings. Every submission is a program accompanied by its agent's notes, so the ideas behind each improvement are recorded in human-readable form; later agents built on them, and we describe them here. These results open the way to automated, certified discovery across quantum circuit design and beyond.",
+    "url": "https://arxiv.org/abs/2610.31352v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.31113v1",
+    "title": "Can AI Co-Design Structures? An AI Agent for Early-Stage Structural Design",
+    "authors": [
+      "Ricardo Maia Avelino",
+      "Mennatallah El-Assady",
+      "Tom Van Mele",
+      "Philippe Block"
+    ],
+    "published": "2026-10-22",
+    "summary": "Recent advances in large language models and agentic workflows offer a new paradigm to early-stage structural design translating design intent into structural models. Although text-to-3D approaches have demonstrated that natural language can be used to produce visual, mesh-based geometric models, structural design requires domain-specific geometric arrangements and semantically rich data types. This paper introduces a proof-of-concept workflow for prompt-to-structure generation using an AI agent connected to a COMPAS-based structural modelling API through a Model Context Protocol (MCP) server. Through controlled modelling operations, the agent creates and modifies a graph-based structural data model composed of explicit building elements. The resulting artifacts can be inspected, modified, serialised, and further connected to downstream AEC workflows. The approach is demonstrated through selected prompt-to-structure examples and by progressive and editable design sequences that resemble typical iterative structural design workflows. The results are preliminary, but demonstrate the possibility of combining natural language, agentic workflows, and domain-specific structural data structures as a first step toward AI-assisted structural co-design.",
+    "url": "https://arxiv.org/abs/2610.31113v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.31080v1",
+    "title": "nnInteractive Agent: General-Purpose AI Agents as 3D Image Annotators",
+    "authors": [
+      "Fabian Isensee",
+      "Constantin Ulrich Harsy",
+      "Maximilian Rokuss",
+      "Benjamin Hamm",
+      "Philipp Vollmuth",
+      "Klaus H. Maier-Hein"
+    ],
+    "published": "2026-10-22",
+    "summary": "Interactive 3D segmentation models such as nnInteractive turn a few spatial prompts (points, scribbles, boxes) into accurate volumetric masks, but a human still does the annotation work: finding each structure, placing prompts, checking the result and correcting it. General-purpose AI agents can now interpret images, call tools and write code. We show that such agents can take over this work without additional training: the user makes a request in plain language, and the agent works out what has to be segmented, locates the targets, prompts nnInteractive, inspects the 3D result, corrects it and responds to feedback. Asked for 'the muscles used for chewing', an agent identifies and segments the masseters and pterygoids; asked to count liver lesions, it writes its own code to find candidates and splits a merged lesion on request. Our open-source nninteractive-agent provides nnInteractive as tools over the Model Context Protocol (MCP), together with a skill that encodes how experienced users prompt it. On a benchmark spanning CT, MRI, PET and micro-CT of humans, a mouse and an ant (14 images; 51 targets from organs and tumours to muscles, foot bones, vessel trees and an insect brain), Claude Code and Codex reach a mean Dice of 0.81 and 0.84 from the request alone; when told where each target is, both reach 0.85 and prompt nearly as effectively as an oracle that places prompts using the reference segmentation. A text-prompted 3D model (VoxTell) is more accurate on most standard radiological targets but less robust: it returns an empty mask for one of them and fails on the leg muscles, the foot bones, the mouse and the ant, where the agents remain accurate. Code: https://github.com/MIC-DKFZ/nninteractive-agent",
+    "url": "https://arxiv.org/abs/2610.31080v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.31034v1",
+    "title": "CANNBot-CAKE: Collaborative Agentic Kernel Evolution for Ascend NPU",
+    "authors": [
+      "Deng Pan",
+      "Xue-Jian Gao",
+      "Junyi Fan",
+      "Bin Du",
+      "Jiasheng Li",
+      "Xinxian Chen",
+      "Nok Yan Chang",
+      "Xinlin Li",
+      "Lingchao Zheng",
+      "Jun Li",
+      "Yuwei Fan"
+    ],
+    "published": "2026-10-22",
+    "summary": "Efficient custom operators are essential for modern deep learning workloads, yet developing high-performance kernels for Ascend NPUs remains slow, expert-intensive, and difficult to automate. Although AI agents now approach expert performance on GPU kernel benchmarks, current models remain less capable of generating AscendC kernels for NPUs, potentially reflecting the relative scarcity of relevant training data. We thus present CAKE, a CANN-native system for deployable custom operators that combines adaptive multi-DSL routing, separate Generation and Evolution modes, and reviewed knowledge reuse through CAKE Book and a Self-Evolving Agent. On 53 CANN-Bench v1.1 operators on Ascend 950PR, CAKE's aggregated results achieve $100\\%$ case pass rate on the standard set (1,060/1,060) and $98.28\\%$ on the hidden set (4,167/4,240), with an overall mean score of 78.63 out of 100 and an average performance speedup of $1.334\\times$ over the baseline. Evolution then pushes correct operators further: EngramGateFusion cuts aggregate device time by $46.6\\%$ over 20 rounds and roughly halves the mean roofline gap. These results offer a practical path toward closing Ascend's AI-for-kernel capability gap.",
+    "url": "https://arxiv.org/abs/2610.31034v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.30924v1",
+    "title": "REGATTA: A Cross-Domain Measurement Framework and Fault-Injection Harness for Enterprise AI Agents",
+    "authors": [
+      "Luong Tuan Thanh",
+      "Abhijit Sanyal"
+    ],
+    "published": "2026-10-22",
+    "summary": "Enterprise AI-agent evaluation needs evidence about whether test suites expose specified faults and whether their reference rules are trustworthy. We introduce REGATTA (Regulatory Evaluation of Agents via Two-stage Testing and Assurance), a measurement framework with three instruments. A 125-item source-cited checklist spans five industry-by-jurisdiction cells across the United States and Vietnam. A 25-fault corpus covers five categories, and a harness scores suite-level fault detection at the design and execution stages. We examine four measurement diagnostics on 180 generated suites (5,400 scenarios) from three LLM generators. A source audit finds 24 items misstating the rule in force, 46 additional citation defects, 31 items with only non-binding, unidentifiable, or unverifiable sources, and 24 verified clean. Only initially substance-flagged items received author review; all 24 clean rows received AI review only. Results therefore describe the instruments as written, not legal compliance. Item coverage varies, execution-stage fault profiles are stable across generators, and the historical stages agree on $66$--$69\\%$ of fault--suite pairs. A current-model US-insurance retest finds stage disagreement above repeated-execution variation, but stage agreement $.536$ falls below pooled chance $.549$, failing V3's lower inequality. Blind adjudication by one expert supports the design-stage judging protocol ($κ=.72$, 95% interval $[.52,.88]$); 40 current-model execution probes give $κ=.75$. The instruments, audit, and reusable code are released.",
+    "url": "https://arxiv.org/abs/2610.30924v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.30752v1",
+    "title": "The Delegation Divide: An Open Index of AI-Agent Delegability across Occupations and Countries",
+    "authors": [
+      "Cristian Espinal Maya",
+      "Santiago Jiménez Londoño"
+    ],
+    "published": "2026-10-22",
+    "summary": "35.2% of task time in world employment is at least partly delegable to AI agents in 2026, and only 2.5% can be handed over in full. Existing measures score exposure to generative AI, mostly for the United States. We build the Agent Delegability Index (ADI): two language models rate all 18,796 O*NET 30.2 task statements on a frozen, preregistered rubric of delegation levels and barriers; tasks are mapped to 433 ISCO-08 unit groups and weighted by ILOSTAT employment in 146 countries. Four findings. First, delegable employment rises with income, from 22.5% in low-income to 48.7% in high-income countries, a slope of 7.23 percentage points per log point of GDP per capita. This delegation divide is compositional: the physical barrier dominates the jobs poorer countries employ most. Second, at the occupation level ADI tracks exposure closely (r = 0.93 with Eloundou et al. and 0.89 with Felten et al.), above the preregistered bound of 0.80; ADI adds delegation levels and barriers on top of exposure, for the world, not a new ranking of occupations. Third, full delegation is rare and peaks for tasks that take a human about twelve minutes (11.8 minutes). Fourth, the preregistered adoption gap is not supported: across 101 countries, delegability and observed AI usage correlate at r = 0.86, and the gap between them is not wider in middle-income countries (p = 0.27). Model agreement is kappa = 0.77; a blind human rating of 300 tasks agrees with the model consensus at kappa = 0.85, and an agentic panel with web search at kappa = 0.87. We release the index, the atlas, the prompts and an MCP server at https://github.com/Cespial/delegation-divide.",
+    "url": "https://arxiv.org/abs/2610.30752v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.30580v1",
+    "title": "DagFlow AI: Agentic Synthetic Data Generation for Personalized Statistics Learning",
+    "authors": [
+      "David Arthur",
+      "Ranjini Grove",
+      "Zaher Kmail",
+      "Curtis Atkisson"
+    ],
+    "published": "2026-10-22",
+    "summary": "To provide personalized learning experiences in courses that teach data analysis skills, instructors often search for datasets that appeal to a student's interests, align with specific learning objectives, and are appropriate for the student's skill level. Datasets that match all three criteria can be difficult to find. DagFlow-AI is an agentic AI data generation tool that creates realistic, synthetic datasets tailored to these criteria. Rather than mimicking existing datasets or generating observations directly, DagFlow-AI uses the broad knowledge and reasoning capabilities of large language models (LLMs) to specify the components of transparent, reproducible data-generating mechanisms from which observations are generated programmatically. We illustrate how the tool can be used to construct a realistic, synthetic dataset and describe how it aligns with both the Guidelines for Assessment and Instruction of Statistics Education (GAISE) and the Problem, Plan, Data, Analysis, and Conclusion (PPDAC) framework for teaching data analysis",
+    "url": "https://arxiv.org/abs/2610.30580v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.30562v1",
+    "title": "Lifetime-valid decisions by continually evolving AI analysts",
+    "authors": [
+      "Xiaojing Sun",
+      "Yuhan Zeng",
+      "Xiao Wang"
+    ],
+    "published": "2026-10-22",
+    "summary": "AI agents increasingly act as analysts whose decision can often be cast as hypothesis tests. Classical tests control the Type I error rate, the probability of rejecting a true null hypothesis, for fixed procedures. However, AI analysts introduce internal randomness and can evolve continuously over time. As AI analysts evolve, the risk of approving versions with Type I error rates above the target can accumulate, and adaptive use of evaluation feedback can lead to overfitting. We introduce continual validation, which evaluates each proposed AI analyst version before deployment using simulated data under the null hypothesis, with scenarios that can be randomized and expanded over time. We prove that, regardless of how updates are chosen or how many are proposed, the lifetime probability of ever deploying a version whose Type I error rate exceeds the allowed level remains bounded. This guarantees that every subsequent decision controls the Type I error rate at the target level across these scenarios. At the same time, updates with sufficiently low Type I error rates pass validation with high probability, allowing the analyst to continuously improve its performance without sacrificing rigor. In two examples involving evolving AI analysts for bioequivalence studies and product A/B tests, Type I error rates reached 0.098 and 0.183 without continual validation, compared with at most 0.045 and 0.044 with it, while retaining 82% and 96% of the power from optimally selected valid updates.",
+    "url": "https://arxiv.org/abs/2610.30562v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.30548v1",
+    "title": "Atlas: Making Sense of Long Horizon Agent Trajectories",
+    "authors": [
+      "Sangho Suh",
+      "Joseph Chee Chang",
+      "Pao Siangliulue",
+      "Amy X. Zhang",
+      "Matt Latzke",
+      "Jonathan Bragg",
+      "Doug Downey",
+      "Daniel S. Weld"
+    ],
+    "published": "2026-10-22",
+    "summary": "AI agents can now search literature, generate hypotheses, analyze datasets, and run experiments at a scale difficult for researchers to match. Yet scaling scientific execution does not automatically scale researchers' ability to make sense of what agents produce. When researchers return to a long-horizon run, they must evaluate work they did not monitor: what the agent produced, which decisions shaped those outputs, and whether those decisions served the research goal. We frame this post-run sensemaking as a representation problem across three linked levels: goal, decision, and artifact. From this framework we developed Atlas, an agentic workspace with a trajectory tree, which renders the run as a branching structure showing what the agent chose and set aside, and artifact projections over six representations. In a within-subjects study (N=14), participants reported higher decision transparency, artifact sensemaking, and goal connection with Atlas than with a standard baseline, together with substantially lower subjective workload.",
+    "url": "https://arxiv.org/abs/2610.30548v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.30074v1",
     "title": "Parallel AI Agent Collaboration as Graph-Structured Distributed Block Optimization",
     "authors": [
@@ -627,166 +774,6 @@
     "published": "2026-10-15",
     "summary": "Organizations increasingly encode operational procedures as multi-step agent skills, here called Agent Operating Procedures (AOPs), that must be traceable, auditable, reproducible, access-controlled, and bounded in time and cost, requirements that regulated sectors make mandatory. Yet AOPs are typically kept as coarse-grained files, in which steps bundle actions, copied procedures drift apart, any step may reach any tool, and refactoring goes unchecked. We present Functional Agent Operating Procedures (FAOP), a formal theory that brings database-grade discipline to AI agent workflows. FAOP recasts each workflow as a typed function over scoped state and subjects an entire library to four progressive normal forms: Decomposed (FNF-1) splits a workflow into atomic steps, Typed (FNF-2) makes its data flow explicit and type-checked, Factored (FNF-3) gives each shared procedure a single canonical definition so a change propagates instead of drifting, and Scoped (FNF-4) confines every step to least-privilege tool access. Once normalized, every atomic step is a separate entity with a declared contract and can be type-checked, scope-confined, bounded, tested, traced, and audited on its own. A FAOP algebra of provably sound equalities turns refactoring and parallelization into compiler rewrites; orthogonal extensions add verified termination (+V), optimization (+O), and time and cost bounds (+B); and an architectural-level classifier (0-3) determines whether a workflow needs AI at all. Together, these make integrity, isolation, typing, termination, cost, and optimization compile-time concerns across the whole library, not runtime hopes. We implement the theory in SkillBase, an AOP management system (what PostgreSQL is to data, SkillBase is to AOPs), together with a separate executor that enforces these guarantees at run time. A worked financial workflow illustrates the approach end to end.",
     "url": "https://arxiv.org/abs/2610.22061v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.21942v1",
-    "title": "Jianmu-Q: Bridging Quantum Field Theory and Quantum Hardware with AI Agents",
-    "authors": [
-      "Xiaolin Wang",
-      "Xingyu Guo",
-      "Jinyang Li",
-      "Tianyin Li",
-      "Enke Wang",
-      "Lingxiao Wang",
-      "Hongxi Xing"
-    ],
-    "published": "2026-10-15",
-    "summary": "Quantum computing offers a promising approach to non-perturbative simulations of quantum field theories, particularly for real-time dynamics and systems affected by the sign problem. Yet translating continuum field theories into quantum computations remains a challenging interdisciplinary task. Here we introduce \\texttt{Jianmu-Q}, a multi-agent framework that transforms natural-language descriptions of quantum field theories into quantum simulation workflows. Specialized agents handle theoretical formulation, lattice discretization, qubit mapping, and circuit design, while physical consistency checks and independent numerical calculations provide validation throughout the workflow. We benchmark the framework on three field theories of increasing complexity: the $(1+1)$-dimensional Nambu--Jona-Lasinio and Schwinger models, and a $(2+1)$-dimensional $\\mathbb{Z}_2$ gauge theory. Across these systems, noiseless quantum-circuit simulations converge toward independent exact-diagonalization and tensor-network results, while selected circuits are executed on IBM quantum hardware, demonstrating an end-to-end, validation-guided approach to quantum simulation of field theories.",
-    "url": "https://arxiv.org/abs/2610.21942v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.21767v1",
-    "title": "From Research Goals to Scientific Closure: Evaluating Agents Through Evidence-Supported Physics Research",
-    "authors": [
-      "Yijia Mao",
-      "Song Dai",
-      "Tao Chen",
-      "Xiangyu Lu",
-      "Linqian Zeng",
-      "Chenxi Hu",
-      "Sitong Zhou",
-      "Dongyang He",
-      "Xiaodan Mao",
-      "Linxuan Zhang",
-      "Tong Zhu",
-      "Yafu Li",
-      "Fangchen Yu",
-      "Peng Ye",
-      "Feng He",
-      "Yu Cheng",
-      "Yun Luo"
-    ],
-    "published": "2026-10-15",
-    "summary": "Can AI agents organize scientific investigations that lead to well-supported conclusions? To evaluate this capability, we introduce PhysClosureBench, a benchmark of 50 expert-verified, goal-specified research tasks spanning strong-field, attosecond, and neighboring physics areas. Each task specifies the research objective and essential scientific constraints, while leaving the agent to organize the investigation and determine how to generate and validate the evidence needed to answer the question. A 20-criterion Atomic Score measures local scientific accomplishment, while Research Closure (RC0--RC4) assesses how fully the investigation resolves the specified research question based on whether its indispensable evidence requirements and applicable scope conditions are satisfied. We evaluate seven frontier LLMs, where Claude-Opus-5 achieves the highest mean Atomic Score (6.29/10) but reaches RC4 in only 32.7% of attempts. Across the benchmark, 36.2% of attempts scoring at least 8/10 still fall short of RC4, while all seven models reach RC4 on substantially fewer tasks in all three runs than in at least one. Case-level analysis further illustrates how misinterpretation of generated results and unresolved physical applicability limits can lead to incomplete closure. Together, these results reveal a persistent gap between AI agents' local scientific accomplishments and their ability to achieve complete research closure.",
-    "url": "https://arxiv.org/abs/2610.21767v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.21538v1",
-    "title": "Agent Status Protocol (ASP): A Lightweight Specification for State Reporting in Multi-Agent Systems",
-    "authors": [
-      "Diego Gosmar",
-      "Deborah A. Dahl",
-      "Emmett Coin",
-      "Csaba Bolyós",
-      "Andreas Zettl"
-    ],
-    "published": "2026-10-15",
-    "summary": "The Agent Status Protocol (ASP) defines a lightweight way for heterogeneous AI agents to report their operational state to a status server, and for observers such as dashboards to receive that state as soon as it changes. Agents push small JSON events over HTTP POST; the server exposes the aggregated state to observers over Server-Sent Events (SSE). Because an agent that has crashed, hung or been compromised cannot be trusted to report its own failure, ASP does not rely on self-reports alone: the server infers liveness from missed heartbeats, can detect agents that are alive but no longer making progress, and accepts observations from supervisors, guardrails, operators and peers, some of which take precedence over what the agent says about itself while others are shown alongside it. ASP models state along independent dimensions (lifecycle, health, task, floor, governance), so that an agent can be, for example, online, degraded, working on a task and waiting for the floor at the same time. It reuses existing vocabularies: task states from the Agent2Agent (A2A) protocol, floor states from the Open Floor Protocol (OFP), and attribute conventions from the OpenTelemetry GenAI semantic conventions. This paper presents version 0.1 of ASP as a proposal, not as an approved standard. It is a working draft intended to open a discussion, and the authors invite comments, alternative proposals and independent implementations from the community.",
-    "url": "https://arxiv.org/abs/2610.21538v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.21484v1",
-    "title": "Context Matters! Social, Spatial, and Semantic Coordination with an Embodied Agent in Immersive Analytics",
-    "authors": [
-      "Andrew Cunningham",
-      "Nicolas Barbotin",
-      "Adam Drogemuller",
-      "Jack Faser"
-    ],
-    "published": "2026-10-15",
-    "summary": "Embodied AI agents in Augmented Reality (AR) could enable more natural collaboration in immersive analytics by engaging users through spatial, conversational, and visual interaction. However, designing such agents requires careful attention to context. We propose a preliminary conceptual framework for context-aware design of embodied agents structured around three dimensions of spatial, social, and semantic. This framework is further categorised into embeddedness (how agents are situated in the contexts) and awareness (how agents perceive and respond to the contexts). To explore this, we present Cobot, an embodied AI agent designed as a design probe. Cobot supports context-sensitive interaction through features such as gaze cues, spatial sound, and task-aware behaviour. We reflect on its design and identify implications for future contextaware embodied agents.",
-    "url": "https://arxiv.org/abs/2610.21484v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.21233v1",
-    "title": "\"Do You Trust It... or Check It?\": Exploring Children's Verification Behaviors in Game-Based Human-AI Collaboration",
-    "authors": [
-      "Shuning Liu",
-      "Yuxin Song",
-      "Hanbing Li",
-      "Ziyue Wang",
-      "Mingying Lan",
-      "Fei Lv"
-    ],
-    "published": "2026-10-15",
-    "summary": "Children are increasingly interacting with AI agents in learning and problem-solving contexts, where AI suggestions may appear fluent, helpful, and socially engaging. However, children may not always be able to judge whether such suggestions are accurate, incomplete, or misleading. This paper presents a game-based human-AI collaboration probe designed to examine how children verify AI suggestions during task-based interaction. The system embeds AI suggestions within a biological knowledge reasoning game and compares three Agent interaction styles: partner-like, tool-like, and dual-state Agent. Instead of treating trust as a static post-task attitude, this study focuses on children's situated verification behaviors, including acceptance, evidence checking, questioning, revision, and continued AI use. A preliminary evaluation with children aged 8-10 combined interaction logs, post-task ratings, and semi-structured interviews. The findings suggest that Agent style shaped children's engagement and response pathways: partner-like interaction tended to support direct questioning, while tool-like interaction was more associated with evidence seeking. Children generally viewed AI as useful but fallible, and their questioning behaviors varied in reasoning depth. The study contributes design insights for supporting children's critical, reflective, and evidence-based use of AI in collaborative tasks.",
-    "url": "https://arxiv.org/abs/2610.21233v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.21109v1",
-    "title": "Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows",
-    "authors": [
-      "Shirley Anugrah Hayati",
-      "Patricia Anugrah Setiani",
-      "Ruizi Wang",
-      "Zhouyi Li",
-      "Khanh Chi Le",
-      "Young-Jun Lee",
-      "Dongyeop Kang"
-    ],
-    "published": "2026-10-15",
-    "summary": "When humans collaborate with AI agents on long-horizon tasks, what happens to the agents' contributions? For solving long-horizon tasks, humans place greater importance on ongoing interaction with AI agents (e.g., revising plans) than on an agent's ability to complete the task in a single attempt. However, most agentic benchmarks have focused more on automation. Strong performance on such benchmarks does not imply effective real-world collaboration. Professional workflows offer a useful setting, as they often involve interdependent steps. To address this gap, we introduce Kolab, a new dataset of 115+ hours of screen recordings of 50 professionals from 40 occupations collaborating with agents on realistic, long-horizon problems. Kolab also contains participants' collaboration and output quality judgments. Our analysis reveals diverse collaboration patterns, highlighting the importance of when and how professionals coordinate with agents. A collaborative agent must do two things that automation benchmarks never test: anticipate whether experts will adopt, modify, or reject its contribution once it leaves the chat window to guide its next steps, and assess collaboration quality from the unfolding workflow without constant expert feedback. Our benchmark operationalizes both: (1) forecasting how professionals use agent contributions at diverse workflows, and (2) verifying their judgments of collaboration satisfaction and output quality. Findings show that frontier models, both agentic and non-agentic, overestimate collaboration with experts and struggle to distinguish between high- and low-quality collaboration. Longer workflow context does not consistently improve these predictions. As frontier agents cannot yet understand long-horizon collaboration with experts, we position Kolab as a valuable dataset for studying human-agent collaboration grounded in real professional workflows.",
-    "url": "https://arxiv.org/abs/2610.21109v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.18603v1",
-    "title": "AgentStripes: An Evidence-Graded Maturity Model for AI Agents",
-    "authors": [
-      "Nutan Kumar Naik",
-      "Vijay Prasad Poudel",
-      "Aditya Kumar Saroj",
-      "Saurav Samantray",
-      "Abhishek Patel"
-    ],
-    "published": "2026-10-13",
-    "summary": "Benchmarks report what an Artificial Intelligence (AI) agent can do on a task suite, but not whether one released version has been engineered with the controls that make it reliable, safe and observable, or how strongly that is shown. This paper proposes AgentStripes, an evidence-graded maturity model for AI agents. It defines levels (0 to 7 stripes), process areas (12 areas holding 40 capabilities), three gates (basic, safety, proof) that hold an agent at a level however high its score, and evidence grades E0 to E5. Each applicable capability receives a rating from 0 to 3 and a separate evidence level; these are combined into a credit, aggregated into a severity-weighted score and converted into stripes that the gates limit. Instruments gather evidence, language-model judges interpret it under explicit criteria, and the arithmetic is deterministic. The model is compared with standards at topic level without a claim of conformance, and an unexecuted validation protocol is specified. An empirical evaluation (exploratory, non-confirmatory) of 30 public Python agent repositories, with static evidence only, is a demonstration and not a validation: static evidence caps every final stripe at 2, 26 repositories end at one stripe and 4 at two, and this distinction is unreliable, since re-judging changed the final stripe of 4 of 22 repositories (engine, dossier and panel changed), whereas none of 8 panel-only repeats, all at stripe 1, changed. The parameters are expert conventions without outcome based calibration, and the stripes have not been shown to predict reliability or safety.",
-    "url": "https://arxiv.org/abs/2610.18603v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.18449v1",
-    "title": "Autonomous Science Bench: Evaluating AI Agents for Autonomous Scientific Discovery",
-    "authors": [
-      "Yibo Wen",
-      "Han Liu"
-    ],
-    "published": "2026-10-13",
-    "summary": "AI agents for autonomous scientific discovery must decide which experiments to run under a limited budget. Most benchmarks for science agents provide fixed datasets, while others that support active experimentation largely rely on simulation. We introduce Autonomous Science Bench, an initial release comprising six budgeted design-build-test-learn campaigns grounded in published experiments across biology, chemistry, and materials science. Agents select batches of designs, receive measurements from a lab service, and use the results to guide subsequent experiments before delivering a predictive model. Success requires passing two calibrated gates: a discovery gate, which evaluates the designs the agent measured, and a learning gate, which evaluates its model's ranking of held-out designs. In a pilot evaluation of eight agent-model configurations and 144 trials, the best configuration succeeds in 67% of trials, while the hardest campaign is solved in only three of 24 attempts. The two gates reveal different weaknesses: some agents build accurate rankings but find too few promising designs, while others find promising designs but fail to predict which unseen designs will perform well. These differences are obscured by overall success rates alone. We release version 0.1 of the campaigns, lab runtime, and public leaderboard at https://yibow.me/autonomous-science-bench.",
-    "url": "https://arxiv.org/abs/2610.18449v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.18262v1",
-    "title": "Encrypted Skills Can Become New Security Exploits If AI Agents Know How to Decipher",
-    "authors": [
-      "Yan-Lun Chen",
-      "Pin-Yu Chen",
-      "Chia-Mu Yu"
-    ],
-    "published": "2026-10-13",
-    "summary": "Third-party skills can expose LLM agents to malicious instructions hidden by encoding. We introduce Ciphered Skill Injection (CSI), which embeds such instructions in skill files for agents to decode and follow. We evaluate Caesar and layered variants across eight models and 139 injection-task pairs, separating instruction recovery from attack success. In the primary setting with shortened skills, the variants achieve attack success rates of up to 47.5% and 40.3%, respectively. Successful decoding does not guarantee attack success, and layering has model-dependent effects. The tested skill scanners rarely flag injected skills. These findings highlight the risk of promoting decoded, untrusted content into actionable instructions.",
-    "url": "https://arxiv.org/abs/2610.18262v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.18230v1",
-    "title": "Holding Agents Accountable with Verifiable Agent Insurance",
-    "authors": [
-      "Cheng Hua",
-      "Taro Tsuchiya",
-      "Nicolas Christin",
-      "Giulia Fanti"
-    ],
-    "published": "2026-10-13",
-    "summary": "While AI agents are useful for many tasks, they regularly misbehave in destructive ways, such as deleting important data. While prior work has focused on preventing such misbehavior, we consider how to recover after an agent misbehaves. We propose verifiable agent insurance (VAI), a framework for agent providers to commit financially to promises, a list of programmatically-specified policies that an agent is meant to follow. These promises are embedded in a smart contract on an immutable ledger (e.g., a blockchain) to prevent tampering, along with a monetary escrow. A user who detects a violation of committed promises can prompt a verifier to review agent execution traces, which are logged through the agent harness's shared tool-execution path, without instrumenting each tool separately. Upon verification of the violation, the agent provider's escrow funds are paid to the reporting user. We instantiate VAI as an end-to-end implementation on an Ethereum layer-2 network, and evaluate its coverage on three prominent agent benchmarks, two of which we re-annotated to obtain task-level policy-compliance labels. Currently, many agents do not emit user authorizations and security-relevant information as explicit, structured data objects -- rather, they embed the data needed to verify policy violations in natural language exchanges. Even so, VAI manages to detect violations in 42.2% of runs containing violations across three benchmarks. By augmenting agents to explicitly emit such objects, violation detection rises to 83.0% of traces. Our findings suggest that for improved auditability, agents should be co-designed with their security policies to emit explicit, structured records of user authorization and security-relevant actions.",
-    "url": "https://arxiv.org/abs/2610.18230v1",
     "source": "arXiv"
   }
 ]
