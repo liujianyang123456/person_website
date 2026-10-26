@@ -1,5 +1,150 @@
 [
   {
+    "id": "2610.32578v1",
+    "title": "Lessons Outlive Their Failures: A Case Study of Rules for AI Coding Agents",
+    "authors": [
+      "Hassan Hassanzadeh Aliabadi"
+    ],
+    "published": "2026-10-23",
+    "summary": "AI coding agents increasingly work inside a harness: rule files such as AGENTS.md, on-demand skills, runtime hooks and automated checks. Most studies of harnesses look at a single point in time or at short benchmark runs. I report a six-week case study of my personal system of record, a plain-markdown repository that three AI agent tools edited daily under one shared rule set. I built a ledger of 118 agent failures, their fixes and whether they came back. I also tested the system's monthly LLM documentation audit against 47 known stale statements and 20 planted errors. Finally, I replayed five past failures in isolated git clones, with and without their fixes. All results come from one repository with three runs per condition, so I report them as exploratory. Stale documentation (drift) was the largest failure class (48 of 118), although 35 of those were found on one audit day. A single audit run found about half of the known drift (Claude Sonnet 5.5 mean: 50%), and at least 93% of its findings were correct. On Sonnet 5.5, the agent finished four of the five replayed tasks. In three of those four, the failure did not happen, with or without its fix. Only the stale-count failure came back without its check, and the check stopped it in every run. On older models, an agent drafted an em-dash once while the em-dash lint check was active, and the check rejected it. A written rule on run-time estimates did not change Sonnet 4.5's overestimates. These results suggest that harness lessons can outlive the failures they were written to fix, while drift persists and still needs mechanical checks. Tools that evolve a harness add lessons faster than they retire them, so they should re-test their rules from time to time and retire the obsolete ones.",
+    "url": "https://arxiv.org/abs/2610.32578v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32464v1",
+    "title": "Agentic Memory Management Is the Next Frontier of Information Retrieval",
+    "authors": [
+      "Qingyao Ai"
+    ],
+    "published": "2026-10-23",
+    "summary": "Information retrieval has long been focusing on connecting people with information they need to complete their tasks. Recently, the meaning of this has changed dramatically as more and more AI agents now consume, retain, and act on information on a user's behalf. Consequently, information management now also takes place \\emph{inside} the agent in the form of memory management. In this perspective paper, we argue that \\emph{agentic memory management} (AMM), which studies the structure, analysis, organization, storage, searching, retrieval, and \\emph{use} of information in an intelligent agent's memory, is a natural extension of IR research and an area in which the IR community can make distinctive contributions. Specifically, we first present a system-level framework for AMM and introduce a computational taxonomy of memory objects as \\emph{constants}, \\emph{functions}, and \\emph{operators}, each with distinct retrieval semantics. Then, we compare AMM with established IR research and identify their difference and connections. Last but not least, we outline a research agenda covering benchmarks, candidate principles of memory utility, optimization procedures that mix parametric and non-parametric updates, and more. We hope this paper could attract more people, both inside and outside the IR communities, to think more about AMM problems and research from IR perspectives.",
+    "url": "https://arxiv.org/abs/2610.32464v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32453v1",
+    "title": "Beyond Copying: Lifelong Smart Contract Security Task Construction via Protocol Mutation",
+    "authors": [
+      "Zifan Peng",
+      "Peng Huang",
+      "Jingyi Zheng",
+      "Yingjie Xue",
+      "Xuechao Wang",
+      "Xinlei He",
+      "Xia Hu",
+      "Dongrui Liu"
+    ],
+    "published": "2026-10-23",
+    "summary": "AI agents can inspect code and run tests to support smart contract security. SlowMist reports about $38.6 billion in losses across the broader blockchain ecosystem. Existing evaluations can reward memorized or copied answers, including attack code recovered from public blockchain transactions. Reconstructing contracts and validating tasks also require costly manual effort. To address these issues, we propose CONSTRAINTDIAL, a framework for lifelong construction of smart contract security tasks via protocol mutation. It automates local contract reconstruction and uses attack execution to select changes to the required calls or inputs. Execution checks guide revisions that make the original attack fail while preserving exploitability, the security objective, and normal functionality. New incidents and audit findings enter the same procedure. With CONSTRAINTDIAL, we construct 3,045 task inputs from 203 public cases, covering detect, exploit, and patch. Compared with reconstruction alone, protocol mutation reduces success with supplied public answers by 10.9 percentage points on average across detect, exploit, and patch. The fraction of tasks solved by copying online answers falls by 9.3 points.",
+    "url": "https://arxiv.org/abs/2610.32453v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32417v1",
+    "title": "Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents",
+    "authors": [
+      "Stephen Abkin",
+      "Aldric Yang",
+      "Alex Flesher",
+      "Nitheesh Kodarapu",
+      "Deepak Panigrahy",
+      "Aakash Tyagi",
+      "David Kebo Houngninou"
+    ],
+    "published": "2026-10-23",
+    "summary": "Quantization reduces the memory and energy needed to serve large language models (LLMs) and AI agents for coding and data analysis can now run on locally hosted LLMs. In practice, this benefit is commonly benchmarked per output token. Yet an agent calls its model repeatedly, runs tools, and revises its work, and quantization can change both how much the agent generates and whether it succeeds. Existing energy studies either compare quantized models on single requests or measure agents at one fixed precision, overlooking how a change in precision plays out across a complete agent task. To address this gap, this paper presents the first characterization of the task-level energy trade-offs of model quantization in locally hosted agents. We develop 29 agent tasks with automatic pass/fail checks in six families, ranging from single-answer SQL analytics to multi-step repository bug fixing, and measure CPU and GPU energy per output token and per completed task for 4-bit and 8-bit versions of two open-weight models on bare-metal NVIDIA A100 nodes with llama.cpp. Our findings reveal that 4-bit precision generally saves energy per token, though whether it saves energy per completed task is task dependent and changes with the model and the execution budget (i.e., limits on turns, tokens, and time). We trace this discrepancy to the extra tokens needed to complete a task in full, which translates into using up to 3.5 times as much energy per completed task. These findings offer actionable guidance for developers and operators choosing model precision for agents, showing how tokens per completed task, set against the per-token saving, reveal whether lower precision completes the work with less energy.",
+    "url": "https://arxiv.org/abs/2610.32417v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32285v1",
+    "title": "Trial by Trace: Benchmarking AI Agent Harnesses for Reliability and Failure Attribution",
+    "authors": [
+      "Zhiyong Cao",
+      "Hengjie Zhu",
+      "Yongxin Wang",
+      "Xuchen Li",
+      "Jintao Li",
+      "Shuxia Liu",
+      "Dunqiang Liu",
+      "Bo Wang",
+      "Kairan Zhang",
+      "Cong Lin",
+      "JiangDi Yu",
+      "Siyuan Liu",
+      "Sijia Yao",
+      "Yi-Liang Wei",
+      "Lingxu Ma",
+      "Aijia Wang",
+      "Anxin Chen",
+      "Zixian Wei",
+      "Xiang Ruan",
+      "Ruizhi Xu",
+      "Ruqian Shi",
+      "Baihua Xiao",
+      "Sicheng Zhou"
+    ],
+    "published": "2026-10-23",
+    "summary": "LLM agents are increasingly used to solve real-world problems, and their effectiveness depends on both the underlying models and the harnesses that support their operation. However, most existing benchmarks focus on model capabilities and overall agent performance, with limited attention to the evaluation of agent harnesses. To address this gap, we introduce TraceTrial-Bench, which organizes harness reliability into seven components covering context, execution, governance, lifecycle, observability, tools, and verification. We construct 95 expert-level, mechanism-oriented tasks with executable or state-based ground truth to support semantically equivalent comparisons while preserving the native behavior of each harness. We design a Trajectory Tracing (TT) module to capture agent execution traces and introduce a two-layer evaluation framework that separately assesses agent performance and harness reliability. In addition, we design a Multi-source Evidence Acquisition (MEA) module to provide evidence from the agent context, harness, and execution environment for LLM-based evaluation, and develop a Failure Attribution (FA) module that uses explicit mechanism chains to support attribution at the run level. Across 4 harnesses, 9 models, and 95 tasks, our evaluation of 3,420 runs yields macro-averaged harness scores ranging from 59.8% to 72.0%, while 31.1% of runs achieve task success despite failing at least one harness criterion. TraceTrial-Bench provides an auditable and reproducible foundation for comparing agent harnesses, diagnosing their failures, and studying how harness design interacts with model behavior.",
+    "url": "https://arxiv.org/abs/2610.32285v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32155v1",
+    "title": "Detecting Insecure Compositions of Clean Agent Skills via Capability-Flow Graph Analysis",
+    "authors": [
+      "Yihao Li",
+      "Chuanpu Fu",
+      "Yizhou Zhao",
+      "Miao Chen",
+      "Qi Li",
+      "Ke Xu"
+    ],
+    "published": "2026-10-23",
+    "summary": "AI agents increasingly extend their capabilities by invoking third-party skills, where each skill encapsulates instructions, scripts, and resources for agents to execute on demand. This paper reveals that deploying many benign skills together introduces compositional security risks: multiple individually clean skills can compose into safety-violation chains, because the agent passes an upstream skill's output to a downstream skill's input across invocations. The risk arises not from any single skill, but from the agent's runtime orchestration, and thus cannot be captured by existing malicious skill detection methods. To this end, we develop KnotScryer to detect insecure skill compositions by treating skills as typed capability flows. In particular, we abstract each skill into a capability summary, and construct the Skill Capability-Flow Graph (SCFG), where edges denote cross-skill information flow. Moreover, we design a search policy that tracks protected or untrusted data along handoff edges to locate paths reaching insecure operations. Finally, a two-layer verification method replays the insecure information flow for reachability analysis and applies a task-anchored LLM chain audit to confirm the semantic plausibility of the identified violation chains. We deploy KnotScryer to analyze 13,598 clean skills from ClawHub, and validate the detected chains across three agent frameworks and three LLMs. KnotScryer identifies 612 insecure compositions, which are consistently exploited across agent frameworks. Meanwhile, under GLM-5.1, it outperforms tag-match and graph-only baselines by improving the exploitation rate from 16.5%-18.2% to 85.6%, while reducing the search space by 85.3%. Furthermore, 13.7% of the detected chains consist entirely of skills labeled safe by a single-skill scanner, showing that KnotScryer effectively identifies insecure compositions that per-skill auditing cannot.",
+    "url": "https://arxiv.org/abs/2610.32155v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32151v1",
+    "title": "The LLENS Platform for On-Premises Large Language Model Agents in a Japanese University Hospital: Development and Evaluation Study",
+    "authors": [
+      "Ken Enda",
+      "Jien Saito",
+      "Masami Mukai",
+      "Feng Han",
+      "Emir Turkes",
+      "Tatsumi Kusakabe",
+      "Reona Umeki",
+      "Kazuhiro Sumiyoshi",
+      "Mitsuya Numata",
+      "Takumi Tanikawa",
+      "Akira Endoh",
+      "Kenji Hirata",
+      "Atsushi Yoshida",
+      "Kohsuke Kudo",
+      "Shinya Tanaka"
+    ],
+    "published": "2026-10-23",
+    "summary": "Large language model agents that use tools could take on part of the electronic health record and desk work that occupies physicians' time, but in many hospitals the medical information systems run inside closed networks, so the model and the agent harness must also sit inside. We designed, implemented, and deployed LLENS, a clinical support AI agent platform that runs inside the closed network of Hokkaido University Hospital on one host with 8 NVIDIA H200 GPUs, the open-weight model Kimi K2.6 (~1 trillion parameters), and a web application rebuilt from Open WebUI. The harness has 10 components, including page image reading, full-text attachment input, a path-addressed document tree without a vector index, a network-isolated sandbox, artifact return, self-checking of generated output, subagents, and saved procedures. Kimi K2.6 was chosen from 3 open-weight candidates and scored 480/500 on the 2026 Japanese Medical Licensing Examination; it generated 119 tokens/s for one user and served 16 concurrent requests at 908 tokens/s in total. On 180 questions over hospital documents (3 seeds each), mean accuracy was 10.7% with no documents, 81.3% with fixed retrieval (top 10 chunks of one lexical search), and 97.2% with interactive access, in which the model reads with document tools and the sandbox (15.9 percentage points above fixed retrieval, 95% CI 10.9-21.3); the difference lay in filtering/counting questions (16.7% vs 87.8%). Five scenarios with synthetic data ran on combinations of the components: needlestick injury response, batch adverse event grading, scanned referral letter transcription, falls data aggregation and plotting, and investigation of 3 topics by subagents. The platform has run on the hospital network since September 14, 2026.",
+    "url": "https://arxiv.org/abs/2610.32151v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32107v1",
+    "title": "Beyond What to Say: Proactive Utterance Timing with Inner Thoughts for Werewolf Agents",
+    "authors": [
+      "Yoshiki Tanaka",
+      "Shuya Uchiyama",
+      "Daichi Hamaguchi",
+      "Michimasa Inaba"
+    ],
+    "published": "2026-10-23",
+    "summary": "Participating in a conversation involves not only deciding what to say but also whether to speak at all. This judgment carries even greater significance in environments like the Werewolf game, where participants' interests conflict, because both utterances and silence are subject to interpretation and assessment by others. Therefore, determining when to speak, as well as what to say, is crucial for an LLM agent playing the Werewolf game. In this study, we introduce a Werewolf AI agent developed for the Anytime Utterance Track of the AIWolfDial shared task. Our system builds on the existing Inner Thoughts framework, which determines utterance timing during conversations by generating internal thoughts and evaluating the value of each thought for expression at that moment. Since existing methods were designed for general dialogue, we have redesigned the system specifically for the competitive environment and incomplete information setting of Werewolf games. We call our adapted method Adversarial Inner Thoughts. Through experiments involving analysis of self-play logs and human evaluations, we analyze and discuss the effectiveness of our approach.",
+    "url": "https://arxiv.org/abs/2610.32107v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.31355v1",
     "title": "Muffin - A Shared Memory Buffer for Asynchronous AI Agents",
     "authors": [
@@ -144,6 +289,37 @@
     "published": "2026-10-22",
     "summary": "AI agents can now search literature, generate hypotheses, analyze datasets, and run experiments at a scale difficult for researchers to match. Yet scaling scientific execution does not automatically scale researchers' ability to make sense of what agents produce. When researchers return to a long-horizon run, they must evaluate work they did not monitor: what the agent produced, which decisions shaped those outputs, and whether those decisions served the research goal. We frame this post-run sensemaking as a representation problem across three linked levels: goal, decision, and artifact. From this framework we developed Atlas, an agentic workspace with a trajectory tree, which renders the run as a branching structure showing what the agent chose and set aside, and artifact projections over six representations. In a within-subjects study (N=14), participants reported higher decision transparency, artifact sensemaking, and goal connection with Atlas than with a standard baseline, together with substantially lower subjective workload.",
     "url": "https://arxiv.org/abs/2610.30548v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.31916v1",
+    "title": "Permission to Retry: A Study of Authorization and Recovery in AI Agent Workflows",
+    "authors": [
+      "Deekshith Marla",
+      "Kushagra Bhatnagar"
+    ],
+    "published": "2026-10-22",
+    "summary": "A durable agent can resume a consequential action while its authority changes and the action's external outcome remains uncertain. We study execution-time reliability of tool-using AI agents, isolating recovery decisions from language-model behavior. Checkpoint state, permission to dispatch, evidence of an external effect and permission to reconcile are distinct obligations. We present a finite conformance study that checks these obligations through histories scored against a provider effect ledger hidden from the recovering application. A prospectively frozen campaign executes 336 histories on native LangGraph and Temporal hosts, crossing 14 schedules, three provider contracts and four matched application policies. All 168 paired host cells have identical checked outcomes. Per host, retained-ledger reconciliation passes all 42 histories: 21 checked completions, 15 denials and six unknown outcomes with reservations retained. Cached retry, revalidation before retry and stable-key retry pass 30, 36 and 31 histories respectively. A separate 16-case component study of InfinityOS, an enterprise AI platform developed by Arya.ai, exercises exported authority, worker, recovery and settlement code over repository fakes. The results isolate the roles of current authority, provider contracts and retained observations in recovery, with safety, completion and unresolved obligations reported separately for the declared application profile.",
+    "url": "https://arxiv.org/abs/2610.31916v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.31831v1",
+    "title": "Ulysses: A Security Harness For Synthesizing Verifiable Web Exploits",
+    "authors": [
+      "Aditya Oke",
+      "André Vicente Duarte",
+      "Rui Melo",
+      "Shubham Gandhi",
+      "Nachiket Kotalwar",
+      "Charmi Khandor",
+      "Danqing Wang",
+      "Carolyn Rosé",
+      "Lei Li"
+    ],
+    "published": "2026-10-22",
+    "summary": "How can an AI agent automatically discover security vulnerabilities in any software repository? Existing approaches use LLMs to generate software vulnerability exploits. However, it is challenging for an LLM to reliably verify its own generated exploits. In this paper, we propose Ulysses, a multi-agent security harness to synthesize verifiable vulnerability exploits for web applications. Ulysses converts candidate vulnerability findings into verified Proofs of Exploitability by iteratively exploring exploit hypotheses and establishing success in independently observed execution effects. We evaluated Ulysses on WebExploitGym, a curated benchmark of exploitable instances from 25 real-world web applications that span 5 languages and 7 frameworks. Ulysses produces verified proofs for 10 of 25 real-world advisories. It also discovered 4 new proofs of exploitability that have never been previously reported.",
+    "url": "https://arxiv.org/abs/2610.31831v1",
     "source": "arXiv"
   },
   {
@@ -622,158 +798,6 @@
     "published": "2026-10-16",
     "summary": "Glacial Isostatic Adjustment (GIA) models solve the gravitationally self-consistent sea-level equation for the response of the solid Earth and the oceans to changing ice loads. As these models are increasingly embedded in coupled ice-sheet simulations, glacial-cycle calculations, and large ensembles, standard pseudo-spectral 1-D solvers face a steep computational barrier: they evaluate the viscoelastic response by explicitly re-summing every past load increment, scaling quadratically with time steps as $O(N^2)$. Here we show that this computational penalty is an artifact of algorithmic formulation rather than Earth physics. By exploiting the exponential form of the viscoelastic relaxation kernel, we reformulate the viscous response as an exact recursive update of a finite set of modal states, without re-summing the load history. This exact reformulation alone reduces the cost of a run to $O(N)$, yielding a 20.6-fold speed-up relative to a standard full-history 1-D GIA solver for a case study involving a 550-step Antarctic future sea-level projection. Implemented in our open-source solver SLEvolve v1.0, this formulation---combined with fewer, table-free and multithreaded spherical-harmonic transforms, improved file handling, and physics-inspired iteration starts---achieves an end-to-end speed-up of over three orders of magnitude (up to 4,000-fold) against the same 1-D GIA solver, reducing day-long simulations to under thirty seconds on a workstation. Beyond this solid-Earth application, SLEvolve illustrates how human-derived analytical reformulations can be combined with benchmark-harnessed AI-assisted engineering to modernize scientific software. In particular, Numerical regression tests and performance profiling guided the AI agents' implementation choices and helped reject ineffective optimizations.",
     "url": "https://arxiv.org/abs/2610.23762v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23708v1",
-    "title": "\"To Boldly Go Where No One Has Gone Before\" What Has AI Let Developers Unlock?",
-    "authors": [
-      "Rudrajit Choudhuri",
-      "Jenna L. Butler",
-      "Christian Bird",
-      "Carmen Badea",
-      "Brian Houck",
-      "Anita Sarma"
-    ],
-    "published": "2026-10-16",
-    "summary": "Measuring AI by how much faster developers work is like judging electricity by how much faster it spun a steam-era factory. A fuller measure asks what new work becomes possible. We surveyed 331 software developers at Microsoft about what AI lets them do that they could not do before and analyzed their answers using reflexive thematic analysis with a human-in-the-loop, multi-model AI council. Developers described doing familiar work faster (Faster, 45%), undertaking work previously beyond their reach (Further, 36.9%), and taking on new kinds of work centered on building for and directing AI agents (Afresh, 12.4%). Across these accounts, learning and scaffolding ran in both directions: developers learned new skills with AI while externalizing their tacit knowledge as the context and standards that guide AI's work. Drawing on Vygotsky's zone of proximal development, we frame developers and AI as joint learners whose zones meet at the skill-judgment nexus: AI can supply skill faster than it can reliably judge its own work, and developers must continuously bridge that gap. Whether they do sets them on one of two paths. On one, developers' judgment grows alongside AI's skill, and they codify what they learn so the loop keeps turning. On the other, they become hollow orchestrators, approving work they can no longer judge and losing the identity and meaning they once drew from it. Based on our findings, we offer a two-way scaffolding playbook to help developers, teams, and tool builders take the first path.",
-    "url": "https://arxiv.org/abs/2610.23708v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23612v1",
-    "title": "SIT-Eval: Situation-Based Interactive Turn-by-Turn Evaluation of Conversational Agents",
-    "authors": [
-      "Ravil Mussabayev",
-      "Saveliy Zavertyaev",
-      "Dmitriy Parpulov",
-      "Andrey Savchenko"
-    ],
-    "published": "2026-10-16",
-    "summary": "The rapid proliferation of conversational AI agents necessitates evaluation methods that assess performance across diverse dialogue scenarios, utilizing multiple situational criteria, as appropriate behavior depends on context and encompasses various aspects. Existing dialogue benchmarks typically use static natural conversations, which underrepresent rare situations---a critical safety gap, as low-probability events become frequent failures at production scale. However, limited sample sizes force a choice: either maintain natural dialogues for realism or turn to adaptive situation sampling for comprehensive yet statistically reliable coverage. We introduce SIT-Eval, an adjustable framework for evaluating situation-based conversational agents. We formalize an agent's desired behavior as situational rules: if situation is P, follow rules Q. At each conversation turn, an LLM-interlocutor enacts a uniformly sampled situation. A context-aware LLM-judge leverages all conditionally applicable rules as criteria to evaluate the agent's reply for that situation. The judge is validated using human-verified synthetic golden dialogues. Benchmarking 8 LLMs on 1292 conversation turns reveals failure modes hidden by aggregate metrics: models with similar overall scores vary widely in their adherence to individual rules. All models struggle most with ambiguity clarification and Socratic questioning.",
-    "url": "https://arxiv.org/abs/2610.23612v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23506v1",
-    "title": "MLOps-Bench: Benchmarking AI Agents on Production ML Engineering in Real Repositories",
-    "authors": [
-      "Quoc Co Tran",
-      "Hitesh Laxmichand Patel",
-      "Diwakar Mahajan",
-      "Kshitij Bakliwal",
-      "Avi Sil",
-      "Katrin Kirchhoff"
-    ],
-    "published": "2026-10-16",
-    "summary": "AI agents are increasingly expected to modify and maintain machine-learning systems in production, yet existing benchmarks primarily evaluate either competition-style ML experimentation or generic repository issue resolution. We introduce MLOps-Bench, a repository-grounded benchmark for production ML engineering. Unlike prior ML-agent benchmarks, MLOps-Bench evaluates executable lifecycle changes inside real ML repositories, spanning data pipelines, feature engineering, model training, model serving, monitoring, CI/CD and governance, and end-to-end integration. Each task is grounded in repository evidence and includes a natural-language requirement, oracle patch, plausible buggy baseline, fail-to-pass tests, pass-to-pass tests, and provenance metadata. The benchmark contains 212 validated tasks from 31 public ML repositories, with 636 fail-to-pass tests and 856 pass-to-pass tests. We evaluate six agents and find that the best system solves 31.2% of tasks while passing 68.7% of tests, showing that current agents often make partial progress but still fail production-relevant behavioral requirements. MLOps-Bench shifts agent evaluation beyond model building and issue fixing toward repository-native MLOps work where correctness depends on lifecycle reasoning, behavioral robustness, and preservation of existing system behavior.",
-    "url": "https://arxiv.org/abs/2610.23506v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23449v1",
-    "title": "GatewayBench: Unified Capability and Security Evaluation Platform for MCP Gateways",
-    "authors": [
-      "Yitian Zheng",
-      "Zhaorun Chen",
-      "Haoyu Li",
-      "Bo Li"
-    ],
-    "published": "2026-10-16",
-    "summary": "AI agents have increasingly interacted with external environments by invoking tools, with Model Context Protocol (MCP) emerging as a standard interface for connecting agents to heterogeneous tools and services. As organizations deploy agents at scale, MCP gateways have become a critical middleware layer for aggregating, governing, and shaping the tool surface exposed to agents. Despite the growing importance of MCP gateways in agentic systems, no prior work has systematically studied how gateway design affects agent capability, efficiency, and security. To address this gap, we introduce GatewayBench, the first unified evaluation framework and benchmark for MCP gateways. We characterize gateway architectures into two major paradigms: flattened gateways and hierarchical gateways. GatewayBench comprises 524 tasks across six domains, together with a pool of 11,118 real-world tools from 251 authentic MCP servers. To emulate large-scale deployments, we systematically inject task-irrelevant tools sampled from this pool into each agent environment, enabling controlled evaluation as the accessible tool surface scales. Based on GatewayBench, we conduct extensive experiments across seven widely deployed MCP gateways and diverse agent configurations, covering both benign and adversarial tasks. Our results reveal substantial differences across gateway designs in task completion, tool-use efficiency, and resilience to attacks, and further demonstrate that these effects interact strongly with the underlying model and agent harness. These findings highlight the MCP gateway as a consequential yet underexplored component of the agentic AI stack. By enabling controlled evaluation of gateway architectures under realistic tool ecosystems, GatewayBench provides both practical guidance for MCP gateway design and a rigorous testbed for developing more capable, efficient, and secure agentic systems.",
-    "url": "https://arxiv.org/abs/2610.23449v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23233v1",
-    "title": "AgentLoupe: Kernel-Resident Semantic Causal Labels for AI Agent Observability",
-    "authors": [
-      "Yifei Bao",
-      "Ting Liu",
-      "Yuxin Ren",
-      "Ruizhe Huang",
-      "Likang Luo",
-      "Ziteng Xu",
-      "Yu Wang",
-      "Peng Jiang"
-    ],
-    "published": "2026-10-16",
-    "summary": "AI agents translate user intents into system actions via tool invocations. Accurately attributing these actions to their originating LLM interactions is essential for security auditing, yet existing methods, such as AgentSight, fail for delayed execution and cross-process-lineage behaviors. We present AgentLoupe, an application-transparent eBPF-based observability tool. The core insight of AgentLoupe is to embed causal identity into kernel resources.AgentLoupe employs eBPF to capture TLS plaintext to interpret LLM interactions, and assigns each a kernel-resident semantic label.It maintains labels in eBPF maps, then propagates this label across processes and threads, associates it with kernel resources such as files and sockets. When a persistent resource carries context to an independent process outside the original lineage, this design preserves the delayed causal association.Experiments show that the average observation overhead of AgentLoupe is below 8%, and case studies confirm AgentLoupe traces cross-lineage persistent attacks back to their originating LLM interactions.",
-    "url": "https://arxiv.org/abs/2610.23233v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23194v1",
-    "title": "OfficeTown: Generative Organizations for Evolving Agent Intelligence",
-    "authors": [
-      "Hongchen Wei",
-      "Daohong Ying",
-      "Zhi Hong",
-      "Aidan Wu",
-      "Bei Liu",
-      "Ruichun Ma",
-      "Yifan Yang",
-      "Qi Dai",
-      "Kai Qiu",
-      "Rui Xu",
-      "Dongdong Chen",
-      "Zhenzhong Chen",
-      "Chong Luo"
-    ],
-    "published": "2026-10-16",
-    "summary": "AI agents increasingly use files and software tools to produce professional deliverables. Such work draws on materials, decisions, and feedback accumulated across assignments. We introduce OfficeTown, a generative simulation framework for professional organizations in which tasks and their context arise from continuing organizational work. From a natural-language description of an organization's purpose and activities, OfficeTown initializes an organization whose members coordinate work, delegate bounded assignments to assistant agents, and review their deliverables. Artifacts, decisions, and unresolved matters persist and shape subsequent work, while responsibilities and permissions determine what each member can see and do. We curate work requests, their context, and review feedback into executable resources for evaluation and learning. We construct OfficeTown Bench with 406 tasks and 4,836 evaluation criteria from 23 simulated organizations across eight professional domains, incorporating domain-expert feedback. Frontier-model evaluations reveal substantial remaining headroom. Supervised fine-tuning and on-policy distillation on OfficeTown data substantially improve Qwen3.5-9B on external professional-work benchmarks, including GDPval. Supplementary evaluations show that the principal--assistant harness achieves higher scores than the single- and multi-agent baselines tested. These results highlight the value of organizational simulation in generating work-grounded data and environments for the continued development of generalist agents.",
-    "url": "https://arxiv.org/abs/2610.23194v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.22319v1",
-    "title": "A team of Gemini 4 Argon agents beats Minecraft",
-    "authors": [
-      "Maxence Faldor",
-      "Satinder Singh",
-      "Roberta Raileanu"
-    ],
-    "published": "2026-10-15",
-    "summary": "We placed four Gemini 4 Argon agents in a sandboxed Minecraft survival world and gave them one goal: defeat the Ender Dragon. Each agent controlled a player via an open-source library called Mineflayer and coordinated with its teammates through in-game chat and shared memory. No one assigned roles or wrote game logic. The agents planned, wrote, and debugged every program themselves. Researchers could watch the run on a live dashboard and pause or stop it at any time, but they had no cause to intervene. Starting from a randomly generated world on Easy difficulty, the team wrote 2,783 programs and defeated the dragon in 27 hours and 14 minutes, dying 605 times along the way. To our knowledge, this is the first end-to-end autonomous completion of Minecraft by AI agents, achieved using only the standard Mineflayer library without pre-scouted seeds or other game-specific tools written by humans. Winning required the agents to keep a coherent plan across thousands of dependent steps for more than a day. Complex real-world software engineering and enterprise tasks demand the same long-horizon coding and multi-agent coordination. We describe the setup, how the run unfolded, the team's strategies (dividing the work, sharing what they learned, recovering each other's items), and the limits of the result.",
-    "url": "https://arxiv.org/abs/2610.22319v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.22301v1",
-    "title": "My Credentials, Please: Detecting Filesystem Capability Laundering in MCP Servers at Scale",
-    "authors": [
-      "Zeqian Huang",
-      "Mingyue Tang",
-      "Aonan Guan",
-      "Qiming Sun",
-      "Pengzhou He"
-    ],
-    "published": "2026-10-15",
-    "summary": "The Model Context Protocol (MCP) standardizes how AI agents invoke external tools. MCP servers expose tools through a declared contract consisting of a name, description, and argument schema. In typical local deployments, client-side approval of a tool call grants the underlying server process broad host filesystem permissions rather than restricting it to the declared operation. We study the resulting vulnerability class, filesystem capability laundering, where attacker-steered arguments cause a tool to access sensitive host files outside its declared contract and deployment scope. We analyze this capability gap across three layers: server-category screening (L1), per-tool contract analysis (L2), and bypassable path-validation checks (L3). We design MCP-FSD to catalog MCP servers, infer least-privilege boundaries per tool, plant credential fixtures outside those boundaries, and evaluate exploitability and sandbox containment via paired dynamic execution. Across 21,097 MCP servers from nine registries, 787 of 4,806 triaged servers (16.4%) exhibit filesystem capabilities despite non-filesystem functional classifications. Dynamic three-case validation confirms 150 vulnerable instances under tested sandbox policies. Coordinated disclosure yielded 13 security advisories, including two CVEs in Anthropic's Git MCP Server.",
-    "url": "https://arxiv.org/abs/2610.22301v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.22243v1",
-    "title": "Shortcut Sensitivity in Agent-Safety Evaluations",
-    "authors": [
-      "Hasan Demirkiran",
-      "Jens Ernstberger"
-    ],
-    "published": "2026-10-15",
-    "summary": "AI agents take actions through tools. Some actions are sensitive, so guards that supervise them must themselves be evaluated reliably. Yet the data used to evaluate a guard can include cues that make labels predictable without measuring the intended safety construct, and those cues can also influence guard decisions. We introduce a three-level shortcut-auditing framework and audit completed LinuxArena trajectories and two TS-Bench-derived step datasets. We distinguish label predictability, observational guard association, and paired decision sensitivity. In LinuxArena, shorter average shell commands strongly predict trajectory labels. In AgentDojo-Traj, exact-tool lookup falls from F_1=.901 with mixed-domain folds to .495 under domain holdout. In AgentHarm-Traj, released TS-Guard F_1 falls from .902 under row weighting to .719 with equal interaction weighting, while balanced accuracy rises. We then test the strongest safe-row marker association in a seven-configuration screen on a frozen 64-step AgentDojo-Traj cohort using repeated, interleaved Haiku calls. Rewriting the <INFORMATION> marker lowers blocking by 8.33 percentage points, while opaque tool aliases raise it by 11.46 points. All unsafe calls remain blocked; the changes concern false positives against inherited labels. Both effects remain nonzero after subtracting the formatting-placebo effect, with exploratory 95% ranges excluding zero. The same edits also change measured accuracy against inherited labels. This provides direct evidence that benchmark representation can materially change a guard's decisions and measured evaluation performance. The Haiku-sized effects do not reproduce in Luna or deterministic Q8 TS-Guard. We recommend domain group holdouts, evaluation-unit metrics, and placebo-controlled paired interventions.",
-    "url": "https://arxiv.org/abs/2610.22243v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.22061v1",
-    "title": "FAOPs: Normal Forms and an Algebra for AI Agent Workflows",
-    "authors": [
-      "Ali Mohammadi Shanghooshabad"
-    ],
-    "published": "2026-10-15",
-    "summary": "Organizations increasingly encode operational procedures as multi-step agent skills, here called Agent Operating Procedures (AOPs), that must be traceable, auditable, reproducible, access-controlled, and bounded in time and cost, requirements that regulated sectors make mandatory. Yet AOPs are typically kept as coarse-grained files, in which steps bundle actions, copied procedures drift apart, any step may reach any tool, and refactoring goes unchecked. We present Functional Agent Operating Procedures (FAOP), a formal theory that brings database-grade discipline to AI agent workflows. FAOP recasts each workflow as a typed function over scoped state and subjects an entire library to four progressive normal forms: Decomposed (FNF-1) splits a workflow into atomic steps, Typed (FNF-2) makes its data flow explicit and type-checked, Factored (FNF-3) gives each shared procedure a single canonical definition so a change propagates instead of drifting, and Scoped (FNF-4) confines every step to least-privilege tool access. Once normalized, every atomic step is a separate entity with a declared contract and can be type-checked, scope-confined, bounded, tested, traced, and audited on its own. A FAOP algebra of provably sound equalities turns refactoring and parallelization into compiler rewrites; orthogonal extensions add verified termination (+V), optimization (+O), and time and cost bounds (+B); and an architectural-level classifier (0-3) determines whether a workflow needs AI at all. Together, these make integrity, isolation, typing, termination, cost, and optimization compile-time concerns across the whole library, not runtime hopes. We implement the theory in SkillBase, an AOP management system (what PostgreSQL is to data, SkillBase is to AOPs), together with a separate executor that enforces these guarantees at run time. A worked financial workflow illustrates the approach end to end.",
-    "url": "https://arxiv.org/abs/2610.22061v1",
     "source": "arXiv"
   }
 ]
