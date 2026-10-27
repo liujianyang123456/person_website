@@ -1,22 +1,23 @@
 {
-  "run_time": "2026-10-26 01:19:44",
+  "run_time": "2026-10-27 01:14:20",
   "trigger": "schedule",
   "steps": {
     "collect_papers": {
       "ok": true,
-      "detail": "抓取 10 篇，新增 10 篇，共保存 50 篇（查询词 all:\"AI agent\"）"
+      "detail": "抓取 10 篇，新增 3 篇，共保存 50 篇（查询词 all:\"AI agent\"）"
     },
     "fetch_rss": {
       "ok": true,
-      "detail": "1 个订阅源，本次抓取 20 条，合并后共 20 条"
+      "detail": "1 个订阅源，本次抓取 20 条，合并后共 26 条"
     },
     "build": {
       "ok": true,
-      "detail": "CHECK PAPERS_SCHEMA [通过] 50 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-26 01:19:44，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
+      "detail": "CHECK PAPERS_SCHEMA [通过] 50 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-27 01:14:20，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
     }
   },
   "changed_files": [
     "public/data/papers.json",
+    "public/data/rss-items.json",
     "public/data/status.json",
     "public/feed.xml"
   ],

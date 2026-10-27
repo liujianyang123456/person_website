@@ -140,6 +140,66 @@
     "summary": "借助混元大模型，腾讯啄木鸟代码安全团队在代码评审（Code Review，下文简称CR）场景下的安全漏洞检出能力取得显著提升，日均发现和阻断300+个代码安全风险，极大提升了公司核心数据资产安全性。"
   },
   {
+    "id": "https://security.tencent.com/index.php/blog/msg/209",
+    "feed": "腾讯安全中心博客",
+    "feed_url": "https://security.tencent.com/index.php/feed/blog/0",
+    "title": "警惕Hugging Face开源组件风险被利用于大模型供应链攻击",
+    "link": "https://security.tencent.com/index.php/blog/msg/209",
+    "published": "2023-11-03 14:00:00",
+    "published_sort": "2023-11-03 14:00:00",
+    "summary": "著名AI社区Hugging Face开源组件datasets存在不安全特性，可引发供应链后门投毒攻击风险。"
+  },
+  {
+    "id": "https://security.tencent.com/index.php/blog/msg/208",
+    "feed": "腾讯安全中心博客",
+    "feed_url": "https://security.tencent.com/index.php/feed/blog/0",
+    "title": "虚拟货币挖矿检测与防御",
+    "link": "https://security.tencent.com/index.php/blog/msg/208",
+    "published": "2021-11-18 18:00:58",
+    "published_sort": "2021-11-18 18:00:58",
+    "summary": "从流量和主机层入手，分析挖矿木马的防御之策。"
+  },
+  {
+    "id": "https://security.tencent.com/index.php/blog/msg/207",
+    "feed": "腾讯安全中心博客",
+    "feed_url": "https://security.tencent.com/index.php/feed/blog/0",
+    "title": "安全通知｜NPM官方仓库遭遇coa等恶意包投毒攻击",
+    "link": "https://security.tencent.com/index.php/blog/msg/207",
+    "published": "2021-11-05 21:31:07",
+    "published_sort": "2021-11-05 21:31:07",
+    "summary": "腾讯洋葱入侵检测系统发现开源软件沙箱主机出现异常行为，跟进发现npm官方仓库的coa、rc被投毒攻击，已经在腾讯软件源紧急拦截相关版本。目前npm官方仓库已将相应版本的恶意包删除，但由于国内开源镜像站均同步npm官方仓库且存在缓存，所以恶意包还可能通过各个开源镜像站影响广大用户。"
+  },
+  {
+    "id": "https://security.tencent.com/index.php/blog/msg/206",
+    "feed": "腾讯安全中心博客",
+    "feed_url": "https://security.tencent.com/index.php/feed/blog/0",
+    "title": "云原生安全攻防｜使用eBPF逃逸容器技术分析与实践",
+    "link": "https://security.tencent.com/index.php/blog/msg/206",
+    "published": "2021-11-03 18:56:37",
+    "published_sort": "2021-11-03 18:56:37",
+    "summary": "在新版本容器运行时中适用的攻击手法，并使用新方式把“任意文件写”转化为“远程代码执行”。"
+  },
+  {
+    "id": "https://security.tencent.com/index.php/blog/msg/205",
+    "feed": "腾讯安全中心博客",
+    "feed_url": "https://security.tencent.com/index.php/feed/blog/0",
+    "title": "Ghostscript沙箱绕过(CVE-2021-3781)分析",
+    "link": "https://security.tencent.com/index.php/blog/msg/205",
+    "published": "2021-10-29 18:40:35",
+    "published_sort": "2021-10-29 18:40:35",
+    "summary": "完整分析从ImageMagick到Ghostscript的攻击利用链"
+  },
+  {
+    "id": "https://security.tencent.com/index.php/blog/msg/204",
+    "feed": "腾讯安全中心博客",
+    "feed_url": "https://security.tencent.com/index.php/feed/blog/0",
+    "title": "实时中文语音克隆——开源项目MockingBird体验",
+    "link": "https://security.tencent.com/index.php/blog/msg/204",
+    "published": "2021-10-27 22:06:51",
+    "published_sort": "2021-10-27 22:06:51",
+    "summary": "5秒内克隆生成任意声音？以语音克隆开源项目MockingBird为例看AI项目面临的安全风险"
+  },
+  {
     "id": "https://security.tencent.com/index.php/blog/msg/202",
     "feed": "腾讯安全中心博客",
     "feed_url": "https://security.tencent.com/index.php/feed/blog/0",

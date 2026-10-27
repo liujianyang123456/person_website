@@ -145,6 +145,58 @@
     "source": "arXiv"
   },
   {
+    "id": "2610.32755v1",
+    "title": "Semantic Representation for Agentic Self-Play in Automated Laboratories",
+    "authors": [
+      "Yves Delley",
+      "John Coller",
+      "Zachary Cutts",
+      "Alexander Daryin",
+      "Mathias Bellaiche",
+      "Jun W. Kim",
+      "Oscar Donosa",
+      "Srinidhi B. Seshadri",
+      "Tanner Clary",
+      "Sandy Klemm",
+      "Avinatan Hassidim",
+      "Yossi Matias",
+      "Pooja Rao",
+      "Petar Sirkovic",
+      "Annalisa Pawlosky"
+    ],
+    "published": "2026-10-23",
+    "summary": "Navigating complex, high-dimensional biological search spaces necessitates scalable physical and computational intelligence to explore beyond local optima through iterative self-play across ideation, experimentation, and automation. Translating experimental designs into reliable physical execution remains bottlenecked by static laboratory automation and unmodeled physical variability. To address this, we introduce VERified Infrastructure for Discovery Laboratories, or VERID, a foundational infrastructure designed to bridge the gap between the high-level reasoning of artificial intelligence (AI) agents and complex, error-prone physical realities of wet labs. VERID is a persistent, high-fidelity semantic digital twin of the laboratory workcell that provides four core services: queryable introspection for agentic reasoning, time-compressed simulation for protocol validation, comprehensive trace persistence for a complete scientific record, and a framework for safe execution. We present three case studies using aqueous dye and deionized water mixtures to validate the optical and fluidic foundations of VERID. These studies demonstrate how VERID enables pre-emptive detection of critical errors in experimental protocols, stateful mid-run error recovery and post-hoc identification of subtle physical failures. The simulation functions as a discrete accounting engine, allowing agents to safely and inexpensively explore experimental designs in silico and refine experimental strategies through iterative self-play. VERID also captures structured multimodal experimental data for downstream analysis, knowledge mining and agent training. We argue that this semantic layer is an essential prerequisite for deploying autonomous agents in the biochemical and biomedical sciences, ensuring data integrity, operational safety, and paving the way for tackling previously intractable grand challenges in biology.",
+    "url": "https://arxiv.org/abs/2610.32755v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32738v1",
+    "title": "Agentic Hazard Mapper: Emulating Expert Map-Making with AI Agents for Risk Communication",
+    "authors": [
+      "Sidi Wu",
+      "Lifeng Lin",
+      "Yizi Chen",
+      "Anna Yokokubo",
+      "Lorenz Hurni"
+    ],
+    "published": "2026-10-23",
+    "summary": "Hazard maps are essential tools for public risk communication, preparedness, and evacuation planning, yet effective cartographic design is not always ensured due to limited access to cartographic expertise across local governments and communities. We present Agentic Hazard Mapper, a multi-agent system that automates hazard-map production by emulating professional cartographic workflows and iterative design trade-offs while adapting design decisions to different data, locations, and hazard contexts. We conducted a formative study with map experts to inform the system design, followed by a user study and interviews with map experts and hazard practitioners. The generated maps improved participants' spatial understanding and evacuation-planning performance, reduced perceived workload and task completion time, and were generally preferred over corresponding municipal maps. We further discuss human oversight, adaptation across users and communication contexts, and opportunities to extend agentic support across broader stages of hazard-map production and risk communication.",
+    "url": "https://arxiv.org/abs/2610.32738v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.32636v1",
+    "title": "Can AI Agents Help Robotic Engineers? Lessons from Two Focus Days in Industry",
+    "authors": [
+      "Salim Fares",
+      "Steffen Herbold"
+    ],
+    "published": "2026-10-23",
+    "summary": "Software developers increasingly use AI agents that execute multi-step programming tasks on their own. However, it is unclear if and how this transfers to robotic engineering, where engineers program industrial robots in niche, vendor-specific languages and rely on visual feedback from simulation tools. Within this paper, we report a case study on the use of AI agents by an SME that programs industrial robots. Our results show that the agent did not make the engineers more productive, with the exception of a task that required the generation of highly repetitive code. However, the results with the agent improved over time, as the engineers learned how to use it and the agent was adapted to the domain. Moreover, the experience with AI mattered more for the success with the agent than the experience with robotic engineering. This shows that AI agents are not a plug-and-play solution. Instead, companies must train their engineers on the usage of agents, plan time for a learning curve, and ensure that agent configurations match the domain and developer requirements. The strong learning curve we observed further implies that studies on productivity gains with AI should be longitudinal, as they otherwise miss how engineers adopt agents in practice.",
+    "url": "https://arxiv.org/abs/2610.32636v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.31355v1",
     "title": "Muffin - A Shared Memory Buffer for Asynchronous AI Agents",
     "authors": [
@@ -751,53 +803,6 @@
     "published": "2026-10-16",
     "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the Surveillance, Epidemiology, and End Results (SEER) database, a widely used U.S. cancer registry underlying tens of thousands of published studies. First, we introduce SEER-Repro, a benchmark of 20 published SEER-based papers together with the data and resources required to reproduce their findings. Second, we create an AI agent that successfully reproduces 77.4% of 2,190 atomic claims, while providing executable baselines for further analysis. Third, we develop an agentic analysis pipeline to test the robustness of the medical findings by identifying analytical choices underlying each finding, proposing defensible alternatives, and rerunning the analysis to determine whether those choices affect the conclusion. Across published papers in SEER-Repro, our pipeline identifies potentially consequential analytical choices in 9.5% of fully reproduced findings and flags them for expert review. These results show how LLM agents can support scientific review by reproducing findings, systematically testing their robustness, and directing expert attention toward potentially consequential analytical choices.",
     "url": "https://arxiv.org/abs/2610.23845v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23832v1",
-    "title": "Leveraging verifiable structure in quantum circuits to find more efficient compilations with agentic AI",
-    "authors": [
-      "Tanuj Khattar",
-      "Nicholas C. Rubin",
-      "Craig Gidney",
-      "Michael Broughton",
-      "Guang Hao Low",
-      "Ryan Babbush"
-    ],
-    "published": "2026-10-16",
-    "summary": "We discuss an effective paradigm of utilizing AI agents to better compile quantum circuits when one can constrain bottleneck subroutines to have some form of classically verifiable structure. For example, when critical subroutines are composed exclusively of reversible classical logic, phasing operations, and measurement based uncomputation, one can efficiently simulate execution for classical inputs. This property facilitates efficient certification of approximate circuit synthesis via a form of fuzz testing, provided suitable assumptions on the input distribution. While this pattern was recently exploited to improve quantum cryptanalysis circuits, here we highlight the flexibility of the broader approach by discussing three important applications. (1) The computation of $1/\\sqrt{x}$ that bottlenecks real space simulations of the Coulomb operator such as those important for modeling inertial confinement fusion reactors. (2) The decoding of Reed-Solomon codes which bottlenecks the decoded quantum interferometry algorithm when used to approximately solve the optimal polynomial intersection problem. And (3) the quantum look-up tables and controlled application of Givens rotations that bottleneck the most performant quantum algorithms for simulating chemistry in second quantization. We discuss reference implementations of these algorithms and how they can be constrained and verified in the interest of seeding a Kaggle competition designed to accelerate AI-based research into the optimization of their compilation.",
-    "url": "https://arxiv.org/abs/2610.23832v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23826v1",
-    "title": "Self-Building Labs",
-    "authors": [
-      "Jiaru Bai",
-      "Yuchi Zhao",
-      "Han Hao",
-      "Miroslav Bogdanovic",
-      "Yang Cao",
-      "Varinia Bernales",
-      "Alán Aspuru-Guzik"
-    ],
-    "published": "2026-10-16",
-    "summary": "Self-driving laboratories (SDLs) accelerate scientific discovery by automating experimental execution and optimization. AI agents can increasingly propose new experiments, but existing SDLs can only run the procedures they were built for. Adapting them to a new experiment still takes extensive manual engineering, which makes laboratory flexibility the bottleneck for scaling discovery. We introduce the self-building laboratory (SBL), which designs, configures, and operates its own laboratory setup given a high-level scientific goal. SBL starts from whatever already exists, from an empty room to a working SDL, and builds the missing capabilities: the lab layout, its digital twin, robot skills, and experimental workflows. We demonstrate the system working across different robots and setups, scaling from a single workstation to laboratories with several robots working together. We validate SBL's end-to-end capabilities through a real-world quantum-dot synthesis experiment. By shifting the role of human researchers from manually configuring and programming device automation to specifying scientific objectives, SBL makes scientific automation more accessible, flexible, and scalable. Project website: https://self-building-labs.github.io/",
-    "url": "https://arxiv.org/abs/2610.23826v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23762v1",
-    "title": "An exact finite-state representation of viscoelastic memory for accelerated sea-level modeling: SLEvolve v1.0",
-    "authors": [
-      "Xiyuan Bao",
-      "S. Mostafa Mousavi",
-      "Konstantin Latychev",
-      "Jerry X. Mitrovica"
-    ],
-    "published": "2026-10-16",
-    "summary": "Glacial Isostatic Adjustment (GIA) models solve the gravitationally self-consistent sea-level equation for the response of the solid Earth and the oceans to changing ice loads. As these models are increasingly embedded in coupled ice-sheet simulations, glacial-cycle calculations, and large ensembles, standard pseudo-spectral 1-D solvers face a steep computational barrier: they evaluate the viscoelastic response by explicitly re-summing every past load increment, scaling quadratically with time steps as $O(N^2)$. Here we show that this computational penalty is an artifact of algorithmic formulation rather than Earth physics. By exploiting the exponential form of the viscoelastic relaxation kernel, we reformulate the viscous response as an exact recursive update of a finite set of modal states, without re-summing the load history. This exact reformulation alone reduces the cost of a run to $O(N)$, yielding a 20.6-fold speed-up relative to a standard full-history 1-D GIA solver for a case study involving a 550-step Antarctic future sea-level projection. Implemented in our open-source solver SLEvolve v1.0, this formulation---combined with fewer, table-free and multithreaded spherical-harmonic transforms, improved file handling, and physics-inspired iteration starts---achieves an end-to-end speed-up of over three orders of magnitude (up to 4,000-fold) against the same 1-D GIA solver, reducing day-long simulations to under thirty seconds on a workstation. Beyond this solid-Earth application, SLEvolve illustrates how human-derived analytical reformulations can be combined with benchmark-harnessed AI-assisted engineering to modernize scientific software. In particular, Numerical regression tests and performance profiling guided the AI agents' implementation choices and helped reject ineffective optimizations.",
-    "url": "https://arxiv.org/abs/2610.23762v1",
     "source": "arXiv"
   }
 ]
