@@ -1,23 +1,22 @@
 {
-  "run_time": "2026-10-27 01:14:20",
+  "run_time": "2026-10-28 01:28:41",
   "trigger": "schedule",
   "steps": {
     "collect_papers": {
       "ok": true,
-      "detail": "抓取 10 篇，新增 3 篇，共保存 50 篇（查询词 all:\"AI agent\"）"
+      "detail": "抓取 10 篇，新增 10 篇，共保存 50 篇（查询词 all:\"AI agent\"）"
     },
     "fetch_rss": {
-      "ok": true,
-      "detail": "1 个订阅源，本次抓取 20 条，合并后共 26 条"
+      "ok": false,
+      "detail": "exit 1: FETCH RSS FAILED: <urlopen error timed out>（已保留旧数据，文件未改动）"
     },
     "build": {
       "ok": true,
-      "detail": "CHECK PAPERS_SCHEMA [通过] 50 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-27 01:14:20，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
+      "detail": "CHECK PAPERS_SCHEMA [通过] 50 篇论文通过校验 … BUILD STATUS: 构建时间 2026-10-28 01:28:41，页面 16，文章 3，Wiki 5 … BUILD ALL: 完成"
     }
   },
   "changed_files": [
     "public/data/papers.json",
-    "public/data/rss-items.json",
     "public/data/status.json",
     "public/feed.xml"
   ],

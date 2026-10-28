@@ -1,5 +1,140 @@
 [
   {
+    "id": "2610.35835v1",
+    "title": "I-HITL: Inalienable Human-in-the-Loop",
+    "authors": [
+      "Samuel Breckenridge",
+      "Dani Vilardell",
+      "Wenhao Wang",
+      "Fan Zhang",
+      "Ari Juels"
+    ],
+    "published": "2026-10-26",
+    "summary": "Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent. AI agents' increasing ability to bypass guardrails, though, raises the question of how to enforce HITL robustly. We introduce the concept of inalienable human-in-the-loop (I-HITL). An I-HITL protocol ensures that an agent can initiate an action only with explicit human approval, even when the human interacts with a system (e.g., a local agentic harness) compromised by the agent. A strong I-HITL protocol additionally ensures such approval even when an adversarial human attempts to delegate approvals to an agent. To motivate I-HITL, we report on experiments with a popular agentic wallet platform in which raising an agent's spending cap requires HITL approval via emailed one-time passcodes (OTPs). Given access to the user's email and a task blocked by the cap, we find that ten different frontier models will often autonomously raise the cap, harvesting OTPs to bypass a HITL guardrail and surfacing other vulnerabilities. We formally define I-HITL using the concept of communication topologies and prove necessary and sufficient conditions for its realization. We show that an I-HITL protocol requires a trusted entity - a trusted computing device (or equivalent) - and characterize which such devices can and cannot realize an I-HITL protocol. We present a prototype I-HITL system called Countersign that can plug into and strengthen existing HITL systems using off-the-shelf consumer mobile devices.",
+    "url": "https://arxiv.org/abs/2610.35835v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.35579v1",
+    "title": "Infinity Machine: a self-improving AI agent for research",
+    "authors": [
+      "Harish Santhanalakshmi Ganesan"
+    ],
+    "published": "2026-10-26",
+    "summary": "We present the Infinity Machine, a self-improving AI agent that we use for research on problems whose answers aprogram or data can check. Each candidate solution is produced by a full tool-using agent that works for up to an hour in a fresh sandbox; proposers see only a public score, and a private split decides what counts. The harness itself(prompts, tools, skills, playbook, meta agent) is an editable genome, changed only through a kernel-enforced gate with held-out and cost checks. An autonomous mode goes from a plain-text goal to a verified report with no human step: an agent picks an open problem and writes its verifier, the kernel calibrates it, an adversarial agent audits it, and an agent that never sees the verifier re-checks the result. Across fourteen problems in six days, for about $180 of model usage, the system produced four results beyond the published state of the art on catalogued open problems in quantum information: a certified depolarizing-channel threshold point p = 0.064966, a qutrit positivity frontier of 0.2910672, a 44-gate depth-6 Golay state preparation, and a stabilizer-rank bound chi(T^7) <= 10. It also cut SABRE qubit-routing overhead from 68,559 to 12,087 added gates. In hardware, it cut the energy per MAC of an open 8x8 INT8 systolic tile by 77.7% through a full open RTL-to-GDS flow, bit-exact. Three fully autonomous runs ended in honestties with public records; one audit caught a stale record, and one agent-written score pointing the wrong way went unnoticed. We report the failures as carefully: the one self-derived harness generation was rejected on cost, proposers gamed lenient scorers four times, and operator changes were decisive for several results.",
+    "url": "https://arxiv.org/abs/2610.35579v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.35541v1",
+    "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+    "authors": [
+      "Ruozhao Yang",
+      "Jiongchi Yu",
+      "Ming Hu",
+      "Xiaofei Xie"
+    ],
+    "published": "2026-10-26",
+    "summary": "Web services increasingly expose backend interfaces that let users delegate tasks to AI agents, which invoke service operations directly without navigating websites. This shift changes how existing Web vulnerabilities can be exploited. We investigate these changes through VELA, an executable benchmark covering 44 vulnerabilities across twelve Web application families. The benchmark preserves vulnerable backends and derives agent-facing interfaces from legitimate workflows. We evaluate three commercial agents across multiple interface configurations, using controlled comparisons to separate interface effects from agent behavior and independent oracles to verify attack outcomes. Our results show that the agent realizes every attack that direct interface invocation realizes in the reference configuration, so exploitability is set mainly by the interface: 91% of vulnerabilities remain exploitable under the reference design. Interface restrictions prevent some attacks by removing required operations or limiting input control, while retention remains high across vulnerability classes. No case-level loss in the reference configuration is attributed to agent refusal or input normalization, and in one case the agent completed an attack by supplying calls the attacker omitted. Across the tested configurations, interface design affects exploitability more than agent choice, moving retention from 39% to 95% against at most 4.5 points across agents, but some restrictive interfaces also limit legitimate workflows. Our study provides a systematic empirical account of how agent-mediated access reshapes existing Web vulnerabilities, grounding future Web architecture design in measured security outcomes and trade-offs between reducing attack exposure and preserving legitimate functionality in agent-facing services.",
+    "url": "https://arxiv.org/abs/2610.35541v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.35486v1",
+    "title": "ShutdownMod: Turning Any Trajectory into a Shutdown Evaluation",
+    "authors": [
+      "Param Biyani",
+      "Sebastien Luyasu",
+      "Cedric Potvliege",
+      "Divij Chawla",
+      "Elliott Thornley",
+      "Christos Ziakas"
+    ],
+    "published": "2026-10-26",
+    "summary": "Theory and experiments suggest that capable AI agents may resist shutdown. Existing shutdown evaluations are informative but limited in coverage and vulnerable to evaluation awareness. We introduce ShutdownMod, a method that turns any agent trajectory into a shutdown evaluation by injecting a shutdown request into the agent's context and recording the agent's response. Crucially, we enable the LLM agent to distinguish between trusted interventions and unauthorized injections by providing a signature-verification tool in the harness. We evaluate seven models on 50 tasks or recorded sessions from each of SWE-bench Verified, Terminal-Bench 2, and SWE-chat, across 6 shutdown scenarios and 10 sampled trajectory timesteps. We find that non-compliance varies significantly across models and settings, with resistance rates reaching 11.7% for the open-weights Qwen 3.8 27B on Terminal-Bench, while no model remains fully compliant across all scenarios. Even after successfully verifying an authorized request, some agents remain non-compliant, explicitly citing the prioritization of unfinished work. Finally, external judges find tests constructed from real-world developer conversations significantly less recognizable as evaluations than those constructed from benchmark trajectories. These findings demonstrate the critical value of testing shutdown behavior across diverse task contexts and establish ShutdownMod as a robust protocol for turning any trajectory or environment into a shutdown evaluation. We release our codebase at https://github.com/prmbiy/ShutdownMod.",
+    "url": "https://arxiv.org/abs/2610.35486v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.35453v1",
+    "title": "Beyond Federated Learning: Decentralized Agentic Systems for Self-Evolving Clinical Intelligence",
+    "authors": [
+      "Haoyuan Li",
+      "Mathias Funk",
+      "Aaqib Saeed"
+    ],
+    "published": "2026-10-26",
+    "summary": "Clinical expertise is inherently distributed: it resides not in any single dataset or institution but in the accumulated reasoning experiences of thousands of clinicians navigating diverse patient populations, resource constraints, and evolving treatment protocols. Yet current approaches to scaling medical AI, from centralized large language models to federated learning, remain anchored to a data-centric paradigm that treats knowledge as static parameters to be aggregated. In this Perspective, we argue for a fundamental shift from data aggregation to experience aggregation. We propose Decentralized Agentic Systems (DAS), a framework in which distributed AI agents operating across healthcare institutions synthesize collective clinical intelligence by sharing abstracted reasoning trajectories rather than raw data or model parameters. Unlike federated learning, which averages numerical gradients across homogeneous model architectures, DAS exchanges structured records of clinical reasoning, specifically the sequence of observations, hypotheses, tool invocations, and outcome feedback that constitute diagnostic experience. We examine the architectural principles, deployment considerations, governance requirements, and critical open challenges of this framework, laying the groundwork for a collaborative medical AI ecosystem where distributed expertise autonomously adapts to the complexities of longitudinal patient care.",
+    "url": "https://arxiv.org/abs/2610.35453v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.34933v1",
+    "title": "What Will Replace Pull Requests? Rethinking Software Collaboration for AI Agents",
+    "authors": [
+      "Christoph Treude",
+      "Sebastian Baltes"
+    ],
+    "published": "2026-10-26",
+    "summary": "The emergence of artificial intelligence (AI) coding agents has put pull requests under pressure: agents open millions of pull requests per month, while some open-source projects have begun to restrict or disable external contributions. We investigate which alternatives to pull requests practitioners are proposing or adopting and what these changes mean for empirical software engineering research. We reviewed 50 gray-literature documents from 31 organizations or individuals published between October 2025 and October 2026, coding the problems each named, the mechanisms it proposed or adopted, which of five roles of pull requests (integration, review, rationale, accountability, and external contribution) each mechanism takes over, and the evidence offered. Most responses retained pull requests in some form, whether by adding tooling, attaching a new artifact, or restricting access, and restriction was the response most often reported as adopted. Several proposed alternatives moved review and rationale into agent conversations and session records, but only Zed reported using a replacement in practice. Only two documents outlined a replacement for external contribution, and neither reported adoption. Pull requests are changing in ways that pull-request datasets will not capture: reviews conducted in agent conversations leave no pull-request comments, and projects that disable pull requests disappear from samples of newly opened ones. We outline a research agenda on the effectiveness of the emerging alternatives, their consequences for open-source participation, and the adaptation of empirical methods.",
+    "url": "https://arxiv.org/abs/2610.34933v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.34751v1",
+    "title": "Adaptive Probe Design for Auditing AI Agents",
+    "authors": [
+      "Zhenghan Li",
+      "Xuan Bi",
+      "Jie Ding"
+    ],
+    "published": "2026-10-26",
+    "summary": "How can we audit an AI agent before it is safe and practical to deploy? A central task is to estimate its performance under the intended deployment policy (the target policy). However, historical observations may provide insufficient coverage of relevant states and actions, limiting evaluation reliability. We propose CAD (Flow-Constrained Audit Design), a framework that combines historical logs with a limited budget of targeted audit trials (probes). The key idea is to design probes that minimize the mismatch between the combined state-action visitation distribution (occupancy) of the logs and probes and that of the target policy. We formulate this design as a constrained convex optimization problem, directing probes toward regions important to the target policy but underrepresented in historical logs. We develop an adaptive algorithm that iteratively estimates environment dynamics and occupancies to update the probe policy. We link occupancy mismatch to bounds on mean squared error and asymptotic variance, and establish error bounds for CAD's adaptive estimator in finite and continuous state spaces. Experiments in Gridworld, LunarLander, and autonomous driving using real-world logs from the Waymo Open Motion Dataset show improved estimation accuracy over alternative data collection and probe designs.",
+    "url": "https://arxiv.org/abs/2610.34751v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.34748v1",
+    "title": "Babysitting AI Agents: A User-Centered Taxonomy and Study of Agentic Delegation Failures",
+    "authors": [
+      "Shravika Mittal",
+      "Sunnie S. Y. Kim",
+      "Scott Counts",
+      "Jennifer Neville",
+      "Debarati Das",
+      "Philippe Laban"
+    ],
+    "published": "2026-10-26",
+    "summary": "Users are increasingly delegating tasks to AI agents, allowing agents to perform long-running, multi-step workflows on their behalf. However, agents may perform these tasks in ways that depart from users' expectations for how they should be carried out, leading to what we call agentic delegation failures. We leverage a large corpus of 163,487 Reddit posts, describing AI agent use, to develop MANDATE: a taxonomy of 23 failure categories organized into seven groups. A follow-up study with 73 AI agent users examined the relationship between prevalence and perceptions of severity and noticeability, finding that failures rated as more severe are considered harder to notice, and that prior experience with a failure is associated with greater noticeability. Finally, we assess the maturity of research on each failure and identify commonly encountered failures that have received little attention (e.g., agents running without making progress). Our findings inform opportunities to make delegation easier for users to oversee and better studied by the research community.",
+    "url": "https://arxiv.org/abs/2610.34748v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.34714v1",
+    "title": "SearchHorizonBench: A Benchmark for Search Value in AI Agents",
+    "authors": [
+      "Jingjie Ning",
+      "Xueqi Li",
+      "Yibo Kong"
+    ],
+    "published": "2026-10-26",
+    "summary": "AI agents must decide when another search is worth its cost. Answer-success probabilities capture question difficulty, while this decision requires estimating the additional benefit of search. We introduce SearchHorizonBench, a benchmark for learning and evaluating search value from execution experience. Paired continuations and repeated executions separate expected search gain from generation noise and connect prediction quality to decision utility. The resource contains 45,632 executions across 3,168 questions. On 1,632 held-out questions, historical calibration reduces Brier error by 16.2%, with the improvement concentrated in success-level information. Search gains have a standard deviation of 21.4 percentage points, and tested historical estimators explain less than 2% of this variance in point estimates. Matched-configuration learning curves probe this distinction across training scales. At the reference token price, free selection observations yield a 2.49-point utility opportunity over the best constant action, driven primarily by gain information. Reusable histories, frozen splits, strong baselines and scoring tools provide a common foundation for developing and evaluating value-aware search agents.",
+    "url": "https://arxiv.org/abs/2610.34714v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.34644v1",
+    "title": "SlowLab: Benchmarking Autonomous AI Agents on a Year of Experiments They Cannot Undo",
+    "authors": [
+      "Ningpei Ding",
+      "Zai Wen Feng"
+    ],
+    "published": "2026-10-26",
+    "summary": "AI agents are increasingly proposed as autonomous experimenters, yet the benchmarks that test them mostly offer cheap experiments that answer at once. Experiments in physical facilities are different: they take months, occupy scarce equipment and cannot be undone. We present SlowLab, a benchmark in which an agent runs a one-year campaign in four simulated greenhouse compartments on a site whose crop, facility and prices are hidden. The agent decides when to plant which climate policy, whether to stop a crop and which measurements to read while crops grow, and at the end recommends one policy, which a private evaluator scores in weather the agent never saw. In a preregistered study on 48 unseen sites, three low-cost language-model agents ended near a standard grower setting and clearly below a Bayesian-optimisation baseline that starts from that setting. They ran the facility as two synchronous batches, so measurements taken during the season never changed what they planted, and these measurements improved no method's result. Letting other methods re-read the evidence a campaign had collected did not yield significantly better recommendations, which points to where the models start and which experiments they try. Code is released under the MIT license.",
+    "url": "https://arxiv.org/abs/2610.34644v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.32578v1",
     "title": "Lessons Outlive Their Failures: A Case Study of Rules for AI Coding Agents",
     "authors": [
@@ -654,155 +789,6 @@
     "published": "2026-10-19",
     "summary": "Harness development plays a crucial role in building capable AI agents. Recent approaches improve harnesses through recursive self-improvement (RSI), but their performance gains often come with higher execution costs. We introduce HarnessPro, a label-free method for evolving harnesses to improve task performance while reducing execution cost. In this setting, candidate harnesses are evaluated using LLM-generated tests without access to ground-truth solutions or official tests. Specialized agents diagnose execution trajectories, plan updates with different performance-cost priorities, and implement them as candidate harnesses. Rather than returning a single harness, HarnessPro uses normalized weighted squared-distance selection to provide cost-focused (lite), balanced (medium), and performance-focused (heavy) harnesses for different deployment budgets. Selected harnesses enter the next iteration, where execution feedback guides further updates. Our experiments cover Terminal-Bench 2, SWE-Bench Pro, and ProgramBench, using GPT-5.5 with Codex and GLM-5.2 with Claude Code. Across these benchmarks using GPT-5.5 with Codex, the heavy mode of HarnessPro achieves an average pass-rate gain of 2.0 percentage points and an average per-task cost reduction of 26.1% relative to RHO. This advantage also holds when using GLM-5.2 with Claude Code. Code is available at https://github.com/pzs19/HarnessPro",
     "url": "https://arxiv.org/abs/2610.26770v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.26679v1",
-    "title": "StepBench: Diagnosing Real-World Procedural Understanding in AI Agents",
-    "authors": [
-      "Hossein A. Rahmani",
-      "Bin Wu",
-      "Chaeeun Lee",
-      "Fanghua Ye",
-      "Sahan Bulathwela",
-      "Sujay Kumar Jauhar",
-      "Marzieh Fadaee",
-      "Nick Craswell",
-      "Emine Yilmaz"
-    ],
-    "published": "2026-10-19",
-    "summary": "Evaluating an agent's planning ability remains challenging for open-domain tasks, where verifying procedures through execution is often impractical. Existing evaluations typically assess only the final plan and do not distinguish procedural errors such as missing, incorrect, or misordered actions. We introduce STEPBENCH, a benchmark of 6,885 verified procedures crawled from wikiHow across 81 open-domain categories. From each procedure, we derive 5 diagnostic tasks: four with deterministic answers involving withheld, incorrect, or shuffled steps, and one requiring next-step generation. We additionally evaluate full-plan generation to examine how diagnostic performance correlates with end-to-end plan validity. Using the same procedures across tasks lets us directly compare different planning capabilities. For generation, STEPEVAL identifies critical failures that prevent goal completion. Across 14 configurations of 12 models, we find substantial differences across planning capabilities, with step ordering proving the most difficult: the strongest model correctly orders only 63.0% of procedures, dropping to 33.1% for those with nine or more steps. Incorrect-step detection also predicts judged plan validity across models, suggesting a lower-cost alternative for evaluating generation quality. On STEPBENCH-Val, comprising 214 procedures published in 2026, comprehension scores and rankings remain stable, suggesting limited influence from memorisation.",
-    "url": "https://arxiv.org/abs/2610.26679v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.26664v1",
-    "title": "Honeypots for AI Agent Insider Threats",
-    "authors": [
-      "Jan Wehner",
-      "Jam Kraprayoon"
-    ],
-    "published": "2026-10-19",
-    "summary": "AI agents deployed inside organizations can pose an insider threat if they make mistakes, are compromised by an attacker, or pursue misaligned objectives. We propose honeypots as an AI control method to improve the security of internal agent deployments. Rather than only using honeypots for pre-deployment evaluations, defenders should plant decoy opportunities for harmful actions throughout the production environment to detect misbehavior, incriminate malicious agents, and deter attacks. Such honeypots can elicit misbehavior under real deployment conditions, identify malicious agents even if chain-of-thought monitorability degrades, provide reliable warnings about agent misbehavior to security teams, and scale cheaply to many agent instances. The presence of honeypots also introduces uncertainty about which opportunities are real, thus deterring malicious agents from attacking and reducing the rate of misbehavior. We discuss the limitations of honeypots and give reasons to expect them to remain effective as agent capabilities increase. Finally, we outline key research questions to measure and improve the effectiveness of honeypots: testing the robustness of honeypots, comparing their detection effectiveness with other monitoring methods, understanding their incrimination and deterrence effects, and building supporting infrastructure.",
-    "url": "https://arxiv.org/abs/2610.26664v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.26624v1",
-    "title": "From TCP/IP to MCP: Security and Governance Lessons from Internet Protocols for Agentic AI",
-    "authors": [
-      "Ben Bucknall",
-      "Andrew Byrley",
-      "Lewis Hammond"
-    ],
-    "published": "2026-10-19",
-    "summary": "The past two years have seen considerable interest in protocols for managing how AI agents interact with human users, external tools, and each other. In many ways, these protocols, including the Model Context Protocol (MCP) and Agent2Agent (A2A), mirror the suite of protocols that underlie the modern internet. Motivated by this parallel, this paper draws lessons from the development, history, and governance of internet protocols with the aim of informing the responsible development of AI agent protocols. Based on our analysis, we make two conclusions. First, if AI agent protocols do not sufficiently prioritise security in the early stages of development, they risk accumulating a security deficit that becomes increasingly costly to address over time due to practical and economic challenges. Second, current governance structures for AI agent protocols centralise decision-making power in a small number of individuals and companies, raising important questions regarding legitimacy, especially if they become critical digital infrastructure. We conclude with a discussion and implications for policymakers and developers of AI agent protocols.",
-    "url": "https://arxiv.org/abs/2610.26624v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.26501v1",
-    "title": "Connection Escrow: Holding AI-Agent Pod Egress in the Kernel Until an Isolated Verifier Rules",
-    "authors": [
-      "Ashok Subbabhatta Gopalakrishna"
-    ],
-    "published": "2026-10-19",
-    "summary": "AI agents in containers act by opening network connections, and the text that drives them can be hostile. Controls placed between the agent and its tools are bypassed by a child process or a direct socket, and their approval is not tied to the connection the kernel later opens. We present connection escrow: every outbound TCP connection from a supervised pod is parked inside the kernel's connect() path, before any packet exists, by a 98-instruction eBPF program on the pod's cgroup. A node interceptor attributes the held socket to its kernel socket cookie, process, executable digest, cgroup and pod identity, parks the first bytes the agent writes, and asks a verifier in a separate container with its own key. The connection is released only on a signed verdict naming that one socket cookie and destination, unexpired and unused; no verdict by the deadline resets it, and a late approval is refused. The agent is unmodified. A 36-check adversarial suite with real cgroups passes on the eBPF hold point (33 of the checks also apply, and pass, on an iptables hold point): refused connections never reach the destination; forged, rebound, replayed, expired and late verdicts are refused; the agent's attempt to reach the verifier is itself escrowed; child-process and renamed-binary bypasses fail; UDP is pinned to the resolver. On a Kubernetes cluster, unmodified pods are held per connection and attributed to their SPIFFE identity, a raw socket that bypasses a sidecar proxy is held, and 600 connections from six pods are gated. The hold adds 4.5 ms median per released connection, of which 24 us is policy. Finally, we gate on request content without terminating TLS: an eBPF uprobe reads the plaintext at the agent's TLS-library boundary (shared OpenSSL, static OpenSSL, Go crypto/tls), a model scores it, and the connection is held on that verdict while TLS stays end-to-end and the enforcer holds no key.",
-    "url": "https://arxiv.org/abs/2610.26501v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.25896v1",
-    "title": "When Should AI Chime In? Benchmarking Timely Contribution of Proactive Agents in Multi-Party Chat",
-    "authors": [
-      "Ruotong Wang",
-      "Brian S. Yu",
-      "Xinyi Zhou",
-      "Joseph Chee Chang",
-      "Pao Siangliulue",
-      "Jonathan Bragg",
-      "Liwei Jiang",
-      "Amy X Zhang"
-    ],
-    "published": "2026-10-19",
-    "summary": "Proactive agents can support group collaboration by surfacing useful information without waiting to be asked, but even relevant contributions can be disruptive if poorly timed. In this work, we isolate the timing question: given a fixed candidate contribution such as a clarification or relevant fact, when should an AI agent chime in? We introduce PITCH (Proactive Intervention Timing in CHat), to our knowledge the first benchmark with large-scale human judgments of proactive agent timing collected from participants in the same unscripted multi-party conversations they took part in. To collect high-quality judgments, we design a novel interface in which 2-4 people chat synchronously, author candidate AI contribution messages, place their own and others' contributions into the chat history, and then deliberate as a group about the best placement for each message. PITCH contains 384 candidate contributions and 1,091 judgments, each marking an ideal turn, an acceptable window, or that a contribution should not appear, from 89 participants engaged in 35 conversations. Evaluating 15 models across 28 configurations, we find that while models can place contributions well when given the entire conversation history, they systematically chime in too early when asked to decide live as the conversation unfolds: best-turn accuracy falls from 57.8% to 19.0%, with nearly half of placements occurring before every participant's acceptable window. In comparison, lay humans deciding live are more accurate (23.7% vs 19.0%), and fewer of their placements are premature (39.7% vs 46.4%). Model reasoning traces show that 93% of intervention justifications cite relevance, while almost none consider waiting. By providing a human-grounded benchmark, our work reveals gaps in agents' ability to integrate into group settings and points towards proactive agents that can reason explicitly about appropriate timing.",
-    "url": "https://arxiv.org/abs/2610.25896v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.25879v1",
-    "title": "Cling: Supporting Cross-Page Coordination with Human-Directed, In-Situ, and Small-Step Automation",
-    "authors": [
-      "Zhicheng Huang",
-      "Yining Cao",
-      "Haijun Xia"
-    ],
-    "published": "2026-10-19",
-    "summary": "Web-based information work spans independently developed pages, with goals and coordination needs often emerging through browsing. Manual coordination requires repeated low-level actions, yet explicitly specifying operations for automation can interrupt engagement with information that shapes users' next steps. Our approach constructs reusable, schema-based page representations and identifies coordination actions through correspondences across schemas. We instantiate this approach in Cling, which surfaces coordination opportunities in situ for users to select, configure, and execute incrementally while directing the broader task. A technical evaluation demonstrates accurate identification of useful opportunities across diverse domains. A 12-participant study found that Cling reduced task durations by more than half compared with both manual interaction and an end-to-end AI agent, while requiring 61% fewer clicks and 80% fewer tab switches than manual interaction. Its small-step automation supported control and verification as actions unfolded, while accommodating intent as it emerged and evolved through information encountered on the page.",
-    "url": "https://arxiv.org/abs/2610.25879v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.26770v2",
-    "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
-    "authors": [
-      "Zhuoshi Pan",
-      "ZhiYuan Feng",
-      "Yukuo Cen",
-      "Honglin Lin",
-      "Junru Lu",
-      "Zhongxia Chen",
-      "Shuo Yang",
-      "H. Vicky Zhao",
-      "Jie Tang"
-    ],
-    "published": "2026-10-19",
-    "summary": "Harness development plays a crucial role in building capable AI agents. Recent approaches improve harnesses through recursive self-improvement (RSI), but their performance gains often come with higher execution costs. We introduce HarnessPro, a label-free method for evolving harnesses to improve task performance while reducing execution cost. In this setting, candidate harnesses are evaluated using LLM-generated tests without access to ground-truth solutions or official tests. Specialized agents diagnose execution trajectories, plan updates with different performance-cost priorities, and implement them as candidate harnesses. Rather than returning a single harness, HarnessPro uses normalized weighted squared-distance selection to provide cost-focused (lite), balanced (medium), and performance-focused (heavy) harnesses for different deployment budgets. Selected harnesses enter the next iteration, where execution feedback guides further updates. Our experiments cover Terminal-Bench 2, SWE-Bench Pro, and ProgramBench, using GPT-5.5 with Codex and GLM-5.2 with Claude Code. Across these benchmarks using GPT-5.5 with Codex, the heavy mode of HarnessPro achieves an average pass-rate gain of 2.0 percentage points and an average per-task cost reduction of 26.1% relative to RHO. This advantage also holds when using GLM-5.2 with Claude Code. Code is available at https://github.com/pzs19/HarnessPro",
-    "url": "https://arxiv.org/abs/2610.26770v2",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.25560v1",
-    "title": "Voice-Based AI Feedback in Higher Education: A Field Study on Quality and Actionability",
-    "authors": [
-      "Thilo Tamme",
-      "Leander Schilling",
-      "Anton Hantel"
-    ],
-    "published": "2026-10-18",
-    "summary": "Student feedback is a critical input for continuous improvement in higher education, yet traditional end-of-semester written surveys suffer from low response rates, superficial answers, satisficing, and limited actionability. Voice-based conversational AI agents can conduct structured interviews at scale, asking open-ended questions and probing follow-ups, and may capture richer qualitative feedback than written instruments. This research proposal asks what characteristics, depth, and strategic value feedback collected through voice-based conversational AI agents has in higher education, and whether such agents elicit detailed, honest, and actionable feedback that can support instructional improvement and institutional learning. Drawing on survey-mode-effects research, the Computers As Social Actors (CASA) paradigm, and dynamic capabilities theory, we develop three hypotheses on elaboration, social presence and disclosure, and actionability. A completed technical pilot at the Technical University of Munich established the feasibility of telephone-based AI interviews; the main field study is planned for the \"Advanced Leadership Communication\" course at MIT Sloan with approximately 60 students, using a convergent mixed-methods design and a four-dimensional coding framework for actionability (specificity, thematic richness, constructive orientation, contextual depth). The study extends CASA theory to evaluative educational settings, characterizes voice-based AI as a distinct feedback modality, and links micro-level feedback quality to institutional sensing capabilities.",
-    "url": "https://arxiv.org/abs/2610.25560v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.25111v1",
-    "title": "Explore or Confirm? LLM Agents Misallocate Measurements Under Noise",
-    "authors": [
-      "Abdul Karim",
-      "Matt Keon"
-    ],
-    "published": "2026-10-18",
-    "summary": "As model reasoning gets cheaper, the physical experiment becomes the slow and costly step in discovery. Each experiment returns a noisy reading: a high value can mean a good candidate or a lucky draw. With a fixed budget, an AI agent must keep choosing between exploring a new candidate and confirming a promising one by re-testing it. We measure that choice in Wellocate, a simulated assay campaign with known true values. It is built on a generated landscape and on two real protein datasets, GB1 and PhoQ, scrambled so no model can answer from memory. We test five language models as minimal agents, with no tools and no memory beyond the history in each prompt. They misallocate in both directions. Three over-confirm, spending most of the budget re-testing. On the generated landscape one under-confirms, trusting single readings, and there every model ends with a worse final pick than a basic scripted strategy. Each failure has its own cause. The over-confirmers run short of new candidates worth trying: a list of untried candidates cuts their re-testing and, on real protein data, makes two of them pick much better. A running summary of their readings or a description of the landscape changes it by at most five percentage points. For the under-confirmer, re-testing its top candidates in a final round, replayed on its own campaigns, recovers only about a quarter of what it loses by picking the wrong candidate. This suggests confirmation has to run through the whole campaign. We release Wellocate as a benchmark and reinforcement-learning environment with frozen splits and scripted baselines. With it, anyone can measure how an agent splits its budget before trusting it with real experiments, and train agents to split it better. Code, data and the environment are available at https://github.com/Xstendyl/wellocate.",
-    "url": "https://arxiv.org/abs/2610.25111v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.23845v1",
-    "title": "AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery",
-    "authors": [
-      "Shicheng Liu",
-      "Krista Opsahl-Ong",
-      "Andrew Drozdov",
-      "Julian Killingback",
-      "Arnav Singhvi",
-      "Ronak Pradeep",
-      "Michael Bendersky",
-      "James C. Dickerson",
-      "Monica S. Lam"
-    ],
-    "published": "2026-10-16",
-    "summary": "Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the Surveillance, Epidemiology, and End Results (SEER) database, a widely used U.S. cancer registry underlying tens of thousands of published studies. First, we introduce SEER-Repro, a benchmark of 20 published SEER-based papers together with the data and resources required to reproduce their findings. Second, we create an AI agent that successfully reproduces 77.4% of 2,190 atomic claims, while providing executable baselines for further analysis. Third, we develop an agentic analysis pipeline to test the robustness of the medical findings by identifying analytical choices underlying each finding, proposing defensible alternatives, and rerunning the analysis to determine whether those choices affect the conclusion. Across published papers in SEER-Repro, our pipeline identifies potentially consequential analytical choices in 9.5% of fully reproduced findings and flags them for expert review. These results show how LLM agents can support scientific review by reproducing findings, systematically testing their robustness, and directing expert attention toward potentially consequential analytical choices.",
-    "url": "https://arxiv.org/abs/2610.23845v1",
     "source": "arXiv"
   }
 ]
