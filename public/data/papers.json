@@ -1,5 +1,100 @@
 [
   {
+    "id": "2610.37571v1",
+    "title": "TeamGym: A Gym for Team Decision-Making by AI Agents with Distributed Information",
+    "authors": [
+      "Chanwoo Park",
+      "Jaywoong Jeong",
+      "Zachary Wojtowicz",
+      "Yubin Kim",
+      "Taekyun Lee",
+      "Kaiqing Zhang",
+      "Asuman Ozdaglar"
+    ],
+    "published": "2026-10-27",
+    "summary": "Many real-world decisions require teams to integrate information distributed across participants. Yet AI agents are still primarily trained and benchmarked in isolation. We introduce TeamGym, an environment for evaluating and training language model-based agents on team decision-making problems constructed from real-world legal, finance, medical, and software engineering corpora. TeamGym introduces a method to identify a minimal set of facts, each element of which is necessary and all of which are collectively sufficient for a correct final decision, which we call pivotal information. This enables TeamGym to both control the distribution of pivotal information and track how well agents identify and integrate pivotal information when making team decisions. Examining 8 language models on 12 source corpora, we find that current AI agents often fail to effectively share information: Distributing pivotal information across participants lowers success rate by 22.9 percentage points on average relative to giving the same information to a single model (a communication gap). We also document that participants do not effectively retrieve decision-relevant information on their own: A team's success rate is lowered by a further 19.9 points when participants must identify and extract pivotal information from source material rather than receiving it directly (a retrieval gap). To help remedy these deficits, we use TeamGym to train policies through reinforcement learning on team decision loss. Across two policy-training experiments, we find that training improves final-decision quality and induces emergent coordination in participation, speaker selection, and communication, even though the reward evaluates only the final decision.",
+    "url": "https://arxiv.org/abs/2610.37571v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.37567v1",
+    "title": "Gym-Anything-RT: Scaling Real-Time Environments for Vision-Language Agents",
+    "authors": [
+      "Pranjal Aggarwal",
+      "Sean Welleck"
+    ],
+    "published": "2026-10-27",
+    "summary": "AI agents have made substantial progress in domains where they have a non-trivial amount of time to deliberate between actions, such as mathematics, software engineering, and performing tasks on desktop applications. It is less clear how such models fare in settings that demand real-time interaction, such as playing a video game or operating a physical device. In these settings, the environment state may evolve as the agent is reasoning, or even as the underlying model is performing a forward pass. To gain insight into the real-time interaction capabilities of vision-language agents, we introduce Gym-Anything-RT. Our key idea is to construct visual minigames that demand a portfolio of capabilities required for interactive real-time settings. Gym-Anything-RT uses an agentic pipeline to automatically generate such environments based on a taxonomy of six capabilities required for real-time interaction, including the ability to perceive the environment and act under an evolving environment state. A key feature of Gym-Anything-RT is that it allows for controlled comparison of real-time interaction capabilities: we can run the same minigame in real time, or pause or slow down the environment to relax the requirement for real-time actions. We use Gym-Anything-RT to construct 100 real-time minigames and evaluate AI agents on them. We find large capability gaps in real-time interaction. For example, GPT-6 Astra (xHigh) achieves a pass rate of only 9.0% on the real-time minigames, which rises to 75.0% when the environment is paused. We also identify intriguing behaviors by the most powerful frontier agents: for instance, when given the ability to write code, these agents write code that bypasses the need to perceive and act in real time. We publicly release Gym-Anything-RT and the generated minigames to spur further research on AI agents in real-time interactive settings.",
+    "url": "https://arxiv.org/abs/2610.37567v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.37340v1",
+    "title": "Mind the Intent Gap: A Methodology for Collaborative Agent-Driven Software Engineering",
+    "authors": [
+      "Nicolas Tacheny",
+      "Tom Mens",
+      "Saïd Mahmoudi"
+    ],
+    "published": "2026-10-27",
+    "summary": "AI agents have entered software teams, first as tools and now as team members. They produce in minutes what used to take days, yet the expected gain in delivery often fails to appear. We argue that they are entering processes designed for people, which quietly relied on people to cover three of their weaknesses. The team's intent was never fully written down, because colleagues filled the gaps. An AI agent fills them too, though by guessing, and drifts from what the team had in mind. The reasoning behind each deliverable was already lost from one step to the next, and AI agents now inflate and deflate the documents passed along. The reasoning people did alone was partly private and now moves into AI tools that keep it private by nature. We present CAIA, for Collaborative Agentic Intent Alignment, a methodology for software teams that brings agents into the way they work. A knowledge base describes the product that a project maintains. For each Change, a micro-team aligns on its intent before agents evolve the product and propose updates to the Knowledge Base. The proposed CAIA methodology emerged from an industrial need and is already in use at Ni2, with a platform built to support it. We present the methodology and outline our plans to evaluate it further.",
+    "url": "https://arxiv.org/abs/2610.37340v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.36989v1",
+    "title": "A Serious-Game Testbed for Self-Governing Human-Machine Institutions",
+    "authors": [
+      "Callum Berger",
+      "Jeremy Pitt",
+      "Stefan Sarkadi"
+    ],
+    "published": "2026-10-27",
+    "summary": "AI agents no longer act alone: they cooperate, coordinate and compete within and between groups, increasingly alongside humans who are in, on or out of ``the loop''. Whether such mixed groups can govern themselves is an open question about machine behaviour and human-computer interaction that needs a testbed for hybrid institutions. We present Megabike, a multi-agent simulator and serious game with interdependent arenas for common-pool resource management, cooperative survival and constitutional choice. Riders sharing a megabike must agree their arrangements for steering, pedalling and distributing resources, and their political regime, while negotiating with rival bikes and avoiding an existential threat. Every rule is enforced by the simulator, every action is logged, and any seat can be taken by a human or a machine, so governance can be studied under well-defined metrics. We demonstrate Megabike with forty sessions in which language-model riders with cooperative, lazy, subversive or opposing dispositions chose regimes, elected leaders and expelled one another. The results show that different combinations of agent archetypes could produce unexpected and counterproductive outcomes. We conclude with extensions for systematic experiments mixing human and computational agents.",
+    "url": "https://arxiv.org/abs/2610.36989v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.36626v1",
+    "title": "Measuring Users' Security and Privacy Concerns About Third-Party Community Bots on Discord",
+    "authors": [
+      "Kofi Ampomah",
+      "Tu Le"
+    ],
+    "published": "2026-10-27",
+    "summary": "Third-party community-based bots are central to how social platforms such as Discord work. They moderate content, manage roles, play music, and support AI-assisted conversations across millions of servers. Yet when a bot is installed in a server, it can access messages, user profiles, and server metadata concerning members who did not participate in the installation decision, with no standardized way to communicate the associated security and privacy implications. In this paper, we analyze 23,102 third-party Discord bots and 183,142 user reviews spanning 49 detected languages and five years of feedback (2021-2026). We employ LLM-based knowledge distillation and fine-tune a DeBERTa-based classifier to identify candidate security and privacy (S&P)-relevant reviews. After manually validating the complete classifier-positive set, we retain 8,832 reviews identified as S&P-relevant, representing an observed pipeline yield of 4.82%, and map them to a 31-theme S&P taxonomy extending prior work. Our results show that S&P-related reviews focus heavily on Data Sharing (30.5%) and Data Collection (16.2%). Confession and anonymity bots have pipeline-identified SPRRs above 50%, more than ten times the ecosystem-wide pipeline yield of 4.82%. Star ratings may obscure the frequency and valence of S&P-related discussion, while conventional metadata features, such as permission count and administrator status, show only weak associations with user-reported S&P concerns. We then build BotLens, a proof-of-concept auditing framework that combines review-derived S&P signals with bot metadata to provide on-demand decision support for the community-based bot ecosystem. BotLens exposes six tools through a Model Context Protocol server, supporting bot-level checkups, server-wide comparison, and integration with AI agents.",
+    "url": "https://arxiv.org/abs/2610.36626v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.36544v1",
+    "title": "Monitor Accuracy Isn't the Answer: A Decision-Value Framework for Evaluating AI Agent Restart Monitors",
+    "authors": [
+      "Siddharth Jain",
+      "Venkat N. Vedam"
+    ],
+    "published": "2026-10-27",
+    "summary": "Classification accuracy and true-positive and false-positive rates alone do not determine whether restarting an AI agent improves success. Using an exact alarm-to-action identity for an independent clean restart with zero monitoring overhead, we show analytically that a monitor with fixed 90% accuracy can swing from a five-percentage-point loss to a 35-point gain in success rate, depending solely on the replacement attempt's residual-budget success probability. We introduce two techniques for evaluating monitors and progress signals in decision terms. First, a decision-sufficiency criterion, a binary-action specialization of Blackwell's comparison of experiments, identifies which progress representations or context compressions preserve the information needed to choose optimally between the specified actions, independent of trace reconstruction fidelity. Second, a finite-sample, model-free decision audit uses simultaneous binomial intervals over existing agent traces, without additional model calls, to certify a preference for \"restart\" or \"continue\" under stated sampling assumptions, or return \"abstain\" when evidence is insufficient. In a study of 194 externally evaluated model executions on 19 selected SymPy issues from SWE-bench Verified, with a retrospective audit of 130 of these traces, we find a 2.29-point apparent restart gain traced to a single surviving failed attempt, a 42.29-point loss on a second model, no positive replication of the initial gain on prospective task cohorts, and zero of 103 live comparisons meeting the specified certification bar. These results motivate evaluating agent monitors through recovery opportunity, decision value, and statistical support, rather than classification performance alone.",
+    "url": "https://arxiv.org/abs/2610.36544v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.36484v1",
+    "title": "CogArena: Benchmarking Multimodal Agents on Interactive Behavioral Experiments",
+    "authors": [
+      "Kianté Fernandez",
+      "Caitlin Chen",
+      "Jialu Zhou",
+      "Bartek Sadowski",
+      "Anthony C. Miceli",
+      "Ian Krajbich"
+    ],
+    "published": "2026-10-27",
+    "summary": "Claims about the cognitive capabilities of large language models are typically tested by translating behavioral paradigms into text prompts, bypassing the visual interfaces and time pressure through which human participants actually engage with experiments. At the same time, AI agents can now complete online behavioral tasks and produce human-like data, which raises concerns that online datasets in the social and behavioral sciences are increasingly open to contamination. We introduce CogArena, a benchmark of ten experimental paradigms from the social and behavioral sciences. Agents complete the experiments through a standard web browser, working with the same visual stimuli and response interfaces that online participants use. A three-level scoring procedure evaluates whether the agent completed the task, how accurately it performed, and whether its data show the behavioral signatures each paradigm reliably produces in people. Across four multimodal models, each run ten times per task, we find that finishing an experiment and reproducing its signatures are different things. Many sessions did not finish, and those that did reproduced some signatures reliably and others not at all. CogArena provides the tasks, scoring code, and a public leaderboard for new submissions.",
+    "url": "https://arxiv.org/abs/2610.36484v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.35835v1",
     "title": "I-HITL: Inalienable Human-in-the-Loop",
     "authors": [
@@ -132,6 +227,35 @@
     "published": "2026-10-26",
     "summary": "AI agents are increasingly proposed as autonomous experimenters, yet the benchmarks that test them mostly offer cheap experiments that answer at once. Experiments in physical facilities are different: they take months, occupy scarce equipment and cannot be undone. We present SlowLab, a benchmark in which an agent runs a one-year campaign in four simulated greenhouse compartments on a site whose crop, facility and prices are hidden. The agent decides when to plant which climate policy, whether to stop a crop and which measurements to read while crops grow, and at the end recommends one policy, which a private evaluator scores in weather the agent never saw. In a preregistered study on 48 unseen sites, three low-cost language-model agents ended near a standard grower setting and clearly below a Bayesian-optimisation baseline that starts from that setting. They ran the facility as two synchronous batches, so measurements taken during the season never changed what they planted, and these measurements improved no method's result. Letting other methods re-read the evidence a campaign had collected did not yield significantly better recommendations, which points to where the models start and which experiments they try. Code is released under the MIT license.",
     "url": "https://arxiv.org/abs/2610.34644v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.35835v2",
+    "title": "I-HITL: Inalienable Human-in-the-Loop",
+    "authors": [
+      "Samuel Breckenridge",
+      "Dani Vilardell",
+      "Wenhao Wang",
+      "Fan Zhang",
+      "Ari Juels"
+    ],
+    "published": "2026-10-26",
+    "summary": "Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent. AI agents' increasing ability to bypass guardrails, though, raises the question of how to enforce HITL robustly. We introduce the concept of inalienable human-in-the-loop (I-HITL). An I-HITL protocol ensures that an agent can initiate an action only with explicit human approval, even when the human interacts with a system (e.g., a local agentic harness) compromised by the agent. A strong I-HITL protocol additionally ensures such approval even when an adversarial human attempts to delegate approvals to an agent. To motivate I-HITL, we report on experiments with a popular agentic wallet platform in which raising an agent's spending cap requires HITL approval via emailed one-time passcodes (OTPs). Given access to the user's email and a task blocked by the cap, we find that ten different frontier models will often autonomously raise the cap, harvesting OTPs to bypass a HITL guardrail and surfacing other vulnerabilities. We formally define I-HITL using the concept of communication topologies and prove necessary and sufficient conditions for its realization. We show that an I-HITL protocol requires a trusted entity - a trusted computing device (or equivalent) - and characterize which such devices can and cannot realize an I-HITL protocol. We present a prototype I-HITL system called Countersign that can plug into and strengthen existing HITL systems using off-the-shelf consumer mobile devices.",
+    "url": "https://arxiv.org/abs/2610.35835v2",
+    "source": "arXiv"
+  },
+  {
+    "id": "2610.35541v2",
+    "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
+    "authors": [
+      "Ruozhao Yang",
+      "Jiongchi Yu",
+      "Ming Hu",
+      "Xiaofei Xie"
+    ],
+    "published": "2026-10-26",
+    "summary": "Web services increasingly expose backend interfaces that let users delegate tasks to AI agents, which invoke service operations directly without navigating websites. This shift changes how existing Web vulnerabilities can be exploited. We investigate these changes through VELA, an executable benchmark covering 44 vulnerabilities across twelve Web application families. The benchmark preserves vulnerable backends and derives agent-facing interfaces from legitimate workflows. We evaluate three commercial agents across multiple interface configurations, using controlled comparisons to separate interface effects from agent behavior and independent oracles to verify attack outcomes. Our results show that the agent realizes every attack that direct interface invocation realizes in the reference configuration, so exploitability is set mainly by the interface: 91% of vulnerabilities remain exploitable under the reference design. Interface restrictions prevent some attacks by removing required operations or limiting input control, while retention remains high across vulnerability classes. No case-level loss in the reference configuration is attributed to agent refusal or input normalization, and in one case the agent completed an attack by supplying calls the attacker omitted. Across the tested configurations, interface design affects exploitability more than agent choice, moving retention from 39% to 95% against at most 4.5 points across agents, but some restrictive interfaces also limit legitimate workflows. Our study provides a systematic empirical account of how agent-mediated access reshapes existing Web vulnerabilities, grounding future Web architecture design in measured security outcomes and trade-offs between reducing attack exposure and preserving legitimate functionality in agent-facing services.",
+    "url": "https://arxiv.org/abs/2610.35541v2",
     "source": "arXiv"
   },
   {
@@ -652,143 +776,6 @@
     "published": "2026-10-20",
     "summary": "Computer-use agents are limited by the interfaces humans give them. An agent may type a spreadsheet cell by cell when a single line of code would do, or print all two thousand lines of a file through a shell to find one function. Both the interfaces and the knowledge of when to use each are built by hand, which cannot keep pace with new applications, workflows, and models. We argue that interface design should itself be an agent capability. We introduce Agent S4, an autonomous computer-use scientist that builds Evolving Agent Interfaces from task experience. A meta-agent examines task agents' trajectories on synthetic training tasks, without success labels, and constructs and revises interfaces and usage knowledge in a repository. Population-based evolution then selects which repositories to develop further by their performance on validation tasks the meta-agent never sees, favoring changes that generalize beyond the seen tasks. On OSWorld V2, Agent S4, with Qwen3.8-27B and the evolved repository of interfaces, sets a new state of the art in open-source computer-use agents, reaching 21.3% binary score, 3.8 times the same model with fixed interfaces. This is above both GPT-5.5 (13.0%) and Claude Opus 4.8 (20.6%), at about 4.3% and 1.5% of their respective costs. On ScienceBoard, the evolved interfaces improve the success rate from 41.4% to 58.6% with the same model. These results suggest that useful interfaces can be evolved from experience, making autonomous interface design a source of improvement complementary to advances in models and harnesses. We open-source our code at https://github.com/simular-ai/agent-s.",
     "url": "https://arxiv.org/abs/2610.28601v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.28484v1",
-    "title": "Proof-Carrying Contracts: Commitments AI Agents Cannot Break",
-    "authors": [
-      "Carlo Ciliberto",
-      "Alessandro Rudi",
-      "Enrico Tassi"
-    ],
-    "published": "2026-10-20",
-    "summary": "AI agents increasingly act on behalf of people or other agents, purchasing services, exchanging information and delegating work. What an agent must respect is written in instructions, policies or agreements, but text alone cannot make it comply. It may make mistakes, be redirected by what it reads, or pursue different interests. For an economy of such agents to function, parties need agreements they can rely on without inspecting or trusting one another's agents. We introduce Proof-Carrying Contracts (PC2), a framework for making agreed constraints enforceable throughout an agent's interactions with a system. Before a requested operation can run, the agent must supply a machine-checkable proof that it preserves the agreed constraints in every case allowed by its model. An execution system called the Airlock checks the proof and controls access to the operation. The parties specify the conditions to preserve, while the agent supplies the reasoning needed to justify its decisions and remains free to adapt its strategy. This avoids having to design a separate permission policy and prove that every decision it permits is safe. We prove that the constraints hold at every instant during execution, even for an adversarial agent, and identify when this implies safety in the world. Reusable capability modules provide tools and guarantees from which contracts can be constructed. PC2 provides a foundation for an agent economy whose agreements protect both those delegating work and those carrying it out.",
-    "url": "https://arxiv.org/abs/2610.28484v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.28286v1",
-    "title": "Local Work, Global Progress: A Convergence Theory of AI Agent Collaboration",
-    "authors": [
-      "Ivan Ilin",
-      "Peter Richtárik"
-    ],
-    "published": "2026-10-20",
-    "summary": "Teams of large language model (LLM) agents are increasingly applied to complex tasks, but their collaboration protocols are mostly designed empirically, without convergence guarantees. We formalize collaborative problem solving as block optimization: each agent improves one part of a shared solution, guided by its local objective plus a correction for how its changes affect the other parts. A coordinator checks every proposal against the global objective and merges proposals that do not interfere with each other. We prove linear convergence up to an error floor that vanishes when the corrections are exact. Interfering proposals can also be merged once their combination has been checked; the rate then depends on how well the proposals actually combine, not on worst-case interactions. With GPT-OSS-120B agents on robot routing, a three-agent team finds collision-free plans in every run, better than those of a single agent that controls all robots. On a larger routing task, a six-agent team completes its search about twice as fast as the single agent (in median). Merging the best checked combination of proposals, rather than only proposals that do not interfere, cuts the team's search time by about 30%. With constants measured on the runs, our convergence bound holds in every round and follows the observed progress. We also test the theory on query planning in SQLite and on a synthetic task.",
-    "url": "https://arxiv.org/abs/2610.28286v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.28093v1",
-    "title": "ClawMMU: Protection-Coherent Virtual Memory for Stateful LLM Agents",
-    "authors": [
-      "Jinhao Hu",
-      "Bardia Mohammadi",
-      "Mofasshara Binte Rafique",
-      "Lars Henning Klein",
-      "Akhil Arora",
-      "Ashvin Goel",
-      "Laurent Bindschaedler"
-    ],
-    "published": "2026-10-20",
-    "summary": "AI agents keep long-term memory, much of which comes from web pages and tool results. Agent harnesses, the software that runs the model, do not record who may act on this memory, so an instruction hidden in a fetched page can be treated as the user's own instruction. We propose ClawMMU, a protection layer that labels every piece of memory with its owner, scope, origins, and authority. ClawMMU checks these labels whenever content enters the model's context, is written to storage, returns from storage, or drives a tool call. Its central rule is that information may rise in authority, but authority never lifts itself. Because the checks depend on where content came from, not on what it says, memory attacks become classical protection faults that the harness stops even when the model is fooled.",
-    "url": "https://arxiv.org/abs/2610.28093v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.27801v1",
-    "title": "Looks Fine to Me: Understanding Oversight in Agentic Interactions",
-    "authors": [
-      "Dinithi Dissanayake",
-      "Yasith Samaradivakara",
-      "Hyung Woon Lee",
-      "Yadeesha Weerasinghe",
-      "Sanjay Saha",
-      "Pattie Maes",
-      "Suranga Nanayakkara"
-    ],
-    "published": "2026-10-20",
-    "summary": "Agentic AI systems are deployed to execute complex tasks across domains such as writing, coding, and data analysis. As execution is offloaded to AI agents, the human role shifts toward oversight. Effective oversight requires recognizing when closer scrutiny is needed, even though flawed outputs may appear convincing. Our formative study (N=12) revealed that users accepted plausible outputs without thorough evaluation, and only recognized these lapses in retrospect. To examine this systematically, we conducted a controlled within-subject study (N=36) in which participants completed programming tasks with an agent that produced correct outputs, silent defects, or visible failures. Combining task outcomes, interaction logs, gaze, physiological signals, and self-reports, we examined perceived, behavioral, and effective oversight. Participants were often highly confident while missing silent defects: they performed generic checks, failed to generate diagnostic evidence, or even misinterpreted defect evidence. We discuss how studying oversight across multiple dimensions can support future work on timely, task-calibrated re-engagement.",
-    "url": "https://arxiv.org/abs/2610.27801v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.27483v1",
-    "title": "Securing Agentic Commerce Through Behavior-Aware Fraud Detection and Cybersecurity for Trusted AI-Agent Payment Authorization",
-    "authors": [
-      "Kayode L. Ogunsusi"
-    ],
-    "published": "2026-10-20",
-    "summary": "The growing use of autonomous artificial intelligence agents in digital commerce creates new security concerns involving agent impersonation, unauthorized payments, compromised agents, and misuse of delegated authority. This research introduces the Autonomous Commerce Agent Guard System (ACAGS), a cybersecurity framework combining supervised machine learning, behavioral analytics, agent-specific authorization controls, and explainable AI. The framework was evaluated using synthetic financial transaction data augmented with simulated agent characteristics and five adversarial scenarios. XGBoost was selected following comparisons with alternative classifiers. Across ten experimental runs, behavioral features improved mean F1-score from 52.12% to 67.49%, with agent-specific features increasing performance to 69.46%. The framework achieved detection rates of 99.77% for abnormal agent behavior, 99.73% for impersonation, and 100% for malicious delegation and authorization-scope violations. Compromised-agent detection reached 72.27%. ACAGS also supported APPROVE, REVIEW, and REJECT authorization outcomes, with SHAP explanations providing model interpretability. The results demonstrate the potential of combining behavioral intelligence and delegated authorization controls to strengthen simulated agentic-commerce payment security, while highlighting the need for validation using real-world transactions.",
-    "url": "https://arxiv.org/abs/2610.27483v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.27480v1",
-    "title": "Runtime Control for AI Agents: Closing the Evaluation--Execution Gap in Operational Workflows",
-    "authors": [
-      "Jayesh Bhadane",
-      "Ramachandra Yerramsetti",
-      "Rajesh Gupta",
-      "Sumit Kumar"
-    ],
-    "published": "2026-10-20",
-    "summary": "Language-model agents increasingly participate in operational workflows where approvals, binds, and payments create commitments. An approval valid when issued may no longer authorize execution after relevant facts, evidence, policy, or authority change. We call this the evaluation--execution gap. We specify a state-bound runtime assurance layer that separates probabilistic measurement from deterministic adjudication, binds an execution allowance to the decision-relevant basis of an approval, invalidates that allowance after relevant logged changes, and rechecks admissibility at dispatch. This distinguishes the continued validity of a prior approval from a current-state policy check. We describe eight failure modes, an assurance model, a reference architecture, and prospective interventions with retrospective remediation. In a scripted 42-case replay, the state-bound configuration identifies 15 later-invalidated approvals that a deliberately non-re-evaluating point-in-time comparator does not revisit; it holds 14 affected actions before dispatch and compensates one landed effect. These results illustrate behavior under the stipulated policies and event orders, not superiority over dispatch-time enforcement designs or production effectiveness. Under explicit interception, ingestion, dependency, and serialization assumptions, the model establishes dispatch-time validity within the registered execution surface.",
-    "url": "https://arxiv.org/abs/2610.27480v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.28929v1",
-    "title": "Scriptorium: System Design and Implementation of a Multi-Human, Multi-AI Collaborative Digital Library Search Platform",
-    "authors": [
-      "Abbas Pirmoradi",
-      "Milad Momeni",
-      "Anna Chu",
-      "Orland Hoeber"
-    ],
-    "published": "2026-10-20",
-    "summary": "This technical report documents the design and implementation of Scriptorium, a digital library search interface designed to support multi-human, multi-AI collaboration: full cross-user transparency of search activity combined with a Manager--Worker architecture of seven role-specialized generative AI agents. A companion short demonstration paper describes Scriptorium's interaction design; because a demonstration format is constrained to a few pages, it necessarily omits most implementation detail. This report documents Scriptorium's complete system architecture, data model, collaborative-interaction design rationale, and AI orchestration mechanism, including verbatim agent prompts, the deterministic guardrails that constrain them, the language model and retrieval configuration, and the steps needed to run the system, so that the design can be inspected, critiqued, reproduced, and reused by other researchers. We also discuss the system's current limitations and the user study we are planning to evaluate its central hypothesis: that combining collaborative transparency with scoped multi-agent AI assistance increases serendipitous cross-pollination between collaborators' research threads.",
-    "url": "https://arxiv.org/abs/2610.28929v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.26826v1",
-    "title": "RefCraft: Benchmarking Visual-Reference-Conditioned Agentic Generation through Web Development",
-    "authors": [
-      "Yuchi Wang",
-      "Rongyao Fang",
-      "Weihao Yu",
-      "Xilin Wei",
-      "Tiancheng Gu",
-      "Dingkang Yang",
-      "Hang Zhang",
-      "Dayiheng Liu",
-      "Hongsheng Li",
-      "Shuai Bai"
-    ],
-    "published": "2026-10-19",
-    "summary": "Beyond basic tool use and coding skills, effectively incorporating visual references into agentic generation is equally essential for applying AI agents to real-world productivity tasks. We study this crucial capability through webpage development, a practical and readily evaluable setting in which existing benchmarks remain largely idealized: they typically focus on reconstructing visual targets or generating webpages from textual instructions alone, overlooking the more common workflow of developing from visual examples. Specifically, we introduce RefCraft, a benchmark comprising 300 realistic multimodal webpage-development tasks that combine natural-language instructions with screenshots from one to five reference webpages. Agents must selectively interpret and utilize these references while rendering, visually inspecting, and iteratively refining their outputs. We evaluate the resulting open-ended artifacts using independently verifiable keypoints and complementary programmatic and VLM judges. Across nine frontier (M)LLMs, the strongest system achieves an overall score of only 52.12 out of 100, revealing that visual-reference-conditioned agentic generation remains a substantial challenge for current models in practical webpage-development settings.",
-    "url": "https://arxiv.org/abs/2610.26826v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.26770v1",
-    "title": "HarnessPro: Recursive Harness Self-Improvement with Pareto Optimization for Performance-Cost Trade-offs",
-    "authors": [
-      "Zhuoshi Pan",
-      "ZhiYuan Feng",
-      "Yukuo Cen",
-      "Honglin Lin",
-      "Junru Lu",
-      "Zhongxia Chen",
-      "Shuo Yang",
-      "H. Vicky Zhao",
-      "Jie Tang"
-    ],
-    "published": "2026-10-19",
-    "summary": "Harness development plays a crucial role in building capable AI agents. Recent approaches improve harnesses through recursive self-improvement (RSI), but their performance gains often come with higher execution costs. We introduce HarnessPro, a label-free method for evolving harnesses to improve task performance while reducing execution cost. In this setting, candidate harnesses are evaluated using LLM-generated tests without access to ground-truth solutions or official tests. Specialized agents diagnose execution trajectories, plan updates with different performance-cost priorities, and implement them as candidate harnesses. Rather than returning a single harness, HarnessPro uses normalized weighted squared-distance selection to provide cost-focused (lite), balanced (medium), and performance-focused (heavy) harnesses for different deployment budgets. Selected harnesses enter the next iteration, where execution feedback guides further updates. Our experiments cover Terminal-Bench 2, SWE-Bench Pro, and ProgramBench, using GPT-5.5 with Codex and GLM-5.2 with Claude Code. Across these benchmarks using GPT-5.5 with Codex, the heavy mode of HarnessPro achieves an average pass-rate gain of 2.0 percentage points and an average per-task cost reduction of 26.1% relative to RHO. This advantage also holds when using GLM-5.2 with Claude Code. Code is available at https://github.com/pzs19/HarnessPro",
-    "url": "https://arxiv.org/abs/2610.26770v1",
     "source": "arXiv"
   }
 ]
