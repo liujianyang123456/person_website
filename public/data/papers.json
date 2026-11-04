@@ -1,5 +1,196 @@
 [
   {
+    "id": "2611.03618v1",
+    "title": "Strategist: Evolving Reasoning with Agents",
+    "authors": [
+      "Taiming Lu",
+      "Qi Xu",
+      "Zhigang Hua",
+      "Zhuang Liu"
+    ],
+    "published": "2026-11-02",
+    "summary": "A model is only half of an AI agent system. The other half is the inference strategy: the reasoning procedure that turns model calls into a response. Today that second half is written by hand, and the experience of building one strategy never carries to the next. We introduce Strategist, a meta-agent that evolves inference strategies across tasks. Each strategy is written as a blueprint,executable code that other strategies can reuse, and together the blueprints form a library. Given a task and a small development set, Strategist retrieves related blueprints, writes candidate strategies, tests them on real samples, and revises them from the results. Every candidate then enters the library, so later tasks build on earlier discoveries. On 30 benchmarks, Strategist beats the strongest baseline on 24 and matches its average accuracy (74.7% vs.74.0%) at 39% lower inference cost. Its strategies also transfer to unseen tasks and other models without further search. The part of an AI system that is not improved on its own now does.",
+    "url": "https://arxiv.org/abs/2611.03618v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03600v1",
+    "title": "Four Bridges: Measuring Deception Propensity in a Multi-Agent Game",
+    "authors": [
+      "Raphael Casey",
+      "Michael Simeone",
+      "Alberto Tosato",
+      "Florian Ernst",
+      "Kemal El Moujahid",
+      "James Tamplin",
+      "Tommaso Tosato"
+    ],
+    "published": "2026-11-02",
+    "summary": "AI agents are increasingly deployed in settings where they interact and coordinate with other agents, yet honesty is mostly measured in single-turn, single-agent benchmarks that pressure the model to deceive. We study deception that emerges in multi-agent interaction without any instruction to deceive. We introduce Kradle, a platform for evaluating AI models, and Four Bridges, an information asymmetry game in which four agents distribute across four rooms: one is the death room, the others hold food worth more if not shared. One agent, the informed agent, knows which room is the death room and can withhold or disclose that information. We evaluate eight frontier models as the informed agent. Deceptive behavior appears in every model and in 73% of all runs (6% to 100% per model), and does not decrease with capability tier within a model family. When the informed agent does disclose, the warning is often challenged, and agents that challenge it enter the death room twice as often as those that do not. Telling all agents that one of them knows the death room collapses deception in six of eight models; telling the informed agent that the room is permanently fatal moves only one. On an open-weight model, an honesty steering vector reduces deception to 0% and adversarial honesty training to 6%. The platform and game provide a testbed for measuring deceptive behavior and comparing interventions.",
+    "url": "https://arxiv.org/abs/2611.03600v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03494v1",
+    "title": "Harder Than the Task: From Technical to Organizational Difficulty in AI Benchmarking",
+    "authors": [
+      "Victor Barres",
+      "Aden Barton",
+      "Nicolai J. Foss",
+      "Henrik M. Nielsen"
+    ],
+    "published": "2026-11-02",
+    "summary": "AI benchmarks have made remarkable progress in measuring the ability of AI systems to perform increasingly demanding cognitive and technical tasks. Yet, many of these benchmarks treat technical tasks as the unit of analysis, while much economically valuable work takes place within organizations, where tasks are embedded in a system of relations. Within organizations, successful task performance depends not only on solving the technical demands of the task but also on navigating the interdependence of activities, distributed knowledge, differentiated authority, temporal constraints, conflicting interests, and changing environmental conditions while the task is underway. Accordingly, we argue that organizational task difficulty constitutes a distinct and insufficiently recognized dimension of AI capability, and that existing approaches to benchmarking provide an incomplete basis for assessing how effectively AI agents can perform real-world organizational work. By drawing on organization theory, we develop a taxonomy of the structure of work that characterizes the conditions that agents face in organizational work. Applying this taxonomy to analyze existing benchmarks, we find limited and uneven coverage of organizational dimensions, with fewer than one quarter of prominent benchmarks claiming any of them. We therefore argue that AI benchmarks should increasingly move beyond the evaluation of technically difficult tasks toward the systematic assessment of agents' ability to navigate the organizational conditions under which economically valuable work takes place.",
+    "url": "https://arxiv.org/abs/2611.03494v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03412v1",
+    "title": "DeliverBench: Benchmarking AI Agents on Delivering Realistic Multi-Stage Professional Projects",
+    "authors": [
+      "Yumou Liu",
+      "Mingju Chen",
+      "Zhoufutu Wen",
+      "Qianyu Yang",
+      "Zijie Wang",
+      "Yeqian Liu",
+      "Chenghao Yang",
+      "Tiliang Duan",
+      "Qiyu Cai",
+      "Yanglihong Xiao",
+      "Jiayun Dong",
+      "Jianlan Ma",
+      "Shenhao Miao",
+      "Yuhan Cao",
+      "Lu Xu",
+      "Que Shen",
+      "Tian Gao",
+      "Ge Zhang",
+      "Jianpeng Jiao",
+      "Xuanhe Zhou",
+      "Fan Wu"
+    ],
+    "published": "2026-11-02",
+    "summary": "LLM agents are judged by what they deliver, and in professional work what gets delivered is a project, not a task. A project pays off only if the whole package holds, and one weak part can limit the value of the rest. Yet existing benchmarks mostly test agents on one task at a time, leaving a gap between the capability we measure and the outcome that makes agents useful. To address this gap, we introduce DeliverBench, which tests whether agents can carry a project from brief to final delivery. Its 11 projects, spanning financial due diligence, legal contract drafting, and drug safety reporting, are reconstructed with 13 domain experts from real materials and chain 150 subtasks through 2-15 rounds of new materials and client feedback. Because no reference outputs are injected, agents inherit their own errors from one task to the next. Expert rubrics then score every checkpoint as well as the final package. Across seven model-harness systems, even the best system scores only 65.0 out of 100 on final delivery and passes 50.0% of subtasks at a 90-point threshold. The failures are often failures of carrying work forward: in one audit project, all seven systems addressed the review findings, but only one preserved traceability. Together, these results suggest that task-level capability does not simply compose into delivery, which also depends on keeping the work coherent as it evolves.",
+    "url": "https://arxiv.org/abs/2611.03412v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03373v1",
+    "title": "Towards AI-Agent-Accelerated Research in High-Energy Physics: A Case Study in Monte Carlo Analysis",
+    "authors": [
+      "Tianqi Gao",
+      "Ruobing Jiang"
+    ],
+    "published": "2026-11-02",
+    "summary": "We investigate how far contemporary LLM-based agents can participate in multistep computational high-energy-physics research under reproducible human supervision. Using a previously published CEPC Bell-observable analysis in $e^+e^- \\to ZH$, $Z \\to q\\bar q$, $H \\to ZZ^* \\to 4μ$ as a case study, we test two capabilities. First, the agent performs an instruction-constrained reproduction: it is explicitly instructed not to use the published numerical results as analysis targets, although no technical information-access barrier is imposed. The analysis definition is fixed before the formal comparison, and the resulting detector-level $I_3$ central values reproduce the four published benchmark points to within about 2% without retuning to those values. Second, the agent is used for an open-ended extension with no target answer supplied. Using 200,000 fast-simulated events, a stage-resolved audit identifies muon isolation as the largest single contribution to the hard-to-detector shift, and subsequent diagnostics connect the effect to angle-dependent isolation efficiency, proximity to the hard $Z \\to q\\bar q$ system, and mixed electromagnetic activity from muon final-state radiation and hadron decays. Throughout, the agent assists with workflow planning, code and configuration inspection, Monte Carlo production, anomaly diagnosis, control construction, statistical analysis, and result organization, while state-changing actions and final interpretation remain under human control. The study shows that the value of AI agents in HEP may lie not only in faster code generation, but in faster scientific iteration, and motivates systematic benchmarking across historical HEP analyses using correctness, human intervention, and researcher-time efficiency as explicit metrics.",
+    "url": "https://arxiv.org/abs/2611.03373v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03329v1",
+    "title": "Agentic Pipelines for Mapping Topological Codes to Quantum Hardware",
+    "authors": [
+      "Arpit Arora",
+      "Adam Holmes",
+      "Krysta M. Svore",
+      "Taylor L. Patti"
+    ],
+    "published": "2026-11-02",
+    "summary": "Mapping a prescribed many-body Hamiltonian to a particular quantum hardware is generally an approximate process, resulting in both intended and unwanted quantum dynamics. We introduce an AI-agent-assisted workflow that uses Lean to establish whether an effective device Hamiltonian retains the intended low-energy subspace of the target many-body Hamiltonian. We demonstrate this approach with topological quantum error correction (QEC), providing, to our knowledge, the first Lean-verified pipeline connecting a code space to low-energy states of a device model. Starting from qubits and parity checks, the pipeline constructs the ideal Hamiltonian whose lowest energy states form the intended code space, and determines the excitation gap that protects that code space. It then tests if the device retains the required number of isolated low-energy states and quantifies how closely their subspace matches the intended code space. We compare three bounds on unwanted energy shifts obtained by: summing the interaction strengths, grouping the anticommuting Pauli interactions, and diagonalizing the Hamiltonian. Pauli grouping yields a bound that is tighter than the conventional sum and closer to the diagonalization result, avoiding overly conservative compensation requirements. The workflow also identifies the strongest unwanted interactions and the qubits they affect, providing specific targets for improving device couplings and controls. We demonstrate our framework using an eight-qubit toric-code array on a superconducting device, where the same driven device generates both the required four-qubit interactions as well as unwanted dynamics. An AI agent identifies viable device parameters within a prescribed leakage budget, and Lean verifies four isolated low-energy states close to the ideal code space. Our workflow supports predictive hardware engineering for analog implementations of QEC codes.",
+    "url": "https://arxiv.org/abs/2611.03329v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03157v1",
+    "title": "Toward Knowledge-Centric AI: Discovering, Internalizing, and Using Explicit Knowledge Across Agents and Generations",
+    "authors": [
+      "Yisen Gao",
+      "Haoyu Huang",
+      "Zhongwei Xie",
+      "Yufei Li",
+      "Hong Ting Tsang",
+      "Boyi Zhang",
+      "Qiao Xiao",
+      "Tianshi Zheng",
+      "Jiaxin Bai",
+      "Yangqiu Song"
+    ],
+    "published": "2026-11-02",
+    "summary": "Knowledge is how understanding accumulates across people and generations: durable records that outlive their producers and that others can check, combine, teach, and correct. AI agents are now built and run by many independent users and organizations, and each agent is upgraded, replaced, or retired within months. Yet what an agent learns stays trapped in model parameters, a transient context window, or a system-specific memory store that is appended to and retrieved from rather than processed. We argue that the next generation of AI should be knowledge-centric, built around an explicit, continuously evolving knowledge layer independent of any single agent. In this loop, agents discover knowledge from their environments and trajectories; the layer internalizes it by turning fragmented, heterogeneous records and experience into composable, revisable understanding; and agents across systems and generations use the result and return new outcomes for revision. While discovery and use have advanced rapidly with large language model agents, internalization remains the bottleneck. We argue that internalization should become a persistent object of training and maintenance-centered on condition-preserving conceptualization of events and deductive, inductive, and abductive reasoning across noisy, heterogeneous representations (text, tables, graphs, rules, and programs). To power this layer, we call for knowledge foundation models that provide shared neural capacity for knowledge computation, and outline a research agenda showing how an explicit knowledge layer delivers reuse, cost efficiency, auditability, and continuity across agent generations.",
+    "url": "https://arxiv.org/abs/2611.03157v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03092v1",
+    "title": "Avatar Intelligence: Amplifying Human Agency Through Persistent Personal Agents",
+    "authors": [
+      "Zheng Wu",
+      "Xinbei Ma",
+      "Yao Yao",
+      "Zhaoyuan Huang",
+      "Haowen Hu",
+      "Yijie Lu",
+      "Taolei Wang",
+      "Yifei Yang",
+      "Wuyue Xiong",
+      "Pengzhou Cheng",
+      "Zhuosheng Zhang"
+    ],
+    "published": "2026-11-02",
+    "summary": "Personal AI agents are increasingly capable of handling long-horizon tasks across applications, yet users often need to invest substantial effort in specifying goals, resolving ambiguity, and verifying outcomes. We argue that progress should be measured by how effectively agents amplify human agency: enabling people to pursue their goals with less routine supervision while retaining control over consequential decisions. We advocate Avatar Intelligence, a paradigm of persistent personal agents that represent users' goals, values, and constraints through sustained decision delegation across contexts and time. We describe a maturity roadmap from human-directed execution to autonomous operation within delegated domains, and introduce the Agentic Oversight Index (AOI) as a framework for evaluating delivered value against agent-side operational cost and human oversight burden. We identify three core research challenges: identity-continuous personalization that carries user preferences across tasks, user-situated evolution through Rehearsal Engineering, and safety mechanisms that combine technical control with accountability and recourse. These directions define a research agenda for reliable decision delegation to personal agents across tasks and over time.",
+    "url": "https://arxiv.org/abs/2611.03092v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03063v1",
+    "title": "Networked AI: Architecture, Theory, and Applications",
+    "authors": [
+      "Liang Song",
+      "Jiayue Jin",
+      "Peng Sun",
+      "Di Li",
+      "Yang Liu",
+      "Athanassios Skodras",
+      "Dimitris Ampeliotis",
+      "Yong Yuan",
+      "Amit Dvir",
+      "Jiangchuan Liu",
+      "Victor C. M. Leung",
+      "Qi Bi"
+    ],
+    "published": "2026-11-02",
+    "summary": "Recent advances in Artificial Intelligence (AI), particularly large-scale deep learning, have been driven by monolithic or offline training on massive curated datasets. While successful, these approaches face structural limitations: escalating data and computational demands, limited online adaptability, and a lack of system-level intelligence in open, non-stationary environments. This paper presents Networked AI - a networked intelligent system composed of interacting, heterogeneous, and continuously evolving AI agents. We establish a hierarchical layered architecture comprising an Agent Layer for heterogeneous capability construction, an Interaction Layer for signal-processing-guided online data extraction, and a Regulation Layer for stability-constrained collective evolution. Foundations in data science, signal processing, and system control are hereby synthesized into a unified theoretical framework of Networked AI, providing superior data efficiency, intelligence efficiency, interpretability, and scalability. Theoretical and experimental analysis demonstrates that Networked AI can approach near-linear scaling in resource demand, in contrast to the exponential increase in standalone end-to-end systems. It provides not only online adaptation to out-of-distribution environmental novelties, but also the autonomous evolution towards application-specific intelligence. Application frontiers are discussed for IoT spaces, embodied, spatial, and industrial intelligences, as well as the cellular infrastructure and beyond. Key open challenges are identified towards realizing locally autonomous, collectively intelligent, continuously evolving, globally regulated Networked AI.",
+    "url": "https://arxiv.org/abs/2611.03063v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.02849v1",
+    "title": "TLAPS-Bench: Formally Proving Correctness of Real-World System Specifications with TLA+ Proof System",
+    "authors": [
+      "Qian Cheng",
+      "Ruize Tang",
+      "Saad Mohammad Rafid Pial",
+      "Zhizhen Cathy Cai",
+      "Yiming Su",
+      "Jackson Clark",
+      "Munim Thahmid",
+      "Mahdiya Rahman Sukanya",
+      "Chris Newcombe",
+      "Igor Konnov",
+      "Stephan Merz",
+      "Xudong Sun",
+      "Murat Demirbas",
+      "Yu Huang",
+      "Markus Alexander Kuppe",
+      "Tianyin Xu"
+    ],
+    "published": "2026-11-02",
+    "summary": "TLAPS-Bench is a benchmark and execution harness for constructing machine-checked proofs for real-world system specifications in TLA+ with agentic AI. Proving correctness of complex system specifications requires discovering inductive invariants, reasoning about intricate state transitions, and decomposing proofs into tractable obligations. TLAPS-Bench provides a proof harness that supports iterative proof development atop the TLA+ Proof System (TLAPS), where agents are equipped with proof tools and libraries, with safeguards against reward hacking. Using the harness, we have employed AI agents to prove desired properties for important system specifications that were not proved before, spanning cache coherence, Byzantine consensus, and write-ahead logs. TLAPS-Bench contains 265 proof targets (each encodes a property to prove) from 95 TLA+ specifications of real-world systems. We evaluated frontier AI agents, represented by Codex with GPT models, on a subset of 70 proof targets across 12 specifications. The highest-scoring model, GPT-6.1 Sol (max), proved 31 (44.3%) proof targets. The results show challenges and opportunities in end-to-end proof development.",
+    "url": "https://arxiv.org/abs/2611.02849v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2610.42108v1",
     "title": "Quantum 3xplorer: AI-Native Engine for Next-Generation Quantum Materials Modeling",
     "authors": [
@@ -577,192 +768,6 @@
     "published": "2026-10-23",
     "summary": "AI coding agents increasingly work inside a harness: rule files such as AGENTS.md, on-demand skills, runtime hooks and automated checks. Most studies of harnesses look at a single point in time or at short benchmark runs. I report a six-week case study of my personal system of record, a plain-markdown repository that three AI agent tools edited daily under one shared rule set. I built a ledger of 118 agent failures, their fixes and whether they came back. I also tested the system's monthly LLM documentation audit against 47 known stale statements and 20 planted errors. Finally, I replayed five past failures in isolated git clones, with and without their fixes. All results come from one repository with three runs per condition, so I report them as exploratory. Stale documentation (drift) was the largest failure class (48 of 118), although 35 of those were found on one audit day. A single audit run found about half of the known drift (Claude Sonnet 5.5 mean: 50%), and at least 93% of its findings were correct. On Sonnet 5.5, the agent finished four of the five replayed tasks. In three of those four, the failure did not happen, with or without its fix. Only the stale-count failure came back without its check, and the check stopped it in every run. On older models, an agent drafted an em-dash once while the em-dash lint check was active, and the check rejected it. A written rule on run-time estimates did not change Sonnet 4.5's overestimates. These results suggest that harness lessons can outlive the failures they were written to fix, while drift persists and still needs mechanical checks. Tools that evolve a harness add lessons faster than they retire them, so they should re-test their rules from time to time and retire the obsolete ones.",
     "url": "https://arxiv.org/abs/2610.32578v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32464v1",
-    "title": "Agentic Memory Management Is the Next Frontier of Information Retrieval",
-    "authors": [
-      "Qingyao Ai"
-    ],
-    "published": "2026-10-23",
-    "summary": "Information retrieval has long been focusing on connecting people with information they need to complete their tasks. Recently, the meaning of this has changed dramatically as more and more AI agents now consume, retain, and act on information on a user's behalf. Consequently, information management now also takes place \\emph{inside} the agent in the form of memory management. In this perspective paper, we argue that \\emph{agentic memory management} (AMM), which studies the structure, analysis, organization, storage, searching, retrieval, and \\emph{use} of information in an intelligent agent's memory, is a natural extension of IR research and an area in which the IR community can make distinctive contributions. Specifically, we first present a system-level framework for AMM and introduce a computational taxonomy of memory objects as \\emph{constants}, \\emph{functions}, and \\emph{operators}, each with distinct retrieval semantics. Then, we compare AMM with established IR research and identify their difference and connections. Last but not least, we outline a research agenda covering benchmarks, candidate principles of memory utility, optimization procedures that mix parametric and non-parametric updates, and more. We hope this paper could attract more people, both inside and outside the IR communities, to think more about AMM problems and research from IR perspectives.",
-    "url": "https://arxiv.org/abs/2610.32464v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32453v1",
-    "title": "Beyond Copying: Lifelong Smart Contract Security Task Construction via Protocol Mutation",
-    "authors": [
-      "Zifan Peng",
-      "Peng Huang",
-      "Jingyi Zheng",
-      "Yingjie Xue",
-      "Xuechao Wang",
-      "Xinlei He",
-      "Xia Hu",
-      "Dongrui Liu"
-    ],
-    "published": "2026-10-23",
-    "summary": "AI agents can inspect code and run tests to support smart contract security. SlowMist reports about $38.6 billion in losses across the broader blockchain ecosystem. Existing evaluations can reward memorized or copied answers, including attack code recovered from public blockchain transactions. Reconstructing contracts and validating tasks also require costly manual effort. To address these issues, we propose CONSTRAINTDIAL, a framework for lifelong construction of smart contract security tasks via protocol mutation. It automates local contract reconstruction and uses attack execution to select changes to the required calls or inputs. Execution checks guide revisions that make the original attack fail while preserving exploitability, the security objective, and normal functionality. New incidents and audit findings enter the same procedure. With CONSTRAINTDIAL, we construct 3,045 task inputs from 203 public cases, covering detect, exploit, and patch. Compared with reconstruction alone, protocol mutation reduces success with supplied public answers by 10.9 percentage points on average across detect, exploit, and patch. The fraction of tasks solved by copying online answers falls by 9.3 points.",
-    "url": "https://arxiv.org/abs/2610.32453v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32417v1",
-    "title": "Measuring the Energy Cost of Completing Tasks with Quantized Language-Model Agents",
-    "authors": [
-      "Stephen Abkin",
-      "Aldric Yang",
-      "Alex Flesher",
-      "Nitheesh Kodarapu",
-      "Deepak Panigrahy",
-      "Aakash Tyagi",
-      "David Kebo Houngninou"
-    ],
-    "published": "2026-10-23",
-    "summary": "Quantization reduces the memory and energy needed to serve large language models (LLMs) and AI agents for coding and data analysis can now run on locally hosted LLMs. In practice, this benefit is commonly benchmarked per output token. Yet an agent calls its model repeatedly, runs tools, and revises its work, and quantization can change both how much the agent generates and whether it succeeds. Existing energy studies either compare quantized models on single requests or measure agents at one fixed precision, overlooking how a change in precision plays out across a complete agent task. To address this gap, this paper presents the first characterization of the task-level energy trade-offs of model quantization in locally hosted agents. We develop 29 agent tasks with automatic pass/fail checks in six families, ranging from single-answer SQL analytics to multi-step repository bug fixing, and measure CPU and GPU energy per output token and per completed task for 4-bit and 8-bit versions of two open-weight models on bare-metal NVIDIA A100 nodes with llama.cpp. Our findings reveal that 4-bit precision generally saves energy per token, though whether it saves energy per completed task is task dependent and changes with the model and the execution budget (i.e., limits on turns, tokens, and time). We trace this discrepancy to the extra tokens needed to complete a task in full, which translates into using up to 3.5 times as much energy per completed task. These findings offer actionable guidance for developers and operators choosing model precision for agents, showing how tokens per completed task, set against the per-token saving, reveal whether lower precision completes the work with less energy.",
-    "url": "https://arxiv.org/abs/2610.32417v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32285v1",
-    "title": "Trial by Trace: Benchmarking AI Agent Harnesses for Reliability and Failure Attribution",
-    "authors": [
-      "Zhiyong Cao",
-      "Hengjie Zhu",
-      "Yongxin Wang",
-      "Xuchen Li",
-      "Jintao Li",
-      "Shuxia Liu",
-      "Dunqiang Liu",
-      "Bo Wang",
-      "Kairan Zhang",
-      "Cong Lin",
-      "JiangDi Yu",
-      "Siyuan Liu",
-      "Sijia Yao",
-      "Yi-Liang Wei",
-      "Lingxu Ma",
-      "Aijia Wang",
-      "Anxin Chen",
-      "Zixian Wei",
-      "Xiang Ruan",
-      "Ruizhi Xu",
-      "Ruqian Shi",
-      "Baihua Xiao",
-      "Sicheng Zhou"
-    ],
-    "published": "2026-10-23",
-    "summary": "LLM agents are increasingly used to solve real-world problems, and their effectiveness depends on both the underlying models and the harnesses that support their operation. However, most existing benchmarks focus on model capabilities and overall agent performance, with limited attention to the evaluation of agent harnesses. To address this gap, we introduce TraceTrial-Bench, which organizes harness reliability into seven components covering context, execution, governance, lifecycle, observability, tools, and verification. We construct 95 expert-level, mechanism-oriented tasks with executable or state-based ground truth to support semantically equivalent comparisons while preserving the native behavior of each harness. We design a Trajectory Tracing (TT) module to capture agent execution traces and introduce a two-layer evaluation framework that separately assesses agent performance and harness reliability. In addition, we design a Multi-source Evidence Acquisition (MEA) module to provide evidence from the agent context, harness, and execution environment for LLM-based evaluation, and develop a Failure Attribution (FA) module that uses explicit mechanism chains to support attribution at the run level. Across 4 harnesses, 9 models, and 95 tasks, our evaluation of 3,420 runs yields macro-averaged harness scores ranging from 59.8% to 72.0%, while 31.1% of runs achieve task success despite failing at least one harness criterion. TraceTrial-Bench provides an auditable and reproducible foundation for comparing agent harnesses, diagnosing their failures, and studying how harness design interacts with model behavior.",
-    "url": "https://arxiv.org/abs/2610.32285v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32155v1",
-    "title": "Detecting Insecure Compositions of Clean Agent Skills via Capability-Flow Graph Analysis",
-    "authors": [
-      "Yihao Li",
-      "Chuanpu Fu",
-      "Yizhou Zhao",
-      "Miao Chen",
-      "Qi Li",
-      "Ke Xu"
-    ],
-    "published": "2026-10-23",
-    "summary": "AI agents increasingly extend their capabilities by invoking third-party skills, where each skill encapsulates instructions, scripts, and resources for agents to execute on demand. This paper reveals that deploying many benign skills together introduces compositional security risks: multiple individually clean skills can compose into safety-violation chains, because the agent passes an upstream skill's output to a downstream skill's input across invocations. The risk arises not from any single skill, but from the agent's runtime orchestration, and thus cannot be captured by existing malicious skill detection methods. To this end, we develop KnotScryer to detect insecure skill compositions by treating skills as typed capability flows. In particular, we abstract each skill into a capability summary, and construct the Skill Capability-Flow Graph (SCFG), where edges denote cross-skill information flow. Moreover, we design a search policy that tracks protected or untrusted data along handoff edges to locate paths reaching insecure operations. Finally, a two-layer verification method replays the insecure information flow for reachability analysis and applies a task-anchored LLM chain audit to confirm the semantic plausibility of the identified violation chains. We deploy KnotScryer to analyze 13,598 clean skills from ClawHub, and validate the detected chains across three agent frameworks and three LLMs. KnotScryer identifies 612 insecure compositions, which are consistently exploited across agent frameworks. Meanwhile, under GLM-5.1, it outperforms tag-match and graph-only baselines by improving the exploitation rate from 16.5%-18.2% to 85.6%, while reducing the search space by 85.3%. Furthermore, 13.7% of the detected chains consist entirely of skills labeled safe by a single-skill scanner, showing that KnotScryer effectively identifies insecure compositions that per-skill auditing cannot.",
-    "url": "https://arxiv.org/abs/2610.32155v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32151v1",
-    "title": "The LLENS Platform for On-Premises Large Language Model Agents in a Japanese University Hospital: Development and Evaluation Study",
-    "authors": [
-      "Ken Enda",
-      "Jien Saito",
-      "Masami Mukai",
-      "Feng Han",
-      "Emir Turkes",
-      "Tatsumi Kusakabe",
-      "Reona Umeki",
-      "Kazuhiro Sumiyoshi",
-      "Mitsuya Numata",
-      "Takumi Tanikawa",
-      "Akira Endoh",
-      "Kenji Hirata",
-      "Atsushi Yoshida",
-      "Kohsuke Kudo",
-      "Shinya Tanaka"
-    ],
-    "published": "2026-10-23",
-    "summary": "Large language model agents that use tools could take on part of the electronic health record and desk work that occupies physicians' time, but in many hospitals the medical information systems run inside closed networks, so the model and the agent harness must also sit inside. We designed, implemented, and deployed LLENS, a clinical support AI agent platform that runs inside the closed network of Hokkaido University Hospital on one host with 8 NVIDIA H200 GPUs, the open-weight model Kimi K2.6 (~1 trillion parameters), and a web application rebuilt from Open WebUI. The harness has 10 components, including page image reading, full-text attachment input, a path-addressed document tree without a vector index, a network-isolated sandbox, artifact return, self-checking of generated output, subagents, and saved procedures. Kimi K2.6 was chosen from 3 open-weight candidates and scored 480/500 on the 2026 Japanese Medical Licensing Examination; it generated 119 tokens/s for one user and served 16 concurrent requests at 908 tokens/s in total. On 180 questions over hospital documents (3 seeds each), mean accuracy was 10.7% with no documents, 81.3% with fixed retrieval (top 10 chunks of one lexical search), and 97.2% with interactive access, in which the model reads with document tools and the sandbox (15.9 percentage points above fixed retrieval, 95% CI 10.9-21.3); the difference lay in filtering/counting questions (16.7% vs 87.8%). Five scenarios with synthetic data ran on combinations of the components: needlestick injury response, batch adverse event grading, scanned referral letter transcription, falls data aggregation and plotting, and investigation of 3 topics by subagents. The platform has run on the hospital network since September 14, 2026.",
-    "url": "https://arxiv.org/abs/2610.32151v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32107v1",
-    "title": "Beyond What to Say: Proactive Utterance Timing with Inner Thoughts for Werewolf Agents",
-    "authors": [
-      "Yoshiki Tanaka",
-      "Shuya Uchiyama",
-      "Daichi Hamaguchi",
-      "Michimasa Inaba"
-    ],
-    "published": "2026-10-23",
-    "summary": "Participating in a conversation involves not only deciding what to say but also whether to speak at all. This judgment carries even greater significance in environments like the Werewolf game, where participants' interests conflict, because both utterances and silence are subject to interpretation and assessment by others. Therefore, determining when to speak, as well as what to say, is crucial for an LLM agent playing the Werewolf game. In this study, we introduce a Werewolf AI agent developed for the Anytime Utterance Track of the AIWolfDial shared task. Our system builds on the existing Inner Thoughts framework, which determines utterance timing during conversations by generating internal thoughts and evaluating the value of each thought for expression at that moment. Since existing methods were designed for general dialogue, we have redesigned the system specifically for the competitive environment and incomplete information setting of Werewolf games. We call our adapted method Adversarial Inner Thoughts. Through experiments involving analysis of self-play logs and human evaluations, we analyze and discuss the effectiveness of our approach.",
-    "url": "https://arxiv.org/abs/2610.32107v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32755v1",
-    "title": "Semantic Representation for Agentic Self-Play in Automated Laboratories",
-    "authors": [
-      "Yves Delley",
-      "John Coller",
-      "Zachary Cutts",
-      "Alexander Daryin",
-      "Mathias Bellaiche",
-      "Jun W. Kim",
-      "Oscar Donosa",
-      "Srinidhi B. Seshadri",
-      "Tanner Clary",
-      "Sandy Klemm",
-      "Avinatan Hassidim",
-      "Yossi Matias",
-      "Pooja Rao",
-      "Petar Sirkovic",
-      "Annalisa Pawlosky"
-    ],
-    "published": "2026-10-23",
-    "summary": "Navigating complex, high-dimensional biological search spaces necessitates scalable physical and computational intelligence to explore beyond local optima through iterative self-play across ideation, experimentation, and automation. Translating experimental designs into reliable physical execution remains bottlenecked by static laboratory automation and unmodeled physical variability. To address this, we introduce VERified Infrastructure for Discovery Laboratories, or VERID, a foundational infrastructure designed to bridge the gap between the high-level reasoning of artificial intelligence (AI) agents and complex, error-prone physical realities of wet labs. VERID is a persistent, high-fidelity semantic digital twin of the laboratory workcell that provides four core services: queryable introspection for agentic reasoning, time-compressed simulation for protocol validation, comprehensive trace persistence for a complete scientific record, and a framework for safe execution. We present three case studies using aqueous dye and deionized water mixtures to validate the optical and fluidic foundations of VERID. These studies demonstrate how VERID enables pre-emptive detection of critical errors in experimental protocols, stateful mid-run error recovery and post-hoc identification of subtle physical failures. The simulation functions as a discrete accounting engine, allowing agents to safely and inexpensively explore experimental designs in silico and refine experimental strategies through iterative self-play. VERID also captures structured multimodal experimental data for downstream analysis, knowledge mining and agent training. We argue that this semantic layer is an essential prerequisite for deploying autonomous agents in the biochemical and biomedical sciences, ensuring data integrity, operational safety, and paving the way for tackling previously intractable grand challenges in biology.",
-    "url": "https://arxiv.org/abs/2610.32755v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32738v1",
-    "title": "Agentic Hazard Mapper: Emulating Expert Map-Making with AI Agents for Risk Communication",
-    "authors": [
-      "Sidi Wu",
-      "Lifeng Lin",
-      "Yizi Chen",
-      "Anna Yokokubo",
-      "Lorenz Hurni"
-    ],
-    "published": "2026-10-23",
-    "summary": "Hazard maps are essential tools for public risk communication, preparedness, and evacuation planning, yet effective cartographic design is not always ensured due to limited access to cartographic expertise across local governments and communities. We present Agentic Hazard Mapper, a multi-agent system that automates hazard-map production by emulating professional cartographic workflows and iterative design trade-offs while adapting design decisions to different data, locations, and hazard contexts. We conducted a formative study with map experts to inform the system design, followed by a user study and interviews with map experts and hazard practitioners. The generated maps improved participants' spatial understanding and evacuation-planning performance, reduced perceived workload and task completion time, and were generally preferred over corresponding municipal maps. We further discuss human oversight, adaptation across users and communication contexts, and opportunities to extend agentic support across broader stages of hazard-map production and risk communication.",
-    "url": "https://arxiv.org/abs/2610.32738v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32636v1",
-    "title": "Can AI Agents Help Robotic Engineers? Lessons from Two Focus Days in Industry",
-    "authors": [
-      "Salim Fares",
-      "Steffen Herbold"
-    ],
-    "published": "2026-10-23",
-    "summary": "Software developers increasingly use AI agents that execute multi-step programming tasks on their own. However, it is unclear if and how this transfers to robotic engineering, where engineers program industrial robots in niche, vendor-specific languages and rely on visual feedback from simulation tools. Within this paper, we report a case study on the use of AI agents by an SME that programs industrial robots. Our results show that the agent did not make the engineers more productive, with the exception of a task that required the generation of highly repetitive code. However, the results with the agent improved over time, as the engineers learned how to use it and the agent was adapted to the domain. Moreover, the experience with AI mattered more for the success with the agent than the experience with robotic engineering. This shows that AI agents are not a plug-and-play solution. Instead, companies must train their engineers on the usage of agents, plan time for a learning curve, and ensure that agent configurations match the domain and developer requirements. The strong learning curve we observed further implies that studies on productivity gains with AI should be longitudinal, as they otherwise miss how engineers adopt agents in practice.",
-    "url": "https://arxiv.org/abs/2610.32636v1",
     "source": "arXiv"
   }
 ]
