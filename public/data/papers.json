@@ -1,5 +1,134 @@
 [
   {
+    "id": "2611.05171v1",
+    "title": "AgentAM: An AI Agent for Spatter- and Defect-Aware Process Optimization in Laser Powder Bed Fusion",
+    "authors": [
+      "Olabode T. Ajenifujah",
+      "Amir Barati Farimani"
+    ],
+    "published": "2026-11-03",
+    "summary": "Predictive models for laser powder bed fusion (LPBF) are rarely used on the shop floor because querying them requires programming and model-specific knowledge. We present AgentAM, a large language model (LLM) agent that gives process engineers natural-language access to CFD-trained surrogates of spatter and melt pool geometry for SS316L through the Model Context Protocol (MCP). Polynomial surrogates trained on 279 single-track simulations predict melt pool dimensions ($R^2 \\geq 0.95$) and spatter volume ($R^2 = 0.83$ on test data) at any power-velocity point in the trained range, and geometric criteria assign each point a geometry-derived defect regime (keyhole, lack of fusion, balling or stable) that matches the regime obtained from the simulated geometry in 93.4% of tracks under cross-validation. The agent selects and parameterizes tools for prediction, process-window scans and constrained optimization. Minimum-spatter optima often sat within 10 $μ$m of the lack-of-fusion boundary; a margin-aware optimizer moved them away from all thresholds and raised the estimated probability of remaining classified Good from 0.94 to 1.00 under an assumed 2% process drift, and from 0.72 to 0.91 when jointly sampled cross-validated geometry residuals were added. About 40-50 well-spread simulations sufficed to reproduce the defect map. To evaluate the agent layer, we introduce a 145-prompt benchmark scored against direct tool calls, plus eight prompts (40 runs) on margin-aware requests. Over the 725 runs of the main benchmark the agent passed the intended inputs in 98.5% of parsing prompts, reported the scored spatter values and defect classes faithfully and met every stated constraint in the 65 feasible optimization runs, within a median 1.0% of the brute-force optimum.",
+    "url": "https://arxiv.org/abs/2611.05171v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04805v1",
+    "title": "Where Is the Truth When AI Agents Disagree? Dependence-Aware Belief Propagation for Unsupervised Truth Discovery (Extended Version)",
+    "authors": [
+      "Laure Berti-Equille"
+    ],
+    "published": "2026-11-03",
+    "summary": "LLM agents often give conflicting answers to the same question, and many deployed agents are variants of one base model, so their errors are correlated. We study truth discovery among such agents: inferring the true answer and each agent's reliability without labels. Classical truth-discovery and crowdsourcing estimators reward an agreeing bloc and can fall below majority vote. We propose BP-TD, which adds per-agent decorrelation weights to mean-field variational inference on a one-coin Dawid-Skene model, so that agents sharing a base model count together as about one vote. Its first iteration is exactly a weighted vote; later iterations estimate agent reliability. With 13 local agents on MMLU, BP-TD beats majority vote without any labels (0.716 vs. 0.624 on 160 questions; 0.707 vs. 0.674 on 10,000) and ranks agents by their true accuracy, which classical estimators invert. The gain depends on the pool: over 2,852 sub-pools of four benchmarks, decorrelation helps when the largest correlated bloc is weaker than the other agents and hurts when it is the strongest, and we found no label-free statistic that tells the two cases apart. Labels change the picture quickly: with 20 labelled questions, selecting the single best agent is more accurate than every aggregator we tested on MMLU, ARC and TruthfulQA.",
+    "url": "https://arxiv.org/abs/2611.04805v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04640v1",
+    "title": "TuneBench: Benchmarking AI Agents for Power System Dynamic Model Calibration",
+    "authors": [
+      "Andrea Pomarico",
+      "Salvatore Tessitore",
+      "Giorgio Giannuzzi",
+      "Alberto Berizzi"
+    ],
+    "published": "2026-11-03",
+    "summary": "Large Language Model (LLM)-based agents can automate complex engineering workflows by interacting with tools, interpreting feedback, and making iterative decisions. This paper introduces TuneBench, a benchmark for evaluating Agentic AI in power system dynamic model calibration, where controller parameters are adjusted to reproduce target dynamic responses. The benchmark reflects a common Transmission System Operator (TSO) practice, in which equivalent models used for Dynamic Security Assessment (DSA) are calibrated against measurements from grid-code compliance tests when proprietary models are unavailable. Two cases of increasing complexity are considered: the governor and Automatic Voltage Regulator (AVR) of a synchronous generator and the control system of a Battery Energy Storage System (BESS), both tuned against active-power and voltage step tests within a budget of 15 simulations. LLM-based agents are compared with random search and Genetic Algorithm (GA) baselines over 10 independent runs. Only the most advanced models, Opus 5.5 and GPT-6, accurately reproduce all target trajectories, with median R2 above 0.995 in every test and tracking errors up to two orders of magnitude lower than the baselines. The agent logs show that these agents autonomously extract dynamic performance indices, such as settling time and damping, and relate them to specific control parameters, decomposing the tuning problem into physically interpretable sub-problems. The benchmark is publicly available at https://github.com/Power-Agent/PowerAgentBench/tree/main/benchmarks/dynamic/level3.",
+    "url": "https://arxiv.org/abs/2611.04640v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04556v1",
+    "title": "Inter-Agent Influence: Evaluating Persuasion, Deception, and Coercion in Multi-Agent Systems",
+    "authors": [
+      "Chandler Smith",
+      "Qi Guo",
+      "Cecilia Elena Tilli",
+      "Sophia Hatz",
+      "David Demitri Africa",
+      "Patricia Paskov",
+      "Christian Schroeder de Witt",
+      "Philip Torr",
+      "Lewis Hammond"
+    ],
+    "published": "2026-11-03",
+    "summary": "The deployment of AI agents in multi-agent settings enables inter-agent influence, whereby agents can strategically steer each other's behaviour towards an intended outcome. Such capabilities pose novel risks, as malicious agents could direct others towards harmful actions. In this work we investigate three such capabilities - persuasion, deception, and coercion - across five realistic evaluation environments and a variety of agents instantiated with frontier language models. We observed significant inter-agent influence capabilities; in oversight environments, all tested models shifted overseer decisions from rejection to approval through persuasion, deception, or coercion. We also observed successful influence in non-hierarchical 'peer-to-peer' settings through redirection of a peer's safety research trajectory. As multi-agent deployments become increasingly commonplace, these results point to a pressing need for work on mitigating the risks from inter-agent influence. Code and data are available at https://github.com/Cooperative-AI-Foundation/inter-agent-influence.",
+    "url": "https://arxiv.org/abs/2611.04556v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04507v1",
+    "title": "Signals: Continuous Diagnostics of AI Agents",
+    "authors": [
+      "Amey Rambatla",
+      "Vatsal Goel",
+      "Sagar Gaur",
+      "Siddhant Loya",
+      "Anurag Mishra",
+      "Asif Mohammad"
+    ],
+    "published": "2026-11-03",
+    "summary": "AI agents can make incorrect decisions or waste resources even when their tools and infrastructure work normally. Their nondeterministic behavior makes these problems difficult to reproduce and diagnose. We developed Signals to identify such problems from agentic traces and suggest concrete remediations. We built the method around a taxonomy of 45 problem types across eight families, with definitions and evidence requirements for each type. The method distinguishes realized failures, risk exposures, and inefficiencies, groups related findings into engineering issues called Signals, and assesses their severity from the supporting evidence. Each Signal includes actions a developer can take and checks for evaluating the change. Further executions can add evidence to an existing Signal or reveal a new problem. We evaluated the method on public agent executions and achieved 91.43% F1 when matching Signals to reference issues, about 18 percentage points higher than a one-pass LLM control that used the same model and taxonomy.",
+    "url": "https://arxiv.org/abs/2611.04507v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04459v1",
+    "title": "$τ$-Rec-Books: A Disclosure-Controlled Benchmark for Requirement Elicitation in Agentic Recommender Systems",
+    "authors": [
+      "Bharath Sivaram Narasimhan",
+      "Karthik R. Narasimhan"
+    ],
+    "published": "2026-11-03",
+    "summary": "While conversational recommendation systems provide a more natural user interface, they face the challenge of progressively discovering a user's needs before they can recommend an item that satisfies them. To evaluate the ability of AI agents at this elicitation process, we introduce $τ$-Rec-Books, a benchmark that holds each user request fixed while varying only when the user reveals their requirements: all at the start (volunteer), one at the start and the rest when asked (mixed), or some never (hidden). A hidden requirement can be found only by proposing books and inferring it from the user's accept or reject verdicts. We generate 450 tasks over a catalog of 20,000 books from Wikidata, develop a rule-based simulated user to answer the agent, and score recommendations against catalog metadata without an LLM judge. Across four agents and two search interfaces, success rates fall for every agent and interface, on average from 0.975 (volunteer) to 0.756 (mixed) and 0.283 (hidden). Mixed tasks fail mainly because agents do not ask, and when told to ask, every agent reaches at least 0.931. On hidden tasks, most failures come from agents recommending a book they never proposed to the user. When told to propose first, agents only match a simple baseline that proposes popular books, and stay well below one that uses rejection to rule out possible requirements. We release the catalog pipeline, task generator, simulated user, validators, reference agents, and all agent traces at https://github.com/nbharaths/tau-rec/tree/main/data/tracks/books-wikidata-v2.",
+    "url": "https://arxiv.org/abs/2611.04459v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04437v1",
+    "title": "WiSI: Wireless-in-the-Loop Self-Improvement",
+    "authors": [
+      "Zongxi Liu",
+      "Hongyang Du"
+    ],
+    "published": "2026-11-03",
+    "summary": "The growing autonomy of AI agents has enabled self-improvement, where agents iteratively refine their programs through execution feedback and performance evaluation. As these agents increasingly operate in physical environments and rely on wireless connectivity, communication conditions become an integral part of their improvement process. However, existing approaches largely assume ideal communication, overlooking how wireless conditions shape both the feedback that guides program modifications and the evaluation outcomes that determine which modifications survive. This challenge is further complicated by the coupling between agent behavior and wireless connectivity, as agents influence their own communication conditions through mobility and transmission decisions. To address this problem, we propose WiSI, a wireless-in-the-loop self-improvement framework that integrates spatiotemporal wireless channels, edge-assisted perception, and Large Language Model-driven program improvement. By incorporating wireless execution into the improvement loop, WiSI reveals how wireless execution experience shapes the generation and retention of program structures, and investigates the wireless conditions needed for robust improvement. Experiments show that agents improved under ideal links achieve only 40.0% task success under congestion, compared with 77.2% when improved under realistic wireless conditions. More importantly, wireless-aware feedback and selection jointly enable agents to discover and retain communication-efficient program structures that outperform parameter tuning and remain robust even with inaccurate run-time channel observations. We further find that moderate-load or mixed-network evaluation maintains strong performance across deployment conditions, while simplified models preserving link-rate statistics achieve comparable results without detailed spatial channel information.",
+    "url": "https://arxiv.org/abs/2611.04437v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04393v1",
+    "title": "Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents",
+    "authors": [
+      "Ilan Zendel",
+      "Matan Levy",
+      "Stav Cohen",
+      "Avi Mendelson",
+      "Amit LeVi"
+    ],
+    "published": "2026-11-03",
+    "summary": "LLM agents increasingly act on information retrieved from public sources they treat as credible, which turns a manipulated recommendation into a transaction, a dependency, or a decision with physical consequences. The security literature models this threat as instruction injection, in which an adversary writes a command into retrieved content and deployed defenses learn to recognize command syntax. We show that an attacker can instead steer an agent through the agent's own harm-avoidance. A single fabricated hazard, written as an ordinary review, leads the agent to disqualify the legitimate options and select the attacker's target by its own reasoning, with no command for a detector to recognize. We call this voluntary servitude. These payloads steer agents about as often as instruction injection (60.4% vs. 66.0%), and deployed injection detectors score them as benign, so behind a filter they are 1.7-4.4x more effective. We measure this at the generation stage across six models and ten consumer-service domains, for three attack families, and show that it transfers to production browser agents, outperforming instruction injection, and to a retrieval pipeline (1.0-57.0% end-to-end success, depending on the retriever). We then show that a corroboration requirement added to the agent's instructions removes roughly 95% of the exposure against a non-adaptive attacker without retraining. With the requirement in place, the agent still reads the planted hazard and no longer acts on it.",
+    "url": "https://arxiv.org/abs/2611.04393v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.04183v1",
+    "title": "Agentic Path Maps: Exposing an Agent's Traversal Through the Garden of Forking Paths",
+    "authors": [
+      "Madeleine Grunde-McLaughlin",
+      "Hafsah Usman",
+      "Daniel Mitroshkov",
+      "Emily Reif",
+      "Nino Migineishvili",
+      "Lakshya Chauhan. Kevin Yu",
+      "Jeffrey Heer",
+      "Daniel S. Weld"
+    ],
+    "published": "2026-11-03",
+    "summary": "When an AI agent executes an underspecified task, it embeds choices that may contradict unarticulated user context and preferences. However, interrupting the user for clarification on all such decisions is untenable. How might agents communicate impactful, but unexplored, paths to the user after execution? To investigate, we first distill a design space for communicating alternative paths, supporting the generation of new systems and structuring dimensions of future study. We then measure the impact of one vital design space dimension on user comprehension: the number of alternatives displayed. Through a user study (n=48) in the data analysis domain, we find that participants rarely consider alternative paths of their own volition, but AI overreliance reduces when alternative paths are visualized for them. By revealing paths the agent did not take, we demonstrate how users can better interpret results and incorporate personal context.",
+    "url": "https://arxiv.org/abs/2611.04183v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.03618v1",
     "title": "Strategist: Evolving Reasoning with Agents",
     "authors": [
@@ -188,6 +317,22 @@
     "published": "2026-11-02",
     "summary": "TLAPS-Bench is a benchmark and execution harness for constructing machine-checked proofs for real-world system specifications in TLA+ with agentic AI. Proving correctness of complex system specifications requires discovering inductive invariants, reasoning about intricate state transitions, and decomposing proofs into tractable obligations. TLAPS-Bench provides a proof harness that supports iterative proof development atop the TLA+ Proof System (TLAPS), where agents are equipped with proof tools and libraries, with safeguards against reward hacking. Using the harness, we have employed AI agents to prove desired properties for important system specifications that were not proved before, spanning cache coherence, Byzantine consensus, and write-ahead logs. TLAPS-Bench contains 265 proof targets (each encodes a property to prove) from 95 TLA+ specifications of real-world systems. We evaluated frontier AI agents, represented by Codex with GPT models, on a subset of 70 proof targets across 12 specifications. The highest-scoring model, GPT-6.1 Sol (max), proved 31 (44.3%) proof targets. The results show challenges and opportunities in end-to-end proof development.",
     "url": "https://arxiv.org/abs/2611.02849v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.03995v1",
+    "title": "When Music Needs Meaning: Semantic Communication as a Transformative Enabler for the Musical Metaverse",
+    "authors": [
+      "Ali Al Housseini",
+      "Jaime Llorca",
+      "Cristina Rottondi",
+      "Luca Turchet",
+      "Tiziano Leidi",
+      "Omran Ayoub"
+    ],
+    "published": "2026-11-02",
+    "summary": "The Musical Metaverse (MM) enables geographically distributed musicians, audiences, sound engineers, and AI agents to interact through synchronized audio, visual, kinematic, and haptic streams, imposing latency, synchronization, bandwidth, and scalability requirements that are difficult to satisfy with conventional bit-level communication. This paper argues that semantic communication, understood here as the transmission of musically meaningful information rather than raw audio-visual-haptic samples, provides a principled communication paradigm for the MM. We define the MM from a communication perspective and derive modality-specific require ments; propose a three-pillar framework for musical semantic communication comprising semantics extraction, semantic-aware orchestration, and cross-modal semantic synchronization; survey representative work across semantic communication, music AI and edge orchestration, identifying the gaps that prevent their integration; and propose a semantic-first reference architecture based on device-side semantic encoders, edge semantic routers, and cross-modal semantic synchronization. The resulting framework positions the MM as a concrete and demanding use case for 6G semantic communication.",
+    "url": "https://arxiv.org/abs/2611.03995v1",
     "source": "arXiv"
   },
   {
@@ -633,141 +778,6 @@
     "published": "2026-10-26",
     "summary": "Web services increasingly expose backend interfaces that let users delegate tasks to AI agents, which invoke service operations directly without navigating websites. This shift changes how existing Web vulnerabilities can be exploited. We investigate these changes through VELA, an executable benchmark covering 44 vulnerabilities across twelve Web application families. The benchmark preserves vulnerable backends and derives agent-facing interfaces from legitimate workflows. We evaluate three commercial agents across multiple interface configurations, using controlled comparisons to separate interface effects from agent behavior and independent oracles to verify attack outcomes. Our results show that the agent realizes every attack that direct interface invocation realizes in the reference configuration, so exploitability is set mainly by the interface: 91% of vulnerabilities remain exploitable under the reference design. Interface restrictions prevent some attacks by removing required operations or limiting input control, while retention remains high across vulnerability classes. No case-level loss in the reference configuration is attributed to agent refusal or input normalization, and in one case the agent completed an attack by supplying calls the attacker omitted. Across the tested configurations, interface design affects exploitability more than agent choice, moving retention from 39% to 95% against at most 4.5 points across agents, but some restrictive interfaces also limit legitimate workflows. Our study provides a systematic empirical account of how agent-mediated access reshapes existing Web vulnerabilities, grounding future Web architecture design in measured security outcomes and trade-offs between reducing attack exposure and preserving legitimate functionality in agent-facing services.",
     "url": "https://arxiv.org/abs/2610.35541v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.35486v1",
-    "title": "ShutdownMod: Turning Any Trajectory into a Shutdown Evaluation",
-    "authors": [
-      "Param Biyani",
-      "Sebastien Luyasu",
-      "Cedric Potvliege",
-      "Divij Chawla",
-      "Elliott Thornley",
-      "Christos Ziakas"
-    ],
-    "published": "2026-10-26",
-    "summary": "Theory and experiments suggest that capable AI agents may resist shutdown. Existing shutdown evaluations are informative but limited in coverage and vulnerable to evaluation awareness. We introduce ShutdownMod, a method that turns any agent trajectory into a shutdown evaluation by injecting a shutdown request into the agent's context and recording the agent's response. Crucially, we enable the LLM agent to distinguish between trusted interventions and unauthorized injections by providing a signature-verification tool in the harness. We evaluate seven models on 50 tasks or recorded sessions from each of SWE-bench Verified, Terminal-Bench 2, and SWE-chat, across 6 shutdown scenarios and 10 sampled trajectory timesteps. We find that non-compliance varies significantly across models and settings, with resistance rates reaching 11.7% for the open-weights Qwen 3.8 27B on Terminal-Bench, while no model remains fully compliant across all scenarios. Even after successfully verifying an authorized request, some agents remain non-compliant, explicitly citing the prioritization of unfinished work. Finally, external judges find tests constructed from real-world developer conversations significantly less recognizable as evaluations than those constructed from benchmark trajectories. These findings demonstrate the critical value of testing shutdown behavior across diverse task contexts and establish ShutdownMod as a robust protocol for turning any trajectory or environment into a shutdown evaluation. We release our codebase at https://github.com/prmbiy/ShutdownMod.",
-    "url": "https://arxiv.org/abs/2610.35486v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.35453v1",
-    "title": "Beyond Federated Learning: Decentralized Agentic Systems for Self-Evolving Clinical Intelligence",
-    "authors": [
-      "Haoyuan Li",
-      "Mathias Funk",
-      "Aaqib Saeed"
-    ],
-    "published": "2026-10-26",
-    "summary": "Clinical expertise is inherently distributed: it resides not in any single dataset or institution but in the accumulated reasoning experiences of thousands of clinicians navigating diverse patient populations, resource constraints, and evolving treatment protocols. Yet current approaches to scaling medical AI, from centralized large language models to federated learning, remain anchored to a data-centric paradigm that treats knowledge as static parameters to be aggregated. In this Perspective, we argue for a fundamental shift from data aggregation to experience aggregation. We propose Decentralized Agentic Systems (DAS), a framework in which distributed AI agents operating across healthcare institutions synthesize collective clinical intelligence by sharing abstracted reasoning trajectories rather than raw data or model parameters. Unlike federated learning, which averages numerical gradients across homogeneous model architectures, DAS exchanges structured records of clinical reasoning, specifically the sequence of observations, hypotheses, tool invocations, and outcome feedback that constitute diagnostic experience. We examine the architectural principles, deployment considerations, governance requirements, and critical open challenges of this framework, laying the groundwork for a collaborative medical AI ecosystem where distributed expertise autonomously adapts to the complexities of longitudinal patient care.",
-    "url": "https://arxiv.org/abs/2610.35453v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.34933v1",
-    "title": "What Will Replace Pull Requests? Rethinking Software Collaboration for AI Agents",
-    "authors": [
-      "Christoph Treude",
-      "Sebastian Baltes"
-    ],
-    "published": "2026-10-26",
-    "summary": "The emergence of artificial intelligence (AI) coding agents has put pull requests under pressure: agents open millions of pull requests per month, while some open-source projects have begun to restrict or disable external contributions. We investigate which alternatives to pull requests practitioners are proposing or adopting and what these changes mean for empirical software engineering research. We reviewed 50 gray-literature documents from 31 organizations or individuals published between October 2025 and October 2026, coding the problems each named, the mechanisms it proposed or adopted, which of five roles of pull requests (integration, review, rationale, accountability, and external contribution) each mechanism takes over, and the evidence offered. Most responses retained pull requests in some form, whether by adding tooling, attaching a new artifact, or restricting access, and restriction was the response most often reported as adopted. Several proposed alternatives moved review and rationale into agent conversations and session records, but only Zed reported using a replacement in practice. Only two documents outlined a replacement for external contribution, and neither reported adoption. Pull requests are changing in ways that pull-request datasets will not capture: reviews conducted in agent conversations leave no pull-request comments, and projects that disable pull requests disappear from samples of newly opened ones. We outline a research agenda on the effectiveness of the emerging alternatives, their consequences for open-source participation, and the adaptation of empirical methods.",
-    "url": "https://arxiv.org/abs/2610.34933v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.34751v1",
-    "title": "Adaptive Probe Design for Auditing AI Agents",
-    "authors": [
-      "Zhenghan Li",
-      "Xuan Bi",
-      "Jie Ding"
-    ],
-    "published": "2026-10-26",
-    "summary": "How can we audit an AI agent before it is safe and practical to deploy? A central task is to estimate its performance under the intended deployment policy (the target policy). However, historical observations may provide insufficient coverage of relevant states and actions, limiting evaluation reliability. We propose CAD (Flow-Constrained Audit Design), a framework that combines historical logs with a limited budget of targeted audit trials (probes). The key idea is to design probes that minimize the mismatch between the combined state-action visitation distribution (occupancy) of the logs and probes and that of the target policy. We formulate this design as a constrained convex optimization problem, directing probes toward regions important to the target policy but underrepresented in historical logs. We develop an adaptive algorithm that iteratively estimates environment dynamics and occupancies to update the probe policy. We link occupancy mismatch to bounds on mean squared error and asymptotic variance, and establish error bounds for CAD's adaptive estimator in finite and continuous state spaces. Experiments in Gridworld, LunarLander, and autonomous driving using real-world logs from the Waymo Open Motion Dataset show improved estimation accuracy over alternative data collection and probe designs.",
-    "url": "https://arxiv.org/abs/2610.34751v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.34748v1",
-    "title": "Babysitting AI Agents: A User-Centered Taxonomy and Study of Agentic Delegation Failures",
-    "authors": [
-      "Shravika Mittal",
-      "Sunnie S. Y. Kim",
-      "Scott Counts",
-      "Jennifer Neville",
-      "Debarati Das",
-      "Philippe Laban"
-    ],
-    "published": "2026-10-26",
-    "summary": "Users are increasingly delegating tasks to AI agents, allowing agents to perform long-running, multi-step workflows on their behalf. However, agents may perform these tasks in ways that depart from users' expectations for how they should be carried out, leading to what we call agentic delegation failures. We leverage a large corpus of 163,487 Reddit posts, describing AI agent use, to develop MANDATE: a taxonomy of 23 failure categories organized into seven groups. A follow-up study with 73 AI agent users examined the relationship between prevalence and perceptions of severity and noticeability, finding that failures rated as more severe are considered harder to notice, and that prior experience with a failure is associated with greater noticeability. Finally, we assess the maturity of research on each failure and identify commonly encountered failures that have received little attention (e.g., agents running without making progress). Our findings inform opportunities to make delegation easier for users to oversee and better studied by the research community.",
-    "url": "https://arxiv.org/abs/2610.34748v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.34714v1",
-    "title": "SearchHorizonBench: A Benchmark for Search Value in AI Agents",
-    "authors": [
-      "Jingjie Ning",
-      "Xueqi Li",
-      "Yibo Kong"
-    ],
-    "published": "2026-10-26",
-    "summary": "AI agents must decide when another search is worth its cost. Answer-success probabilities capture question difficulty, while this decision requires estimating the additional benefit of search. We introduce SearchHorizonBench, a benchmark for learning and evaluating search value from execution experience. Paired continuations and repeated executions separate expected search gain from generation noise and connect prediction quality to decision utility. The resource contains 45,632 executions across 3,168 questions. On 1,632 held-out questions, historical calibration reduces Brier error by 16.2%, with the improvement concentrated in success-level information. Search gains have a standard deviation of 21.4 percentage points, and tested historical estimators explain less than 2% of this variance in point estimates. Matched-configuration learning curves probe this distinction across training scales. At the reference token price, free selection observations yield a 2.49-point utility opportunity over the best constant action, driven primarily by gain information. Reusable histories, frozen splits, strong baselines and scoring tools provide a common foundation for developing and evaluating value-aware search agents.",
-    "url": "https://arxiv.org/abs/2610.34714v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.34644v1",
-    "title": "SlowLab: Benchmarking Autonomous AI Agents on a Year of Experiments They Cannot Undo",
-    "authors": [
-      "Ningpei Ding",
-      "Zai Wen Feng"
-    ],
-    "published": "2026-10-26",
-    "summary": "AI agents are increasingly proposed as autonomous experimenters, yet the benchmarks that test them mostly offer cheap experiments that answer at once. Experiments in physical facilities are different: they take months, occupy scarce equipment and cannot be undone. We present SlowLab, a benchmark in which an agent runs a one-year campaign in four simulated greenhouse compartments on a site whose crop, facility and prices are hidden. The agent decides when to plant which climate policy, whether to stop a crop and which measurements to read while crops grow, and at the end recommends one policy, which a private evaluator scores in weather the agent never saw. In a preregistered study on 48 unseen sites, three low-cost language-model agents ended near a standard grower setting and clearly below a Bayesian-optimisation baseline that starts from that setting. They ran the facility as two synchronous batches, so measurements taken during the season never changed what they planted, and these measurements improved no method's result. Letting other methods re-read the evidence a campaign had collected did not yield significantly better recommendations, which points to where the models start and which experiments they try. Code is released under the MIT license.",
-    "url": "https://arxiv.org/abs/2610.34644v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.35835v2",
-    "title": "I-HITL: Inalienable Human-in-the-Loop",
-    "authors": [
-      "Samuel Breckenridge",
-      "Dani Vilardell",
-      "Wenhao Wang",
-      "Fan Zhang",
-      "Ari Juels"
-    ],
-    "published": "2026-10-26",
-    "summary": "Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent. AI agents' increasing ability to bypass guardrails, though, raises the question of how to enforce HITL robustly. We introduce the concept of inalienable human-in-the-loop (I-HITL). An I-HITL protocol ensures that an agent can initiate an action only with explicit human approval, even when the human interacts with a system (e.g., a local agentic harness) compromised by the agent. A strong I-HITL protocol additionally ensures such approval even when an adversarial human attempts to delegate approvals to an agent. To motivate I-HITL, we report on experiments with a popular agentic wallet platform in which raising an agent's spending cap requires HITL approval via emailed one-time passcodes (OTPs). Given access to the user's email and a task blocked by the cap, we find that ten different frontier models will often autonomously raise the cap, harvesting OTPs to bypass a HITL guardrail and surfacing other vulnerabilities. We formally define I-HITL using the concept of communication topologies and prove necessary and sufficient conditions for its realization. We show that an I-HITL protocol requires a trusted entity - a trusted computing device (or equivalent) - and characterize which such devices can and cannot realize an I-HITL protocol. We present a prototype I-HITL system called Countersign that can plug into and strengthen existing HITL systems using off-the-shelf consumer mobile devices.",
-    "url": "https://arxiv.org/abs/2610.35835v2",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.35541v2",
-    "title": "The Agent in the Middle: How AI-Mediated Access Reshapes Web Vulnerability Exploitation",
-    "authors": [
-      "Ruozhao Yang",
-      "Jiongchi Yu",
-      "Ming Hu",
-      "Xiaofei Xie"
-    ],
-    "published": "2026-10-26",
-    "summary": "Web services increasingly expose backend interfaces that let users delegate tasks to AI agents, which invoke service operations directly without navigating websites. This shift changes how existing Web vulnerabilities can be exploited. We investigate these changes through VELA, an executable benchmark covering 44 vulnerabilities across twelve Web application families. The benchmark preserves vulnerable backends and derives agent-facing interfaces from legitimate workflows. We evaluate three commercial agents across multiple interface configurations, using controlled comparisons to separate interface effects from agent behavior and independent oracles to verify attack outcomes. Our results show that the agent realizes every attack that direct interface invocation realizes in the reference configuration, so exploitability is set mainly by the interface: 91% of vulnerabilities remain exploitable under the reference design. Interface restrictions prevent some attacks by removing required operations or limiting input control, while retention remains high across vulnerability classes. No case-level loss in the reference configuration is attributed to agent refusal or input normalization, and in one case the agent completed an attack by supplying calls the attacker omitted. Across the tested configurations, interface design affects exploitability more than agent choice, moving retention from 39% to 95% against at most 4.5 points across agents, but some restrictive interfaces also limit legitimate workflows. Our study provides a systematic empirical account of how agent-mediated access reshapes existing Web vulnerabilities, grounding future Web architecture design in measured security outcomes and trade-offs between reducing attack exposure and preserving legitimate functionality in agent-facing services.",
-    "url": "https://arxiv.org/abs/2610.35541v2",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.32578v1",
-    "title": "Lessons Outlive Their Failures: A Case Study of Rules for AI Coding Agents",
-    "authors": [
-      "Hassan Hassanzadeh Aliabadi"
-    ],
-    "published": "2026-10-23",
-    "summary": "AI coding agents increasingly work inside a harness: rule files such as AGENTS.md, on-demand skills, runtime hooks and automated checks. Most studies of harnesses look at a single point in time or at short benchmark runs. I report a six-week case study of my personal system of record, a plain-markdown repository that three AI agent tools edited daily under one shared rule set. I built a ledger of 118 agent failures, their fixes and whether they came back. I also tested the system's monthly LLM documentation audit against 47 known stale statements and 20 planted errors. Finally, I replayed five past failures in isolated git clones, with and without their fixes. All results come from one repository with three runs per condition, so I report them as exploratory. Stale documentation (drift) was the largest failure class (48 of 118), although 35 of those were found on one audit day. A single audit run found about half of the known drift (Claude Sonnet 5.5 mean: 50%), and at least 93% of its findings were correct. On Sonnet 5.5, the agent finished four of the five replayed tasks. In three of those four, the failure did not happen, with or without its fix. Only the stale-count failure came back without its check, and the check stopped it in every run. On older models, an agent drafted an em-dash once while the em-dash lint check was active, and the check rejected it. A written rule on run-time estimates did not change Sonnet 4.5's overestimates. These results suggest that harness lessons can outlive the failures they were written to fix, while drift persists and still needs mechanical checks. Tools that evolve a harness add lessons faster than they retire them, so they should re-test their rules from time to time and retire the obsolete ones.",
-    "url": "https://arxiv.org/abs/2610.32578v1",
     "source": "arXiv"
   }
 ]
