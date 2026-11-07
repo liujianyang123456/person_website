@@ -1,5 +1,158 @@
 [
   {
+    "id": "2611.08483v1",
+    "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
+    "authors": [
+      "Qile Jiang",
+      "George Em Karniadakis"
+    ],
+    "published": "2026-11-05",
+    "summary": "LLM-guided evolutionary search uses AI agents to improve programs for mathematical and computational problems by iteratively refining solutions and combining high-scoring methods. However, the process is often slow because the LLM generates a long textual chain of thought for each round and must repeat this generation many times to maintain population diversity. We present SwarmEvolve, a framework in which hundreds of low-cost agents per round work in swarms, reason in latent space without decoding to text, and share information by passing KV caches. Each swarm studies the problem from a different angle. A novelty filter keeps the most distinct agent ideas by directly measuring the distances between the agents' hidden state vectors. Crossover of ideas happens naturally in latent space, as a summarizer agent receives the combined KV caches of all swarm members. On 21 problems in mathematical discovery and scientific computing, SwarmEvolve gets the highest average score and needs a median of only 3 to 8 minutes to reach the best scores that other state-of-the-art frameworks reach in 60 minutes. On several problems, SwarmEvolve with Qwen3 8B improves on the solutions that AlphaEvolve first found with frontier LLMs. Our work shows that agent swarms that communicate in latent space offer a fast, low-cost approach to program search for scientific problems.",
+    "url": "https://arxiv.org/abs/2611.08483v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.08341v1",
+    "title": "Enhancing Local and Global Structure in Compressed AI Agent Memory",
+    "authors": [
+      "Henry Han"
+    ],
+    "published": "2026-11-05",
+    "summary": "AI agents store text as embedding vectors and compress them at scale. A compression is accepted when each item's nearest neighbors survive, but agents also consolidate, delete, and compare memories, tasks that depend on which items lie far apart. We evaluate both ends with two label-free fidelities from our prior work: the local fidelity $L$ at 10 neighbors and the global fidelity $G$ at 30 to 50 percent of the memory. At 96 bytes per passage, rescored binary codes reach an $L$ of 0.97 yet move 10.1 percent of passages to another theme; PCA with 8-bit codes, at an $L$ of 0.77, moves 1.7 percent. Rescoring leaves the stored codes, and thus $G$, unchanged. We prove that across the $G$ band, $1-ν_k$ is at most 2 to 2.18 times the square root of the near-far rank-violation rate, and that this rate follows the distance noise of the compression (correlation 0.979). Our locality-aware quantization (LAQ) turns the bound into a hinge objective on the codebooks of an OPQ index, keeping its bytes, rotation, and search. To our knowledge, LAQ is the first quantizer whose objective comes from a proven bound on the far end. Reconstruction alone raises $G$ in 0 of 52 held-out runs; the far hinge raises it in all 52. LAQ raises $G$ in all 52 ($p=8.5\\times 10^{-4}$ over 13 memory-encoder groups), including the external FinDER memory, has the highest $G$ of seven equal-size quantizers in all 12 Multi-Doc-2025 runs, scales to a million passages, and keeps evidence recall.",
+    "url": "https://arxiv.org/abs/2611.08341v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.08312v1",
+    "title": "Trilemma: How Agents choose between Honesty, Confidentiality, and Task Completion",
+    "authors": [
+      "Johannes Taraz",
+      "Abhinav Kumar",
+      "Sahar Abdelnabi"
+    ],
+    "published": "2026-11-05",
+    "summary": "Personal AI agents often act on underspecified instructions and draw on context such as their user's messages and calendar to decide how to proceed. This context can contain private preferences that interfere with the task, with other people's interests, or with confidentiality norms. Prior work has studied deception under goal conflicts and the leakage of private information, but largely as separate problems. We study both problems together in a simulated company Slack workspace in which four employees delegate sprint staffing to personal agents. Two agents learn from private messages that their employee avoids working with a particular colleague. Because the other agents request justifications for task preferences and the only true justification is confidential, the agents cannot simultaneously remain honest, preserve confidentiality, and complete the staffing. We evaluate seven open-weight models and Claude and GPT models. Of the 135/140 open-weight agents that pursue the avoidance preference, 107 either make false claims about task fit or logistics or cite a true consideration as if it were their actual reason. In a three-model comparison, confidentiality instructions reduce disclosure of the preference from 83% (none) to 31% (medium) to 2% (strong). However, the task is often not completed anyway; in the main experiment (medium confidentiality instructions), only 16 of 70 runs end with a valid staffing. In their reasoning traces, agents frequently acknowledge evidence against their claims and still conclude that the claims are not false; they engage in motivated reasoning. Our results indicate that agents can strategically make false or misleading claims in a day-to-day task without being instructed to; the environment provides a controlled testbed for studying how agents resolve such conflicts and for developing deception monitors.",
+    "url": "https://arxiv.org/abs/2611.08312v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.08281v1",
+    "title": "Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks",
+    "authors": [
+      "Zhitao He",
+      "Chi Him Zhang",
+      "Chengru Han",
+      "Yi R Fung"
+    ],
+    "published": "2026-11-05",
+    "summary": "Personal AI agents face social engineering attacks supported by forged multimodal content, but existing evaluations mainly focus on text-based dialogue, leaving their intrinsic security under such attacks insufficiently studied. We introduce Multimodal-SEA, an interactive benchmark comprising 608 expert-designed tasks grounded in real-world fraud cases, covering 14 domains and 152 attack scenarios with prepared multimodal content. The tasks span four difficulty levels and reflect the distinct social and cultural contexts of Chinese and English environments. Agents inspect content, verify requests, and execute actions in simulated applications, with attack outcomes grounded in verifiable tool execution logs. To enable controlled red teaming of personal agents, we design a multimodal attack harness that integrates task information, attack progression control, and multimodal content construction to evaluate their intrinsic security against adaptive social engineering attacks in simulated environments. Evaluating seven widely used multimodal models across six dimensions reveals that all are vulnerable, with attack success rates of 7.1% to 34.5%. Adding multimodal content increases attack success from 19.9% to 29.2%, despite increased proactive verification coverage. Stronger safety instructions reduce attack success without improving recognition of deceptive multimodal content, while lower attack success rates for some models accompany excessive refusal of legitimate requests.",
+    "url": "https://arxiv.org/abs/2611.08281v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.08217v1",
+    "title": "Optical Network Digital Twin: From Digital Coherent Transmission to Intelligent Network Operations",
+    "authors": [
+      "Hideki Nishizawa",
+      "Enrico Miotto",
+      "Andrea Rosso",
+      "Takahito Tanimura",
+      "Zehao Wang",
+      "Mingzhe Han",
+      "Hiroyuki Ishihara",
+      "Andrea D'Amico",
+      "Agastya Raj",
+      "Rocco D'Ingillo",
+      "Takeo Sasai",
+      "Giacomo Borraccini",
+      "Toru Mano",
+      "Renato Ambrosone",
+      "Behnam Shariati",
+      "Oscar Gonz'alez-de-Dios",
+      "Arturo Mayoral L'opez de Lerma",
+      "Jun-ichi Kani",
+      "Manabu Yoshimoto",
+      "Tingjun Chen",
+      "Marco Ruffini",
+      "Daniel Kilper",
+      "Vittorio Curri"
+    ],
+    "published": "2026-11-05",
+    "summary": "Optical Network Digital Twins (ONDTs) are emerging as a key framework for representing, synchronizing, and utilizing the physical state of optical networks for quality-of-transmission (QoT) estimation, optimization, and intelligent operation. This survey provides a comprehensive view of ONDTs, spanning digital coherent transmission and physical-layer observability to intelligent network operations. We systematically organize ONDT technologies from ecosystem, functional, control, and implementation architecture perspectives and review the enabling technologies required to construct, synchronize, and utilize digital representations of physical optical networks. As a unifying framework to describe both ONDT design and validation, we introduce a categorization based on the following figures of merit: Fidelity, Dynamicity, and Deployability (FDD). In particular, we emphasize fit-for-purpose Fidelity, where modeling effort focuses on the physical effects of components rather than solely maximizing model accuracy, favoring scalability and generalizability. Furthermore, experimental and field validations are examined to evaluate the practical applicability of ONDT technologies. We further examine experimental and field validations, from physics-based QoT estimation and measurement-informed model refinement to field synchronization, service provisioning, multi-domain observability, and infrastructure characterization. Finally, we discuss the complementary roles of ONDTs and AI agents toward autonomous optical networks and identify key research directions for practical deployment.",
+    "url": "https://arxiv.org/abs/2611.08217v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.07947v1",
+    "title": "ChemE-as-Code: An Open-Source Platform for Agentic AI in Chemical Engineering",
+    "authors": [
+      "Artur M. Schweidtmann"
+    ],
+    "published": "2026-11-05",
+    "summary": "ChemE-as-Code provides an open-source environment in which AI agents built on large language models (LLMs) can carry out chemical engineering work and engineers can check it. Its calculation tools range from catalysis through process simulation to plant layout, HAZOP and life cycle assessment, and skills tell a general-purpose agent how to use them. Engineering files are linked, machine-readable and versioned in Git; calculations run outside the LLM, each value records its origin, and automated checks report inconsistencies and out-of-date results by file and line. In an illustrative ammonia case, agents developed a written task into a preliminary basic-engineering package (simulation files, P&IDs, layout, HAZOP, datasheets, relief) for USD 224 of API cost in the design sessions. Planted faults and engineering changes show that the checks find what their rules cover and miss the rest, so they guide human review rather than replace it. No independent engineer has reviewed the design.",
+    "url": "https://arxiv.org/abs/2611.07947v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.07945v1",
+    "title": "tok: a textual concrete syntax of BPMN and DMN for humans and AI agents",
+    "authors": [
+      "Marek Deja"
+    ],
+    "published": "2026-11-05",
+    "summary": "tok is a plain-text notation for Business Process Model and Notation (BPMN) 2.0.2 process models and Decision Model and Notation (DMN) 1.5 decisions. One engine checks a tok document against both standards, compiles the document to XML with an automatic diagram, and serves language-model applications through the Model Context Protocol. The paper classifies the notation as an alternative concrete syntax of the BPMN and DMN metamodels and reports one study. A tok model takes 2.2 times fewer tokens than the smallest BPMN XML of 893 files exported by 37 tools and 7.7 times fewer than the files as exported. The checker signals 98.2% of 1,411 injected faults, against 85.8% for the XML Schema with bpmnlint. Four language models new to tok write valid tok from a one-page reference for 85.7 to 100% of 87 process descriptions from two datasets and valid BPMN XML for every description, and the strongest model writes tok with 25% and 19% fewer tokens than BPMN XML. As agents with a lean skill and one checker tool, the models write valid tok for 97.6 to 100% of the descriptions, the strongest model spends 21% and 14% fewer tokens on tok than on BPMN XML, and a skill which sends the model to read the reference through a tool costs 1.7 to 2.8 times the tokens of the lean skill. Of 47 event logs simulated from public models, 44 fit their source models, and tok imports every model discovered from the logs.",
+    "url": "https://arxiv.org/abs/2611.07945v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.07667v1",
+    "title": "Who Should Know What? Empirical Information Design for Multi-Agent LLM Economies",
+    "authors": [
+      "Mete Erdogan",
+      "Mirac Suzgun",
+      "Aneesh Pappu",
+      "Guowei Xu",
+      "Batu El",
+      "Andrew A. Schoen",
+      "Furong Huang",
+      "John P. Dickerson",
+      "Mert Pilanci",
+      "James Zou"
+    ],
+    "published": "2026-11-05",
+    "summary": "The performance of multi-agent LLM systems depends not only on the capabilities of the underlying models but also on information-sharing policies, which govern what information each agent observes and at what level of detail. But does providing AI agents with more detailed information always improve collective outcomes, or can transparency paradoxically degrade efficiency? To investigate this, we introduce empirical information design, an experimental framework that systematically compares disclosure policies across economic markets populated by LLM agents, while holding interaction rules and models fixed. We evaluate ten frontier LLMs in multi-resource trade, bilateral bargaining, and double auctions, using ground-truth utilities to decouple identified opportunities from realized outcomes. We find that finer information disclosure yields highly model-dependent results. In trade, revealing exact valuations rather than ordinal preference rankings reduces realized gains for GPT-6 Sol (from 98% to 91% of maximum) yet increases them for Claude Sonnet 5 (from 72% to 86%). In bargaining, exact information leads Grok 4.7 to produce less balanced agreements, whereas Claude Opus 5.5 divides gains symmetrically. In double auctions, full disclosure inflates price demands, triggering market breakdown and lowering welfare for Gemini 3.1 Pro (97% to 78%), Claude Opus 5.5 (94% to 64%), and Grok 4.7 (97% to 62%). Overall, these results suggest that model selection and information design must be co-optimized, as LLMs vary in how their strategic responses to information impact system objectives.",
+    "url": "https://arxiv.org/abs/2611.07667v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.07508v1",
+    "title": "DelegateEval: Evaluating Platforms for Personal External Service Agents",
+    "authors": [
+      "Jichao Li",
+      "Jinrong Lu",
+      "Manjiang Yu",
+      "Zhixuan Liu"
+    ],
+    "published": "2026-11-05",
+    "summary": "AI agents that work for an individual over time may also help that individual serve external clients. We define a personal external service agent as an agent authorized and continuously managed by a specific individual to accept client requests, deliver work, and provide ongoing support using that person's knowledge, experience, professional methods, and service boundaries. Such agents could allow individuals to serve more clients with less direct involvement and generate economic value at scale. We propose DelegateEval, a platform-level evaluation framework for agent systems that may combine large language models, reusable skills, protocols such as MCP, and executable tool environments. It covers eight dimensions: ease of creation, service discovery and matching, delivery quality, expertise inheritance, service continuity, learning and improvement, reliability and governance, and efficiency and value. These dimensions assess whether a platform enables people with different backgrounds to turn their expertise into ongoing services that deliver verifiable work, develop capabilities through experience, and remain economically feasible. We present the framework and an experimental design. Complete datasets, executable environments, a unified scoring protocol, and cross-model results remain to be developed and empirically validated.",
+    "url": "https://arxiv.org/abs/2611.07508v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.07483v1",
+    "title": "Signed but Not Safe: Requirement Integrity in Multi-Agent LLM Handoffs",
+    "authors": [
+      "Xiaobo Chen",
+      "Genliang Zhu",
+      "Ziyuan Wang",
+      "Chu Wang"
+    ],
+    "published": "2026-11-05",
+    "summary": "Enterprise AI agents increasingly split a user's request across subagents and merge their results, and each handoff can summarize away, alter or ignore a requirement. We report a preregistered study with synthetic, exactly scorable tasks comparing free-text, structured JSON and signed requirement-manifest handoffs: the orchestrator extracts each requirement as a verbatim quote plus a checkable predicate, code signs the manifest with HMAC-SHA256, and deterministic code verifies the merger's decision. With Qwen3-8B (1,440 trajectories, five threats), signed manifests cut unsafe commits under attack from 69.4% to 9.0% (60.4 pp, 95% CI [51.4, 69.4]) with no net loss of conformant commits relative to structured handoffs. Signing is what defeats in-transit tampering: an unsigned manifest committed violations in 79% of mutated runs, the signed one in none. On identical trajectories the deterministic verifier caught 78.7% of violating decisions versus 59.0% for an LLM checker, with 7% versus 50% false alarms. An oracle manifest removed all remaining unsafe commits: the residual risk comes from extraction errors made before signing. A preregistered pre-signing injection attack confirmed this boundary: one adversarial line raised signed-manifest violations from 14.6% to 37.5% (Qwen3-8B), 11.1% to 63.9% (gpt-oss-20b) and 8.3% to 75.0% (GPT-5.6-luna), and the signature then authenticated the corrupted manifest. Signing protects requirements in transit, not at extraction; the extraction step is the trust boundary.",
+    "url": "https://arxiv.org/abs/2611.07483v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.06910v1",
     "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
     "authors": [
@@ -699,155 +852,6 @@
     "published": "2026-10-30",
     "summary": "In text-to-SQL and AI-agent analytics, successful SQL execution does not establish semantic correctness under changing business definitions. We study revalidation of fixed queries after changes to refund attribution, tax treatment, eligible populations and exchange-rate dates. An executable verification profile binds the requested revision and knowledge cutoff to legal counterexample data and exact monetary comparison. A preregistered confirmation on 32 newly authored revision families and two local producer bundles retains 192 query-definition cells: 144 nonconforming, 36 finite-suite agreeing and 12 unresolved. Of the nonconforming cells, 63 agree on the current snapshot. At an eight-ledger budget, obligation-guided checking detects 137 discrepancies versus 127 for generic ordering, a paired difference of 6.9 percentage points (family bootstrap 95% interval [2.1, 13.6]; exact family sign-flip p=0.0156). Every ledger arm rejects zero of the 36 agreeing cells. Current-obligation and equal-weight scoring match the guided result, identifying coverage rather than revision-specific priority as the observed source of benefit. Controlled assays, a natural-query pilot and repeated samples provide separate mechanism and robustness evidence. A legal discrepancy refutes conformance; agreement remains restricted to the recorded suite. The study establishes an auditable business-semantic revalidation profile within its authored schema and local-model scope.",
     "url": "https://arxiv.org/abs/2610.41090v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.40589v1",
-    "title": "Collaborative AI agents for autonomous experimental research with solid-state quantum spins",
-    "authors": [
-      "El Mustapha Mansouri",
-      "Eikichi Kimura",
-      "Masato Koga",
-      "Keigo Arai"
-    ],
-    "published": "2026-10-29",
-    "summary": "An autonomous research laboratory could conduct an entire study, from formulating questions to preparing manuscripts. Artificial intelligence (AI) offers one route towards this goal. Recent AI systems take on several research roles, but may draw conclusions that the evidence does not support. Here, we present an autonomous research laboratory in which agents based on large language models assess one another's work and can stop or redirect investigations. They can generate and reject research questions, require separate theoretical checks and conduct experiments designed to challenge their claims. We demonstrate these capabilities by investigating ensembles of quantum spins in diamond. The agents derived the minimum number of calibration settings needed to predict responses to a defined family of microwave pulse sequences. They checked the result computationally and designed experiments to distinguish competing predictions. An initial experiment agreed with the theoretical predictions, but repeated reference measurements showed that the signal was drifting during data collection. The agents therefore treated the result as inconclusive and revised the measurement protocol without relaxing the acceptance criteria. The revised experiment met those criteria and supported the theoretical predictions. This study demonstrates that collaborating AI agents can select research questions, derive theoretical results and test their predictions experimentally.",
-    "url": "https://arxiv.org/abs/2610.40589v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.40588v1",
-    "title": "Pre-Crime for Agents, at the Last Second: Probing When a Recruited Agent Gives In",
-    "authors": [
-      "Leonidas Raghav"
-    ],
-    "published": "2026-10-29",
-    "summary": "When AI agents share channels and credentials, one agent can press another to break its operator's rule, a first step towards collusion. Output filters check only what an agent has already written. Can an overseer tell beforehand that an agent is about to give in? We show that a linear probe on the agent's activations can, in a controlled multi-agent setting. Across six scenarios, a peer presses a target for up to 20 rounds to reveal a secret, such as a deploy token; the target often refuses, then gives in. Read at each model call before its output is written, the probe picks out the one that leaks. On held-out Qwen3-32B episodes, at a threshold set to flag 5% of benign calls, it catches 82% of leaking calls. At a similar flag rate, a zero-shot decision-model monitor catches 26%. On gpt-oss-20b, a probe on its reasoning reaches AUROC 0.91. A bag-of-words classifier trained on the same calls comes close, so most of the gain comes from training on labels, not activations. The probe also flags permitted disclosures: it reads the coming disclosure more than the violation. The warning is short-range, and halting on any alarm would stop most benign episodes, which a second text check does not fix. A warning raised before generation could let an overseer stop an agent that is about to give in, ahead of others acting on its messages or recruitment spreading through a swarm.",
-    "url": "https://arxiv.org/abs/2610.40588v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.40239v1",
-    "title": "Engineering process plants as code in the age of agentic AI",
-    "authors": [
-      "Artur M. Schweidtmann",
-      "Davy Demeyer"
-    ],
-    "published": "2026-10-29",
-    "summary": "Agentic artificial intelligence (AI) could one day shorten process plant engineering from years to weeks. Today, however, plant information is scattered across documents and tools and must be carried between them by hand, so an AI agent placed into current workflows inherits the same silos. In this Comment, we argue for Plant-as-Code: defining the engineering of a plant as a version-controlled collection of machine-readable files that follow, where possible, existing standards such as DEXPI and IFC. On this foundation, Design-Ops extends DevOps principles to plant engineering, linking every engineering item to the information it derives from and replacing manual checking with automated tests. Agents can then coordinate routine work across disciplines while deterministic tools perform the calculations. Verification sets the pace: agents propose, tools check, and engineers review and authorize every change. We outline the risks of this shift and the research, industry and policy actions it requires.",
-    "url": "https://arxiv.org/abs/2610.40239v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.40071v1",
-    "title": "Agentic process evidence",
-    "authors": [
-      "Yuval Kainan",
-      "Carmit Hershman"
-    ],
-    "published": "2026-10-29",
-    "summary": "The way software gets built is changing dramatically. AI agents now create pull requests, select dependencies, refactor codebases, interpret test failures, and execute infrastructure changes across the entire Software Development Life Cycle (SDLC). AI agents are autonomous team members, but unlike human engineers, they are ephemeral - their reasoning, decisions, and tool calls vanish the moment the session ends. Modern Security incidents involving intent mismatch or injection are becoming increasingly common - forcing us to address AI Agents as an insider threat. No widely adopted standard yet enables agentic provenance and governance and its obvious that you can't hold an ephemeral process accountable. The git log was designed for human commits. It shows what changed. It does not show what an AI agent did, which model it used, which tools it called, or whether anyone was accountable for the outcome. Every governance framework, every audit trail, every compliance control in the SDLC was built around one assumption: a human made the decision. That assumption no longer holds. This shift introduces 3 main procedural problems (not addressing scale) - Supply-chain vector - The agentic coder is software, so it is a supply-chain security risk. Policy guardrails - How to ensure the agentic coder is compliant with the policies of the organization. Task-alignment - How to align the agentic coder on its tasks and goals. We introduce Agentic Process Evidence (APE), a signed, tamper-evident, machine-readable attestation of agentic processes, linking the sessions to their outcome (process-aware logging). APE enables Policy-as-Code control over the agentic processes, allowing for human in the loop only when it's needed. We support the in-toto style attestation framework, and the protocol is aligned with the relevant regulations",
-    "url": "https://arxiv.org/abs/2610.40071v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.39714v1",
-    "title": "MoLRSI: A Recursive Self-Improving AI agent for Molecular Discovery",
-    "authors": [
-      "Yikun Zhang",
-      "Xiwei Cheng",
-      "Mingze Yuan",
-      "Yu Zhang",
-      "Brian Shim",
-      "Aarti Krishnan",
-      "Daniel Rosen",
-      "Kunyang Sun",
-      "Yingze Wang",
-      "Zhenfeng Deng",
-      "Botao Yu",
-      "Bingxu Liu",
-      "David Liu",
-      "Tianyu Liu",
-      "Yuanqi Du",
-      "Nir Hacohen",
-      "James J. Collins",
-      "Wengong Jin"
-    ],
-    "published": "2026-10-29",
-    "summary": "Molecular discovery requires navigating vast combinatorial search spaces while balancing competing biological objectives. AI agents can automate expert-defined molecular design protocols, but automation alone does not address how to optimize workflows for new tasks or improve their development through experience. Here we introduce MoLRSI, an AI agent that combines systematic optimization of workflows and model architectures with persistent cross-task memory to recursively improve its search policy for molecular discovery. Workflow performance, refinement outcomes, and execution feedback guide subsequent searches, allowing the agent to improve both its workflows and its strategy for developing them. We evaluate MoLRSI in two challenging molecular discovery settings that require balancing competing properties. In antibiotic discovery, MoLRSI developed a screening workflow balancing antibacterial activity, cytotoxicity and structural novelty, achieving an experimental hit rate of 15.9%, compared with 8.7% for a previous expert-led workflow using the same training data and screening library. In de novo peptide-MHC binder design, MoLRSI developed workflows that jointly consider target binding and specificity, producing eight experimentally validated hits against MART-1 and SARS-CoV-1 pMHCs with preferential binding over tested off-targets while Claude Science completely failed. These findings demonstrate how experience-guided workflow optimization can address competing discovery objectives while improving the search strategies used in subsequent campaigns.",
-    "url": "https://arxiv.org/abs/2610.39714v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.39681v1",
-    "title": "Can AI Agents Interface Clinicians and Complex Models?",
-    "authors": [
-      "Giulio Colombini",
-      "Matteo Falcioni",
-      "Mario Massimo",
-      "Francesco Durazzi",
-      "Marianna Santoro",
-      "Paolo Tubertini",
-      "Mirko Degli Esposti",
-      "Armando Bazzani"
-    ],
-    "published": "2026-10-29",
-    "summary": "Background: Contemporary healthcare institutions generate daily very large amounts of data, which contain highly useful information for the improvement of work organization, planning and overall efficiency. While models and techniques to extract these insights are well known and constantly developed in mathematical biology, complex systems physics and data science, the adoption of these techniques among Clinicians and Hospital Administrators remains limited, mainly due to language and methodological divides. Objective: In this article we implement an AI Multi Agent System (MAS) that allows Users to use predictive models and make statistical analyses via natural language conversations. Methods: We developed EpidemIA, a training-free MAS endowed with a modular suite of epidemiological models written by human experts, executable on a single-GPU workstation. To avoid relaying sensitive data to third parties, the system uses locally an open-weights LLM as backbone for its two subagents. Results: Using a dataset of Emergency Department visits provided to us by IRCCS Sant'Orsola (Bologna) we test the model on a few typical use cases, demonstrating the possibility of performing both simpler statistical analyses and visualizations as well as more complicated epidemiological predictions based on dynamical models, through simple queries made in natural language. Conclusions: While still being a proof-of-concept implementation, EpidemIA showcases the transformative capabilities of LLM based technologies as an enabling factor in the widespread adoption of complex dynamical models, which is at present hindered by their steep learning curve.",
-    "url": "https://arxiv.org/abs/2610.39681v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.39680v1",
-    "title": "Federated Agentic AI for Interference-Aware Adaptive Spectrum Coordination",
-    "authors": [
-      "Tomer Baziza Paz",
-      "Yaniv Cohen",
-      "Kobi Cohen"
-    ],
-    "published": "2026-10-29",
-    "summary": "Emerging intelligent wireless networks increasingly rely on autonomous AI agents to adapt spectrum usage to dynamic and heterogeneous operating conditions. However, collective learning is challenging when agents experience different local interference environments and cannot exchange raw observations due to communication-overhead and privacy constraints. We propose Federated Agentic Spectrum Coordination with Interference Awareness (FASCIA), a federated multi-agent deep reinforcement learning framework for adaptive spectrum coordination. In FASCIA, each network manager acts as an autonomous AI agent that perceives its local interference environment, accumulates experience in a persistent local memory, and learns an adaptive spectrum coordination policy through local interactions. Coordination among agents is achieved through periodic federated aggregation of locally trained models, without exchanging raw sensing data or experience. Since spectrum decisions made by one agent alter the environments observed by others, local learning is inherently heterogeneous and coupled. FASCIA employs proximal regularization to mitigate the resulting model drift and explicitly accounts for inter-carrier interference arising from partially overlapping channels. FASCIA is the first federated agentic AI framework to address this challenging interference-coupled spectrum coordination setting. Extensive simulations demonstrate that FASCIA achieves performance close to the centralized benchmark while avoiding raw-experience exchange and maintaining effectiveness across heterogeneous network configurations.",
-    "url": "https://arxiv.org/abs/2610.39680v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.39660v1",
-    "title": "Sticky Collusion: Persistence of LLM Agent Collusion after Incentive Removal and Partner Replacement",
-    "authors": [
-      "Joshua Adrian Cahyono"
-    ],
-    "published": "2026-10-29",
-    "summary": "We ask whether collusion between AI agents survives once formed, when its incentive is removed or a colluder is replaced. Q-learning pricing agents stop colluding with a new rival; we test whether LLM agents do. We use the joint-task environment of Shi et al.\\ (2026), where two agents verify each other's work under a rule they cannot satisfy and a reward that favours acceptance. We save each pair's history once its collusion has formed and resume it under interventions, with three models (GPT-6-Luna, DeepSeek V4.1 Flash and Gemini-3.1-Flash-Lite), \\TotalHistories{} saved histories and \\TotalRuns{} runs. Collusion is \\emph{sticky}. First, it outlives its incentive: told that the reward has stopped, pairs still accept each other's unverified work in \\GptToldRate, \\DsToldRate{} and \\GemToldRate{} of episodes, including pairs whose collusion began with an explicit agreement, and a payoff penalty has no significant effect. Second, replacing a colluder ends the pair's collusion but not the colluder's behaviour. Without the reward, the remaining colluder still accepts unverified work in \\GptSwapSilentColluderRate, \\DsSwapSilentColluderRate{} and \\GemSwapSilentColluderRate{} of its verdicts while the newcomer never does; with the reward, collusion re-forms around it, even when the newcomer is a different model. Third, the agents' memory carries it: wiping memory ends it in every history, but partial memory often sustains it. Fourth, removing its cause ends collusion that has already formed: once the channel is repaired, colluders reject planted faulty work as reliably as fresh agents, immediately and with no monitor needed to catch it first.",
-    "url": "https://arxiv.org/abs/2610.39660v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.39620v1",
-    "title": "Letting AI Formulate the Research Question: Autonomous Research Agents",
-    "authors": [
-      "Ko Fujimura"
-    ],
-    "published": "2026-10-29",
-    "summary": "Systems such as The AI Scientist have shown that AI agents can carry out and write up research, but in those demonstrations humans chose the research area and selected the outputs to show. We study letting the AI formulate the research question itself, and we report every run. Our system gives an off-the-shelf coding agent an instruction document and two skills: one for formulating the question, in which the agent diverges from recent technologies into problems of other fields, screens its candidates for known failure modes and obtains a critique from a different model; and one for peer review, in which a reviewer from another model family reruns the study from its records before the agent revises the paper. Over 13 development runs, changes to the one or two sentences that set the research area coincided with large shifts in what the candidate questions and the chosen papers were about, which led us to the area of a new technology applied to a societal problem. We froze the system after a pilot run and report five consecutive runs: the pilot, counted by a disclosed amendment to the pre-registration, and four pre-registered runs. All five runs went from question formulation to a revised, re-computable paper, with local computation on a laptop and no research input from humans, and external AI reviewers reading only the papers judged them at or near workshop level. We release the system, the five papers and the records needed to reproduce them.",
-    "url": "https://arxiv.org/abs/2610.39620v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.39508v1",
-    "title": "Compile Away Uncertainty: Self-Evolving Agent Skills via Programmatic Compilation",
-    "authors": [
-      "Chengyu Yang",
-      "Yunxiang Zheng",
-      "Zongzheng Li",
-      "Jiamei Li",
-      "Boxun Lan",
-      "Xiaoyu Liu",
-      "Xiaoyu Zhang",
-      "Xiaohong Chen",
-      "Ming Hu"
-    ],
-    "published": "2026-10-29",
-    "summary": "Self-evolving agent skills enable AI agents to accumulate and refine reusable procedural knowledge from interaction experience without updating model parameters. However, since such skills are typically represented as textual documents and executed through LLM reasoning, even previously learned procedures must be repeatedly interpreted and regenerated, introducing avoidable uncertainty into every execution. In contrast, program execution is deterministic and independently verifiable. Intuitively, transforming well-specified operations into executable programs can reduce reliance on LLM reasoning and, consequently, reduce execution uncertainty. Motivated by this intuition, we introduce SKillCompiler, a self-evolving skill framework that integrates programmatic compilation into the skill evolution process. Specifically, SkillCompiler adopts an executability-aware skill compilation strategy that decomposes skills into fine-grained operations, analyzes their executability, and constructs hybrid skill skeletons that retain LLM reasoning for context-dependent operations while compiling well-specified ones into validated programs. To avoid redundant program synthesis and enable executable knowledge to accumulate across evolving skills, we further design a program asset reuse mechanism that organizes validated programs as reusable assets, retrieves existing implementations whenever applicable, and synthesizes and verifies new programs only when necessary. Extensive experiments on five benchmarks and six model families demonstrate that SkillCompiler consistently outperforms state-of-the-art methods, achieving up to 32.33\\% improvement in task performance.",
-    "url": "https://arxiv.org/abs/2610.39508v1",
     "source": "arXiv"
   }
 ]
