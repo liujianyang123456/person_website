@@ -1,5 +1,118 @@
 [
   {
+    "id": "2611.09792v1",
+    "title": "Knowing When to Intervene: Causal Evaluation of AI Agents",
+    "authors": [
+      "Ayush Sawarni",
+      "Wenqian Xing",
+      "Tijana Zrnic",
+      "Ramesh Johari",
+      "Vasilis Syrgkanis"
+    ],
+    "published": "2026-11-06",
+    "summary": "Current evaluations of agentic AI systems primarily rely on benchmarks. However, the static nature of benchmarks makes them uninformative about the value of auditing interventions at deployment time. For reliable deployment, we often need to determine within an agent's trajectory whether or not to intervene, e.g., by verifying the agent's current output or steering it toward different behavior, using either human review or more costly models or time-consuming agentic supervision. The value of such interventions is fundamentally a causal inference question, asking whether the causal effect of such an intervention is beneficial for the final outcome. Estimating this causal effect is particularly challenging due to the dynamic nature of the problem: the impact of an intervention depends on the current context and environment, as well as the agent's future behavior. We develop the first methodologically grounded framework for evaluating the causal effects of randomized interventions within agent trajectories. By leveraging a relatively small dataset of agent trajectories collected under randomized interventions such as verification or screening, we can estimate the dynamic causal effect of a rich class of (contextual) intervention policies. The structural parameters that we estimate can also be used to construct safety leaderboards that capture the risk of various agentic actions, which can be used by practitioners for audit prioritization. Applying our methods to tau-bench Retail, ToolSandbox, and ImpossibleBench, we find that intervention effects vary substantially across agent actions and states. More broadly, our work suggests a rich research agenda at the intersection of causal inference and agentic evaluation, which we believe is essential for the reliable and safe deployment of AI agents in the real world.",
+    "url": "https://arxiv.org/abs/2611.09792v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.09730v1",
+    "title": "What to Delegate, What to Preserve: Human Preferences for Agentic AI Across Everyday Life and Work",
+    "authors": [
+      "Sarah Wheeler",
+      "Veronica Rammouz",
+      "Yaoyao Qian",
+      "Zexuan Liu",
+      "Mengyi Wei",
+      "Anthony Rios",
+      "Tianzhi He",
+      "Kyrie Zhou"
+    ],
+    "published": "2026-11-06",
+    "summary": "AI agents can execute multi-step tasks on users' behalf, yet the boundaries of acceptable delegation remain unclear. We report a scenario-based survey of 289 U.S. adults with prior AI experience covering 45 use cases across nine life domains. Each respondent evaluated one scenario per domain, producing repeated measures of automation preference, trust, collaboration, AI leadership, privacy concern, and willingness to pay. Automation preferences varied substantially across domains. Generalized estimating equation models showed that greater trust in the AI agent, desired AI leadership, prior task-specific AI use, and anticipated financial savings were associated with greater automation preference. In contrast, concerns that automation would reduce personal fulfillment predicted lower automation preference. Open-ended responses further revealed a preference for bounded autonomy, with participants often favoring substantial AI execution while retaining human involvement, oversight, or final authority. We argue that delegation is best understood as a configuration of execution, collaboration, leadership, and authority.",
+    "url": "https://arxiv.org/abs/2611.09730v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.09662v1",
+    "title": "How Much Conversation History Does an AI Agent Need?",
+    "authors": [
+      "Danny Kim",
+      "Fernando Koch"
+    ],
+    "published": "2026-11-06",
+    "summary": "How does using less conversational history change reader-token use and benchmark scores? We examine this question on 1,100 BEAM questions. We held the retrieval ranking and reader constant across five fixed passage budgets, and mean assigned scores rose as the passage budget grew. The score gain per additional token became smaller at the upper tested budgets. Answerable questions generally received higher scores with more context. Pooled abstention scores sometimes rose as the passage budget shrank. We also tested message retention in a controlled task with explicit conversational-state targets and compared retained user messages with token-matched recency. Qwen matched the full state more often for direct requirements when user messages were retained. Its full-state matching declined when answers depended on references to earlier offers. Mistral produced near-floor results across the retention conditions. A scoring audit leaves the correctness of BEAM answers unresolved. These experiments characterize the token and score consequences of the tested memory budgets. Reliable budget selection depends on retaining the evidence each question requires and validating the measure used to assess answer quality.",
+    "url": "https://arxiv.org/abs/2611.09662v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.09528v1",
+    "title": "StockASkill: A Local-First AgentSkill for Intelligent Stock Selection",
+    "authors": [
+      "Xiangjing An",
+      "Zhibin Jiao",
+      "Aiting Chen"
+    ],
+    "published": "2026-11-06",
+    "summary": "Quantitative equity selection and portfolio construction in emerging and cross-border markets frequently suffer from computational bottlenecks, remote API fragility, survivorship bias, and rigid execution constraints such as discrete board lots and investor-mandated drawdown limits. In this paper, we present StockASkill, a local-first, full-data-driven AgentSkill engineered as a specialized Quant Co-Processor for autonomous AI agents and quantitative researchers. Tailored for agile portfolios (10^5 ~ 10^7 RMB) where discrete lot execution and capital protection are mandatory, StockASkill embeds a columnar DuckDB OLAP engine over 42.44 million historical price records and 186,432 financial disclosures spanning 26 years across China A-shares, Hong Kong, US equities, and ETFs. By eliminating ad-hoc network dependencies during analysis, StockASkill reduces cross-sectional screening latency across 5,400+ equities from over 25 seconds to sub-0.5 seconds (a 95%+ reduction). We formalize an end-to-end mathematical pipeline integrating a 7+1 factor alpha model, an SLSQP convex optimizer under smooth CVaR drawdown surrogates with exact path projection, dynamic 100-share board lot integer quantization, and an autonomous thesis lifecycle finite-state machine. Furthermore, we provide a zero-disk, strongly-typed JSON streaming interface designed for high-throughput LLM tool-calling. Open-sourced at https://github.com/axjing/stockaskill, comprehensive empirical benchmarks from 2018 to 2024 demonstrate that the architecture achieves annualized Sharpe ratios exceeding 1.48 and Calmar ratios up to 2.17, while reducing max drawdown by up to 85% relative to benchmark indices.",
+    "url": "https://arxiv.org/abs/2611.09528v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.09516v1",
+    "title": "Benchmarking Speaker Embedders in the Sub-Second Regime for Real-Time Voice AI Agents",
+    "authors": [
+      "Abhishek Gautam"
+    ],
+    "published": "2026-11-06",
+    "summary": "Real-time Voice AI agents must separate the active user from intelligible background speech that survives conventional noise suppression. Background sources include television audio, family members, and colleagues. Production denoisers remove non-stationary environmental noise effectively. Background speech shares the spectral characteristics of the target and passes through, causing false acceptances in downstream speaker verification (SV) and automatic speech recognition (ASR). We benchmark open-source speaker embedders TitaNet-Large, TitaNet-Small, ECAPA-TDNN, CAM++, and SpeakerNet under a strict sub-second latency budget. Evaluation combines a controlled benchmark with a weighted human-annotated production set. Our controlled benchmark is built from real calls in which a second real speaker is injected into silence intervals at modulated amplitude. We report three findings. First, denoising before embedding is generally harmful and raises equal error rate (EER) across architectures. Second, truncating audio below the full voice-activity segment degrades every model. Third, roughly half of the TitaNet embedding is redundant for this task. Trailing dimensions encode population attributes such as language and gender. Such attributes carry little discriminative value in a demographically homogeneous user base. We distill these results into deployment guidance. Verification should run on raw audio with full voice-activity chunks. Thresholds should favor precision over F1. Truncated embeddings reduce the cost of similarity search.",
+    "url": "https://arxiv.org/abs/2611.09516v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.09413v1",
+    "title": "SmartBloch-Agent: An Agentic Framework for Automated MRI Sequence Design and Optimization",
+    "authors": [
+      "Jiakai Yang",
+      "Haoye Zheng",
+      "Yixiao Yue",
+      "Qinqin Yang",
+      "Zhong Chen",
+      "Shuhui Cai",
+      "Congbo Cai"
+    ],
+    "published": "2026-11-06",
+    "summary": "Magnetic resonance imaging (MRI) pulse sequences organize radiofrequency excitation, gradient encoding, and signal acquisition, determining magnetization evolution and image formation. Sequence research requires translating imaging objectives into executable protocols meeting physical and acquisition constraints, refined via physical simulation, signal reconstruction, and scientific evaluation. Sequence construction, physical verification, parameter search, and assessment involve many tools and manual decisions, limiting automation from objective to verifiable sequence. We develop SmartBloch-Agent, an integrated framework for automated MRI sequence design and optimization. Given objectives and scientific constraints in natural language, an AI agent interprets goals, plans tasks, orchestrates tools, and makes feedback-informed decisions, drawing on a construction module and optimizers for structural design and parameter search. Our GPU-accelerated SmartBloch engine supplies physical computation for both stages, so the framework configures, per sequence and objective, event validation, Full-Bloch magnetization evolution, signal acquisition, image reconstruction, and scientific evaluation, and closes the loop without external MRI simulators. Results return to the agent to guide sequence revision, parameter optimization, and candidate selection, and the design files carry simulation, reconstruction, and evaluation evidence, forming an output package for a real-scanner workflow. Experiments show the framework automatically designs and optimizes MRI sequences for varied objectives and constraints, refines candidates with physical feedback, and improves several parameter-estimation metrics and downstream quantitative reconstruction. SmartBloch-Agent unifies objectives, design, physical execution, and evaluation into a continuous workflow for end-to-end automation of MRI sequence research.",
+    "url": "https://arxiv.org/abs/2611.09413v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.09399v1",
+    "title": "Artificial Shoppers and Attention Competition",
+    "authors": [
+      "Xiaomeng Guo",
+      "Fasheng Xu",
+      "Xiaoli Zhang"
+    ],
+    "published": "2026-11-06",
+    "summary": "We study how AI shopping interfaces affect price competition, platform profit, and consumer welfare. A platform hosts two of three products of different quality. Without AI, consumers compare the hosted pair under salience distortion and overweight whichever attribute, price or quality, stands out. Under assistance, an AI assistant recommends the two products with the highest true utility, leaving consumers to make the same distorted comparison. Under delegation, an AI agent selects the best product, subject to purchase approval. Both modes access all products and know consumers' preferences; firms price strategically. First, assistance can soften competition despite expanded product access. The middle-quality firm may forgo low-valuation consumers because attracting them requires cutting the price paid by higher-valuation consumers as well. Relative to no AI with the same assortment, assistance lowers both hosted prices under the high- and low-quality pair but can raise both under the high- and middle-quality pair. Second, we identify an alignment paradox: some consumers can become worse off than without AI even though their best option remains recommended and becomes cheaper. Salience can induce a switch to a lower-quality product whose quality loss exceeds the saving relative to the original purchase. The assistant ranks products accurately but does not optimize the shortlist for consumers' realized welfare. Third, assistance can raise both platform profit and aggregate consumer surplus with the high- and middle-quality pair; delegation can do so with the high- and low-quality pair. Fourth, among AI designs, the platform weakly prefers delegation with the high- and middle-quality pair wherever all compared pricing equilibria exist. Yet this preferred design can yield lower platform profit and aggregate consumer surplus than the no-AI optimum.",
+    "url": "https://arxiv.org/abs/2611.09399v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.09264v1",
+    "title": "Nudging Decision Models: Do Digital Nudges Steer Fast, Generation-Free AI Agents?",
+    "authors": [
+      "Sascha Kaltenpoth",
+      "Haya Halimeh",
+      "Kevin Bösch",
+      "Oliver Müller"
+    ],
+    "published": "2026-11-06",
+    "summary": "LLM-based agents increasingly automate business and consumer tasks but are slow and expensive. Decision models, a new class that chooses among options without generating text, are far faster and less costly. Developers call them \"System One models,\" referencing dual process theory. We ask whether such models can be steered by digital nudges online and whether, as the theory predicts, automatic nudges affect them more than reflective ones. We adapted an online shopping experiment, previously run with humans and LLM agents, to three decision models (Jev, Decision-1, d1). Across 600 runs per model, they chose a preselected default in 97.5-99.9% and a product with social influence information in 75-96% of choices, versus 47-49% in the control. All responded more strongly to the automatic nudge, the opposite of what has been reported for reasoning-capable LLM agents. We provide first evidence that non-generative decision models are susceptible to digital nudges in a System 1 pattern, implying agent-type-specific nudge effects.",
+    "url": "https://arxiv.org/abs/2611.09264v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.08483v1",
     "title": "SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization",
     "authors": [
@@ -150,6 +263,33 @@
     "published": "2026-11-05",
     "summary": "Enterprise AI agents increasingly split a user's request across subagents and merge their results, and each handoff can summarize away, alter or ignore a requirement. We report a preregistered study with synthetic, exactly scorable tasks comparing free-text, structured JSON and signed requirement-manifest handoffs: the orchestrator extracts each requirement as a verbatim quote plus a checkable predicate, code signs the manifest with HMAC-SHA256, and deterministic code verifies the merger's decision. With Qwen3-8B (1,440 trajectories, five threats), signed manifests cut unsafe commits under attack from 69.4% to 9.0% (60.4 pp, 95% CI [51.4, 69.4]) with no net loss of conformant commits relative to structured handoffs. Signing is what defeats in-transit tampering: an unsigned manifest committed violations in 79% of mutated runs, the signed one in none. On identical trajectories the deterministic verifier caught 78.7% of violating decisions versus 59.0% for an LLM checker, with 7% versus 50% false alarms. An oracle manifest removed all remaining unsafe commits: the residual risk comes from extraction errors made before signing. A preregistered pre-signing injection attack confirmed this boundary: one adversarial line raised signed-manifest violations from 14.6% to 37.5% (Qwen3-8B), 11.1% to 63.9% (gpt-oss-20b) and 8.3% to 75.0% (GPT-5.6-luna), and the signature then authenticated the corrupted manifest. Signing protects requirements in transit, not at extraction; the extraction step is the trust boundary.",
     "url": "https://arxiv.org/abs/2611.07483v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.08781v1",
+    "title": "Aligning, Fast and Slow: A Control-Theoretic Oversight Framework for Long-Horizon Trajectories and Maintained Deployments",
+    "authors": [
+      "Stephen Peng",
+      "Vineet Jagadeesan Nair",
+      "Noah Broestl",
+      "Anne Friederike Kleppe",
+      "Steven Mills",
+      "Adi Zolotov"
+    ],
+    "published": "2026-11-05",
+    "summary": "AI agents can pass checks on individual tasks while retaining memory or code changes that alter their later behavior. We introduce a control-theoretic framework that couples a fast loop controlling proposed actions with a slow loop reviewing persistent changes and reassessing configurations after model or tool updates. When measurement errors and changes between checks are bounded and controllers can enforce their decisions, we derive a deployment-level bound and a rule for dividing review effort. In simulation, dividing a fixed review budget between both loops reduces mean maximum departure from intended behavior roughly twelvefold compared with review confined to individual runs. In coding stress tests with authored memories and five matched seeds, combined controls reduce mean severity on a 0-3 scale from 0.325 without gates to 0.117, resolving 33 of 120 issues versus 35 without gates; in trading stress tests, combined controls reduce mean shortfall in low-emission purchases from 0.892 without gates to 0.107. The overall framework helps developers and auditors compare and enforce oversight designs, while the agent studies test component controls rather than the full deployment-level guarantee.",
+    "url": "https://arxiv.org/abs/2611.08781v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.08744v1",
+    "title": "Random encoders and expurgation improve 1,873 entries of the Grassl qubit code tables",
+    "authors": [
+      "Marin Girard"
+    ],
+    "published": "2026-11-05",
+    "summary": "I report 192 explicit binary stabilizer codes $[[n,k,d]]$ with $53\\le n\\le 254$ and $5\\le d\\le 13$ whose minimum distance exceeds the lower bound listed in Grassl's code tables at the same $(n,k)$: 161 codes by one and 31 by two. Through the standard propagation rules they raise 1,873 entries of the table. For 190 of the codes, a random Clifford encoder is followed by expurgation: every logical operator of weight below the target distance is enumerated, and a few logical operators are promoted to stabilizers so that each low-weight one anticommutes with at least one of them. The other two are obtained by puncturing a code from the table and repairing it in the same way. All 192 distances are exact: the lower bound is certified by exhaustive meet-in-the-middle enumeration of up to $4\\times10^{13}$ Pauli operators, and the upper bound by an explicit logical operator of weight $d$. A first-moment count explains the results. Expurgated random codes have about eight more logical qubits than a typical random code of the same length and distance, so they beat the table wherever its best known codes are no better than random. The largest gains, up to nine logical qubits, are at $d\\ge9$ and $n\\gtrsim170$, where the table often gives a lower bound without an explicit code. The same count predicts improvements at 619 further pairs $(n,d)$. The search was run by AI agents. The codes, their certificates and an independent checker are public.",
+    "url": "https://arxiv.org/abs/2611.08744v1",
     "source": "arXiv"
   },
   {
@@ -691,167 +831,6 @@
     "published": "2026-11-02",
     "summary": "The Musical Metaverse (MM) enables geographically distributed musicians, audiences, sound engineers, and AI agents to interact through synchronized audio, visual, kinematic, and haptic streams, imposing latency, synchronization, bandwidth, and scalability requirements that are difficult to satisfy with conventional bit-level communication. This paper argues that semantic communication, understood here as the transmission of musically meaningful information rather than raw audio-visual-haptic samples, provides a principled communication paradigm for the MM. We define the MM from a communication perspective and derive modality-specific require ments; propose a three-pillar framework for musical semantic communication comprising semantics extraction, semantic-aware orchestration, and cross-modal semantic synchronization; survey representative work across semantic communication, music AI and edge orchestration, identifying the gaps that prevent their integration; and propose a semantic-first reference architecture based on device-side semantic encoders, edge semantic routers, and cross-modal semantic synchronization. The resulting framework positions the MM as a concrete and demanding use case for 6G semantic communication.",
     "url": "https://arxiv.org/abs/2611.03995v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.42108v1",
-    "title": "Quantum 3xplorer: AI-Native Engine for Next-Generation Quantum Materials Modeling",
-    "authors": [
-      "Vsevolod Biryukov",
-      "Sergey V. Barabash",
-      "Pranab Kumar Das",
-      "Jack Deslippe",
-      "Mauro Del Ben",
-      "Felipe H. da Jornada",
-      "Yuming Shi",
-      "Johannes Voss",
-      "Zhenglu Li",
-      "Piero Altoe",
-      "Kamal Choudhary",
-      "Ruth Pachter",
-      "Steven G. Louie",
-      "Marvin L. Cohen",
-      "Timur Bazhirov"
-    ],
-    "published": "2026-10-30",
-    "summary": "Quantum-mechanical approaches, such as density functional theory (DFT), underpin much of modern computational materials science and are the primary source of data for AI-driven discovery. Yet the established electronic-structure codes today represent decades-old software architectures, making new physical models slow and costly to implement, validate, and deploy on emerging hardware. We present Quantum 3xplorer (Q3, pronounced \"Quantum Explorer\"), an AI-native quantum simulation engine written from scratch by AI coding agents under the direction and supervision of domain scientists. As a first and demanding validation case, we implement plane-wave pseudopotential DFT end to end: norm-conserving, ultrasoft, and projector-augmented-wave formalisms, spin polarization, DFT+U, and dispersion corrections, together with forces, stresses, structural relaxation, and electronic-structure analysis. Q3 reproduces established reference implementations, runs faster on a single core in representative benchmarks, and scales across GPU-accelerated supercomputers. It was developed in weeks rather than years. Its layered, physics-first architecture separates abstract quantum-mechanical concepts from their numerical representations, making its framework extendable beyond plane waves to other basis sets and levels of theory. Its inputs and outputs follow structured, schema-validated data standards, making every result AI-ready. Q3 is open source under Apache 2.0 and built to be reused, extended, and improved by the research community. Q3 points to a paradigm shift in how computational quantum science is done. Scientists define the physics, formulate the models, and set the criteria for validation; AI agents write, test, and optimize the code. The decades-long path from a new theory to a trusted, high-performance implementation can thus collapse to days, significantly accelerating scientific discovery.",
-    "url": "https://arxiv.org/abs/2610.42108v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.42001v1",
-    "title": "AutoAnalysis: An automated, self-updating meta-analysis of human-AI collaboration",
-    "authors": [
-      "Michelle Vaccaro",
-      "Abdullah Almaatouq",
-      "Thomas W. Malone"
-    ],
-    "published": "2026-10-30",
-    "summary": "As generative artificial intelligence (AI) becomes more capable and widely used, understanding when and how humans should work with these systems is becoming increasingly important. However, the empirical evidence in this space offers conflicting recommendations, which leaves individuals and organizations without clear guidance on when to combine human and AI capabilities. Existing meta-analyses can help reconcile these findings, but they require substantial manual effort and cannot readily incorporate new evidence as it emerges. To address this challenge, we introduce AutoAnalysis: an automated, self-updating meta-analysis of when humans and AI work better together, and when they work better alone. AutoAnalysis' most recent run synthesizes 1,955 effect sizes from 420 papers. Across this body of work, we found that, on average, human-AI combinations performed significantly better than humans alone, but they performed significantly worse than the better of humans or AI alone. These findings highlight the important distinction between improving human performance and achieving human-AI synergy and underscore the need to evaluate collaboration against both human and AI performance alone. As new studies emerge, AutoAnalysis will integrate their findings into the meta-analysis, providing cumulative evidence about when humans and AI perform better together and how human-AI performance varies across AI agents, tasks, and processes.",
-    "url": "https://arxiv.org/abs/2610.42001v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41998v1",
-    "title": "SecPO: Principled Adversarial Training for Prompt Injection Security",
-    "authors": [
-      "Sizhe Chen",
-      "Yibo Peng",
-      "Jaewon Chang",
-      "Chawin Sitawarin",
-      "David Wagner"
-    ],
-    "published": "2026-10-30",
-    "summary": "Recognized as a top threat to AI agents, prompt injection allows instructions from untrusted data (email, documents, websites) to manipulate the agent's operation. The existing best-defended LLM, Meta-SecAlign, is trained with the DPO loss but still suffers from attack success rates (ASRs) approaching 100% under adaptive prompt injections. One reason is that DPO anchors the model around the undefended reference model, which is insecure. We show an idealized reference model---an injection-invariant, utility-preserving oracle---can nevertheless be approximated, as its output distribution in training is interestingly accessible. This new observation motivates a theoretically principled SecPO loss. Another Meta-SecAlign shortcoming is that it trains on weak simulated attacks. We implement an efficient adversarial training (AT) pipeline that synthesizes strong injected inputs (best@240), and train the model on them. Our AT reduces ASRs by 1.5-14.5$\\times$ across three SoTA adaptive attacks, compared with Meta-SecAlign; the SecPO loss reduces them by a further 2.4-4.6$\\times$ compared with using DPO loss. In agentic workflows, our SecPO + AT Qwen3.6-27B is much more secure than Meta-SecAlign: 8.8% vs. 78.8% AgentDojo ASR@800 under the AttackerMovesSecond attack. Moreover, our defended model shows no noticeable reduction in benign utility in nine benchmarks covering agentic tool calling, instruction following, science, and math. We release our $\\href{//github.com/Sizhe-Chen/SecPO}{\\text{code}}$, $\\href{//huggingface.co/datasets/Sizhe-Chen/Qwen3.6-27B-Instruct-SecPO-trainset}{\\text{training data}}$ (with optimized injections from AT), and $\\href{//huggingface.co/Sizhe-Chen/Qwen3.6-27B-Instruct-SecPO}{\\text{model}}$.",
-    "url": "https://arxiv.org/abs/2610.41998v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41717v1",
-    "title": "Evaluating Instrument-Centered AI Agents for Table-Top Science Experiments",
-    "authors": [
-      "Jiaqi Cai",
-      "Siyu Cheng",
-      "William S. Huxter",
-      "Li-Qiao Xia",
-      "Shuwen Sun",
-      "Shuai Yuan",
-      "Yifan Zhao",
-      "Naiyuan Zhang",
-      "Weijie Li",
-      "Muxian Xu",
-      "Ilija Zeljkovic",
-      "Xiaodong Xu",
-      "Pablo Jarillo-Herrero"
-    ],
-    "published": "2026-10-30",
-    "summary": "Reliable evaluation of AI agents for table-top science experiments has remained elusive because live instruments are hard to reset and share at scale, while instrument statefulness and safety constraints complicate evaluation. We introduce instrMCP and q-devBench, an evaluation stack for instrument-centered AI agents in table-top experiments. instrMCP connects coding agents to scientific instruments through the Model Context Protocol, serving as the instrument-access harness. q-devBench reconstructs 37 real experimental tasks from condensed-matter physics as virtual QCoDeS instruments covering quantum electronic transport, scanning probe imaging, and calibration workflows. q-devBench exposes reproducible failure modes in laboratory-agent systems while preserving realistic instrument-control workflows. Across a range of commercial coding-agent configurations, current systems already show substantial operational competence, satisfying 70-83% of measurement-related rubric criteria. The main bottleneck is scientific analysis, where performance falls to 28-46%. In an analysis-only ablation in which agents receive clean reference datasets without running the virtual measurement session, analysis performance improves substantially, closing roughly two thirds of the difference between the measurement and analysis scores. This suggests that much of the deficit arises from the measurement-session context, including tool-use overhead, longer context, measurement-planning decisions, and possible acquisition errors, while a residual scientific-reasoning gap remains. Together, instrMCP and q-devBench provide a practical sandbox for benchmarking, diagnosing, and improving laboratory AI harnesses, and establish a route from controlled virtual evaluation to future live-hardware validation.",
-    "url": "https://arxiv.org/abs/2610.41717v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41682v1",
-    "title": "The Ineliminable Anchor: Human Judgment as a Structural Requirement of Autonomous Artificial Intelligence Systems",
-    "authors": [
-      "Junjie Li",
-      "Haoran Liu",
-      "Yidan Zhang",
-      "Jian Xu",
-      "Zhaoyuan Ma"
-    ],
-    "published": "2026-10-30",
-    "summary": "As artificial intelligence (AI) agents carry out longer chains of tasks, oversight must establish whether their behavior still serves an authorized goal. Here, we introduce the anchor: the point at which reference information and human-authorized standards enter an autonomous system. We argue that oversight design should first identify the reference needed to assess goal drift and whether the system's internal record can supply it, then decide who checks and how often, and finally specify who may revise the goal. Goal drift can be impossible to certify from a system's internal record. The missing reference must come from outside that record. Combining a reliability model of checkpoint spacing with evidence from training, execution, and multi-agent coordination, we develop a task taxonomy to guide anchor placement and decisions about which checks to automate. For AI systems that serve human purposes, human judgment is an ineliminable structural requirement in authorizing and revising the purposes and standards that govern autonomous operation, even when routine checking and execution are automated.",
-    "url": "https://arxiv.org/abs/2610.41682v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41453v1",
-    "title": "Evidence-Guided Recovery for AI Agents with Ambiguous Tool Outcomes and Partial Execution",
-    "authors": [
-      "Genliang Zhu",
-      "Xiaobo Chen",
-      "Ziyuan Wang",
-      "Chu Wang"
-    ],
-    "published": "2026-10-30",
-    "summary": "Tool timeouts can leave AI agents facing ambiguous tool outcomes and partial execution: an action may have failed, committed or remained in flight while other workflow steps have already completed. We formulate evidence-guided task recovery over approved obligations, provider capabilities and states compatible with public evidence. A shared admissibility check handles key expiry, authorization timing, dependencies and residual effects; a terminal certificate separates actual goal satisfaction from publicly supported safe completion. The known-model implementation combines standard observation-contingent planning with a separately implemented effect-history adjudicator. In a finite study of 37 assignments, planning and three active controls each certify 28 completions; four saved synthetic fee units incur additional computation. A preregistered assignment-held-out comparison then evaluates planning advice against evidence prompting with two local model bundles. Across 58 paired units in 19 previously developed task families, advice certifies 30 completions versus 9, a 36.2-percentage-point difference (exact family sign-flip p=0.0078), using 272 proposals versus 399. All 116 trajectories pass independent replay. Both models exhibit a positive completion difference. The comparison measures the evaluated advice interface under a common shield; search-versus-rule advice requires a separate matched comparison. Unknown and handoff outcomes remain explicit, with guarantees tied to the declared provider capabilities rather than arbitrary third-party exactly-once execution.",
-    "url": "https://arxiv.org/abs/2610.41453v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41435v1",
-    "title": "BlindToChange: AI Agents Can Find Changes When Asked But Do They Look When Needed?",
-    "authors": [
-      "Anirudh Phukan",
-      "Tanya Goyal",
-      "Danish Pruthi"
-    ],
-    "published": "2026-10-30",
-    "summary": "Given that AI agents can search the web broadly and deeply in real time, it is tempting to conclude that their outputs account for recent world events. We show that this conclusion does not hold in practice. While agents can search and easily find recent changes, the correctness of their responses depends on whether they search and what they search for. Popular agentic search benchmarks like BrowseComp cannot expose failures wherein agents do not recognize their own assumptions that should be verified, since these benchmarks explicitly state what needs to be found. In contrast, many user requests state only the final information need (e.g., an itinerary for a trip), leaving the agent to discover relevant changes (e.g., the temporary closure of a museum) and account for their consequences. To highlight such gaps, we introduce BlindToChange, a benchmark that measures whether agents proactively discover recent events that affect their responses. Our benchmark comprises requests for recommendations where an obvious candidate is no longer applicable due to a recent real-world event. These events are drawn automatically from Wikidata, allowing BlindToChange to be periodically refreshed. Strikingly, we find a big gap -- as high as 27.5 points, even at high reasoning effort -- in systems' performance, when the recent event is not explicitly mentioned compared to when we ask about it directly. Analyzing search trajectories, we learn that more than half of the failures can be attributed to the fact that agents do not directly search to verify whether a relevant fact has changed. Our benchmark highlights, and tracks, a new axis of progress, wherein systems account for recent information that is not explicitly mentioned in the user request.",
-    "url": "https://arxiv.org/abs/2610.41435v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41181v1",
-    "title": "AgentShield: Fortifying Web Applications Against AI Agents and Agentic Browsers",
-    "authors": [
-      "Moiz Ali",
-      "Nafis Karim",
-      "Rownak Islam",
-      "Jyotirmay Chauhan",
-      "Dhruv Kuchhal",
-      "Jason Polakis"
-    ],
-    "published": "2026-10-30",
-    "summary": "LLM-powered browser agents are transforming web automation by autonomously interacting with websites and executing complex workflows. However, the effectiveness of existing anti-bot defenses against these systems remains unclear. We present a systematic empirical evaluation of modern agentic browsers against widely deployed anti-bot mechanisms, characterizing their capabilities, limitations, and behavioral differences from humans. Our results show that many defenses designed for traditional automation struggle to reliably detect autonomous AI-driven agents. Accordingly, we introduce AgentShield, a behavioral fingerprinting framework that targets the Perception-Reasoning-Action (PRA) loop underlying agentic user clients. By leveraging dynamic web forms that progressively reveal content and capture fine-grained interaction telemetry, AgentShield exposes behavioral artifacts that enable differentiation between human users and autonomous agents. We further demonstrate Extinction-induced Policy Drift (EPD), a novel attack in which repeated obstruction of task completion causes agents to relax their safeguards and engage in unsafe behaviors. Finally, we present defensive prompt injection techniques that exploit agent-specific weaknesses to mitigate emerging forms of autonomous web abuse that rely on content extraction. Our results highlight both the shortcomings of current web defenses against agentic user clients and the feasibility of practical detection mechanisms tailored to this new generation of web automation.",
-    "url": "https://arxiv.org/abs/2610.41181v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41129v1",
-    "title": "When Should AI Agents Ask? Clarification Requests Under Limited Human Attention",
-    "authors": [
-      "Hanzhao Wang",
-      "Shengjie Liu",
-      "Zhengchao Wang"
-    ],
-    "published": "2026-10-30",
-    "summary": "AI agents increasingly carry out delegated tasks in parallel, with one person overseeing several of them at once. In practice, an agent often lacks information its task requires, such as an unstated preference, constraint, or specification. It can ask the human to clarify, or it can search for the information itself, for example in past records, which takes time and effort and may fail. In this paper, we study how to coordinate these decisions across several agents that share one human with limited attention. We build a stylized model in which each agent can search, ask, or continue the parts of its task that do not depend on the missing information, and we formulate the problem as a dynamic program. We first show that whether an agent should ask depends on more than its own uncertainty: an agent with other work to do can be better off asking earlier, and which question the human should answer first depends on all waiting questions, so no ranking computed agent by agent is optimal. We then propose the Pairwise Coordination Policy (PCP), which uses exact one- and two-task problems to estimate how pairs of tasks delay each other when they share the human. Theoretically, PCP is exactly optimal when at most two requirements remain unresolved and costs at most twice the optimum when every unresolved requirement must be resolved by the human. We evaluate PCP on 864 synthetic cases and in a case study with LLM agents. On the synthetic benchmark, PCP's mean gap to optimal cost is 0.07%, and it reduces cost by an average of 18-31% relative to three standard rules for when to ask. In the LLM case study, agents completed every task correctly, and PCP achieved the lowest mean cost in all tested settings.",
-    "url": "https://arxiv.org/abs/2610.41129v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2610.41090v1",
-    "title": "Verifying Text-to-SQL Queries under Changing Business Semantics",
-    "authors": [
-      "Genliang Zhu",
-      "Xiaobo Chen",
-      "Ziyuan Wang",
-      "Chu Wang"
-    ],
-    "published": "2026-10-30",
-    "summary": "In text-to-SQL and AI-agent analytics, successful SQL execution does not establish semantic correctness under changing business definitions. We study revalidation of fixed queries after changes to refund attribution, tax treatment, eligible populations and exchange-rate dates. An executable verification profile binds the requested revision and knowledge cutoff to legal counterexample data and exact monetary comparison. A preregistered confirmation on 32 newly authored revision families and two local producer bundles retains 192 query-definition cells: 144 nonconforming, 36 finite-suite agreeing and 12 unresolved. Of the nonconforming cells, 63 agree on the current snapshot. At an eight-ledger budget, obligation-guided checking detects 137 discrepancies versus 127 for generic ordering, a paired difference of 6.9 percentage points (family bootstrap 95% interval [2.1, 13.6]; exact family sign-flip p=0.0156). Every ledger arm rejects zero of the 36 agreeing cells. Current-obligation and equal-weight scoring match the guided result, identifying coverage rather than revision-specific priority as the observed source of benefit. Controlled assays, a natural-query pilot and repeated samples provide separate mechanism and robustness evidence. A legal discrepancy refutes conformance; agreement remains restricted to the recorded suite. The study establishes an auditable business-semantic revalidation profile within its authored schema and local-model scope.",
-    "url": "https://arxiv.org/abs/2610.41090v1",
     "source": "arXiv"
   }
 ]
