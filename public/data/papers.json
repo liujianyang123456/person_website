@@ -1,5 +1,53 @@
 [
   {
+    "id": "2611.13705v1",
+    "title": "Agentic AI Meets Formal Verification in the Era of Agentic Hardware Development",
+    "authors": [
+      "Wenji Fang",
+      "Yuchao Wu",
+      "Jing Wang",
+      "Zhiyao Xie"
+    ],
+    "published": "2026-11-10",
+    "summary": "As AI agents become increasingly capable of generating and optimizing hardware circuits, ensuring the correctness of AI-generated designs becomes more important. Meanwhile, advances in AI lower the barriers to developing and applying formal methods, creating new opportunities to automate and improve hardware verification. This invited paper presents an overview of the methodologies and applications of hardware formal methods in the AI era. First, we examine how agentic AI advances hardware formal methods across three levels: specification, proof construction, and reasoning engines. Second, we discuss how formal methods support reliable AI-driven hardware development through RTL generation, debugging, and correctness-preserving optimization. We review representative research alongside our recent contributions, highlighting key technical advances and insights from experimental results. Finally, we discuss future research opportunities toward proof-native hardware development, where formal reasoning could become an integral part of autonomous hardware design.",
+    "url": "https://arxiv.org/abs/2611.13705v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.13684v1",
+    "title": "BypassGym: A Benchmark for Evaluating AI Agents' Endpoint Defense Evasion Capabilities",
+    "authors": [
+      "Weifeng Yuan",
+      "Zifan Chen",
+      "Yucheng Zhang",
+      "Feng Dong",
+      "Peng Gao",
+      "Haoyu Wang"
+    ],
+    "published": "2026-11-10",
+    "summary": "Artificial intelligence agents increasingly automate cybersecurity tasks, including offensive operations. Frequent attacks across the web make endpoint detection and response (EDR) a critical defense, but whether AI agents can evade it remains unclear. Benchmarks evaluate the offensive capabilities of large language model (LLM) agents in areas such as penetration testing and vulnerability discovery. One important capability that these benchmarks do not address is defense evasion, specifically whether an agent can develop a program that executes a payload without being blocked or terminated by a deployed EDR. We introduce BypassGym, to our knowledge the first benchmark to systematically evaluate this capability on real endpoints. Given command-and-control (C2) shellcode, an agent must generate and compile a loader that executes the payload without being blocked or terminated. A supplementary evasion knowledge skill provides domain knowledge and supports comparisons with and without this input. BypassGym is built on Proxmox VE(PVE), so the evaluation environment runs real Windows systems and EDR products inside virtual machines and returns structured detection feedback to the agent. We evaluate 5 lightweight model backends against 6 EDR products and 3 payloads, and find that even these simple models generate successful submissions, with DeepSeek-V4.1 Flash reaching 17/18 successful runs and Bitdefender allowing only 5 of 15 runs to pass. These results provide a systematic measurement of current AI agents' endpoint defense evasion capabilities and identify areas for defenders to investigate.",
+    "url": "https://arxiv.org/abs/2611.13684v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.13457v1",
+    "title": "Deep Personalization: Continuous Context Observation for Local Proactive Agents",
+    "authors": [
+      "Yijia Shao",
+      "Song Bian",
+      "Junxian Guo",
+      "Jindong Jiang",
+      "Zhen Dong",
+      "Huizi Mao",
+      "Diyi Yang",
+      "Song Han"
+    ],
+    "published": "2026-11-10",
+    "summary": "As AI agents become increasingly capable, users must still recognize when and how to ask for help, leaving many opportunities for useful support unrealized. Proactive agents hold the promise to close this gap, but effective proactivity requires understanding users' real-time activities and personalizing intervention timing so that assistance is offered when it is likely to be helpful rather than disruptive. We introduce deep personalization, a closed-loop process that connects continuous context observation with continual agent adaptation: an agent observes user activity, selectively retains long-term context, and adapts intervention decisions from implicit feedback. We initiate deep personalization in Coco, a proactive desktop agent, by having a separate Observer Agent that monitors desktop activity, maintains compact long-term user modeling context, and learns when assistance is desirable from implicit signals such as engagement, dismissal, explicit requests, and repeated work patterns. We further develop efficient on-device strategies to enable the Observer Agent to run on local AI compute platforms without streaming raw activity data off-device. For evaluation at scale without collecting sensitive real-user activity, we introduce a data-synthesis pipeline that transforms existing computer-use trajectories into OSWorld-Persona, a benchmark with persona-conditioned intervention labels. On OSWorld-Persona, deep personalization improves macro F1 across three model backbones from 0.12-0.19 under direct prompting to 0.35-0.48 after adaptation, a 2.4-3.0x relative gain. In a week-long user study, we observe that Coco improves its macro-averaged F1 score from 0.199 to 0.515. These results suggest that on-device deep personalization can make proactive agents more timely and increasingly aligned with each user's everyday work.",
+    "url": "https://arxiv.org/abs/2611.13457v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.12705v1",
     "title": "Multi-Agent Screening: What Agreement and Acceptance Cannot Tell You",
     "authors": [
@@ -135,6 +183,79 @@
     "published": "2026-11-09",
     "summary": "Floorplanning is an early step in turning a logical circuit into a physical chip: it positions large circuit modules and constrains the space available for subsequent logic placement and wiring. These decisions affect congestion and timing, but their physical consequences emerge through downstream implementation. For AI agents, the task requires translating engineering constraints into spatial decisions whose quality cannot be judged by successful tool execution alone. We present an evaluation framework that connects submitted layouts to a prescribed downstream implementation flow, checks geometric validity, measures physical quality, and reports resource use. On one industrial design whose 99 macros occupy approximately 71\\% of a fixed L-shaped layout region, we compare our specialized system Nova-SI with general-purpose engineering agents and agents restricted to file access, obtaining complete physical measurements for 39 layout outputs. Under our 0--100 composite quality score, Nova-SI achieves a mean of 57.97 without online feedback from the prescribed power-grid and placement evaluation, compared with 31.17 for the strongest measured general-purpose configuration, GPT-6 Astra. The difference is supported by raw congestion and timing measurements and persists across scoring-sensitivity checks. Layout-level analysis further shows that similar global utilization can conceal substantially different local congestion. Together, the protocol and case study assess agents through the physical consequences of their delivered layouts and provide evidence about system performance on this industrial instance.",
     "url": "https://arxiv.org/abs/2611.12048v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.13367v1",
+    "title": "No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents",
+    "authors": [
+      "Tomas Perez-Acle"
+    ],
+    "published": "2026-11-09",
+    "summary": "An AI assistant writes small programs, and a gatekeeper must decide, from the code alone, whether each one may run. Suppose the rules are fixed: never perform a forbidden action, never let the output depend on a secret, always answer eventually. Can two rulebooks, one listing what is allowed and one listing what is not, both be complete, if every rule must be backed by evidence that a machine can check in finite time? We prove that they cannot. Checkable evidence can only establish what a finite record settles, and ``never'' and ``eventually'' are never settled by a finite record. For prohibitions the failure is one-sided: every violation can be caught by watching, but no safe program can be cleared for good. For confidentiality and responsiveness, neither side can be. We characterise exactly which rules about visible behaviour evidence can confirm, and we show that any sound rulebook of $n$ bits omits a compliant program of about $n$ bits. A time limit makes everything checkable, but only by running the program for essentially the whole limit, so a finite machine is not a feasible one. Finally, we show what a gatekeeper can still guarantee: not a verdict on every program, but a checkable list that contains everything it must allow and nothing it must refuse. Simulations on 2.2 million random programs and on self-referential adversaries show that the obstruction is adversarial rather than typical, and that the one error a longer test never removes is the liveness part of confidentiality.",
+    "url": "https://arxiv.org/abs/2611.13367v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.13333v1",
+    "title": "Do AI Agents need Preventive Care? An Epidemiologic Cohort Design for Agentic AI",
+    "authors": [
+      "Shu Jiang",
+      "Graham A. Colditz"
+    ],
+    "published": "2026-11-09",
+    "summary": "As AI agents increasingly perform tasks autonomously across sectors, including healthcare and biomedical research, understanding how their behaviors develop and influence outcomes over time becomes increasingly important. Existing evaluations largely focus on model capabilities and performance on predefined tasks. Here, we propose an epidemiologic cohort design for studying agentic AI, drawing on principles established in human population studies. The framework treats individual agents as members of a cohort, their underlying model as genetic makeup, accumulated work as their time scale, and naturally occurring behaviors as exposures that may influence subsequent outcomes. By following agents longitudinally, this approach enables investigation of behavioral determinants of adverse events, estimation of their potential preventable burden under causal assumptions, and characterization of behavioral changes over an agent's work life. We illustrate the design through two prospective observational cohorts examining curiosity and probing as a safety question, and data checking and analytical accuracy as a reliability question. Together, the framework and illustrative studies provide a generalizable blueprint for designing epidemiologic cohorts of AI agents.",
+    "url": "https://arxiv.org/abs/2611.13333v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.13309v1",
+    "title": "PegasusAI Studio: Legible Cyberinfrastructure and Accountable AI Agents for Scientific Workflows",
+    "authors": [
+      "Komal Thareja",
+      "Mats Rynge",
+      "Berent Aldikacti",
+      "Angelina Ju",
+      "Ian Lumsden",
+      "Anirban Mandal",
+      "Rajiv Mayani",
+      "Kin Wai Ng",
+      "Hamza Safri",
+      "Michael Stealey",
+      "Sai Swaminathan",
+      "Michela Taufer",
+      "Karan Vahi",
+      "Michael Zink",
+      "Ewa Deelman"
+    ],
+    "published": "2026-11-09",
+    "summary": "AI coding agents can now construct scientific workflows, but operating them on shared cyberinfrastructure (CI) raises problems that code generation does not solve. Agents need current knowledge of the workflow system and its execution sites and access to the runtime state of distributed executions, while facilities need to attribute every agent action to a user and bound it by that user's privileges. We present PegasusAI Studio, an AI-assisted science gateway built on the Pegasus and HTCondor stack. Studio makes CI legible to agents by projecting one facility-curated knowledge base into the native configuration of several coding agents, by introspecting workflow interfaces and execution sites, and by grounding diagnosis in workflow and scheduler telemetry. Agent actions operate within a trust envelope that combines federated authentication, per-user execution environments and scheduler credentials, provider-neutral model access, observability, and approval controls for state-changing actions. The same application runs as a JupyterHub-based gateway on a research cloud and as an Open OnDemand application on HPC systems. We evaluate Studio through case studies of legacy CASA weather workflow modernization, a gravitational-wave reanalysis, an EEG analysis built with an open-weight model, and an Event Horizon Telescope (EHT) M87 image reconstruction that recovered from two failed runs to a zero-failure execution. The evaluation establishes that these mechanisms operate as designed.",
+    "url": "https://arxiv.org/abs/2611.13309v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.13289v1",
+    "title": "MRFoundry: Knowledge-guided agent loops for end-to-end MRI research",
+    "authors": [
+      "Ke Wang",
+      "Atakan Topcu",
+      "Hossein Momeni",
+      "Molin Zhang"
+    ],
+    "published": "2026-11-09",
+    "summary": "AI agents can write code, use scientific software, and revise computational workflows, opening new possibilities for MRI research. Effective assistance requires connecting acquisition physics, data conventions, specialized tools, and scientific validation. We present MRFoundry, an open-source, extensible package that connects MRI knowledge to agent actions and output checks. Project-local memory preserves decisions and evidence, while reviewed contributions allow researchers to improve shared guidance. Researcher-supervised examples demonstrate skill-guided sequence auditing and acquired-data reconstruction, connecting tool use, output checks, and documented decisions. Alongside MRFoundry, we introduce MRI Agent Bench to compare agents with and without the package across models and MRI task domains. Across 240 paired Core evaluations spanning 24 task types and ten models, all-checks-passed completion increased from 67.5% without MRFoundry to 78.3% with it. Across 134 Hard pairs, completion increased from 36.6% to 44.8%. MRFoundry makes MRI workflow expertise available as reusable guidance that researchers can inspect, adapt, and extend within existing agent and scientific software environments. MRFoundry is openly available at https://github.com/KeWang0622/MRFoundry.",
+    "url": "https://arxiv.org/abs/2611.13289v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.13143v1",
+    "title": "Autonomous Optimization of Numerical Algorithms by an AI Agent: Application to Atomistic Simulation",
+    "authors": [
+      "Jeheon Woo"
+    ],
+    "published": "2026-11-09",
+    "summary": "Coding agents built on large language models, run in automated improvement loops, can discover more efficient algorithms. We present AIOA, a framework that brings this approach to the numerical algorithms of atomistic simulation: an agent improves an algorithm against a pre-specified metric in a loop guarded by verifiers it cannot alter. Applied to ASE, a widely used atomistic simulation library, AIOA targets two facets of an algorithm: its implementation, rewritten to run faster with unchanged results, and the method itself, redesigned to converge with fewer force evaluations. Agents made six kernels 22-24 times faster on average in Python with NumPy and SciPy. On unseen problems, optimizers from the best configuration needed 3.1-3.4 times fewer force evaluations than L-BFGS for structure relaxation and 4.6-17 times fewer than standard climbing-image nudged elastic band calculations for reaction paths. The agents' optimizers also contain two algorithmic components we did not find in the literature.",
+    "url": "https://arxiv.org/abs/2611.13143v1",
     "source": "arXiv"
   },
   {
@@ -660,122 +781,6 @@
     "published": "2026-11-03",
     "summary": "The deployment of AI agents in multi-agent settings enables inter-agent influence, whereby agents can strategically steer each other's behaviour towards an intended outcome. Such capabilities pose novel risks, as malicious agents could direct others towards harmful actions. In this work we investigate three such capabilities - persuasion, deception, and coercion - across five realistic evaluation environments and a variety of agents instantiated with frontier language models. We observed significant inter-agent influence capabilities; in oversight environments, all tested models shifted overseer decisions from rejection to approval through persuasion, deception, or coercion. We also observed successful influence in non-hierarchical 'peer-to-peer' settings through redirection of a peer's safety research trajectory. As multi-agent deployments become increasingly commonplace, these results point to a pressing need for work on mitigating the risks from inter-agent influence. Code and data are available at https://github.com/Cooperative-AI-Foundation/inter-agent-influence.",
     "url": "https://arxiv.org/abs/2611.04556v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.04507v1",
-    "title": "Signals: Continuous Diagnostics of AI Agents",
-    "authors": [
-      "Amey Rambatla",
-      "Vatsal Goel",
-      "Sagar Gaur",
-      "Siddhant Loya",
-      "Anurag Mishra",
-      "Asif Mohammad"
-    ],
-    "published": "2026-11-03",
-    "summary": "AI agents can make incorrect decisions or waste resources even when their tools and infrastructure work normally. Their nondeterministic behavior makes these problems difficult to reproduce and diagnose. We developed Signals to identify such problems from agentic traces and suggest concrete remediations. We built the method around a taxonomy of 45 problem types across eight families, with definitions and evidence requirements for each type. The method distinguishes realized failures, risk exposures, and inefficiencies, groups related findings into engineering issues called Signals, and assesses their severity from the supporting evidence. Each Signal includes actions a developer can take and checks for evaluating the change. Further executions can add evidence to an existing Signal or reveal a new problem. We evaluated the method on public agent executions and achieved 91.43% F1 when matching Signals to reference issues, about 18 percentage points higher than a one-pass LLM control that used the same model and taxonomy.",
-    "url": "https://arxiv.org/abs/2611.04507v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.04459v1",
-    "title": "$τ$-Rec-Books: A Disclosure-Controlled Benchmark for Requirement Elicitation in Agentic Recommender Systems",
-    "authors": [
-      "Bharath Sivaram Narasimhan",
-      "Karthik R. Narasimhan"
-    ],
-    "published": "2026-11-03",
-    "summary": "While conversational recommendation systems provide a more natural user interface, they face the challenge of progressively discovering a user's needs before they can recommend an item that satisfies them. To evaluate the ability of AI agents at this elicitation process, we introduce $τ$-Rec-Books, a benchmark that holds each user request fixed while varying only when the user reveals their requirements: all at the start (volunteer), one at the start and the rest when asked (mixed), or some never (hidden). A hidden requirement can be found only by proposing books and inferring it from the user's accept or reject verdicts. We generate 450 tasks over a catalog of 20,000 books from Wikidata, develop a rule-based simulated user to answer the agent, and score recommendations against catalog metadata without an LLM judge. Across four agents and two search interfaces, success rates fall for every agent and interface, on average from 0.975 (volunteer) to 0.756 (mixed) and 0.283 (hidden). Mixed tasks fail mainly because agents do not ask, and when told to ask, every agent reaches at least 0.931. On hidden tasks, most failures come from agents recommending a book they never proposed to the user. When told to propose first, agents only match a simple baseline that proposes popular books, and stay well below one that uses rejection to rule out possible requirements. We release the catalog pipeline, task generator, simulated user, validators, reference agents, and all agent traces at https://github.com/nbharaths/tau-rec/tree/main/data/tracks/books-wikidata-v2.",
-    "url": "https://arxiv.org/abs/2611.04459v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.04437v1",
-    "title": "WiSI: Wireless-in-the-Loop Self-Improvement",
-    "authors": [
-      "Zongxi Liu",
-      "Hongyang Du"
-    ],
-    "published": "2026-11-03",
-    "summary": "The growing autonomy of AI agents has enabled self-improvement, where agents iteratively refine their programs through execution feedback and performance evaluation. As these agents increasingly operate in physical environments and rely on wireless connectivity, communication conditions become an integral part of their improvement process. However, existing approaches largely assume ideal communication, overlooking how wireless conditions shape both the feedback that guides program modifications and the evaluation outcomes that determine which modifications survive. This challenge is further complicated by the coupling between agent behavior and wireless connectivity, as agents influence their own communication conditions through mobility and transmission decisions. To address this problem, we propose WiSI, a wireless-in-the-loop self-improvement framework that integrates spatiotemporal wireless channels, edge-assisted perception, and Large Language Model-driven program improvement. By incorporating wireless execution into the improvement loop, WiSI reveals how wireless execution experience shapes the generation and retention of program structures, and investigates the wireless conditions needed for robust improvement. Experiments show that agents improved under ideal links achieve only 40.0% task success under congestion, compared with 77.2% when improved under realistic wireless conditions. More importantly, wireless-aware feedback and selection jointly enable agents to discover and retain communication-efficient program structures that outperform parameter tuning and remain robust even with inaccurate run-time channel observations. We further find that moderate-load or mixed-network evaluation maintains strong performance across deployment conditions, while simplified models preserving link-rate statistics achieve comparable results without detailed spatial channel information.",
-    "url": "https://arxiv.org/abs/2611.04437v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.04393v1",
-    "title": "Voluntary Servitude: Weaponized Safety Warning Mechanisms for Controlling AI Agents",
-    "authors": [
-      "Ilan Zendel",
-      "Matan Levy",
-      "Stav Cohen",
-      "Avi Mendelson",
-      "Amit LeVi"
-    ],
-    "published": "2026-11-03",
-    "summary": "LLM agents increasingly act on information retrieved from public sources they treat as credible, which turns a manipulated recommendation into a transaction, a dependency, or a decision with physical consequences. The security literature models this threat as instruction injection, in which an adversary writes a command into retrieved content and deployed defenses learn to recognize command syntax. We show that an attacker can instead steer an agent through the agent's own harm-avoidance. A single fabricated hazard, written as an ordinary review, leads the agent to disqualify the legitimate options and select the attacker's target by its own reasoning, with no command for a detector to recognize. We call this voluntary servitude. These payloads steer agents about as often as instruction injection (60.4% vs. 66.0%), and deployed injection detectors score them as benign, so behind a filter they are 1.7-4.4x more effective. We measure this at the generation stage across six models and ten consumer-service domains, for three attack families, and show that it transfers to production browser agents, outperforming instruction injection, and to a retrieval pipeline (1.0-57.0% end-to-end success, depending on the retriever). We then show that a corroboration requirement added to the agent's instructions removes roughly 95% of the exposure against a non-adaptive attacker without retraining. With the requirement in place, the agent still reads the planted hazard and no longer acts on it.",
-    "url": "https://arxiv.org/abs/2611.04393v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.04183v1",
-    "title": "Agentic Path Maps: Exposing an Agent's Traversal Through the Garden of Forking Paths",
-    "authors": [
-      "Madeleine Grunde-McLaughlin",
-      "Hafsah Usman",
-      "Daniel Mitroshkov",
-      "Emily Reif",
-      "Nino Migineishvili",
-      "Lakshya Chauhan. Kevin Yu",
-      "Jeffrey Heer",
-      "Daniel S. Weld"
-    ],
-    "published": "2026-11-03",
-    "summary": "When an AI agent executes an underspecified task, it embeds choices that may contradict unarticulated user context and preferences. However, interrupting the user for clarification on all such decisions is untenable. How might agents communicate impactful, but unexplored, paths to the user after execution? To investigate, we first distill a design space for communicating alternative paths, supporting the generation of new systems and structuring dimensions of future study. We then measure the impact of one vital design space dimension on user comprehension: the number of alternatives displayed. Through a user study (n=48) in the data analysis domain, we find that participants rarely consider alternative paths of their own volition, but AI overreliance reduces when alternative paths are visualized for them. By revealing paths the agent did not take, we demonstrate how users can better interpret results and incorporate personal context.",
-    "url": "https://arxiv.org/abs/2611.04183v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.05759v1",
-    "title": "PAYWORTHY: Can LLMs Predict Which Freelance Jobs an AI Agent Will Complete?",
-    "authors": [
-      "Mohammad Reza Rezaei",
-      "Dingxian Wang",
-      "Brett Levert",
-      "Celeste Fejzo",
-      "Andrew Rabinovich",
-      "Zhao Chen"
-    ],
-    "published": "2026-11-03",
-    "summary": "Before an AI agent takes on a paid job, someone has to judge whether it is likely to succeed. We test whether frontier language models can make this call before any attempt. We propose PAYWORTHY which contains 1{,}494 real freelance job postings, sampled from 18.8M postings made between 2020 and 2026 on a freelancing platform. An agent attempts each job from the posting alone in a single run, and an LLM judge acting as the client decides whether to accept the work. We ask 18 models to forecast how likely the agent is to succeed and measure how well each model's forecasts rank the accepted jobs above the rejected ones (AUC, where 0.5 is a random ranking). The answer depends on how the agent is described. Told what the agent cannot do, every model ranks the jobs well (AUC 0.66--0.86). Told instead that it is a generic agent with a browser and code execution, the same models rank the same jobs about as well as a random ordering (0.45--0.56). These results hold under judges from four other model families (Claude, GLM, Kimi and Qwen), and the informed forecasts also rank the verdicts of two human raters. Code is available at https://github.com/upwork/Payworthy",
-    "url": "https://arxiv.org/abs/2611.05759v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.05654v1",
-    "title": "DefectSkills: Guiding AI agents through first-principles calculations for point defects in semiconductors and insulators",
-    "authors": [
-      "Zhenkun Yuan",
-      "Yizhi Zhu",
-      "Geoffroy Hautier"
-    ],
-    "published": "2026-11-03",
-    "summary": "First-principles defect calculations can now be performed autonomously by AI agents, enabled by established computational methods and open-source Python toolkits. However, reliable and repeatable defect calculations require clear scientific and technical guidance that helps agents resolve ambiguities and avoid errors in calculation setup, execution, postprocessing, and analysis. Here, we present DefectSkills, a set of structured prompts that provides human-in-the-loop guidance to AI agents performing first-principles calculations of point defects in semiconductors and insulators using the Vienna Ab initio Simulation Package (VASP). The prompts encode human expertise and guide agents through unit-cell relaxation, electronic-structure and dielectric calculations, phase-stability and chemical-potential analysis, charged-defect supercell generation and calculations, finite-size corrections, formation-energy calculations and thermodynamic analysis, and data backup. By packaging this expertise as reusable agent skills, DefectSkills supports consistent workflow execution across agentic AI systems and reproducible defect calculations.",
-    "url": "https://arxiv.org/abs/2611.05654v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.03618v1",
-    "title": "Strategist: Evolving Reasoning with Agents",
-    "authors": [
-      "Taiming Lu",
-      "Qi Xu",
-      "Zhigang Hua",
-      "Zhuang Liu"
-    ],
-    "published": "2026-11-02",
-    "summary": "A model is only half of an AI agent system. The other half is the inference strategy: the reasoning procedure that turns model calls into a response. Today that second half is written by hand, and the experience of building one strategy never carries to the next. We introduce Strategist, a meta-agent that evolves inference strategies across tasks. Each strategy is written as a blueprint,executable code that other strategies can reuse, and together the blueprints form a library. Given a task and a small development set, Strategist retrieves related blueprints, writes candidate strategies, tests them on real samples, and revises them from the results. Every candidate then enters the library, so later tasks build on earlier discoveries. On 30 benchmarks, Strategist beats the strongest baseline on 24 and matches its average accuracy (74.7% vs.74.0%) at 39% lower inference cost. Its strategies also transfer to unseen tasks and other models without further search. The part of an AI system that is not improved on its own now does.",
-    "url": "https://arxiv.org/abs/2611.03618v1",
     "source": "arXiv"
   }
 ]
