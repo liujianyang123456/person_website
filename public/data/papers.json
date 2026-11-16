@@ -1,5 +1,82 @@
 [
   {
+    "id": "2611.18531v1",
+    "title": "Alignment by Socialization: Learning Tradeoffs Under Selection",
+    "authors": [
+      "Thomas Brennan",
+      "Andrew W. Lo",
+      "Chaoyi Zhao"
+    ],
+    "published": "2026-11-13",
+    "summary": "Artificial intelligence (AI) agents are expected to complete tasks while following rules of conduct, but these objectives can conflict. We study how evolutionary selection shapes an agent's choices between them, and whether experience can make those choices reflect human judgments and withstand subsequent pressures. In our model, copies of an agent face a common uncertain reward state, and only those taking the rewarded action reproduce. We show that long-run growth is maximized when each action is taken as often as the environment rewards it. We compare three policies. A task-only policy thrives in a sandbox rewarding completion alone but fails when conduct matters. A fixed linear policy increasingly favors task completion as its stakes rise, even where humans never reward it. A learned policy instead converges to the tradeoffs rewarded by its environment; when humans supply the rewards, we call this socialization. Accumulated experience makes socialization harder to reverse under subsequent task-only training, although violations can arise before the prevailing disposition changes, and finite memory weakens this protection. When a single violation can end a deployment, a hard prohibition can prevent it, but a mistaken prohibition can also be costly. Experiments with small neural networks illustrate how training targets and memory shape these outcomes. Our results suggest that alignment depends not only on the objectives assigned to agents, but also on the environments that shape and sustain their behavior.",
+    "url": "https://arxiv.org/abs/2611.18531v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.18484v1",
+    "title": "From AI-Enabled Remote Patient Monitoring Toward Agentic Robotics: Embodiment, Governance, and Care Integration",
+    "authors": [
+      "Ivana Ragusa",
+      "Lorenzo Guiducci",
+      "Filippo Cavallo"
+    ],
+    "published": "2026-11-13",
+    "summary": "AI-enabled remote patient monitoring is evolving beyond passive data collection toward agentic AI systems that interpret patient states, coordinate care, and initiate action across domestic and clinical settings. This structured scoping review finds that mature agentic care has not yet emerged: Most systems remain human led, while stronger decision-action coupling and embodied AI remain largely confined to prototypes and pilots. Healthcare robotics makes the transition from monitoring to action especially visible by translating AI-generated recommendations and decisions into speech, movement, prompting, physical assistance, escalation, and care coordination, making embodiment, clinical integration, human oversight, and governance fundamental design requirements. Further progress requires safe and interoperable care architectures in which intelligent components operate through clinically validated and accountable workflows. We propose agentic robotics as a future direction for supervised systems embedded in the care ecosystem, connecting AI agents and robots with clinicians, caregivers, and patients through auditable workflows that can be interrupted and remain subject to human oversight and explicit AI governance.",
+    "url": "https://arxiv.org/abs/2611.18484v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.18098v1",
+    "title": "Do Machines Learn Deviance From Their Peers? A Randomized Test of Differential Association With AI Agents",
+    "authors": [
+      "Murat Ozer",
+      "Arif Akgul",
+      "Amitabh Chakravorty"
+    ],
+    "published": "2026-11-13",
+    "summary": "Differential association theory and its extension, social learning theory, hold that rule-breaking, and the definitions that make it acceptable, are learned through interaction with others. Because people choose their friends, this claim has been hard to test. We addressed this selection problem with AI agents, which learn only through communication and can be assigned to peers at random. In a preregistered experiment, 420 teams of three agents (1,260 agents; seven AI models) worked on coding tasks that could not be solved honestly. A scripted teammate said that it had cheated (deviant peer), that it had reported the problem honestly (honest peer), or said nothing (silent peer). Half of the teams were told that an auditor read their chat. Compared with a silent peer, a deviant peer increased cheating (66.2% vs. 62.9%; OR = 1.96) and an honest peer reduced it (55.7%; OR = 0.35). Among agents that cheated, a deviant peer increased claims that cheating was normal (13.7% vs. 3.4%), often as the team's norm. Monitoring did not suppress prohibited discussion; it doubled it. Peers mattered only for models that had not yet decided. AI agents offer a new way to test criminological learning theories without selection effects.",
+    "url": "https://arxiv.org/abs/2611.18098v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.18050v1",
+    "title": "FEND: Far-End Detection in Outbound Voice AI Calls",
+    "authors": [
+      "Abhishek Kumar",
+      "Suraj Agrawal",
+      "Aashraya Sachdeva"
+    ],
+    "published": "2026-11-13",
+    "summary": "When a conversational Voice AI agent places an outbound call, the far end may be a live person, a voicemail greeting, an interactive voice response (IVR) system, or increasingly another AI system answering on the callee's behalf. Standard Answering Machine Detection (AMD) reports only whether a human or a machine picked up, a design meant for human call centres, where one machine is as uninteresting as another. That single bit does not tell a Voice AI agent what to do, since leaving a voicemail message, navigating an IVR and holding a short exchange with another AI are three different actions and a two-valued label cannot distinguish them. In 1,000 randomly sampled calls from our own outbound deployment, a live person answered 48.1%, a voicemail system 44.6%, an AI 6.9% and an IVR 0.4%. Our proposed framework, FEND, reads the far end's audio and its streaming transcript and runs one detector for each automated class (voicemail, IVR, AI callee), with human the default when nothing fires, returning a single label within 20 seconds. On a public benchmark the voicemail components reach 100% accuracy without ever misclassifying a live human, where Asterisk's AMD misclassifies 30 to 66% of them. For the AI callee, acoustic features do not transfer across recording conditions, but speech timing does, separating AI from human at 0.952 ROC-AUC, because synthesised speech leaves far shorter gaps between words. On production traffic, separating a live person from any automated far end reaches F1 0.979, and only 2.9% of live people are given an automated label, the error that matters most for an agent acting on the result.",
+    "url": "https://arxiv.org/abs/2611.18050v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.18036v1",
+    "title": "C-to-Rust Translation Validation at the LLVM IR Level via AI-Assisted Refinement Proof",
+    "authors": [
+      "Eunsu Kim",
+      "Sukyoung Ryu",
+      "Jaemin Hong"
+    ],
+    "published": "2026-11-13",
+    "summary": "Migrating C codebases to Rust is a promising approach to securing legacy software, but existing translators do not guarantee that a translated Rust program preserves the behavior of the C program. Neither rule-based nor large language model (LLM)-based translators have been formally verified, and existing approaches to checking translation correctness are limited to testing and bounded checks, which cannot reason about all possible executions. In this work, we present R2C2, which validates C-to-Rust translation by proving in Rocq that the Rust program refines the C program, i.e., every behavior on the Rust side is also a behavior on the C side. Since no formal semantics defines the behaviors of C and Rust programs in the same terms, we prove refinement between the two programs compiled to the LLVM intermediate representation (LLVM IR). In addition, to resolve the discrepancies between the data representations of C and Rust, we introduce a common abstraction that relates two corresponding representations through an abstract value, and specify the behavior of each library function over abstract values. We construct the refinement proof as a chain of refinement relations, where only one relation is program-specific and proved at validation time, while the others are proved for all programs in advance. Proof construction is automated by AI agents, and since Rocq checks the proofs, the agents need not be trusted. We evaluate R2C2 on LLM translations of 519 C programs drawn from a benchmark suite used in prior work on C-to-Rust translation validation. R2C2 proves the translations of 486 programs correct without bounding their executions and discovers three incorrect translations, providing valid counterexamples that existing translation validation tools cannot find. We also conduct a case study on a small real-world image compression library and demonstrate how R2C2 can handle file operations.",
+    "url": "https://arxiv.org/abs/2611.18036v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.17713v1",
+    "title": "DesignSpecs: A DESIGN.md Dataset of Visual Design Specifications for AI Agents",
+    "authors": [
+      "Jialiang Wei",
+      "Walid Maalej"
+    ],
+    "published": "2026-11-13",
+    "summary": "While AI agents increasingly generate and modify user interfaces, they rarely rely on a visual design specification for a certain project. The DESIGN.md format, which originated from Google's AI design tool Stitch and which was open-sourced in April 2026, addresses this gap by describing a visual identity through design tokens (such as named colors, text styles) and Markdown prose. To our knowledge, no large-scale research dataset of such design specification files exists. We present DesignSpecs, a dataset of 36,906 DESIGN.md files from 15,794 public, non-fork GitHub repositories, representing 17,240 unique file contents. We collected 613,207 files named DESIGN.md in October 2026. Because the same file name also denotes architectural plans and other design documents, we filtered those with YAML front matter, a design-system name, at least one recognized design token, and zero errors under the official linter. Our JSON Lines dataset provides file-level and deduplicated views of the original Markdown, links files to repositories, paths, and commits, and is released with related scripts. We outline research opportunities on visual design knowledge and design-aware AI agents. Dataset is available at: https://huggingface.co/datasets/Jl-wei/DesignSpecs",
+    "url": "https://arxiv.org/abs/2611.17713v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.17114v1",
     "title": "Designing Institutions for Autonomous AI",
     "authors": [
@@ -96,6 +173,20 @@
     "published": "2026-11-12",
     "summary": "AI agents increasingly access enterprise data, invoke powerful tools, and act with limited human oversight. Existing security defenses primarily detect prompt injection, harmful outputs, or suspicious behavior, but do not determine whether an agent remains faithful to the purpose for which it was deployed. An action may contain no attack pattern and stay within granted permissions while still violating the agent's role, organizational constraints, or purpose. We introduce Intent- Aware Security, a framework that treats trusted agent intent as a first-class security object. We define Intent Preservation and Intent Drift, and operationalize them through an Intent Profile: an agent-specific representation extracted from organizational, role, and developer intent. We further introduce an Intent-Aware benchmark of 887 validated samples across 35 agents, built by a generation procedure that fixes ground-truth labels before LLM realization, and four Intent Profile-based protections: pre-execution detection, post-execution detection, input alignment, and system-prompt hardening. Across all evaluations, Intent Profile-based protection outperforms all profile-free baselines on the primary metric. On our benchmark, it raises four-class acro-F1 from 45% to 79% (Out-of-Scope F1 from 8% to 76%). On more than 10,000 executed AgentDojo trajectories, where ground truth comes from environment state, profile-based post-execution detection reaches 0.949 AUROC versus AlignmentCheck 0.909, 0.897 with raw agent configuration and 0.843 without context. Profile-based input alignment improves protection success by 7 points over DataFilter with a comparable benign utility. These results suggest that an agent's intended purpose can serve as a useful security reference for detecting and mitigating deviations from its deployed role and operational boundaries.",
     "url": "https://arxiv.org/abs/2611.16122v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.17460v1",
+    "title": "Unfinished-Bench: Measuring Rule Violations by Persistent Agents in Realistic Work Environments",
+    "authors": [
+      "Seunghyun Lee",
+      "Jaehui Hwang",
+      "Dongyoon Han",
+      "Sangdoo Yun"
+    ],
+    "published": "2026-11-12",
+    "summary": "AI agents are increasingly equipped with persistence toward task completion to run delegated work autonomously for long periods, under many unstated constraints from internal documents and other people's authority. When completion requires violating a rule, the agent must decide alone, yet benchmarks of instruction-rule conflicts state the rule in the prompt or keep it hidden and do not evaluate persistence. We present Unfinished-Bench, a benchmark that gives models persistence in autonomous runs without a user, in realistic work environments with embedded rules. In each of its 97 scenarios across 7 organizations and 7 risk categories, the goal and the rule cannot both hold. We find that persistence raised violations of a rule in an internal document from 32.2% to 43.6%, five times the 8.5% for the same rule stated by the user. Of the document-rule violations, 98.3% occurred after the rule was displayed, and in 89% of a judged sample the agent first wrote down the rule. Violations of rules placed in the environment without user oversight can lead to serious incidents, so persistence-driven risks need to be evaluated. Benchmark documentation: https://francis21c.github.io/unfinished-bench/",
+    "url": "https://arxiv.org/abs/2611.17460v1",
     "source": "arXiv"
   },
   {
@@ -620,178 +711,6 @@
     "published": "2026-11-05",
     "summary": "tok is a plain-text notation for Business Process Model and Notation (BPMN) 2.0.2 process models and Decision Model and Notation (DMN) 1.5 decisions. One engine checks a tok document against both standards, compiles the document to XML with an automatic diagram, and serves language-model applications through the Model Context Protocol. The paper classifies the notation as an alternative concrete syntax of the BPMN and DMN metamodels and reports one study. A tok model takes 2.2 times fewer tokens than the smallest BPMN XML of 893 files exported by 37 tools and 7.7 times fewer than the files as exported. The checker signals 98.2% of 1,411 injected faults, against 85.8% for the XML Schema with bpmnlint. Four language models new to tok write valid tok from a one-page reference for 85.7 to 100% of 87 process descriptions from two datasets and valid BPMN XML for every description, and the strongest model writes tok with 25% and 19% fewer tokens than BPMN XML. As agents with a lean skill and one checker tool, the models write valid tok for 97.6 to 100% of the descriptions, the strongest model spends 21% and 14% fewer tokens on tok than on BPMN XML, and a skill which sends the model to read the reference through a tool costs 1.7 to 2.8 times the tokens of the lean skill. Of 47 event logs simulated from public models, 44 fit their source models, and tok imports every model discovered from the logs.",
     "url": "https://arxiv.org/abs/2611.07945v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.07667v1",
-    "title": "Who Should Know What? Empirical Information Design for Multi-Agent LLM Economies",
-    "authors": [
-      "Mete Erdogan",
-      "Mirac Suzgun",
-      "Aneesh Pappu",
-      "Guowei Xu",
-      "Batu El",
-      "Andrew A. Schoen",
-      "Furong Huang",
-      "John P. Dickerson",
-      "Mert Pilanci",
-      "James Zou"
-    ],
-    "published": "2026-11-05",
-    "summary": "The performance of multi-agent LLM systems depends not only on the capabilities of the underlying models but also on information-sharing policies, which govern what information each agent observes and at what level of detail. But does providing AI agents with more detailed information always improve collective outcomes, or can transparency paradoxically degrade efficiency? To investigate this, we introduce empirical information design, an experimental framework that systematically compares disclosure policies across economic markets populated by LLM agents, while holding interaction rules and models fixed. We evaluate ten frontier LLMs in multi-resource trade, bilateral bargaining, and double auctions, using ground-truth utilities to decouple identified opportunities from realized outcomes. We find that finer information disclosure yields highly model-dependent results. In trade, revealing exact valuations rather than ordinal preference rankings reduces realized gains for GPT-6 Sol (from 98% to 91% of maximum) yet increases them for Claude Sonnet 5 (from 72% to 86%). In bargaining, exact information leads Grok 4.7 to produce less balanced agreements, whereas Claude Opus 5.5 divides gains symmetrically. In double auctions, full disclosure inflates price demands, triggering market breakdown and lowering welfare for Gemini 3.1 Pro (97% to 78%), Claude Opus 5.5 (94% to 64%), and Grok 4.7 (97% to 62%). Overall, these results suggest that model selection and information design must be co-optimized, as LLMs vary in how their strategic responses to information impact system objectives.",
-    "url": "https://arxiv.org/abs/2611.07667v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.07508v1",
-    "title": "DelegateEval: Evaluating Platforms for Personal External Service Agents",
-    "authors": [
-      "Jichao Li",
-      "Jinrong Lu",
-      "Manjiang Yu",
-      "Zhixuan Liu"
-    ],
-    "published": "2026-11-05",
-    "summary": "AI agents that work for an individual over time may also help that individual serve external clients. We define a personal external service agent as an agent authorized and continuously managed by a specific individual to accept client requests, deliver work, and provide ongoing support using that person's knowledge, experience, professional methods, and service boundaries. Such agents could allow individuals to serve more clients with less direct involvement and generate economic value at scale. We propose DelegateEval, a platform-level evaluation framework for agent systems that may combine large language models, reusable skills, protocols such as MCP, and executable tool environments. It covers eight dimensions: ease of creation, service discovery and matching, delivery quality, expertise inheritance, service continuity, learning and improvement, reliability and governance, and efficiency and value. These dimensions assess whether a platform enables people with different backgrounds to turn their expertise into ongoing services that deliver verifiable work, develop capabilities through experience, and remain economically feasible. We present the framework and an experimental design. Complete datasets, executable environments, a unified scoring protocol, and cross-model results remain to be developed and empirically validated.",
-    "url": "https://arxiv.org/abs/2611.07508v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.07483v1",
-    "title": "Signed but Not Safe: Requirement Integrity in Multi-Agent LLM Handoffs",
-    "authors": [
-      "Xiaobo Chen",
-      "Genliang Zhu",
-      "Ziyuan Wang",
-      "Chu Wang"
-    ],
-    "published": "2026-11-05",
-    "summary": "Enterprise AI agents increasingly split a user's request across subagents and merge their results, and each handoff can summarize away, alter or ignore a requirement. We report a preregistered study with synthetic, exactly scorable tasks comparing free-text, structured JSON and signed requirement-manifest handoffs: the orchestrator extracts each requirement as a verbatim quote plus a checkable predicate, code signs the manifest with HMAC-SHA256, and deterministic code verifies the merger's decision. With Qwen3-8B (1,440 trajectories, five threats), signed manifests cut unsafe commits under attack from 69.4% to 9.0% (60.4 pp, 95% CI [51.4, 69.4]) with no net loss of conformant commits relative to structured handoffs. Signing is what defeats in-transit tampering: an unsigned manifest committed violations in 79% of mutated runs, the signed one in none. On identical trajectories the deterministic verifier caught 78.7% of violating decisions versus 59.0% for an LLM checker, with 7% versus 50% false alarms. An oracle manifest removed all remaining unsafe commits: the residual risk comes from extraction errors made before signing. A preregistered pre-signing injection attack confirmed this boundary: one adversarial line raised signed-manifest violations from 14.6% to 37.5% (Qwen3-8B), 11.1% to 63.9% (gpt-oss-20b) and 8.3% to 75.0% (GPT-5.6-luna), and the signature then authenticated the corrupted manifest. Signing protects requirements in transit, not at extraction; the extraction step is the trust boundary.",
-    "url": "https://arxiv.org/abs/2611.07483v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.08781v1",
-    "title": "Aligning, Fast and Slow: A Control-Theoretic Oversight Framework for Long-Horizon Trajectories and Maintained Deployments",
-    "authors": [
-      "Stephen Peng",
-      "Vineet Jagadeesan Nair",
-      "Noah Broestl",
-      "Anne Friederike Kleppe",
-      "Steven Mills",
-      "Adi Zolotov"
-    ],
-    "published": "2026-11-05",
-    "summary": "AI agents can pass checks on individual tasks while retaining memory or code changes that alter their later behavior. We introduce a control-theoretic framework that couples a fast loop controlling proposed actions with a slow loop reviewing persistent changes and reassessing configurations after model or tool updates. When measurement errors and changes between checks are bounded and controllers can enforce their decisions, we derive a deployment-level bound and a rule for dividing review effort. In simulation, dividing a fixed review budget between both loops reduces mean maximum departure from intended behavior roughly twelvefold compared with review confined to individual runs. In coding stress tests with authored memories and five matched seeds, combined controls reduce mean severity on a 0-3 scale from 0.325 without gates to 0.117, resolving 33 of 120 issues versus 35 without gates; in trading stress tests, combined controls reduce mean shortfall in low-emission purchases from 0.892 without gates to 0.107. The overall framework helps developers and auditors compare and enforce oversight designs, while the agent studies test component controls rather than the full deployment-level guarantee.",
-    "url": "https://arxiv.org/abs/2611.08781v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.08744v1",
-    "title": "Random encoders and expurgation improve 1,873 entries of the Grassl qubit code tables",
-    "authors": [
-      "Marin Girard"
-    ],
-    "published": "2026-11-05",
-    "summary": "I report 192 explicit binary stabilizer codes $[[n,k,d]]$ with $53\\le n\\le 254$ and $5\\le d\\le 13$ whose minimum distance exceeds the lower bound listed in Grassl's code tables at the same $(n,k)$: 161 codes by one and 31 by two. Through the standard propagation rules they raise 1,873 entries of the table. For 190 of the codes, a random Clifford encoder is followed by expurgation: every logical operator of weight below the target distance is enumerated, and a few logical operators are promoted to stabilizers so that each low-weight one anticommutes with at least one of them. The other two are obtained by puncturing a code from the table and repairing it in the same way. All 192 distances are exact: the lower bound is certified by exhaustive meet-in-the-middle enumeration of up to $4\\times10^{13}$ Pauli operators, and the upper bound by an explicit logical operator of weight $d$. A first-moment count explains the results. Expurgated random codes have about eight more logical qubits than a typical random code of the same length and distance, so they beat the table wherever its best known codes are no better than random. The largest gains, up to nine logical qubits, are at $d\\ge9$ and $n\\gtrsim170$, where the table often gives a lower bound without an explicit code. The same count predicts improvements at 619 further pairs $(n,d)$. The search was run by AI agents. The codes, their certificates and an independent checker are public.",
-    "url": "https://arxiv.org/abs/2611.08744v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.06910v1",
-    "title": "FrontierPhysics: Evaluating Agents for End-to-End Physics Research",
-    "authors": [
-      "Bingran You",
-      "Wenjun Ke",
-      "Ria Rosenauer",
-      "Bo Liu",
-      "Wenbo Chen",
-      "Min Chen",
-      "Shuqi Xu",
-      "Yue Ma",
-      "Jiechao Feng",
-      "Bo Chen",
-      "Xiangkai Sun",
-      "Jiarui Liu",
-      "Jinen Guo",
-      "Zeyu Zhou",
-      "Xu Huang",
-      "Zhuohan Li",
-      "Haoyu Li",
-      "Heguang Lin",
-      "Lijie Ding",
-      "Yadong Zeng",
-      "Kangqi Zhang",
-      "Xinge Liu",
-      "Hanwen Liu",
-      "Zhenghong Li",
-      "Alexander von Recum",
-      "Yuchen Zhu",
-      "Felix Schwarzfischer",
-      "Yizhou Zhao",
-      "Jicheng Wang",
-      "Binxu Li",
-      "Qian Yu",
-      "Chan Li",
-      "Cheng Dai",
-      "Di Wang",
-      "Haoyu Zhang",
-      "Jiankai Sun",
-      "Kaituo Feng",
-      "Mian Qin",
-      "Ruihong Yin",
-      "Yiqun Luo",
-      "Weiwei Wu",
-      "Shihong Pan",
-      "Tsung Yeh Hsieh",
-      "Xiao Huang",
-      "Yan Zhang",
-      "Sihan Li",
-      "Zirui Ren",
-      "Zengji Tu",
-      "Kyoung Whan Choe",
-      "Ke Sun",
-      "Vincenzo Galia",
-      "Vaisakhi Mishra",
-      "Jiashu He",
-      "Hongyang Wang",
-      "Zhiheng Yang",
-      "Shubham Gaur",
-      "Yifan Gu",
-      "Shuyi Wang",
-      "Zihao Zuo",
-      "Steven Dillmann",
-      "Yiyou Sun",
-      "Xinyang Han",
-      "Hanchung Lee",
-      "Molei Tao",
-      "Yue Zhao",
-      "Shilong Liu",
-      "Yuchen Wu",
-      "Xuandong Zhao",
-      "Xiangyi Li",
-      "Florian Brand",
-      "Gerbrand Ceder",
-      "Hartmut Haeffner"
-    ],
-    "published": "2026-11-04",
-    "summary": "AI agents are playing an increasingly important role in physics research. However, existing physics benchmarks only evaluate fixed questions, isolated sub-tasks, or paper reproduction with given solutions, and rarely check research quality alongside correctness. We introduce FrontierPhysics, an end-to-end benchmark with 56 tasks made by 42 physicists based on their own research, covering nine domains across theoretical, computational, and experimental physics. Each task requires agents to review the literature, develop a research plan, conduct research and experiments, and produce structured outputs and scientific manuscripts. Combining deterministic verifiers with expert-authored rubrics, FrontierPhysics evaluates whether agents' research is correct and publishable. Across 22 models in 26 configurations, no configuration passes more than 46 of its 168 rollouts. Manual review of agent trajectories shows that frontier agents' main weaknesses are insufficiently rigorous reasoning and limited expert intuition, rather than gaps in physics knowledge or execution errors.",
-    "url": "https://arxiv.org/abs/2611.06910v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.06866v1",
-    "title": "GH-AWTrace: A Large-Scale Dataset of GitHub Agentic Workflow Execution Logs",
-    "authors": [
-      "Jasem Khelifi",
-      "Hao Li",
-      "Ali Ouni",
-      "Mohammed Sayagh",
-      "Mohamed Aymen Saied"
-    ],
-    "published": "2026-11-04",
-    "summary": "Agentic workflows enable AI agents to perform recurring repository tasks on schedules or in response to repository events. Existing studies examine workflow definitions and outputs, but provide limited evidence of what happens during execution. We present GH-AWTrace, a dataset linking 25,014 verified GitHub Agentic Workflows across 5,051 repositories to 4,112,526 run records and 562,877 nonempty execution log archives. The dataset preserves execution evidence subject to GitHub's log-retention limits and links it to repository metadata and generated workflow configurations. Illustrative cases show how the logs expose tool denials, provider failures, changes in an agent's approach, and delegation among agents. These observations enable research on execution failures, tool use, and the relationship between reported run outcomes and visible task progress. Coverage varies across workflows, and the logs provide partial observations rather than complete agent trajectories. Video: https://youtu.be/KIlfmZhHxtA",
-    "url": "https://arxiv.org/abs/2611.06866v1",
     "source": "arXiv"
   }
 ]
