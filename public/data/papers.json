@@ -1,5 +1,120 @@
 [
   {
+    "id": "2611.24888v1",
+    "title": "Who are you? The Personal Imitation Game",
+    "authors": [
+      "Muhammad Rizky Wellyanto",
+      "Hajara-Yasmin Isa",
+      "Kexin Xue",
+      "Vishal Ravichandran",
+      "Wenpeng Lu",
+      "Jerry O. Talton",
+      "Ranjitha Kumar"
+    ],
+    "published": "2026-11-18",
+    "summary": "Large Language Models (LLMs) now perform strongly on Alan Turing's 1950 Imitation Game, so we propose a harder challenge, the Personal Imitation Game, which asks whether a machine can replicate a specific individual in conversation rather than a generic human. Testing with 30 participants, we establish a human baseline and report the identity signals interrogators rely on: stylometric features, personality traits, and biographical facts. To demonstrate the framework, we design an LLM-based system that plays the game for one of the paper's authors, drawing on an autoethnographic dataset spanning ten years of personal digital communication. In a 20-person deception study, interrogators choose our system over the author's own friends in 7 of 10 rounds, and the author over our system in 13 of 20; neither rate is distinguishable from chance at this sample size. We consider design improvements, applications of personal AI agents, and implications for identity and privacy.",
+    "url": "https://arxiv.org/abs/2611.24888v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.24880v1",
+    "title": "Local AI Agents in Power Electronics Simulation: Deployment, Measurements and Costs",
+    "authors": [
+      "Yuzhuo Li",
+      "Pasan Gunawardena",
+      "Yunwei Li"
+    ],
+    "published": "2026-11-18",
+    "summary": "Agentic artificial intelligence (AI) is emerging in power electronics, where it drives the simulation loop that engineers used to close largely by hand. In this loop, a converter design, or a study of the network it connects to, is built, run, measured and revised until it satisfies its specification. Such an agent can be served from a cloud API or from an inference device on the premises. For organizations whose designs, customer data or export-controlled material cannot leave the site, and whose simulators are licensed there, local deployment is the natural choice. In such a deployment, the agent becomes an electrical load on the organization's own equipment, i.e., every run consumes power and energy on a local device, generates tokens and takes time. However, existing work focuses mainly on what the agent can achieve with cloud-hosted models. What a local deployment costs in power, energy, tokens and time on real simulation tasks, and what its choices trade against one another, has received little quantitative investigation under comparable conditions. To address this gap, a systematic evaluation framework is presented in this paper. It applies locally served models to agentic power electronics tasks, from the converter level to the system level, and measures their power, energy, token and time costs. Based on these measurements, the capability boundary of a local agent on such tasks and the cost per solved task are characterized. The results are expected to provide practical insight for the use of agentic AI in power electronics and the power systems it serves.",
+    "url": "https://arxiv.org/abs/2611.24880v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.24845v1",
+    "title": "Vibe-Trading: Towards Agent-Native Trading",
+    "authors": [
+      "Haozhe Wu",
+      "Zhonghang Li",
+      "Chao Huang"
+    ],
+    "published": "2026-11-18",
+    "summary": "Existing AI agents can retrieve information, call tools, run experiments, and produce multi-step outputs. Yet most are built around relatively static workflows and struggle to preserve reliable state as the environment changes. Financial trading makes this limitation especially consequential: prices, news, market conditions, portfolio positions, and available capital evolve continuously. A result is useful only when it remains tied to the correct time, data snapshot, and execution context. We present Vibe-Trading, a comprehensive agent-native trading framework and all-in-one workspace for building, evaluating, and evolving agents for financial trading. It unifies market research, financial data, strategy generation, backtesting, portfolio analysis, paper trading, multi-agent collaboration, and optional broker execution. Its central contribution is an architecture that keeps results, evidence, research history, and trading authority connected throughout the research-to-action process. Each result retains its source, temporal scope, configuration, and producing run. Shared evidence grounding enables verification, versioned research records support reproducible continuation, and an explicit authority gate separates strategy research from live execution. Together, these designs provide a practical foundation for trading agents whose results can be traced, reproduced, and acted on only under explicit authority.",
+    "url": "https://arxiv.org/abs/2611.24845v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.24588v1",
+    "title": "Large Language Models or AI Agents for English to Arabic Translation? An assessment on WikiEn-Ar190",
+    "authors": [
+      "Fatima Zahra Iguenfer",
+      "Yousra Chtouki"
+    ],
+    "published": "2026-11-18",
+    "summary": "This research investigates whether a large language model or an autonomous AI Agent performs better at translating from English to Arabic, which is considered a low-resource language. The authors introduce WikiEn-Ar190, a new dataset of 190 carefully selected Wikipedia articles from 18 different areas, which were created and verified by two native Arabic speakers to ensure that they accurately reflect both meaning and style. Using this dataset, the study evaluates the translation quality of GPT-5-mini both as an independent neural translator and when used within a more complex process that includes self-assessment and improvement. As a standalone model, GPT-5-mini produced very fluent translations , achieving a COMET score of 0.8649 and receiving high human scores for adequacy, fluency, and style (averaging 4.53 out of 5). When used in a system that combined translation with self-assessment, it improved lexical accuracy by 28.76% (BLEU score of 22.83) while maintaining a similar level of semantic quality. These findings show that methods involving autonomous reasoning can improve translation consistency for language pairs with limited resources. Beyond the results, the approach offers a framework for evaluating and improving translations, potentially using them as assisting tools to expand the representation of low resource languages, such as Arabic, on the web.",
+    "url": "https://arxiv.org/abs/2611.24588v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.24379v1",
+    "title": "MoE-Context: Show the Model Only What It Needs",
+    "authors": [
+      "Vedant Navale"
+    ],
+    "published": "2026-11-18",
+    "summary": "AI agents read their whole history at every step. People do not work like that: we keep what the moment needs and hold the rest as a rough note we can recall. MoE-Context applies this to language models. The context is split into blocks. Before each step a fast yes or no pass decides which blocks the step needs; the rest stay as one-line notes that can be brought back, and nothing is deleted. In the version we build, one model makes this decision and then answers, over a single key-value cache where hidden blocks are masked rather than removed. On a laptop with Qwen3-1.7B and a synthetic lookup task, showing only the needed block raises accuracy from 93 to 119 of 120, and a masked block is as hidden as a deleted one. The model's own picking is the weak part. A supervised linear probe written into spare output rows lifts its accuracy from 80 to 110 of 120, but simple keyword search picks perfectly on this task, and the probe does not transfer to a second task. We report these results openly, along with two cheap usage patterns that block switching enables: undoing a failed attempt and running subagents without a new context.",
+    "url": "https://arxiv.org/abs/2611.24379v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.23855v1",
+    "title": "RoboBuilder: Agentic Robot Co-Design with Real-world Video Feedback in the Loop",
+    "authors": [
+      "Ghadi Nehme",
+      "Dahyun Nam",
+      "Akshay Govind Srinivasan",
+      "Faez Ahmed"
+    ],
+    "published": "2026-11-18",
+    "summary": "Can AI agents design robots that work in the real world? We introduce RoboBuilder, a benchmark in which coding agents co-design a robot's hardware and program from standard parts, motors and a custom 3D-printed part, and every design that passes in simulation is built and tested on a physical course. Simulation alone is not enough: under public part data, none of 15 initial passing designs crossed the real course, so an agent learns the simulator from measurements it requests and videos of real runs. Across four frontier coding agents, ten obstacles at three difficulty levels, 16,427 simulations of 12,774 distinct robots and 135 physical robots built in an estimated 240 hours, agents solve nearly all easy obstacles and invent mechanisms our search baselines do not reach, but falter at harder levels, when one robot must cross every obstacle, and in the real world, where 66% of simulated passes hold across all levels. Closing the loop helps: shown a video of its real failure, an agent redesigns the robot, sometimes correcting its simulator, and removes 72% of level-1 and level-2 failures. RoboBuilder measures progress toward agents that engineer real machines. Project Page: https://ghadinehme.com/robobuilder.github.io/",
+    "url": "https://arxiv.org/abs/2611.23855v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.23663v1",
+    "title": "Lodestone: Automated Semantic Discovery of Datacenter Hardware Specialization",
+    "authors": [
+      "Peizhe Liu",
+      "Akanksha Jain",
+      "Gerasimos Gerogiannis",
+      "Vidushi Dadu",
+      "Parthasarathy Ranganathan",
+      "Jovan Stojkovic"
+    ],
+    "published": "2026-11-18",
+    "summary": "Hardware specialization can improve datacenter efficiency. Unfortunately, identifying computations that justify dedicated hardware is difficult. Existing approaches analyze hot functions, instruction patterns, or overheads such as datacenter tax. They can miss fine-grained computations whose aggregate cost is spread across applications and libraries, especially when different pieces of code obscure the same underlying computation. We observe that seemingly unrelated code regions often perform the same computations, creating specialization opportunities that require semantic reasoning. The rise of agentic AI makes it possible to automate this. However, conventional AI agents cannot efficiently and reliably analyze large scale datacenter software. To unlock this opportunity, we present Lodestone, an agentic framework that automatically discovers hardware specialization opportunities by reasoning about what the executed code computes. First, Lodestone extracts hot control-flow regions from execution traces across workloads and organizes them into compact analysis packages that make large workloads tractable for agents. Second, agents describe what each region computes, merge those that perform the same computation into computational families, and check their semantic correctness in a loop. Third, to verify the discovered family, Lodestone runs every piece of code in a family against a set of reference inputs and outputs on recorded executions. Finally, for selected families, Lodestone proposes hardware, e.g., ISA extensions, near-core units, or detached accelerators, and human experts decide which proposals to develop further. We evaluate Lodestone on 20 workloads across six datacenter workload categories. We simulate 30 discovered families in a cycle-accurate simulator and implement them in RTL. These optimizations speed up the workloads by 12.6% on average and by up to 80.2%.",
+    "url": "https://arxiv.org/abs/2611.23663v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.23644v1",
+    "title": "Polymorph: Operating System Kernel Optimization Through Artificial Intelligence",
+    "authors": [
+      "Dean Sysman",
+      "Georgios Liargkovas",
+      "Tal Zussman",
+      "Hasan Zengin",
+      "Petra Hedesiu",
+      "Hubertus Franke",
+      "Tamar Eilam",
+      "Kostis Kaffes",
+      "Asaf Cidon"
+    ],
+    "published": "2026-11-18",
+    "summary": "While popular operating systems such as Linux and Windows were originally designed as monolithic kernels, an increasing number of kernel subsystems have become extensible using eBPF. Users can now define custom policies for essential kernel mechanisms, such as the process scheduler, page cache, and network stack, without recompiling the kernel. These mechanisms give developers significant freedom to fit the kernel to their applications' workloads, but the question of which policy to deploy remains open. We study how to use agentic AI to automate kernel policy development, selection, and deployment, focusing on the page cache and the process scheduler as two representative subsystems. We show that existing approaches fall short: evolutionary and agentic search runs offline, is relatively expensive, and often fails to generalize to online workloads, while online knob tuners are encumbered by the knobs' lack of expressivity. In contrast, we propose Polymorph, which learns online: an AI agent writes a generalized, granular policy once, and a user mode tuner adjusts its parameters during runtime, with no LLM in the loop. For the page cache, Polymorph improves throughput over Linux's LRU by 8.4% on unseen data, nearly twice the gain of the best existing policy, while adapting to workload changes at runtime and costing only 16M tokens once, versus 125-240M tokens per workload for agentic offline search. For the process scheduler, it improves on Linux's default by 2.75x across six workloads, versus 2.27x for the best fixed sched_ext policy.",
+    "url": "https://arxiv.org/abs/2611.23644v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.23202v1",
     "title": "Agent Trust Infrastructure (ATI): A Federated Identity, Trust, Attestation, and Accountability Architecture for Cross-Organization Autonomous AI Agents",
     "authors": [
@@ -147,6 +262,37 @@
     "published": "2026-11-17",
     "summary": "Professional work involves under-specified assignments, where relevant information is spread across workplace applications and may conflict or change over time. To evaluate how well frontier agents can perform economically valuable work in such settings, we introduce ATLAS-Finance, a benchmark of 100 end-to-end investment-banking tasks across 13 simulated firms. As in real banking workflows, agents must search email, chat, calendars, notes, and files to identify requirements, gather information, reconcile conflicts/updates, and then build complex financial models. Tasks were developed by experienced bankers based on their real deal work and take them 15-30 hours to complete. Agent deliverables are evaluated with expert-authored rubrics (median: 124.5 criteria) covering financial rationale and results, spreadsheet construction, completeness, and formatting. Despite completing substantial portions of the requested work, current agents rarely produce correct deliverables. Across today's frontier models, the best ones (Claude Opus and Fable) pass fewer than 11% of tasks.",
     "url": "https://arxiv.org/abs/2611.22085v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.23476v1",
+    "title": "GUARD: Stabilizing Recursive Self-Improvement with Regret Guidance",
+    "authors": [
+      "Minghe Zhang",
+      "Xuetao Kang",
+      "Yifei Ming",
+      "Yanfei Chen",
+      "Han Yu",
+      "Yufan Zhuang",
+      "Chen-Yu Lee"
+    ],
+    "published": "2026-11-17",
+    "summary": "Autonomous AI agents pair a frozen base model with an editable harness of prompts, skills, tool rules, and memory. Recursive self-improvement (RSI) adapts this harness from experience without weight updates, yet self-editing without external graders often backfires: reflection and scalar scores conflate what an edit newly broke with what remains unsolved, causing local regressions, skill forgetting, and memory bloat. We introduce GUARD (Grader-free Unsupervised Environment Design [UED] with Adaptive Rule Distillation), a closed-loop framework for reference-free continual harness evolution. Our key insight is to decompose each task into pre-execution self-checks and guide harness updates via directional regret. Each round grades trajectories against these checks, pinning mastered rules while prioritizing newly broken behaviors, and selects among parallel candidate edits by critic-free group-relative fitness. A Soft-HURT gate then promotes an edit only when gains outweigh regressions, scoping specialized fixes to prevent over-triggering and guaranteeing non-regression on its gated buffer. At test time, one frozen harness runs in a single pass. Across benchmarks on memory, skill evolution, continual task streams, and domain reasoning, GUARD consistently improves performance without catastrophic forgetting or memory pollution while substantially cutting deployment token usage.",
+    "url": "https://arxiv.org/abs/2611.23476v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.23469v1",
+    "title": "QCCDCert: Formally Verified Compilation for QCCD Co-Design",
+    "authors": [
+      "John Zhuoyang Ye",
+      "Jens Palsberg",
+      "Ke Sun",
+      "Hartmut Haeffner"
+    ],
+    "published": "2026-11-17",
+    "summary": "Quantum charge-coupled device (QCCD) architectures enable scalable trapped-ion quantum computing by dynamically shuttling ions between specialized processing and storage zones. A QCCD can be built with many trap sizes and layouts. Comparing them requires compiling every program under each design's transport, capacity and control constraints, and trusting the target code of each compilation. We present a co-design framework built on one Lean-verified compiler. The hardware description and its operating rules are compiler inputs, so a single theorem covers every candidate design: the target code of every compilation preserves its program's behavior and obeys the hardware rules. Across 75 benchmark programs of 11 to 130 qubits, the best design found takes 66% less modeled execution time on average than the worst design of equal capacity. An AI agent that proposes devices based on our compiler's checked results beats the fastest of these designs on 71 of 75 programs. Our verified compiler provably avoids the 11 defects that we report in three previous compilers. It scales to hundreds of qubits, compiling 512-qubit programs for a 38-trap device in 1 to 29 minutes.",
+    "url": "https://arxiv.org/abs/2611.23469v1",
     "source": "arXiv"
   },
   {
@@ -570,144 +716,6 @@
     "published": "2026-11-10",
     "summary": "As AI agents become increasingly capable, users must still recognize when and how to ask for help, leaving many opportunities for useful support unrealized. Proactive agents hold the promise to close this gap, but effective proactivity requires understanding users' real-time activities and personalizing intervention timing so that assistance is offered when it is likely to be helpful rather than disruptive. We introduce deep personalization, a closed-loop process that connects continuous context observation with continual agent adaptation: an agent observes user activity, selectively retains long-term context, and adapts intervention decisions from implicit feedback. We initiate deep personalization in Coco, a proactive desktop agent, by having a separate Observer Agent that monitors desktop activity, maintains compact long-term user modeling context, and learns when assistance is desirable from implicit signals such as engagement, dismissal, explicit requests, and repeated work patterns. We further develop efficient on-device strategies to enable the Observer Agent to run on local AI compute platforms without streaming raw activity data off-device. For evaluation at scale without collecting sensitive real-user activity, we introduce a data-synthesis pipeline that transforms existing computer-use trajectories into OSWorld-Persona, a benchmark with persona-conditioned intervention labels. On OSWorld-Persona, deep personalization improves macro F1 across three model backbones from 0.12-0.19 under direct prompting to 0.35-0.48 after adaptation, a 2.4-3.0x relative gain. In a week-long user study, we observe that Coco improves its macro-averaged F1 score from 0.199 to 0.515. These results suggest that on-device deep personalization can make proactive agents more timely and increasingly aligned with each user's everyday work.",
     "url": "https://arxiv.org/abs/2611.13457v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12705v1",
-    "title": "Multi-Agent Screening: What Agreement and Acceptance Cannot Tell You",
-    "authors": [
-      "Benjamin Chang",
-      "Dell Zhang"
-    ],
-    "published": "2026-11-09",
-    "summary": "When AI agents screen items for a costly human assessor, as in agentic search, e-discovery and AI reviewing of papers, only what they pass gets judged. We show what each kind of evidence can establish about their errors, even with unlimited data. Agreement shows that agents concur, not that they are right, however many there are. Acceptance by the assessor gives precision but only a lower bound on recall. Knowing which agents found which relevant items gives an upper bound on recall if agents' finds are not negatively correlated, and caps what one more agent can add if agents are interchangeable. Without assumptions about the agents, recall can be pinned down only by judging items they did not pass: a random sample of these estimates how many relevant items were missed, to any chosen accuracy, and the sample needed does not grow with the number of agents.",
-    "url": "https://arxiv.org/abs/2611.12705v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12605v1",
-    "title": "Creative Intent as an Evolving Shared State: Supporting Cross-Stage Human-AI Video Co-Creation",
-    "authors": [
-      "Yuhang Jin",
-      "Mengfei Chen",
-      "Hanwei Zheng",
-      "Songruoyao Wu",
-      "Kejun Zhang"
-    ],
-    "published": "2026-11-09",
-    "summary": "As generative AI becomes increasingly involved in video creation, creators face challenges in expanding, translating, and negotiating creative intent across stages. We therefore view creative intent as an evolving shared state throughout human-AI co-creation. A multi-stage design was employed: semi-structured interviews with 12 creators informed 3 design goals, followed by expert co-design and the development of VideoMaker. VideoMaker organizes creation into a six-stage workflow that progressively translates creative intent. At key stages, creators negotiate with AI through the Seed Panel, explicitly confirming, revising, and updating intent. A shared AI Agent, supported by the Multi-style Script Library and Cinematic Language Knowledge Base, enables differentiated expansion of initial intent and faithful translation. A within-subjects study with 30 participants showed that VideoMaker effectively supported the expansion and cross-stage translation of creative intent, with stronger intent preservation, while negotiated boundaries between creator-confirmed intent and AI initiative remained difficult to sustain.",
-    "url": "https://arxiv.org/abs/2611.12605v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12545v1",
-    "title": "Teamknitt: Configuring, Observing and Intervening in LLM-Agent Teams through the Lens of Dynamical-Systems and Human-Team Theory",
-    "authors": [
-      "Goran Mitevski"
-    ],
-    "published": "2026-11-09",
-    "summary": "Most frameworks for teams of large language model (LLM) agents fix the team's shape inside the software: who talks to whom, how much is passed along, and what a human can do once a run has started. Human-team research has long asked those questions: where team phenomena live (in members or in their interaction), how team-level properties arise, and what separates what a team does from how a team is. I propose using that theory as the organizing lens for configuring, observing and intervening in LLM-agent teams, without assuming its findings transfer. I introduce teamknitt, a framework and open reference implementation in which a user configures a team of 1-16 AI agents for task completion, solution generation, achieving a goal or a research mission; selects one of fourteen deterministic routing topologies or a custom directed graph; chooses a sharing profile that limits what may travel along permitted routes; and binds sources, representations, work dependencies, handoffs and an expertise directory. The recorded process can be observed through non-system views (member reports and behavior) and system views (distributed problem-solving, differentiated transactive memory, interactive coordination, team dynamics). Interventions are explicit and human-led: reviewed reconfiguration between runs, planned disturbances, and private feedback, pause, resume or stop applied at dependency-wave boundaries, with \"queued\", \"applied\", \"assembled\", \"understood\" and \"improved\" kept as separate claims. Emergent states such as trust and shared understanding are declared unmeasured. This is an idea and system-description paper with falsifiable hypotheses on topology, information flow and intervention timing, including whether the fractal scaling of communication output between members, and between members on different models, relates to task and team performance. No comparative result is reported.",
-    "url": "https://arxiv.org/abs/2611.12545v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12377v1",
-    "title": "Detecting Shadow AI: Unsanctioned LLM Agents on Enterprise Endpoints: A Taxonomy, an Open Detector and a Controlled Evaluation",
-    "authors": [
-      "Jeremy Canale",
-      "Fabien Soulis"
-    ],
-    "published": "2026-11-09",
-    "summary": "Shadow IT, the use of technology that the IT organisation has not approved, is a long-standing governance problem. We argue that autonomous AI agents can make it grow much faster: agents make building tools nearly free, act with their user's privileges, and leave behind scripts, automations and MCP servers that are themselves unsanctioned. A simple compounding model shows that, under its assumptions, shadow IT grows exponentially once agentic artifacts reproduce faster than the organisation retires them; retiring them starts with detecting them. We then ask whether unsanctioned agents can be detected on Windows endpoints. We propose a taxonomy of nine classes of agents and six layers of endpoint footprint, and argue that rules based only on the structure of processes and connections cannot separate an agent from its behavioural twin, the same program talking to a non-AI service. We present Agent Detector, an open-source Windows detector that anchors behaviour to the identity of the remote service and correlates it with configuration, installation and execution history, using a catalog of 39 tools and 184 LLM endpoint entries; it informs users through a notice they must acknowledge instead of blocking. On a controlled bench of 12 synthetic agents, 3 AI components and 9 benign workloads, repeated 5 times on one workstation, two behavioural rules flagged every behavioural twin, while Agent Detector flagged none and detected every agent in the majority of runs. Its limits are temporal: a connection to a provider behind a shared content-delivery network is attributable only while the DNS cache holds the provider's name, one to five minutes, and an intermittent agent was seen by about one scan in three. A scan costs about 154 ms. The bench is too small to rank detectors; it maps what each kind of evidence can see: unsanctioned agents can be partly detected, and not by behaviour alone.",
-    "url": "https://arxiv.org/abs/2611.12377v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12288v1",
-    "title": "ForgeSystem: An Architecture for Demand-Specific Artefact Production with AI Agents",
-    "authors": [
-      "Qingfeng He",
-      "Zhui Zhu",
-      "Yaojian Chen",
-      "Shangzhan Li",
-      "Leshan Li",
-      "Tingjian Zhang",
-      "Qian Xie",
-      "Yuxuan Li",
-      "Xu Han",
-      "Zhiyuan Liu"
-    ],
-    "published": "2026-11-09",
-    "summary": "General-purpose software serves many different demands, but this flexibility costs performance and efficiency on any specific demand. Software tailored to a specific demand avoids these losses, yet developing it requires substantial time and effort from human experts. AI agents offer an alternative: they can design, implement and test artefacts tailored to individual demands. We call this production paradigm Forge. Forging for a demand is economically justified when the cumulative benefit of specialisation exceeds the total cost of construction, verification and maintenance. To make Forge a repeatable production process, we propose ForgeSystem, which consists of a control layer, a forge loop and a recursive self-improvement (RSI) loop. The control layer selects which artefact serves each demand and decides which demands to forge, when to forge them and from which starting point; the forge loop iterates between production and verification until a candidate artefact passes verification; and the RSI loop draws on accumulated production records to supply starting points, refine the harness and train models. We implement ForgeSystem for training frameworks, decoding megakernels and individual computational kernels. Forged training engines reach 1.047-1.332x the model-FLOPs utilisation of their reference frameworks, forged megakernels achieve a geometric-mean decoding speedup of 1.21x over SGLang across thirteen configurations, and forged kernels match or exceed expert libraries in eighteen of twenty-two configurations, while satisfying task-specific quality requirements. Controlled comparisons show that explicit quality requirements steer agents towards optimisations that preserve training quality. We also discuss a gradual transition to Forge through service routing, and how demand-specific production may shift value accumulation and trust towards production systems.",
-    "url": "https://arxiv.org/abs/2611.12288v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12269v1",
-    "title": "Agent4Crypto: A Dual-Reflective and Market-Feedback-Aligned LLM-Based Multi-Agent System for Cryptocurrency Trading",
-    "authors": [
-      "Guangyan Gan",
-      "Jiahao Li",
-      "Jiashun Wang",
-      "Lin William Cong"
-    ],
-    "published": "2026-11-09",
-    "summary": "Cryptocurrency markets provide a natural testbed for autonomous AI agents because they are digital-native, high-frequency, and machine-speed environments, yet existing methods often struggle with non-stationary market regimes, opaque decisions, and fixed aggregation rules. In this paper, we propose Agent4Crypto, a dual-reflective and market-feedback-aligned multi-agent system. The framework coordinates specialized agents for data collection, analysis, risk assessment, reflection, and trading, synthesizing heterogeneous signals from prices, indicators, news, and charts in an interpretable decision pipeline. Our central design is a trader-centric decision mechanism: three style-specific trader agents, Aggressive, Neutral, and Conservative, generate candidate actions and natural-language rationales from the same market context, while their influence is learned rather than manually fixed. A PPO-based gating policy dynamically allocates trader weights through a dual-reflective feedback process. One reflection stream evaluates post-trade decision quality from realized portfolio outcomes and distills reusable lessons into a Financial ReasoningBank for retrieval in subsequent trader prompts, while the other estimates trader-level counterfactual contribution, indicating which style has recently aligned better with market movements. The PPO state combines Counterfactual Contribution Memory with market features, previous trader weights, and current trader actions, so trader influence adapts across bull, sideways, and bear regimes. Experiments on BTC, ETH, and XRP show that Agent4Crypto improves total return and Sharpe ratio over traditional strategies, machine learning and reinforcement learning baselines, and existing LLM-based trading systems, demonstrating the value of interpretable trader competition and market-feedback-driven adaptation in volatile cryptocurrency markets.",
-    "url": "https://arxiv.org/abs/2611.12269v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12256v1",
-    "title": "Predictability of Collective Behavior in Networks of LLM Agents",
-    "authors": [
-      "Fabian Baumann",
-      "Michele Starnini"
-    ],
-    "published": "2026-11-09",
-    "summary": "As AI agents built on large language models (LLMs) increasingly interact at scale, anticipating their collective behavior becomes necessary. Unlike humans, individual LLM agents can be probed in {controlled scenarios}; however, the predictability of their collective outcomes hinges on what such measurements capture. We study information cascades on networks of LLM agents that decide whether to share a post given how many of their contacts have shared it. At the same fraction of sharing contacts, an agent's response depends on how many contacts it has and on the post. Responses that ignore the number of contacts mispredict the cascades, increasingly on heterogeneous networks, by an error we derive analytically and that network topology alone cannot reveal. Measured in context, the response predicts, through mean-field theory, the cascades of full LLM simulations, tipping points included. Anticipating the collective behavior of AI agents thus requires evaluating them in their local network context.",
-    "url": "https://arxiv.org/abs/2611.12256v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12122v1",
-    "title": "System Optimizations for Cost-Efficient Agent Harnesses",
-    "authors": [
-      "Jongseok Park",
-      "Jiaxiang Yu",
-      "Eric Zhou",
-      "Tony Hong",
-      "Sunga Kim",
-      "Yusuf Afifi",
-      "Ian Wong",
-      "Ion Stoica",
-      "Alvin Cheung"
-    ],
-    "published": "2026-11-09",
-    "summary": "AI agent harnesses play the critical role of providing LLMs with an interface to a computing environment. Recent studies show that AI agents' task-execution accuracy depends mostly on the LLM used, while harness-side variances such as system prompts or tools have minimal impact. Rather, such harness-side variances show a larger impact on the cost of agent executions, achieving cost reductions up to 2.6 times on the same model and task. To further explore these harness-side cost optimization opportunities, we analyze the cost accumulation patterns across various agent traces and identify system opportunities to reduce token use and LLM calls without modifying the model or affecting task accuracy. Based on this analysis, we design Agency, a harness interposition platform that provides a unified abstraction and allows easy and portable implementation of harness-side system optimizations on existing off-the-shelf harnesses such as Claude Code or OpenAI Codex. Using Agency, we implement proof-of-concept optimization techniques based on our analysis and achieve cost reductions up to 35% across various real-world benchmarks on existing harnesses without compromising accuracy.",
-    "url": "https://arxiv.org/abs/2611.12122v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12092v1",
-    "title": "CRAFT-AI: Capability and Requirement Alignment for Flexible Manufacturing through Agentic AI",
-    "authors": [
-      "Kiavash Fathi",
-      "Hans Wernher van de Venn"
-    ],
-    "published": "2026-11-09",
-    "summary": "One of the fundamental needs for reaching resilient production infrastructure is flexible manufacturing, which requires translating changing production requirements into implementable system configurations. This paper introduces \\textbf{CRAFT-AI}, an agentic AI approach combining natural language (NL) requirement interpretation, Asset Administration Shell (AAS)-based capability descriptions, and reusable engineering knowledge from existing manufacturing configurations. A tool-using AI agent matches requirements with available capabilities and reference implementations to generate manufacturing scenes and corresponding AAS instances. The approach is demonstrated using a Factory I/O prototype with twelve reference scenes and five illustrative manufacturing tasks of varying complexity, providing an initial feasibility assessment of the proposed AAS-enabled, system-level generative engineering approach. For the four valid user task descriptions, proper requirements, correct references to the relevant engineering knowledge, correct components and lastly a valid Factory I/O scene are generated. For the task with missing engineering knowledge and a wrong sensor selection, the user is informed about which requirements of the scene generation lack domain knowledge and also which sensor is not compatible with the selected raw material by the user with link to the related documentation. After fixing the task description, the correct scene is seamlessly generated. \\textbf{CRAFT-AI} highlights the importance of safeguards for risk perception and communication in foundation model-driven solutions.",
-    "url": "https://arxiv.org/abs/2611.12092v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.12048v1",
-    "title": "Evaluating AI Agents for Industrial-Level Chip Floorplanning: A Framework and Empirical Study",
-    "authors": [
-      "Nova-Silicon Team"
-    ],
-    "published": "2026-11-09",
-    "summary": "Floorplanning is an early step in turning a logical circuit into a physical chip: it positions large circuit modules and constrains the space available for subsequent logic placement and wiring. These decisions affect congestion and timing, but their physical consequences emerge through downstream implementation. For AI agents, the task requires translating engineering constraints into spatial decisions whose quality cannot be judged by successful tool execution alone. We present an evaluation framework that connects submitted layouts to a prescribed downstream implementation flow, checks geometric validity, measures physical quality, and reports resource use. On one industrial design whose 99 macros occupy approximately 71\\% of a fixed L-shaped layout region, we compare our specialized system Nova-SI with general-purpose engineering agents and agents restricted to file access, obtaining complete physical measurements for 39 layout outputs. Under our 0--100 composite quality score, Nova-SI achieves a mean of 57.97 without online feedback from the prescribed power-grid and placement evaluation, compared with 31.17 for the strongest measured general-purpose configuration, GPT-6 Astra. The difference is supported by raw congestion and timing measurements and persists across scoring-sensitivity checks. Layout-level analysis further shows that similar global utilization can conceal substantially different local congestion. Together, the protocol and case study assess agents through the physical consequences of their delivered layouts and provide evidence about system performance on this industrial instance.",
-    "url": "https://arxiv.org/abs/2611.12048v1",
     "source": "arXiv"
   }
 ]
