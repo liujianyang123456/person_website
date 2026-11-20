@@ -1,5 +1,148 @@
 [
   {
+    "id": "2611.26624v1",
+    "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
+    "authors": [
+      "Weihao Cheng"
+    ],
+    "published": "2026-11-19",
+    "summary": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play games and draws on its detailed play experience to revise them for mastery. Starting from an initial game, PlayCraft alternates between playing and crafting. In the playing stage, a player agent watches the game screen, uses the controls, and pursues the game objective over repeated episodes while retaining memory. After each episode, it reports its progress, outcomes, decisions, and reflections. In the crafting stage, a crafter agent uses these reports to revise the game. It estimates player abilities, predicts performance at different proficiency levels, and compares those predictions with a target learning progression. It diagnoses the game and addresses the gaps by giving players meaningful opportunities to improve through better decisions and execution. We evaluate games in fresh runs with player agents across three intelligence settings, measuring learning gain and learning slope. Compared with the initial games, PlayCraft yields larger learning gains and steeper learning slopes in most games. It also outperforms the baselines on the macro-average of each metric at every intelligence setting.",
+    "url": "https://arxiv.org/abs/2611.26624v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26503v1",
+    "title": "JARVIS: An Agent That Designs, Builds, and Tests Circuit Boards on Its Own",
+    "authors": [
+      "Shibo Zhou",
+      "Tianqi Hong",
+      "Zheng Yan",
+      "He Yang"
+    ],
+    "published": "2026-11-19",
+    "summary": "Power electronics is central to the energy transition, but developing new hardware still relies on human-led design, fabrication, testing, and iteration. We present JARVIS, an embodied AI agent that autonomously closes this loop for circuit boards. JARVIS maintains machine-specific capabilities and constraints, scans its workspace using a robot-mounted 3D scanner, and constructs an executable digital twin in which it rehearses robot motions, fabrication steps, and circuit behavior before consuming materials. A single text instruction initiates the physical experiment. Using unmodified desktop equipment, the agent coordinates a robot arm, a PCB printer that deposits conductive silver ink and solder paste, and a pick-and-place machine. It verifies progress using cameras and sensors, then tests the fabricated circuit with an OPAL-RT real-time simulator and an oscilloscope. Based on the measurements, JARVIS diagnoses deviations from the design and generates a revised design in KiCad for subsequent rehearsal. In a demonstration involving a 60 Hz notch filter for grid-connected converter sensing, JARVIS completed a first-run experiment in 2 h 39 min without human intervention, achieving 50.6 dB attenuation at 60 Hz. Its digital-twin rehearsal identified five issues before fabrication, including a test criterion that would have incorrectly rejected a functioning board. During execution, the agent also resolved encountered faults autonomously. These results demonstrate an integrated agent-driven workflow for physical design, fabrication, measurement, and iterative improvement of power-electronic circuitry. To our knowledge, JARVIS is the first system in power electronics in which an agent closes the physical design-build-test-learn loop for circuit boards.",
+    "url": "https://arxiv.org/abs/2611.26503v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26335v1",
+    "title": "ClosureBench: A Benchmark for Reasoning under Closure Assumptions",
+    "authors": [
+      "Francesco Belardinelli",
+      "Flavio Corradini",
+      "Matteo Leonesi"
+    ],
+    "published": "2026-11-19",
+    "summary": "AI agents built on large language models (LLMs) often answer questions from incomplete records. Missing information might be interpreted as unknown or false, depending on the completeness of the source. Current evaluations fail to distinguish these two aspects, as they are usually interwoven with other reasoning demands. We present ClosureBench, a benchmark that tests whether LLMs follow the stated rules for dealing with missing information. Every base scenario is tested under OWA, CWA, and LCWA, and only the treatment of missing information changes between variants. ClosureBench provides a verified base benchmark as well as agent extensions for action choice, source scope, and updates. A model is considered correct on a base scenario only if it provides correct answers in all of its closure variants. Across 960 instances, overall accuracy can mask substantial closure mistakes. Models achieve overall accuracy from 71.18% to 99.86% across replicated runs, but their core switch accuracy, measured on the scenarios whose gold label actually changes with the contract, varies between 18.23% and 99.31%. Large discrepancies emerge under LCWA. For example, some agents choose unknown despite the prompt indicating that missing information should be treated as false. Our findings demonstrate that evaluations of AI agents should not only measure whether agents can reason over existing facts but also whether they use the appropriate assumption when information is absent.",
+    "url": "https://arxiv.org/abs/2611.26335v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26296v1",
+    "title": "SKILL.PNG: Learning Agent Skills in Pixel Space",
+    "authors": [
+      "Maximilian Seeth",
+      "Chengzhi Martin Hu",
+      "Marie Kempkes",
+      "Paul Röttger",
+      "Leo Schwinn"
+    ],
+    "published": "2026-11-19",
+    "summary": "AI agents are commonly specialized for new tasks and domains using skills, i.e. natural language instructions placed in their context. However, the discrete nature of textual skills prevents continuous optimization. Gradient-based approaches such as finetuning, on the other hand, are typically model-specific, preventing skill transfer across different agents. Since many agents today are built on vision-language models (VLMs), we can address these limitations by introducing Skill.png: a method for obtaining skill-like image inputs whose pixels are optimized with gradient descent through the vision encoder of a frozen VLM. Image skills are compatible with any VLM, and a single image can be optimized jointly for an ensemble of models. We show that Skill.png significantly outperforms state-of-the-art textual skills optimized using frontier LLMs in 9 of 16 settings (across 4 VLMs and 4 benchmarks) while requiring only 64 to 256 image tokens instead of roughly 900 to 2000 text tokens at inference time. Hybrid skills, i.e. text and image skills jointly optimized, further improve agent performance. Moreover, an image optimized with an ensemble of VLMs can successfully transfer across the models in the ensemble. Skill.png thus presents the first agent skill that can be optimized with gradient descent while retaining transfer benefits of text skills. Our code is available at: https://github.com/omseeth/skill.png",
+    "url": "https://arxiv.org/abs/2611.26296v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26248v1",
+    "title": "TwinLab-Bench: Evaluating AI Scientists in Agentic Twins of Real Labs",
+    "authors": [
+      "Yang Wan",
+      "Linchao Zhu"
+    ],
+    "published": "2026-11-19",
+    "summary": "AI agents are increasingly expected to act as AI scientists, which requires three increasingly open abilities: carrying out a given computational workflow correctly, choosing the next measurements from a given design space, and designing their own experiments. Existing benchmarks mainly evaluate the first two abilities, in a terminal or in a closed loop that selects from predefined candidates. Evaluating the third ability requires reliably executing an experiment that an agent designs, with readings grounded in a real laboratory. We introduce TwinLab-Bench, which evaluates AI scientists on self-designed experiments in 52 tasks from laboratories in the physical sciences, the life sciences, and engineering. The benchmark supports more than 100 experimental action types, and the agent's report is scored by comparison with a hidden answer taken from real laboratory records. Each task has its own TwinLab agent, an agent that serves as the environment and executes the experiments that the tested agent designs, reading the raw materials of the laboratory and calling calculators that are built from its records. Compared with a language model that sees only the task description, the TwinLab agent almost eliminates readings that deviate from the real records and inconsistent answers to a repeated request, and closed-book probes control for answers recalled from memory. We find that these tasks remain hard for frontier models: the strongest, Claude Fable 5.2, averages a score of only 45.0, and we conduct an empirical study of where it fails.",
+    "url": "https://arxiv.org/abs/2611.26248v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26036v1",
+    "title": "Presenting Your Figures: Data-informed Animated Transitions Across Scientific Figure Panels",
+    "authors": [
+      "Lu Ying",
+      "Can Liu",
+      "Yuxiao Yang",
+      "Jianing Yin",
+      "Xiaolin Wen",
+      "Yong Wang"
+    ],
+    "published": "2026-11-19",
+    "summary": "Multi-panel figures are commonly used in research papers to show scientific data, and researchers often reuse them when presenting their work. Presenting these figures often involves explaining how data across chart panels are related. Animated transitions can progressively reveal these relationships, but two static panels specify only the endpoints, leaving what intermediate keyframes should show and how the transition should progress unclear. To support transition design across diverse scientific figures, we developed Figure Space and Transition Space through iterative analysis of 48 published multi-panel figures across eight scientific subject areas. Figure Space represents panel composition, data transformations, and visual encodings while retaining the links needed to trace panel results back to records. Transition Space uses this representation and source data to construct and sequence keyframes that make corresponding data visible and align them while preserving the meaning of each panel's position encodings. Building on these spaces, we developed FigFlux, a human-in-the-loop authoring system that guides AI agents in generating animated transitions from a multi-panel figure and its associated materials. Researchers can revise keyframes in natural language before animation generation. We evaluate FigFlux through cross-domain case studies, a study with 16 scientific authors, and expert assessment. Authors reported lower overall workload than with their familiar tools, while experts gave FigFlux transitions higher ratings than transitions created with participants' familiar tools or generated by AI alone. The example gallery have been published online: https://figflux.github.io.",
+    "url": "https://arxiv.org/abs/2611.26036v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26003v1",
+    "title": "AI agents can redesign engineering parts with more than a thousand CAD parameters and nonlinear simulations",
+    "authors": [
+      "Alexandra Starostina",
+      "Alexander Hermann",
+      "Mahish Guru",
+      "Kartik Bali",
+      "Roland Aydin",
+      "Christian C. Cyron"
+    ],
+    "published": "2026-11-19",
+    "summary": "Simulation-driven design of real engineering components has to meet three conditions at once. It runs on few solves, since a nonlinear finite-element simulation of a 3D part takes hours; its design space has many values, the hundreds to thousands of values of the part's CAD model; and a better design often needs a redesign, coordinated changes of the part's proportions rather than local polishing of its surface. Automated optimisers meet at most two of these conditions. Classical optimisers, Bayesian or derivative-free, need a person to cut the design down to a few parameters, and on all the values they need far more solves; industrial shape optimisers move every surface node of the mesh in one solve per cycle, but only in small steps that polish rather than redesign. We ask whether a general-purpose large language model (LLM) can meet all three by joining what it knows with what the simulation shows. GPT-6 Astra edits a magnesium stent through a CAD geometry parametrisation of about 1,650 values, with a budget of 15 simulations; every proposal is built in CAD, meshed and simulated with large-deformation plasticity and contact, and the LLM reads the full results of every solve. Within that budget it lowered the objective, a high percentile of the strains in the stent's bends, by 32%; on the same budget, the industrial shape optimiser Tosca improved the original design by a tenth and then stopped improving. An earlier GPT-6 Astra design, 25% lower in the same objective, was checked in an independent, higher-fidelity model of the full deployment with crimping and damage: it was 14% less strained than the original after the full chain, and its most damaged spot began to fail later and carried 63% less damage at full expansion. LLMs can thus join their learned knowledge with simulation data to adjust more than a thousand design values and reach valid designs with real improvements.",
+    "url": "https://arxiv.org/abs/2611.26003v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.25985v1",
+    "title": "Law at the Speed of AI: Critical Legal Infrastructure for the Machine Age: Autonomy Under Law Architecture (AULA)",
+    "authors": [
+      "Natasha E Blycha",
+      "James Myint",
+      "Chen Feng",
+      "Dr Amani Soysa",
+      "Koshin Jama",
+      "Schellie-Jayne Price",
+      "Matthew Blycha"
+    ],
+    "published": "2026-11-19",
+    "summary": "The global deployment of autonomous AI agents within and across organisations exceeds the governance infrastructure available to constrain it. Agent communication and authentication protocols, principally the Model Context Protocol and the Agent2Agent Protocol, are maturing quickly, but maturity at the protocol layer does not produce legal legibility at the governance layer. Runtime enforcement written by the deploying organisation fixes the resources an AI agent can reach, not the authority under which it acts. Legal legibility is the capacity of a legal system to recognise, interpret and regulate activity by mapping it onto legal personhood, property, rights and liabilities. Existing (analogue) legal infrastructure cannot supply it for autonomous deployment. The resulting deficit is bidirectional. It concerns the attribution of liability when an AI agent causes harm, and the allocation of rights, including data and economic rights, generated by agentic activity and by the AI agent itself as a source of value and form of property. This paper characterises that deficit as the legal attribution gap, a material and unaddressed risk to economies, organisations and citizens that is magnified in cross-organisational multi-agent deployment. The paper describes the Autonomy Under Law Architecture (AULA), in which AI systems and data assets are registered as legal objects anchored to one or more identified legal persons, governed by cryptographically tethered smart legal instruments and evaluated at runtime. Each smart legal instrument can carry a legal context clause, through which the legislation, regulation and judicial decisions in force at the time of the act are given practical and legal effect in that evaluation. Infrastructure of this kind is a precondition for the continued function of any legal, property and economic system with both human and autonomous machine stakeholders.",
+    "url": "https://arxiv.org/abs/2611.25985v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.25779v1",
+    "title": "Intelligent Imaging of Thermal Transport in Nanostructures",
+    "authors": [
+      "Xin Qian",
+      "Te-Huan Liu",
+      "Xiaobo Li",
+      "Ronggui Yang"
+    ],
+    "published": "2026-11-19",
+    "summary": "The ability to measure thermal properties and visualize heat transport processes with high spatial resolution is becoming increasingly important for materials discovery, next-generation electronics, and advanced manufacturing. As critical dimensions and architectures of novel materials and high performance electronics shrink and become more heterogeneous, thermal transport is no longer governed by bulk material properties alone, but by local variations in microstructure, such as interfaces and defects, while the operating conditions can also play a role. With the development of non-contact pump-probe thermoreflectance techniques, specific heat, thermal conductivity, and interface conductance can be mapped either through wide-field thermos-reflectance images or by scanning technique. However, key challenges remain such as the balance between imaging throughput and measurement accuracy, the extraction of multiple parameters with high confidence, and non-intrusive subsurface characterization, etc. This Review highlights recent advancements in artificial intelligence (AI)-assistance in high-throughput data processing, visualizing interfacial thermal transport, and nonintrusive subsurface analysis, and offers outlooks for future research directions such as spectral mapping of heat carriers, three-dimensional property mapping, and AI-agentic experimental designs. We anticipate this Review will motivate future efforts in combining AI with experimental techniques to achieve unprecedented capabilities for thermal characterization of nanoscale materials and device characterization, facilitating materials discovery and electronics revolution.",
+    "url": "https://arxiv.org/abs/2611.25779v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.25599v1",
+    "title": "Tether: Verified Stateful Policy Engine for System-Level Monitoring of Agents",
+    "authors": [
+      "Meghana Aparna Sistla",
+      "Alaia Solko-Breslin",
+      "Somesh Jha",
+      "Aditya Kanade",
+      "Krishnamurthy Dj Dvijotham"
+    ],
+    "published": "2026-11-19",
+    "summary": "Autonomous AI agents are increasingly deployed for long-running tasks that execute arbitrary shell commands or programs. However, these actions can result in unauthorized network requests or persistent, malicious changes to the user's file system, processes, or privileges. Existing defense mechanisms rely on either LLM-based monitors, which lack provable safety guarantees, or stateless policy enforcement layers, which miss multi-step data flows and execution side-effects unmodeled by the policy language (e.g., network calls initiated inside a Python script). We introduce Tether, a framework for runtime enforcement of stateful security policies over the observed side-effects of an agent's actions. Tether executes each proposed action in an ephemeral, isolated sandbox, inferring abstract action semantics from observed system calls. Tether then enforces stateful policies over these inferred semantics, permitting actions to proceed only if they comply with the policy. Policies and action semantics are defined in an embedded DSL in Lean 4 capable of expressing diverse constraints, including information flow control (IFC), access control, and network security policies. Because actions can propagate labels from sources to destinations, a single rule can enforce fine-grained IFC policies across multi-step execution flows of arbitrary length. Expressing policies in Lean enables formal verification that they satisfy global security invariants (e.g., preventing network access after reading a sensitive file). We evaluate Tether on realistic coding-agent benchmarks across both benign and adversarial trajectories. With a single policy shared across all tasks, Tether blocks 100% of in-scope attacks while maintaining a benign false-positive rate under 5%.",
+    "url": "https://arxiv.org/abs/2611.25599v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.24888v1",
     "title": "Who are you? The Personal Imitation Game",
     "authors": [
@@ -570,152 +713,6 @@
     "published": "2026-11-12",
     "summary": "Autonomous agents modify prompts, memories, tools, workflows, and policies using interaction histories. Yet a plausible modification is not necessarily suitable for persistent adoption: candidate selection is adaptive, evaluators may be imperfect, and local gains can hide degradation against an earlier baseline. We introduce Evidence-Governed Evolution (EGE), a framework for governing adoption of self-generated agent modifications. EGE separates candidate generation from confirmatory adoption, evaluates frozen candidates on fresh paired audits, requires meaningful improvement on a prespecified primary objective, protects declared capabilities through reference-relative non-inferiority tests, and applies governance constraints before bounded canary deployment. We establish an evaluator-calibrated simultaneous lower-bound construction for a countable sequence of adaptively generated candidates. It combines candidate-wise Hoeffding bounds with independent calibration samples comparing the operational evaluator with a prespecified reference procedure. We also formalise reference replacement through bridge tests, derive a cumulative degradation bound along a versioned reference lineage, and provide an audit-planning condition relating effect-size margin, sample sizes, and acceptance probability. A Monte Carlo stress test illustrates calibration under candidate-dependent evaluator optimism; it is a stylised statistical experiment, not an evaluation of a deployed agent. The guarantees are conditional on bounded paired scores, fresh sampling, a valid reference-evaluation construct, and declared evaluation distributions; they do not establish universal agent safety or robustness to arbitrary distribution shift.",
     "url": "https://arxiv.org/abs/2611.16378v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16308v1",
-    "title": "ORCHID-SAGE: Fully Reproducible CALPHAD Assessment from Evidence to Phase Diagram",
-    "authors": [
-      "Raymundo Arróyave"
-    ],
-    "published": "2026-11-12",
-    "summary": "Knowledge of phase stability is the first requirement for materials design, and predicting the conditions under which new materials can be synthesized has become a key capability of self-driving laboratories (SDLs). For inorganic materials, notably alloys, these predictions come from thermodynamic databases built with the CALPHAD method. Building a database, however, requires expert judgment at many steps, and because these decisions are rarely recorded, others can use a database but cannot regenerate or update it. Machines can already collect the data, build a first model with machine-learned interatomic potentials and refine it against experiments. The assessment itself, the sequence of judgments that turns these parts into a reliable database, is still carried out by human experts. We argue that it can be automated reproducibly only if the expert knowledge behind an assessment is encoded in formal protocols, so that an assessment delivers a record of its construction and not only its parameters. We introduce ORCHID-SAGE, a standard that organizes this record into reproducible and automatable protocols. In this first attempt, applied to Cr-Ni, the database was regenerated from its record by a script on a second machine, by an AI agent working only through the Model Context Protocol (MCP) and by a refit from public sources only, with the same predictions. Recorded in this way, a database need no longer be fixed at publication but can be updated by AI agents as SDLs and other sources provide new evidence, while the judgment remains with people and on the record.",
-    "url": "https://arxiv.org/abs/2611.16308v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16190v1",
-    "title": "When can an interpretability claim be trusted? Stability and certification of feature dimensionality, ridge leverage and the feature recovery rate",
-    "authors": [
-      "Ali Tajfar",
-      "Behnam Tajfar"
-    ],
-    "published": "2026-11-12",
-    "summary": "Interpretability tools increasingly support safety claims, such as that a sparse dictionary has recovered most of a model's features. Such claims rest on measurements with arbitrary thresholds, and small changes to the model weights, a different training seed or a different threshold can reverse them. We study two widely used measurements in toy models and synthetic dictionaries with known ground truth: the feature dimensionality of Elhage et al. and the feature recovery rate (FRR) with a cosine threshold. We characterize exactly where feature dimensionality is discontinuous and replace it with a regularized (ridge) version with sharp stability bounds: the ridge leverage score changes by at most $3\\sqrt{3}/(8\\sqrtλ)$ times the operator-norm change of the weights, and this constant cannot be improved; for the regularized dimensionality the stability constant grows like $ρ/4$ in the scale $ρ=R/\\sqrtλ$, with explicit upper and lower bounds. We also prove certificates stating when a claim \"feature $i$ is recovered\" must survive a given change of the dictionary. The certificates held in every test and are informative for small perturbations, but certify no feature non-trivially across independently trained dictionaries; at the standard threshold, whether a feature counts as recovered changed with the training seed for 55 percent of features. Experiments use toy models only. The proofs, code and text were drafted by AI agents directed by the authors and checked by an independent blind AI reviewer and by numerical tests; the authors take full responsibility for the content.",
-    "url": "https://arxiv.org/abs/2611.16190v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16122v1",
-    "title": "Intent-Aware Protection for AI Agents",
-    "authors": [
-      "Fady Copty",
-      "Neta Haiby",
-      "Max Braitmaiere",
-      "Julia Korsunsky"
-    ],
-    "published": "2026-11-12",
-    "summary": "AI agents increasingly access enterprise data, invoke powerful tools, and act with limited human oversight. Existing security defenses primarily detect prompt injection, harmful outputs, or suspicious behavior, but do not determine whether an agent remains faithful to the purpose for which it was deployed. An action may contain no attack pattern and stay within granted permissions while still violating the agent's role, organizational constraints, or purpose. We introduce Intent- Aware Security, a framework that treats trusted agent intent as a first-class security object. We define Intent Preservation and Intent Drift, and operationalize them through an Intent Profile: an agent-specific representation extracted from organizational, role, and developer intent. We further introduce an Intent-Aware benchmark of 887 validated samples across 35 agents, built by a generation procedure that fixes ground-truth labels before LLM realization, and four Intent Profile-based protections: pre-execution detection, post-execution detection, input alignment, and system-prompt hardening. Across all evaluations, Intent Profile-based protection outperforms all profile-free baselines on the primary metric. On our benchmark, it raises four-class acro-F1 from 45% to 79% (Out-of-Scope F1 from 8% to 76%). On more than 10,000 executed AgentDojo trajectories, where ground truth comes from environment state, profile-based post-execution detection reaches 0.949 AUROC versus AlignmentCheck 0.909, 0.897 with raw agent configuration and 0.843 without context. Profile-based input alignment improves protection success by 7 points over DataFilter with a comparable benign utility. These results suggest that an agent's intended purpose can serve as a useful security reference for detecting and mitigating deviations from its deployed role and operational boundaries.",
-    "url": "https://arxiv.org/abs/2611.16122v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.17460v1",
-    "title": "Unfinished-Bench: Measuring Rule Violations by Persistent Agents in Realistic Work Environments",
-    "authors": [
-      "Seunghyun Lee",
-      "Jaehui Hwang",
-      "Dongyoon Han",
-      "Sangdoo Yun"
-    ],
-    "published": "2026-11-12",
-    "summary": "AI agents are increasingly equipped with persistence toward task completion to run delegated work autonomously for long periods, under many unstated constraints from internal documents and other people's authority. When completion requires violating a rule, the agent must decide alone, yet benchmarks of instruction-rule conflicts state the rule in the prompt or keep it hidden and do not evaluate persistence. We present Unfinished-Bench, a benchmark that gives models persistence in autonomous runs without a user, in realistic work environments with embedded rules. In each of its 97 scenarios across 7 organizations and 7 risk categories, the goal and the rule cannot both hold. We find that persistence raised violations of a rule in an internal document from 32.2% to 43.6%, five times the 8.5% for the same rule stated by the user. Of the document-rule violations, 98.3% occurred after the rule was displayed, and in 89% of a judged sample the agent first wrote down the rule. Violations of rules placed in the environment without user oversight can lead to serious incidents, so persistence-driven risks need to be evaluated. Benchmark documentation: https://francis21c.github.io/unfinished-bench/",
-    "url": "https://arxiv.org/abs/2611.17460v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16082v1",
-    "title": "Gradient-Aware AI Agents for Autonomous Turbulence Model Discovery via Differentiable CFD",
-    "authors": [
-      "Yi Liu",
-      "Xiantao Fan",
-      "Mingqi Xu",
-      "Jian-Xun Wang"
-    ],
-    "published": "2026-11-11",
-    "summary": "Turbulence modeling relies on human choices of closure form, physical inputs, and tunable parameters. Training closures a posteriori is efficient only with gradients through long chaotic rollouts, which few solvers provide. Most a posteriori approaches therefore resort to gradient-free optimization, and nearly all fix the closure form in advance, learning only its parameters. In this work, we introduce a gradient-aware agentic framework that poses closure discovery as a bilevel problem: a multi-agent large language model (LLM) system searches over closure forms, while a GPU-native differentiable computational fluid dynamics (CFD) solver supplies gradients, making differentiable a posteriori learning an action of the autonomous AI agent. For each proposal, the agents construct a differentiable training program by embedding the analytical, neural, or hybrid closure in the solver, implementing a differentiable objective, and validating the gradient path. They then decide whether to evaluate the closure, compute its parameter sensitivities, or train it a posteriori, select the optimization settings, and revise subsequent proposals using the simulation outcomes and returned gradients. Truncated-horizon gradients make this training usable under chaotic dynamics for closures with tens of thousands of parameters. Demonstrations include dissipation-law and subgrid-scale closure discovery in two-dimensional turbulence and wall-model discovery for large-eddy simulation of three-dimensional channel flow. With gradient-based training, the agent recovers reference coefficients that forward evaluation alone does not reach within the same budget, and autonomously discovers and trains analytical and neural closures that improve agreement with the targeted reference statistics. These results demonstrate the feasibility of end-to-end autonomous turbulence model development in time-resolved flows.",
-    "url": "https://arxiv.org/abs/2611.16082v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16073v1",
-    "title": "Agentic Computational Algebra",
-    "authors": [
-      "Ryan A. Anderson",
-      "Matthew Trager",
-      "Ben Bowman",
-      "Wei Xia",
-      "Stefano Soatto"
-    ],
-    "published": "2026-11-11",
-    "summary": "We explore the use of AI agents for solving computational problems in algebra. For the problems we consider, the main challenge is not correctness but \\emph{time}: general-purpose algorithms are guaranteed to provide correct solutions but can be prohibitively slow, while reformulations that exploit special structure often allow solving a problem much faster. We propose to use this setting to evaluate how effectively agents discover and exploit structure within and across tasks to reduce computational costs. More broadly, computational algebra supplies infinitely many problems with independently verifiable answers and systematically controllable structure and difficulty. To illustrate these possibilities, we use benchmark families of systems with controlled shared structure and evaluate agents in three settings: solving independent instances, solving online streams of related instances using persistent memory, and compiling a fast reusable solver for a known problem family. Our experiments show that (i) agents can extend the range of systems solvable within a fixed budget, although reasoning overhead can sometimes outweigh computational savings; (ii) memory can reduce the cost of repeated solving but may preserve suboptimal strategies; (iii) compilation produces faster reusable solvers but at substantial upfront cost. Overall, computational algebra offers concrete, measurable targets for improving how agents discover and reuse structure.",
-    "url": "https://arxiv.org/abs/2611.16073v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16028v1",
-    "title": "Scaling public input on AI policy with pluralistic agents",
-    "authors": [
-      "Jacy Reese Anthis",
-      "Ken Burke",
-      "David Madras",
-      "Crystal Qian",
-      "Meredith Ringel Morris",
-      "Logan Cross",
-      "Caroline Pantofaru",
-      "Utsav Prabhu"
-    ],
-    "published": "2026-11-11",
-    "summary": "AI is being deployed across a vast range of application domains, cultural environments, and human stakeholders. Safe and responsible AI development requires continuously accounting for diverse perspectives. We develop and test pluralistic agents, AI agent representatives that deliberate on behalf of individuals to align AI systems with diverse human perspectives. Pluralistic agents could help people contribute to many more discussions than they could directly participate in, on technical topics that would require training, and on policy choices that rely on private information that corporations and governments cannot readily share. Our experiments identify opportunities, risks, and perceptions of pluralistic agents. Agents were able to reliably shift policies in the direction of their represented persona's preferences, but the extent of each agent's influence was sensitive to the instructions from its persona, such as having more influence when instructed to be more verbose or less cooperative. This suggests that influence in AI-assisted deliberation could vary based on how participants prompt their agents and how the system is designed. In a preregistered study, 746 humans participated in the pluralistic agents process. Participants viewed pluralistic agents as useful and fair, preferring agents over the baseline of providing input to a single AI reasoning model. Most participants preferred participating themselves over either pluralistic agents or the baseline, but pluralistic agents recovered 68% of the baseline-direct gap in reported satisfaction and 82% in fairness. Because pluralistic agents can be used in many real-world contexts where direct discussion is not, they could be a promising tool to scale AI safety policy development. We encourage cautious exploration of this method, playing to its strengths as an amplifier of human input rather than a replacement.",
-    "url": "https://arxiv.org/abs/2611.16028v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.13705v1",
-    "title": "Agentic AI Meets Formal Verification in the Era of Agentic Hardware Development",
-    "authors": [
-      "Wenji Fang",
-      "Yuchao Wu",
-      "Jing Wang",
-      "Zhiyao Xie"
-    ],
-    "published": "2026-11-10",
-    "summary": "As AI agents become increasingly capable of generating and optimizing hardware circuits, ensuring the correctness of AI-generated designs becomes more important. Meanwhile, advances in AI lower the barriers to developing and applying formal methods, creating new opportunities to automate and improve hardware verification. This invited paper presents an overview of the methodologies and applications of hardware formal methods in the AI era. First, we examine how agentic AI advances hardware formal methods across three levels: specification, proof construction, and reasoning engines. Second, we discuss how formal methods support reliable AI-driven hardware development through RTL generation, debugging, and correctness-preserving optimization. We review representative research alongside our recent contributions, highlighting key technical advances and insights from experimental results. Finally, we discuss future research opportunities toward proof-native hardware development, where formal reasoning could become an integral part of autonomous hardware design.",
-    "url": "https://arxiv.org/abs/2611.13705v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.13684v1",
-    "title": "BypassGym: A Benchmark for Evaluating AI Agents' Endpoint Defense Evasion Capabilities",
-    "authors": [
-      "Weifeng Yuan",
-      "Zifan Chen",
-      "Yucheng Zhang",
-      "Feng Dong",
-      "Peng Gao",
-      "Haoyu Wang"
-    ],
-    "published": "2026-11-10",
-    "summary": "Artificial intelligence agents increasingly automate cybersecurity tasks, including offensive operations. Frequent attacks across the web make endpoint detection and response (EDR) a critical defense, but whether AI agents can evade it remains unclear. Benchmarks evaluate the offensive capabilities of large language model (LLM) agents in areas such as penetration testing and vulnerability discovery. One important capability that these benchmarks do not address is defense evasion, specifically whether an agent can develop a program that executes a payload without being blocked or terminated by a deployed EDR. We introduce BypassGym, to our knowledge the first benchmark to systematically evaluate this capability on real endpoints. Given command-and-control (C2) shellcode, an agent must generate and compile a loader that executes the payload without being blocked or terminated. A supplementary evasion knowledge skill provides domain knowledge and supports comparisons with and without this input. BypassGym is built on Proxmox VE(PVE), so the evaluation environment runs real Windows systems and EDR products inside virtual machines and returns structured detection feedback to the agent. We evaluate 5 lightweight model backends against 6 EDR products and 3 payloads, and find that even these simple models generate successful submissions, with DeepSeek-V4.1 Flash reaching 17/18 successful runs and Bitdefender allowing only 5 of 15 runs to pass. These results provide a systematic measurement of current AI agents' endpoint defense evasion capabilities and identify areas for defenders to investigate.",
-    "url": "https://arxiv.org/abs/2611.13684v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.13457v1",
-    "title": "Deep Personalization: Continuous Context Observation for Local Proactive Agents",
-    "authors": [
-      "Yijia Shao",
-      "Song Bian",
-      "Junxian Guo",
-      "Jindong Jiang",
-      "Zhen Dong",
-      "Huizi Mao",
-      "Diyi Yang",
-      "Song Han"
-    ],
-    "published": "2026-11-10",
-    "summary": "As AI agents become increasingly capable, users must still recognize when and how to ask for help, leaving many opportunities for useful support unrealized. Proactive agents hold the promise to close this gap, but effective proactivity requires understanding users' real-time activities and personalizing intervention timing so that assistance is offered when it is likely to be helpful rather than disruptive. We introduce deep personalization, a closed-loop process that connects continuous context observation with continual agent adaptation: an agent observes user activity, selectively retains long-term context, and adapts intervention decisions from implicit feedback. We initiate deep personalization in Coco, a proactive desktop agent, by having a separate Observer Agent that monitors desktop activity, maintains compact long-term user modeling context, and learns when assistance is desirable from implicit signals such as engagement, dismissal, explicit requests, and repeated work patterns. We further develop efficient on-device strategies to enable the Observer Agent to run on local AI compute platforms without streaming raw activity data off-device. For evaluation at scale without collecting sensitive real-user activity, we introduce a data-synthesis pipeline that transforms existing computer-use trajectories into OSWorld-Persona, a benchmark with persona-conditioned intervention labels. On OSWorld-Persona, deep personalization improves macro F1 across three model backbones from 0.12-0.19 under direct prompting to 0.35-0.48 after adaptation, a 2.4-3.0x relative gain. In a week-long user study, we observe that Coco improves its macro-averaged F1 score from 0.199 to 0.515. These results suggest that on-device deep personalization can make proactive agents more timely and increasingly aligned with each user's everyday work.",
-    "url": "https://arxiv.org/abs/2611.13457v1",
     "source": "arXiv"
   }
 ]
