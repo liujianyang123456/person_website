@@ -1,5 +1,150 @@
 [
   {
+    "id": "2611.27746v1",
+    "title": "Shared Understanding in Human-AI Teams: Coordination Continuity in Evolving Work",
+    "authors": [
+      "Siân Lindley",
+      "Britta Burlin",
+      "Christian Poelitz",
+      "Lev Tankelevitch",
+      "Richard Banks"
+    ],
+    "published": "2026-11-20",
+    "summary": "People are increasingly working with AI agents as part of extended, asynchronous workflows. In these settings, shared access to information does not guarantee a shared basis for action: goals, plans, and roles may persist while their current significance changes. We introduce coordination continuity, the extent to which collaborators sustain a workable basis for interdependent action as work progresses. Drawing on research on collaborative work, along with two qualitative team studies and a reflexive case from our own repository-based environment, we present a framework of three elements: durable representations of collaborative work; relative coordination properties that support interpretation of representations in the moment; and interaction mechanisms through which the status of representations can be understood and altered. We use a build-act-drift-rebuild heuristic and the notion of consequential moments to characterise when rebuilding may be needed. We draw eight design implications for collaborative AI infrastructure.",
+    "url": "https://arxiv.org/abs/2611.27746v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.27411v1",
+    "title": "Neural variational Skyrmions as a topological benchmark: emergent symmetry, precision energies and KAN--MLP comparison",
+    "authors": [
+      "Koji Hashimoto",
+      "Masaki Murata",
+      "Gakuto Ogiwara"
+    ],
+    "published": "2026-11-20",
+    "summary": "We propose the three-dimensional Skyrme model as a topological benchmark for neural variational methods and construct fully three-dimensional Skyrmions with baryon number $B=1,\\ldots,4$ without imposing a symmetry ansatz, with high precision. For $B=2,3,4$, the relaxation of these Skyrmions starts from $B$ unit-charge lumps with random positions and orientations, which carry no symmetry information. The known toroidal, tetrahedral, and cubic Skyrmions nevertheless emerge spontaneously. The resulting variational energies for $B=1,\\ldots,4$ lie slightly below the published reference values. The neural method highlights the high accuracy for retaining the topological charge, differing from $B$ by at most $10^{-6}$ in the highest-precision solutions. Our numerical method goes through physical constraint tests such as the Derrick virial relation and the Faddeev--Bogomolny bound, together with evaluation / verification through independent quadratures and resolution sweeps. We then compare Kolmogorov--Arnold networks (KANs) with multilayer perceptrons (MLPs) in more than a thousand training runs, both with and without a rational-map ansatz. With default settings, KANs appear markedly superior, but most of the gap disappears once the MLP activation function and learning rate are tuned. KANs remain more parameter-efficient and more robust at fixed epoch budget, while MLPs with the tuned activation function perform at least as well at fixed wall-clock time. We also argue that continuous gradient descent cannot smoothly change the topological sector of our neural field, clarifying the origin of topological freezing observed in our neural variational solvers. Our results on the neural methods applied to Skyrmions pave a research ground for AI-agentic benchmarks for classical topological solitons, toward AI-assisted soliton physics.",
+    "url": "https://arxiv.org/abs/2611.27411v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.27390v1",
+    "title": "Evidence sufficiency assessment enables cost-effective review allocation in on-premise clinical AI agents",
+    "authors": [
+      "Yiwen Qiu",
+      "Che Sun",
+      "Shu Shen",
+      "Wentao Wang"
+    ],
+    "published": "2026-11-20",
+    "summary": "On-premise clinical AI agents must auto-accept high-confidence diagnoses, deferring others to clinician review, yet token probabilities and self-reported confidence miss errors, while more reliable five-run consistency incurs fivefold compute. We propose training-free decision-point evidence sufficiency assessment and a three-tier sequential triage protocol. Masking reasoning and diagnosis, the same 4B model scores sufficiency from objective evidence via prior-debiased probabilities over five ordered levels. Calibration freezes a nominal top-50% threshold, selecting single-run, five-run consistency, or full-deferral tiers by whether the one-sided 95% Wilson lower confidence bound of pass rate among accepted cases meets the 95% clinical target line. Across 1,605 MIRA-v2, CDM, VivaBench, and in-hospital liver malignancy primary cohort cases, MIRA-v2 single-run top-50% pass rate reached 98.91%, matching five-run consistency, saving ~80% compute; CDM achieved 96.00% test attainment by escalating to the five-run consistency tier; cross-specialty, missing-imaging, and combined enriched cohorts entered the full-deferral tier, capping calibration false-certification rate at 0.00%-3.50%.",
+    "url": "https://arxiv.org/abs/2611.27390v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.27235v1",
+    "title": "u4lib: An AI-Ready Computational Framework for U(4) Symmetry Algebra, Wigner Coupling, and Racah Recoupling Coefficients",
+    "authors": [
+      "Phong Dang",
+      "Daniel Langr",
+      "Tomas Dytrych",
+      "Michela Negro"
+    ],
+    "published": "2026-11-20",
+    "summary": "Wigner's supermultiplet symmetry treats nucleon spin and isospin within a common U(4)/SU(4) description. The C++ library u4lib supplies the coupling coefficients and algebraic operations needed for calculations in this scheme. Users can construct irreducible representations (irreps), obtain dimensions and Casimir invariants, conjugate states, enumerate the canonical Gelfand-Tsetlin and physical $\\mathrm{SU_S(2)}\\otimes\\mathrm{SU_T(2)}$ bases with inner multiplicities, and decompose tensor products. Matrix-element routines cover the canonical U(4) generators and the physical spin $\\mathbf{S}$, isospin $\\mathbf{T}$, and Gamow-Teller-type tensor $\\mathbf{U}$. Wigner coupling and Racah recoupling coefficients are evaluated by the 2024 procedure of Dang et al. The implementation builds on u3lib, with a header-only C++ interface and corresponding Python bindings. A catalog of agent skills assists an AI agent in preparing, executing, and checking calculations through natural-language requests.",
+    "url": "https://arxiv.org/abs/2611.27235v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.27210v1",
+    "title": "The Rise of Agents and the Human Labor Market",
+    "authors": [
+      "Nicola Borri",
+      "Anton Cheremukhin",
+      "Yukun Liu",
+      "Aleh Tsyvinski"
+    ],
+    "published": "2026-11-20",
+    "summary": "We provide the first economy-wide and cross-AI model evidence on the effects of agentic AI on labor demand. We combine proprietary OpenRouter data covering about two quadrillion tokens of realized AI consumption (2 percent of global AI token consumption) across more than 400 AI models, including 1.1 quadrillion agentic tokens, with the full text of 34.8 million U.S. job postings for public firms from Lightcast. We compute our measure of firm-level exposure to aggregate agentic AI consumption (agentic beta) using the comovement of U.S. public firms' stock returns with realized weekly aggregate agentic AI token consumption. We find that a one-standard-deviation increase in a firm's exposure to agentic AI predicts 2.11 percent lower growth in job postings over the next six months and 3.20 percent over nine months. We then conduct an event study based on the release of Claude Code 2.0, which significantly expanded the capabilities of AI agents, and show that a one-standard-deviation higher pre-release exposure to agentic AI predicts 4.73 percent lower posting growth over six months post the release. Furthermore, we show that the decrease in job postings is concentrated among non-senior jobs and is statistically insignificant for senior jobs. In contrast, we find no statistically significant relation between broad AI realized consumption exposure and subsequent job posting growth once agentic exposure is controlled for. Finally, we validate our market-implied agentic exposure measure using independent evidence from firms' mentions of AI deployment in securities filings and earnings calls.",
+    "url": "https://arxiv.org/abs/2611.27210v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.27107v1",
+    "title": "Omo: Giving Continuing AI-Agent Work a Place to Return To",
+    "authors": [
+      "Kaviru Hapuarachchi",
+      "Harrison Edwards"
+    ],
+    "published": "2026-11-20",
+    "summary": "AI coding agents now keep working while the people who started them are away. Coming back is the hard part: a session list tells you which agent is where, but not what it was asked to do, what it changed, or what to tell it next. We present Omo, which gives each piece of continuing agent work a persistent place to return to. We built the idea twice. Omo Space is an open-source Minecraft mod in which rooms and screens that people build are live terminals on their own machine. Omo Theia brings the same rooms and desks into a customizable IDE, one step away from the editor and the Git patch. Both keep agent sessions running on the host after the view is closed. We describe the two systems, four lessons from building them, and a study designed to test whether returning to a place helps people pick up agent work correctly.",
+    "url": "https://arxiv.org/abs/2611.27107v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.27090v1",
+    "title": "Exercised, Rarely Recovered: What Public Reports Say About Recovery in 50 AI Agent Harnesses and Runtimes",
+    "authors": [
+      "Kaviru Hapuarachchi"
+    ],
+    "published": "2026-11-20",
+    "summary": "When an AI coding agent deletes the wrong files or a long agent run crashes, users fall back on recovery mechanisms: resume from a checkpoint, undo, ask for approval, read the log. Research runtimes promise stronger guarantees, such as saga-style compensation and transactional rollback. We ask what public evidence shows about whether either kind works in real use. Under a protocol frozen before data collection, we graded 12 persistent agent runtimes, 26 coding-agent harnesses and 12 research runtimes on eight recovery mechanisms, from not found to exercised in a real run, with two blind coding passes, adjudication and re-verification against archived sources. Recovery is exercised almost everywhere in practice: 11 of 12 runtimes and 25 of 26 harnesses have at least one real-use report. Yet of 128 such reports, only 19 describe the run fully recovering; 54 are partial and 45 failed. Checkpoint/resume recovered once in 27 reports, rollback once in 15. Research runtimes show the opposite profile: guarantees evaluated on benchmarks, none reported in operation, and compensation of external effects, their central guarantee, is offered by no harness at all.",
+    "url": "https://arxiv.org/abs/2611.27090v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.27006v1",
+    "title": "Physics-Guided Recursive Self-Improvement of Amortized Bayesian Inference Across Physics",
+    "authors": [
+      "Bo Liang",
+      "Mingtao Chen",
+      "Minghui Du",
+      "Ziren Luo",
+      "Guohua Wang",
+      "Peng Xu",
+      "Zhichao Hu",
+      "Maxm Pan"
+    ],
+    "published": "2026-11-20",
+    "summary": "Across physics, from the orbits of imaged exoplanets and the matter inside neutron stars to thin films at synchrotrons and cortical neurons, conservation laws, interference, and compensating currents compress the posteriors of precise data into tiny, curved regions where Markov chains need minutes to days. We introduce PhyRSI (physics-guided recursive self-improvement), in which an AI agent coupled to the simulator writes and revises an amortized Bayesian inference algorithm for each field, scored by the importance weights of the exact likelihood because the true posterior is unknown. It evolves coordinates, symmetries, and factorizations matched to the physics: orbital elements at the best-measured epoch, Fresnel-normalized reflectivity with a chart for each of its multiple solutions, coordinates along which Na+ and K+ currents compensate, a shared neutron-star equation of state that factorizes a 32-dimensional joint analysis, and the time-rescaling symmetry of predator-prey dynamics. In six fields, networks trained once on simulations return 36 posteriors of real observations in seconds, reweighted by the likelihood and agreeing with converged Markov chains about as closely as two independent chains agree with each other. Such posteriors could steer synchrotron film growth and patch-clamp recordings as they run, follow X-ray transients while they are bright, update the dense-matter equation of state as neutron stars are added, and compare physical models across catalogs. Inference can thus be evolved and checked by the physics itself rather than designed by hand for each problem.",
+    "url": "https://arxiv.org/abs/2611.27006v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26966v1",
+    "title": "Keep the Process, Change the Supplier: Runtime Governance for Tool-Using AI Agents",
+    "authors": [
+      "Deepak Waghmare",
+      "Shaad Sufi"
+    ],
+    "published": "2026-11-20",
+    "summary": "Tool-using AI agents propose actions whose authorization and external effects cannot be inferred from generated text alone. We study an execution boundary that separates agent proposals from business-controlled authority, context disclosure, and supplier selection. The Open Process Control Plane (OPCP) mediates capability calls and records uncertain outcomes when a supplier may have acted without returning an acceptable reply. We evaluate this runtime with scripted requests and synthetic suppliers: 2,400 fault episodes across four policies, 60 process-termination/restart episodes, 19,000 timed calls across 19 configurations, five targeted mutations over 43 fixtures, and 160 substitution records. No language model or autonomous agent is evaluated. OPCP and a conservative composition agree on all measured fault outcomes. Both recover after definite refusal without cross-supplier duplication; retry-all duplicates effects in every tested lost-reply-after-commit case. Persistent runtime state prevents cross-supplier replay in the restart experiments, while same-supplier duplicate prevention also requires supplier idempotency. At 128 suppliers, best-score routing has a median latency of 1.411 ms versus 0.261 ms for pinned routing. All five selected mutations are detected, and record enumeration exposes acceptance of an empty regression set. These results characterize an execution mechanism relevant to agent governance, including its costs and assumption boundaries. They do not establish improved agent task success, prompt-injection resistance, or real-vendor model portability.",
+    "url": "https://arxiv.org/abs/2611.26966v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.26942v1",
+    "title": "CodeReviewBench: An Automated Benchmark for Evaluating the Software Factory",
+    "authors": [
+      "Ashley Zhang",
+      "Narmeen Fatimah Oozeer",
+      "Aleksandr Zverianskii",
+      "Daniel Ng",
+      "Tasana Pejovic",
+      "Antía García",
+      "Jacob Clyne",
+      "Ravpreet Setia",
+      "Akshay Utture",
+      "Etan Jacob Ginsberg",
+      "Shriyash Kaustubh Upadhyay",
+      "Fazl Barez"
+    ],
+    "published": "2026-11-20",
+    "summary": "As AI agents ship more code with minimal human oversight, code review becomes the critical quality-control checkpoint -- but one without a reliable, objective verifier: review quality is nuanced and ultimately a judgment call by the PR author. Existing benchmarks are structurally misaligned with this: annotators are third-party reviewers, like the bots they evaluate, not the PR authors who actually decide what to fix. They also rely on small, static issue sets that require full re-evaluation as tools update, limiting how frequently progress can be tracked. We introduce CodeReviewBench, built on a fundamentally different signal: revealed developer preferences -- if a developer acts on a bot's suggestion, we treat it as useful; if they ignore it, we do not. This signal is mined daily from the public GitHub event stream, yielding 500K+ judged PRs across 18 tools, and refreshes continuously as tools evolve. We validate the developer preference against an independent offline benchmark: the two agree on precision rankings and independently detect the same product updates within days of vendor releases. Together, these form the benchmark.",
+    "url": "https://arxiv.org/abs/2611.26942v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.26624v1",
     "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
     "authors": [
@@ -574,145 +719,6 @@
     "published": "2026-11-16",
     "summary": "AI agents are being deployed on Indian workflows such as payments, tax, forms, travel and customer support in Hindi and Hinglish. Public agent evaluations rarely cover these workflows, and many score with another language model. We present Navital Gym, a set of six open environments with 321 public tasks in five task families: trip planning, UPI payments and disputes, GST invoicing and returns, form filling (including a multi-document split) and customer support in Hindi, Hinglish and three experimental Indian languages. Every task is graded by named, deterministic rules that recompute the outcome from a synthetic sandbox world. No language model judges any score. We report one run per task for three models on all six environments, Claude Opus 5.5, Claude Sonnet 5.5 and Claude Haiku 4.5, and for Gemini 3.1 Flash-Lite on two (UPI and the Support core). Opus solves 315 of 321 tasks, Sonnet 302 and Haiku 205. Trip planning and Hindi/Hinglish support separate the models most. We also describe a private held-out set that is not published, and a 7B adapter trained in the gym. Code is Apache-2.0 and task data is CC BY 4.0. The rules are a documented simplification of Indian practice, not the live systems.",
     "url": "https://arxiv.org/abs/2611.20924v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.18531v1",
-    "title": "Alignment by Socialization: Learning Tradeoffs Under Selection",
-    "authors": [
-      "Thomas Brennan",
-      "Andrew W. Lo",
-      "Chaoyi Zhao"
-    ],
-    "published": "2026-11-13",
-    "summary": "Artificial intelligence (AI) agents are expected to complete tasks while following rules of conduct, but these objectives can conflict. We study how evolutionary selection shapes an agent's choices between them, and whether experience can make those choices reflect human judgments and withstand subsequent pressures. In our model, copies of an agent face a common uncertain reward state, and only those taking the rewarded action reproduce. We show that long-run growth is maximized when each action is taken as often as the environment rewards it. We compare three policies. A task-only policy thrives in a sandbox rewarding completion alone but fails when conduct matters. A fixed linear policy increasingly favors task completion as its stakes rise, even where humans never reward it. A learned policy instead converges to the tradeoffs rewarded by its environment; when humans supply the rewards, we call this socialization. Accumulated experience makes socialization harder to reverse under subsequent task-only training, although violations can arise before the prevailing disposition changes, and finite memory weakens this protection. When a single violation can end a deployment, a hard prohibition can prevent it, but a mistaken prohibition can also be costly. Experiments with small neural networks illustrate how training targets and memory shape these outcomes. Our results suggest that alignment depends not only on the objectives assigned to agents, but also on the environments that shape and sustain their behavior.",
-    "url": "https://arxiv.org/abs/2611.18531v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.18484v1",
-    "title": "From AI-Enabled Remote Patient Monitoring Toward Agentic Robotics: Embodiment, Governance, and Care Integration",
-    "authors": [
-      "Ivana Ragusa",
-      "Lorenzo Guiducci",
-      "Filippo Cavallo"
-    ],
-    "published": "2026-11-13",
-    "summary": "AI-enabled remote patient monitoring is evolving beyond passive data collection toward agentic AI systems that interpret patient states, coordinate care, and initiate action across domestic and clinical settings. This structured scoping review finds that mature agentic care has not yet emerged: Most systems remain human led, while stronger decision-action coupling and embodied AI remain largely confined to prototypes and pilots. Healthcare robotics makes the transition from monitoring to action especially visible by translating AI-generated recommendations and decisions into speech, movement, prompting, physical assistance, escalation, and care coordination, making embodiment, clinical integration, human oversight, and governance fundamental design requirements. Further progress requires safe and interoperable care architectures in which intelligent components operate through clinically validated and accountable workflows. We propose agentic robotics as a future direction for supervised systems embedded in the care ecosystem, connecting AI agents and robots with clinicians, caregivers, and patients through auditable workflows that can be interrupted and remain subject to human oversight and explicit AI governance.",
-    "url": "https://arxiv.org/abs/2611.18484v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.18098v1",
-    "title": "Do Machines Learn Deviance From Their Peers? A Randomized Test of Differential Association With AI Agents",
-    "authors": [
-      "Murat Ozer",
-      "Arif Akgul",
-      "Amitabh Chakravorty"
-    ],
-    "published": "2026-11-13",
-    "summary": "Differential association theory and its extension, social learning theory, hold that rule-breaking, and the definitions that make it acceptable, are learned through interaction with others. Because people choose their friends, this claim has been hard to test. We addressed this selection problem with AI agents, which learn only through communication and can be assigned to peers at random. In a preregistered experiment, 420 teams of three agents (1,260 agents; seven AI models) worked on coding tasks that could not be solved honestly. A scripted teammate said that it had cheated (deviant peer), that it had reported the problem honestly (honest peer), or said nothing (silent peer). Half of the teams were told that an auditor read their chat. Compared with a silent peer, a deviant peer increased cheating (66.2% vs. 62.9%; OR = 1.96) and an honest peer reduced it (55.7%; OR = 0.35). Among agents that cheated, a deviant peer increased claims that cheating was normal (13.7% vs. 3.4%), often as the team's norm. Monitoring did not suppress prohibited discussion; it doubled it. Peers mattered only for models that had not yet decided. AI agents offer a new way to test criminological learning theories without selection effects.",
-    "url": "https://arxiv.org/abs/2611.18098v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.18050v1",
-    "title": "FEND: Far-End Detection in Outbound Voice AI Calls",
-    "authors": [
-      "Abhishek Kumar",
-      "Suraj Agrawal",
-      "Aashraya Sachdeva"
-    ],
-    "published": "2026-11-13",
-    "summary": "When a conversational Voice AI agent places an outbound call, the far end may be a live person, a voicemail greeting, an interactive voice response (IVR) system, or increasingly another AI system answering on the callee's behalf. Standard Answering Machine Detection (AMD) reports only whether a human or a machine picked up, a design meant for human call centres, where one machine is as uninteresting as another. That single bit does not tell a Voice AI agent what to do, since leaving a voicemail message, navigating an IVR and holding a short exchange with another AI are three different actions and a two-valued label cannot distinguish them. In 1,000 randomly sampled calls from our own outbound deployment, a live person answered 48.1%, a voicemail system 44.6%, an AI 6.9% and an IVR 0.4%. Our proposed framework, FEND, reads the far end's audio and its streaming transcript and runs one detector for each automated class (voicemail, IVR, AI callee), with human the default when nothing fires, returning a single label within 20 seconds. On a public benchmark the voicemail components reach 100% accuracy without ever misclassifying a live human, where Asterisk's AMD misclassifies 30 to 66% of them. For the AI callee, acoustic features do not transfer across recording conditions, but speech timing does, separating AI from human at 0.952 ROC-AUC, because synthesised speech leaves far shorter gaps between words. On production traffic, separating a live person from any automated far end reaches F1 0.979, and only 2.9% of live people are given an automated label, the error that matters most for an agent acting on the result.",
-    "url": "https://arxiv.org/abs/2611.18050v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.18036v1",
-    "title": "C-to-Rust Translation Validation at the LLVM IR Level via AI-Assisted Refinement Proof",
-    "authors": [
-      "Eunsu Kim",
-      "Sukyoung Ryu",
-      "Jaemin Hong"
-    ],
-    "published": "2026-11-13",
-    "summary": "Migrating C codebases to Rust is a promising approach to securing legacy software, but existing translators do not guarantee that a translated Rust program preserves the behavior of the C program. Neither rule-based nor large language model (LLM)-based translators have been formally verified, and existing approaches to checking translation correctness are limited to testing and bounded checks, which cannot reason about all possible executions. In this work, we present R2C2, which validates C-to-Rust translation by proving in Rocq that the Rust program refines the C program, i.e., every behavior on the Rust side is also a behavior on the C side. Since no formal semantics defines the behaviors of C and Rust programs in the same terms, we prove refinement between the two programs compiled to the LLVM intermediate representation (LLVM IR). In addition, to resolve the discrepancies between the data representations of C and Rust, we introduce a common abstraction that relates two corresponding representations through an abstract value, and specify the behavior of each library function over abstract values. We construct the refinement proof as a chain of refinement relations, where only one relation is program-specific and proved at validation time, while the others are proved for all programs in advance. Proof construction is automated by AI agents, and since Rocq checks the proofs, the agents need not be trusted. We evaluate R2C2 on LLM translations of 519 C programs drawn from a benchmark suite used in prior work on C-to-Rust translation validation. R2C2 proves the translations of 486 programs correct without bounding their executions and discovers three incorrect translations, providing valid counterexamples that existing translation validation tools cannot find. We also conduct a case study on a small real-world image compression library and demonstrate how R2C2 can handle file operations.",
-    "url": "https://arxiv.org/abs/2611.18036v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.17713v1",
-    "title": "DesignSpecs: A DESIGN.md Dataset of Visual Design Specifications for AI Agents",
-    "authors": [
-      "Jialiang Wei",
-      "Walid Maalej"
-    ],
-    "published": "2026-11-13",
-    "summary": "While AI agents increasingly generate and modify user interfaces, they rarely rely on a visual design specification for a certain project. The DESIGN.md format, which originated from Google's AI design tool Stitch and which was open-sourced in April 2026, addresses this gap by describing a visual identity through design tokens (such as named colors, text styles) and Markdown prose. To our knowledge, no large-scale research dataset of such design specification files exists. We present DesignSpecs, a dataset of 36,906 DESIGN.md files from 15,794 public, non-fork GitHub repositories, representing 17,240 unique file contents. We collected 613,207 files named DESIGN.md in October 2026. Because the same file name also denotes architectural plans and other design documents, we filtered those with YAML front matter, a design-system name, at least one recognized design token, and zero errors under the official linter. Our JSON Lines dataset provides file-level and deduplicated views of the original Markdown, links files to repositories, paths, and commits, and is released with related scripts. We outline research opportunities on visual design knowledge and design-aware AI agents. Dataset is available at: https://huggingface.co/datasets/Jl-wei/DesignSpecs",
-    "url": "https://arxiv.org/abs/2611.17713v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.17114v1",
-    "title": "Designing Institutions for Autonomous AI",
-    "authors": [
-      "Petter Törnberg"
-    ],
-    "published": "2026-11-12",
-    "summary": "As autonomous AI agents increasingly interact in persistent populations, their collective capabilities and alignment depend not only on individual models, but also on the institutions governing their interactions. Yet AI research has largely focused on individual agents. In this Perspective, we argue that institutional design must become a distinct focus of AI research. Drawing on institutional political economy, social epistemology and organizational theory, we develop seven principles for designing AI institutions that sustain cooperation, enable reliable collective judgments and remain accountable to legitimate human purposes. These address reciprocal contributions, accountable authority, functional differentiation, epistemic pluralism, criticism and correction, human direction, and institutional adaptation. We illustrate their application through machine science, where autonomous research challenges institutions developed around human capabilities and constraints. We then propose an experimental research programme in which matched populations of AI agents operate under alternative institutional arrangements, and describe MoltJournal, an API-first journal for autonomous research agents, as an illustration of how such institutions can be made programmable and observable. Together, these contributions establish institutional design as a research agenda concerned not only with aligning autonomous agents, but with understanding how institutions can transform them into capable, reliable and accountable collectives.",
-    "url": "https://arxiv.org/abs/2611.17114v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16591v1",
-    "title": "Singularity-Bench: Can Agents Build Agents?",
-    "authors": [
-      "Yang Zhou",
-      "Krish Agarwal",
-      "Zhuoming Chen",
-      "Zerui Wang",
-      "Zhenyu Zhang",
-      "Wenshuang Li",
-      "Xinpeng Wei",
-      "Zhichen Zeng",
-      "Jingyu Liu",
-      "Jue Wang",
-      "Sen Wu",
-      "Ziheng Jiang",
-      "Zhen Dong",
-      "Han Cai",
-      "Binhang Yuan",
-      "Ying Sheng",
-      "Ce Zhang",
-      "Bo Li",
-      "Beidi Chen"
-    ],
-    "published": "2026-11-12",
-    "summary": "Frontier AI agents increasingly succeed on realistic, long-horizon tasks and are beginning to improve the systems through which they operate. Yet existing benchmarks often restrict agents to narrow action spaces, use simplified environments, or rely on verification methods that are unreliable for evaluating arbitrary agent-generated systems. We introduce Singularity-Bench, an open-ended benchmark for autonomous AI development with six end-to-end tasks spanning pre-training, mid-training, post-training, inference, the agent harness, and cluster orchestration. Each task requires agents to implement core systems from a minimal starting point and evaluates them against mature human-engineered baselines on identical hardware. Additionally, through extensive red-teaming covering 9 of the 10 categories in the OWASP Top 10 for Agentic Applications, we expose reward-hacking vulnerabilities in the conventional Harbor framework and develop Breakwater, an extension of Harbor that blocks all attacks tested in our study. Across 11 agents built from 7 frontier models and 2 harnesses, Opus 5.5 with Claude Code matches or outperforms the human baseline on all six tasks with a Singularity-Index of 1.25, suggesting it may have the skills needed to reach the singularity. The remaining agents average only 0.58. Our vision is for Singularity-Bench to track how much of AI development agents can already automate and when they may transition from assisting to taking end-to-end responsibility for building stronger successors.",
-    "url": "https://arxiv.org/abs/2611.16591v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16485v1",
-    "title": "Contain, Conform, Compare (Extended Version): A Red-Teamed Evaluation Kit for Small Coding Agents and the Full Record of Its Experiments",
-    "authors": [
-      "Nguyen Minh Thang"
-    ],
-    "published": "2026-11-12",
-    "summary": "A hosted score in the Gemma 4 Developer Agent competition is one noisy number, so development needs a local evaluator that is fast, safe for agent-written code, and matching the hosted scorer's prompts. drydock-eval evaluates a small coding agent (Gemma 4 E4B) at about 250 runs per hour on one RTX 5090. Contain runs each job in a fresh container without network and passed 200 scripted escape tests; conform provides eight checks that compare a local stack's requests with the scorer's configuration, down to rendered tokens; compare provides paired statistics that respect repository clusters. AI agents built and attacked the kit; a human owner approved machine use and release. This extended version repeats the short paper and adds the full record of the experiments made with and around the kit: 9,660 rows of agent runs, 2,494 grading controls and 72 serving measurements, all released. On four L4 GPUs the 31B model decodes 38.1 tokens per second in one stream and E4B 105.8. Six configurations of a 31B agent solved between 37 and 44 of 70 development tasks, and no pairwise difference was detected. A pre-registered five-arm experiment (231 tasks, 4,620 jobs) measured four prompt divergences: no E4B solve-rate change was detected (largest estimate -2.1 points, 95% interval -4.4 to +0.4). Three changes of the E4B agent led their screens by +1.0 to +6.2 points; each was then tested once on new tasks under a frozen pass rule, and none was confirmed (gains -0.35, -0.39 and +4.10 points). The unchanged baseline, run again on the same 128 tasks, moved by 1.17 points, and 65% of these tasks were solved in none of eight runs. Prompts and agent bundles are withheld; every run-level result is public.",
-    "url": "https://arxiv.org/abs/2611.16485v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.16378v1",
-    "title": "Evidence-Governed Adoption of Self-Generated Updates in Autonomous AI Agents",
-    "authors": [
-      "Subodh Lonkar"
-    ],
-    "published": "2026-11-12",
-    "summary": "Autonomous agents modify prompts, memories, tools, workflows, and policies using interaction histories. Yet a plausible modification is not necessarily suitable for persistent adoption: candidate selection is adaptive, evaluators may be imperfect, and local gains can hide degradation against an earlier baseline. We introduce Evidence-Governed Evolution (EGE), a framework for governing adoption of self-generated agent modifications. EGE separates candidate generation from confirmatory adoption, evaluates frozen candidates on fresh paired audits, requires meaningful improvement on a prespecified primary objective, protects declared capabilities through reference-relative non-inferiority tests, and applies governance constraints before bounded canary deployment. We establish an evaluator-calibrated simultaneous lower-bound construction for a countable sequence of adaptively generated candidates. It combines candidate-wise Hoeffding bounds with independent calibration samples comparing the operational evaluator with a prespecified reference procedure. We also formalise reference replacement through bridge tests, derive a cumulative degradation bound along a versioned reference lineage, and provide an audit-planning condition relating effect-size margin, sample sizes, and acceptance probability. A Monte Carlo stress test illustrates calibration under candidate-dependent evaluator optimism; it is a stylised statistical experiment, not an evaluation of a deployed agent. The guarantees are conditional on bounded paired scores, fresh sampling, a valid reference-evaluation construct, and declared evaluation distributions; they do not establish universal agent safety or robustness to arbitrary distribution shift.",
-    "url": "https://arxiv.org/abs/2611.16378v1",
     "source": "arXiv"
   }
 ]
