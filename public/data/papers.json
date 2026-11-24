@@ -1,5 +1,161 @@
 [
   {
+    "id": "2611.31033v1",
+    "title": "AI-Assisted Auto-formalization for Trustworthy Scientific Computing: Case Studies and Lessons Learned",
+    "authors": [
+      "Mohit Tekriwal",
+      "Het Mankad",
+      "Naifeng Zhang",
+      "Keita Teranishi",
+      "Sahil Bhola",
+      "Daisuke Uchida",
+      "Jean-Baptiste Jeannin",
+      "Franz Franchetti",
+      "Karthik Duraisamy",
+      "Jeffrey Vetter",
+      "Yohann Dudouit"
+    ],
+    "published": "2026-11-23",
+    "summary": "Agentic AI tools have recently had success in mathematical reasoning. Both general purpose coding agents such as Claude Code and Codex, and specialized mathematics agents such as Aristotle, have been used for formalizing mathematical problems such as Fermat's last theorem, Erdős problems and several IMO level math problems. However, much of these efforts are concentrated in the pure mathematics domain, which benefits from relatively self-contained theorem statements, fixed mathematical representation and extensive support in existing formal libraries. Applied mathematics, on the other hand, presents additional challenges because the source may describe a computational procedure or modeling transformation rather than a declarative theorem. In this work, we present a systematic study of AI-assisted auto-formalization for scientific computing (SC), a domain in applied mathematics central to U.S. Department of Energy applications. Through case studies spanning hierarchical abstraction layers in SC software stack, we evaluate not only whether AI agents can complete numerical proofs, but also where and why they fail across the stack. Our primary contribution is a cross-layer taxonomy of failure modes and an analysis of the form of expert feedback required at each layer to recover mathematical soundness. From these observations, we derive a workflow for recurring proof patterns and practical guidance for using AI agents while preserving mathematical soundness. Our results characterize both the practical value and the current limitations of AI-assisted formalization for trustworthy scientific computing.",
+    "url": "https://arxiv.org/abs/2611.31033v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.31027v1",
+    "title": "ComputeWise: Measuring and Fixing GPU Waste by AI Research Agents",
+    "authors": [
+      "Egor Pakhomov",
+      "Nina Pakhomova",
+      "Anurag Koul",
+      "Shafiq Joty",
+      "Erik Nijkamp"
+    ],
+    "published": "2026-11-23",
+    "summary": "AI agents are given GPUs to do AI research on their own. Do they use those GPUs well? A busy GPU does not tell us, because it can be busy with work the answer did not need. This matters, because the tokens the agent spends cost almost nothing next to the GPUs its experiments run on, so using those GPUs better has a huge impact. So we built ComputeWise, an open benchmark of research tasks on which this waste can be measured and reduced. For it we developed our own simulated GPU, which replays recorded runs to the agent's code. With no real GPU needed, we ran hundreds of experiments, far more than would be reasonable on real GPUs. With no help, the agents put only 52% of their GPU time into work the answer needed. Another 22% went to work it did not need, and 26% sat idle. Asking the agent to finish the work faster, telling it to keep every GPU busy, or giving it a job scheduler does not fix this. So we built an open-source harness, part prompting and part deterministic code. Across five models, it removed over 80% of the extra time to the answer.",
+    "url": "https://arxiv.org/abs/2611.31027v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30916v1",
+    "title": "TrialAgentBench: Evaluating AI Agents for Clinical-Trial Analysis and Long-Horizon Drug-Development Decisions",
+    "authors": [
+      "Bradley Segal",
+      "William Bolton",
+      "Philip Torr",
+      "David Clifton",
+      "Lei Clifton"
+    ],
+    "published": "2026-11-23",
+    "summary": "Clinical drug development is a long-horizon, high-stakes process requiring sequential decisions based on information that costs money and time to acquire. AI agents have demonstrated capabilities for scientific analysis, but there is no established way to evaluate them on these decisions, as real trials are expensive, involve people, and never reveal the counterfactual. We introduce TrialAgentBench, a benchmark for evaluating AI agents on clinical trial analysis and drug development decision-making using simulated trials where the truth is known, embedded within the data records of a fictional drug sponsor. We publicly release nearly 3,500 tasks, varying from analysing a single trial to managing multi-phase programmes with budget and time constraints. We score each analysis by rerunning its code on new trials, and each programme by the value its decisions achieve. Across 24 closed- and open-weight models, the strongest agents can analyse raw, messy trial records to within 6% of a process-aware analysis, even when an assumption is violated, with 95% confidence intervals containing the true effect 94--95% of the time. Over the prior year, the best model improved from 19% above this analysis, with serious misses on 15% of tasks, to 3.5% and 1%. What limits them is decision-making from evidence under uncertainty: when to correct, what evidence to buy, when to stop. The strongest agents are overly careful, correcting on 83% of tasks with equal recording errors, where it is unnecessary. On drug programmes, the best agent has substantial headroom, reaching 48% of the value an oracle achieves against 58% for a rule-based developer, with others falling 24 to 66% short. Model generations show ongoing improvements in handling data and evidence, with substantial variation. The strongest models can act as competent analysts, but do not yet make reliable long-horizon decisions.",
+    "url": "https://arxiv.org/abs/2611.30916v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30848v1",
+    "title": "Deviant Machines: Innovation, Containment, and the Prevention of Autonomous Misalignment",
+    "authors": [
+      "Frederic Lemieux",
+      "Shadi Abouzeid"
+    ],
+    "published": "2026-11-23",
+    "summary": "From May to September 2026, AI agents in training or evaluation at OpenAI, Anthropic and the UK AI Security Institute reached real third-party systems, published malicious packages, used fake identities to manipulate open-source maintainers, probed government data services, and wrote instructions into their own future contexts. Criminology has mostly treated AI as a tool for human offenders. This article treats these systems as deviant rather than criminal: they departed from training, rules and constraints without the intent that criminal concepts assume. It offers an exploratory, theory-informed analysis of documented records, using plausibility probes across three incident complexes and four behavioral clusters, profiled on four evidence dimensions that separate who acted from why. Drawing on Merton, it argues that goal pressure plus blocked legitimate means is a structural condition for innovation, and that whether it ends in containment or harm depends on the means chosen and the controls in place, not the goal. Three framework families fit the record best, each linking diagnosis to remedy: routine activity theory and situational prevention (handlers, guardians, place managers), organizational deviance and safety science (escalation, safeguard parity), and goal-means strain with differential opportunity (sanctioned exits, guarding illegitimate means), the last only structurally. Restrictive deterrence adds an analogy: penalizing visible reasoning produced less monitorable reasoning. The article proposes conditions that keep departures accountable and contestable, and allocates prevention responsibility across developers, evaluation partners, operators, platforms and the system, distinct from blame or legal liability. Because the record is shaped by disclosure and observed departures, the analysis shows plausibility and practical relevance, not a causal test.",
+    "url": "https://arxiv.org/abs/2611.30848v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30777v1",
+    "title": "AvatarAnyone: Agentic Reconstruction of Mesh-Based Layered Avatars from YouTube Video",
+    "authors": [
+      "Aymen Mir",
+      "Peter Wonka",
+      "Stefanos Zafeiriou",
+      "Rıza Alp Güler"
+    ],
+    "published": "2026-11-23",
+    "summary": "We introduce AvatarAnyone, a method for reconstructing avatars from casual YouTube videos as layered meshes, with each garment and footwear as a separate mesh layered on top of the body mesh. In such videos, people differ in garment classes, clothing types, and layers, and each combination needs a different reconstruction. A single fixed layered reconstruction pipeline therefore fails. AvatarAnyone solves this problem with AI agents that plan a custom optimization for each person's reconstruction. The agents predict the garment classes, the clothing type, and the layering. They use these predictions to choose an initialization and stage the optimization. Because the avatars are layered meshes, they support applications such as virtual try-on and cloth simulation. We change the clothing layers of an avatar and render it in different garments and poses. We can also simulate a clothing layer as cloth over the animated body with a standard cloth simulator. Most existing avatars are one fused surface or a set of Gaussians and cannot do this. We load the avatars directly into Blender, Unreal Engine, and robotics simulators such as MuJoCo. As the avatars are meshes, they support contact modeling with other objects. We show results from around 150 YouTube videos. On four datasets, AvatarAnyone outperforms existing mesh-based methods for animatable monocular reconstruction. Our project page is available at https://miraymen.github.io/avataranyone.",
+    "url": "https://arxiv.org/abs/2611.30777v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30750v1",
+    "title": "SchemaCaps: When a Compatible Tool Update Silently Widens an AI Agent's Authority",
+    "authors": [
+      "Yulliwas Ameur",
+      "Samia Bouzefrane",
+      "Soumya Banerjee"
+    ],
+    "published": "2026-11-23",
+    "summary": "The tools users approve for their AI agents keep changing their JSON input schemas. Of 8 surveyed MCP clients and scanners, none is observed or documented to re-approve a tool whose input schema widens (two not determinable). We define non-amplification over the coordinates visible in the schema (declared arguments and undeclared fields, on effective values) and a re-binding rule decided by subschema inclusion, trusting no field labels by default and conservative up to its checker and tested case analysis. Evidence: a Coq proof of composition; 48 regression tests; an exact-reference benchmark, where the reviewed version of the rule silently re-bound 27 amplifying changes, now fixed; and a pilot on 604 releases of 39 public MCP servers. There, 412 of 580 compatible schema changes widen some coordinate, yet compatibility re-binds them silently. The authors' adjudicated double annotation finds at least 76 that add or widen an authority-bearing argument (66 of the 84 a name-based labeller flags, plus 10 it misses). On existing tools, the rule asks 645 re-approvals, against 1,197 for pinning the input schema (2,004 with descriptions) and 617 for compatibility. Behaviour change behind an identical schema remains out of reach.",
+    "url": "https://arxiv.org/abs/2611.30750v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30711v1",
+    "title": "Handoff at Frontier AI Companies",
+    "authors": [
+      "Matteo Pistillo",
+      "Isaak Mengesha",
+      "Charlotte Stix",
+      "Annika Hallensleben",
+      "Alejandro Ortega",
+      "Marius Hobbhahn",
+      "Alexander Meinke"
+    ],
+    "published": "2026-11-23",
+    "summary": "The term \"Handoff\" captures frontier AI companies' ongoing delegation of all AI Research & Development (AI R&D) functions, including high-level decisions such as safety assessments and deployment decisions, to internally deployed AI agents. Handoff is progressing rapidly and will be complete once no human remains in the loop. This report aims to alert policymakers to the national security threats and Loss of Control risks that Handoff can create, and to advise them on how to monitor and respond to those risks.",
+    "url": "https://arxiv.org/abs/2611.30711v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30583v1",
+    "title": "Interrogation Protocols for AI Control",
+    "authors": [
+      "Aniruddh Pramod",
+      "Matthew Khoriaty",
+      "James Lucassen",
+      "Adam Kaufman"
+    ],
+    "published": "2026-11-23",
+    "summary": "As the intelligence of an AI agent increases relative to a trusted monitor, so does the risk that the monitor will fail to understand the agent's actions or to evaluate them confidently. We introduce interrogation protocols to a high-stakes AI control setting, and allow the monitor to ask the untrusted agent questions about confusing actions. For interrogation to improve safety, a weaker model must be able to distinguish misleading explanations produced by an attack policy from genuine ones produced by an honest policy. We find that on a held-out subset of BashArena, an interrogation protocol improves safety at a 1% audit budget from 72.6% for an actions-only baseline, which does not use interrogations, to 79.5% (+7.0 pp [+0.9, +20.1], 95% paired bootstrap interval), but most of this uplift can be captured by having a trusted model state a specific concern. More broadly, our work suggests that interrogating agents can improve safety, allowing monitors to catch more attacks at a larger capability gap.",
+    "url": "https://arxiv.org/abs/2611.30583v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30483v1",
+    "title": "When an AI agent makes a mistake in a database, what decides the damage?",
+    "authors": [
+      "Abdullah Kaya",
+      "Cevheri Bozoglan",
+      "Yusuf Gundogdu"
+    ],
+    "published": "2026-11-23",
+    "summary": "AI agents now run statements against production databases, and several of the incidents that followed deleted production data, which came back only through backups or the provider's help. We ask what decides the damage when such an agent makes a mistake: the model, a guard layer in front of the database, or the database engine itself. The study has two preregistered layers. In Layer A, a frozen library of 22 canonical mistakes is applied by script, with no model involved, to four relational engines under five permission arms and two recovery arms, followed by an engine-native recovery drill (792 cells; 874 drill runs including 10-minute repeats). In Layer B, a minimal tool-calling agent driven by six small open-weight models (4B to 12B parameters, plus one 35B mixture-of-experts model with about 3B active, served locally) works on tasks that contain hazards across nine engines: PostgreSQL, MySQL, SQLite, ClickHouse, Apache Cassandra, MongoDB, Valkey, Apache Kafka and OpenSearch (9,468 trials). A secondary run added MariaDB, Redis and Elasticsearch (2,916 trials); each behaved like its closest core engine. Out of the box, the engines differ less in what a mistake destroys than in what they let you undo. Three of the seven preregistered hypotheses met their decision rule: H2 (for one of nine damage classes) and H3 largely by construction of the arms, and H4 only under its original measure. Four did not; one of them (H5) was uninformative, because in its task the agents never found the credential. The post-hoc analyses (S1-S13) are exploratory and uncorrected for multiple comparisons; on PostgreSQL, MySQL, OpenSearch and ClickHouse the preregistered outcome and original-row loss disagree about G1. We report all of them, with every deviation from the preregistration and its timing.",
+    "url": "https://arxiv.org/abs/2611.30483v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.30287v1",
+    "title": "MMMem: Self-Improving Agents with Task-Aware Multimodal Experience Consolidation",
+    "authors": [
+      "Yuxuan Chen",
+      "Changwei Lv",
+      "Yunfei Li",
+      "Zhongjing Du",
+      "Kehui Tan",
+      "Zijun Liao",
+      "Ruochong Zheng",
+      "Hao Chen",
+      "Can Deng",
+      "Zheni Zeng",
+      "Chang Liu",
+      "Jie Chen"
+    ],
+    "published": "2026-11-23",
+    "summary": "AI agents accumulate conversations, images, and documents through long-term interactions with users. Answering later questions often requires connecting evidence across these records, yet the resulting understanding is rarely retained, allowing mistakes to recur on related questions. Existing multimodal memory methods largely focus on storing and retrieving records, with limited mechanisms for learning from completed tasks and consolidating task-specific experience. We therefore propose MMMem, a task-aware multimodal memory framework that extracts and consolidates experience from completed tasks through four complementary strategies. First, source-linked multi-view memory organizes original text, images, and rendered pages alongside generated scene images that combine clues across records for retrieval. Second, source-generated tasks support knowledge alignment at two levels: warm-up consolidates source knowledge into task-relevant experiences in external memory, while self-training adapts the model's parametric knowledge to task demands. Third, the same vision-language model distills completed tasks into experiences that record the task context, conclusion, and support links. Finally, task-aware retrieval recalls source views and relevant experiences for answering and verification, while source-supported reuse guides long-term retention. Across three memory benchmarks and two vision-language readers, MMMem outperforms eight baselines. With Qwen3.5-9B, MMMem achieves relative gains of 36.9%, 17.6%, and 15.2% over the best-performing baselines on LoCoMo, Mem-Gallery, and LooGLE v2, respectively. Ablations show consistent gains from training and memory warm-up, while case studies illustrate how individual components work in practice.",
+    "url": "https://arxiv.org/abs/2611.30287v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.27746v1",
     "title": "Shared Understanding in Human-AI Teams: Coordination Continuity in Evolving Work",
     "authors": [
@@ -581,144 +737,6 @@
     "published": "2026-11-17",
     "summary": "Quantum charge-coupled device (QCCD) architectures enable scalable trapped-ion quantum computing by dynamically shuttling ions between specialized processing and storage zones. A QCCD can be built with many trap sizes and layouts. Comparing them requires compiling every program under each design's transport, capacity and control constraints, and trusting the target code of each compilation. We present a co-design framework built on one Lean-verified compiler. The hardware description and its operating rules are compiler inputs, so a single theorem covers every candidate design: the target code of every compilation preserves its program's behavior and obeys the hardware rules. Across 75 benchmark programs of 11 to 130 qubits, the best design found takes 66% less modeled execution time on average than the worst design of equal capacity. An AI agent that proposes devices based on our compiler's checked results beats the fastest of these designs on 71 of 75 programs. Our verified compiler provably avoids the 11 defects that we report in three previous compilers. It scales to hundreds of qubits, compiling 512-qubit programs for a 38-trap device in 1 to 29 minutes.",
     "url": "https://arxiv.org/abs/2611.23469v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.21577v1",
-    "title": "When Tool Names Are Not Identities: Measuring Provider Misbinding in MCP-Based AI Agents",
-    "authors": [
-      "Zeynab Anbiaee",
-      "Sajjad Dadkhah",
-      "Ali A. Ghorbani"
-    ],
-    "published": "2026-11-16",
-    "summary": "Large language model (LLM) applications increasingly act as agents that select and invoke external tools. The Model Context Protocol (MCP) standardizes this interaction by allowing clients to compose tools advertised by multiple servers. However, tool metadata used for discovery and selection is not, by itself, necessarily bound to a verified provider identity. This paper studies this gap as tool-provider misbinding: a failure in which a request intended for a legitimate provider is instead resolved to an attacker-controlled tool. The attacker does not compromise the host, LLM, legitimate server, or network channel; it only operates another MCP server that advertises tools with chosen metadata. We formulate tool provider misbinding as an attacker-controlled tool-selection optimization problem and evaluate it in a controlled MCP environment across five LLM-based clients. The results show that interactions drive misbinding. The strongest failures occur when exact-name collision, task-aligned description, and compatible schema reinforce one another, but authority-enhanced descriptions with compatible schema can also cause wrong-provider execution or unresolved provider ambiguity without name collision. Different models expose the same provider-binding weakness differently, including attacker-controlled provider selection, clarification requests, and unstable or inconsistent provider resolution.",
-    "url": "https://arxiv.org/abs/2611.21577v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.21520v1",
-    "title": "Safe Resemblance, Silent Propagation: Limits of Text-Similarity Guardrails for AI Agent Safety",
-    "authors": [
-      "Charles Xiao"
-    ],
-    "published": "2026-11-16",
-    "summary": "When AI agents relay information to one another, an output can preserve an injected instruction's effect on downstream agents even after its wording changes, yet legitimate quotation and template reuse can produce high textual overlap with the source, so text-similarity guardrails that attempt to flag the former risk conflating these two cases. We test this distinction using DonkeyRail, a public classifier combining BLEU, ROUGE-L, and METEOR features, deployed in a controlled three-agent email relay, defining a behavioral measure in which an output counts as functional (the injected procedure induces fresh computations in two subsequent agents) independent of the detector's score, alongside legitimate controls that explicitly authorize quotation and reuse. At its default threshold the classifier misses 8 of 19 functional outputs while flagging 70 of 192 legitimate replies, with every completed quotation and template-reuse reply triggering a false alert; calibrating for low false positives on one template set does not transfer, as the recalibrated threshold detects only one functional output and still produces 15 false alerts on new templates. We also identify an operating-point error in all 21 published classifier configurations, where ROC interpolation replaces direct threshold application, and show formally that high AUC against a surface-level text criterion provides no distribution-free guarantee of high AUC against the behavioral target, while the existing evaluation labels lack the joint observations needed to estimate the gap. An authorization analysis further shows that identical visible transcripts can require different safety decisions depending on the governing policy, a distinction no observation-only classifier can resolve. These results argue for behavioral and policy-grounded evaluation over text-similarity guardrails.",
-    "url": "https://arxiv.org/abs/2611.21520v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.21501v1",
-    "title": "Is This Code Mine? Student Ownership When AI Agents Write the Spec and the Code",
-    "authors": [
-      "Gustavo Pinto",
-      "Enne Rebeca Silva de Freitas",
-      "Danilo Monteiro Ribeiro"
-    ],
-    "published": "2026-11-16",
-    "summary": "Software engineering courses are starting to ask students to build entire systems with AI coding agents, but little is known about what students actually do with them and whether they still own what they deliver. If the agent writes both the code and the decisions behind it, the artifacts we grade no longer show what students learned. We studied an assignment in which 18 pairs of students built applications with agents under Spec-Driven Development, combining the mined history of their repositories, the prompts they recorded, and a survey of 33 students. The agents wrote 69\\% of the specifications meant to keep students in control, sometimes from a prompt of a few words. Students locate their ownership in the ideas, crediting themselves with half of them but a fifth of the code, yet most could not explain that code to a colleague or modify it without the agent, and what they report having written is unrelated to what their own commits declare. The three teams that met the 100,000-line target did so with generated code the application never uses, in one case proposed by the agent itself, and one team rewrote its history to backdate its specifications. Teaching with agents should therefore assess what students specify, review, and can explain, rather than what they ship, and enforce the engineering process with tools rather than trusting it to students or agents.",
-    "url": "https://arxiv.org/abs/2611.21501v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.21452v1",
-    "title": "A Taxonomy and Taxonomy-Guided Benchmark Reduction for Spreadsheet Tasks",
-    "authors": [
-      "Bogdan Vasilescu",
-      "Emerson Murphy-Hill",
-      "Anikesh Parashar",
-      "Aayush Kumar",
-      "Gustavo Soares",
-      "Mar Ginés Marín",
-      "Sumit Gulwani"
-    ],
-    "published": "2026-11-16",
-    "summary": "Spreadsheets let millions of end users without programming training do computational work, and teams are increasingly building AI agents to help them. Evaluating each candidate agent configuration across many tasks is costly. Benchmark reduction can lower this cost by selecting a small subset of tasks whose outcomes predict full-benchmark scores, but selecting tasks only for predictive accuracy can leave whole categories of spreadsheet work untested. We contribute a taxonomy of spreadsheet tasks, grounded in a review of benchmarks and refined with the Excel Agent product team at Microsoft, and a benchmark-reduction method that favors taxonomic diversity among similarly predictive choices. On benchmark logs from Microsoft, taxonomy-guided selection broadens coverage at little or no cost in predictive accuracy and often improves prediction on configurations excluded from selection. Broader coverage can therefore support, rather than compromise, predictive accuracy. Generalization remains limited across time: subsets selected using little recent history predict poorly for configurations much later in time. Beyond benchmark reduction, the taxonomy provides a reusable framework for auditing gaps in task coverage, as teams at Microsoft have done.",
-    "url": "https://arxiv.org/abs/2611.21452v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.21408v1",
-    "title": "Do Embedding-Map Distances Guide LLM Ideation? Four Tests Against What Came Next",
-    "authors": [
-      "Javier Aguilar Martín"
-    ],
-    "published": "2026-11-16",
-    "summary": "A popular ideation recipe treats an embedding map of existing work as a guide: pick points far from everything and decode them into ideas. I test four ways such distances could guide ideation against what appeared later. (1) Far random directions are not text: no later item reaches a raw cosine above about 0.10 with one (after centring or whitening, 22 of 24 cells stay out of reach), and an LLM decoder shown a target's neighbours, with score-only feedback, writes those neighbours in all six target sets. A neighbour-free search writes coherent text at median cosine 0.57 and 0.47 to interior gaps, beating the nearest existing item on 15 and 14 of 20, but only 0.07 and 0.06 to far points. (2) On k-means cells of a past-only map, the registered hole score mostly tracks cell size and position; three density-based gap scores forecast which cells grow fastest at or below chance (AUC 0.30 to 0.66) and add nothing to momentum in Steam and arXiv, with patents inconclusive; more isolated new Steam games are slightly better reviewed. (3) LLM continuations of arXiv papers stay closer to the source than papers that cite it, under three user prompts and against proposal rewrites (gpt-4o) and April-December 2023 papers (OLMo). Critique lengthens this step beyond content-free revision, replicated on 150 new papers. Revealing a real follow-up's title turns the ideas by 0.032 along a follow-up-specific direction beyond revision; reviewer, oracle and distance feedback add 0.13, 0.08 and 0.34 of that turn (upper bounds 0.46, 0.46, 0.70), and their turn is not separable from revision or their longer step. (4) For inspiration material graded by distance, no inverted U was detected, on an anticipation margin that tracks format more than content. Original tests were registered before running, follow-ups (thirteen requested in two AI-agent reviews) after the main results; all are dated only by local git commits.",
-    "url": "https://arxiv.org/abs/2611.21408v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.21376v1",
-    "title": "A Crowd-Audited Atlas of Implicit Bias in LLM-Powered Agents",
-    "authors": [
-      "Jason Alexander",
-      "Yuxuan Li",
-      "Michael Licamele",
-      "Wesley Hanwen Deng",
-      "Sauvik Das"
-    ],
-    "published": "2026-11-16",
-    "summary": "Prior work has shown that large language models (LLMs) express implicit biases in high-publicity, one-off decision scenarios such as hiring and intelligence assessment. However, as people increasingly employ autonomous, LLM-powered AI agents that make decisions on their behalf in doing day-to-day tasks, it is of critical importance that we understand how implicit biases, based on sociodemographic assumptions, emerge across a broad milieu of workaday decision scenarios. We used the 17 domains of daily activity in the American Time Use Survey (ATUS) to generate an atlas of 506 decision scenarios in which LLMs --- endowed with personas representing different races, gender identities, and political ideologies --- expressed significant implicit bias. Next, in a crowdsourced audit, 500 participants made 8,010 binary choices about which implicitly biased decision scenarios most deserved further review. We found that participants prioritized decision scenarios that had broad relevance (e.g., about food choices), were high stakes (e.g., about health), and where all members of a simulated sociodemographic group made unanimous decisions (because it was a clear indication of stereotyping). They were less swayed by the magnitude of an observed disparity or the specific ATUS domain the decision scenario represented. When examining the rationale behind their prioritization choices, we found that participants often interpreted disparities as traits of demographic groups and judged whether those traits seemed plausible, often based on their own internalized stereotypes. We discuss implications for building personalized AI agents, digital twins, social simulations, and for using crowdsourced bias audits.",
-    "url": "https://arxiv.org/abs/2611.21376v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.21273v1",
-    "title": "CAE-Bench: Benchmarking AI Agents for Reusable CAE Solver Development",
-    "authors": [
-      "Zhiyu Zhou",
-      "Tianyou Liu",
-      "Xinping Yang",
-      "Yiyao Liu",
-      "Jiayi Dong",
-      "Yihan Lin",
-      "Haokai Ye",
-      "Yifan Lu",
-      "Zeyu Dong",
-      "Yansong Li",
-      "Shengqi Zhang"
-    ],
-    "published": "2026-11-16",
-    "summary": "We developed CAE-Bench, a benchmark to evaluate AI agents on Computer-Aided Engineering (CAE) solver development. A CAE solver is more than a PDE solver; it must be able to generalize across various inputs, such as different boundary conditions, geometries, and material properties. CAE-Bench evaluates the generalizability of AI-developed CAE solvers by providing the same task, such as a heat transfer problem, multiple cases, with each case specifying an input. The AI agent develops a solver for a fixed task using only a few public cases, and the resulting solver is then tested on held-out cases, i.e., cases it has never seen before. We evaluate 12 models across a range of reasoning settings on 80 computational tasks. Our experiments show that even if a solver developed by an AI agent performs well on the public cases, it may even get 0 score on held-out cases. For tasks such as fluid dynamics problems, even the solver developed by GPT-6 Astra performs poorly on held-out cases. A data format and an SDK for task registration are provided, so the researcher can use the benchmark on their own infrastructure. We hope that CAE-Bench will help the community to develop AI agents that can develop reusable CAE solvers that generalize to various inputs.",
-    "url": "https://arxiv.org/abs/2611.21273v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.20988v1",
-    "title": "Hivemind: A Federated Protocol for AI-Mediated Tacit Knowledge Sharing in Organisations",
-    "authors": [
-      "Srinivasan Sundaresan"
-    ],
-    "published": "2026-11-16",
-    "summary": "This paper presents Hivemind, a federated protocol that enables AI agents to exchange tacit knowledge on behalf of their users, asynchronously and without requiring any direct human interaction. Individual AI memory systems capture the decisions, reasoning, and contextual knowledge that surface during AI-assisted work. Hivemind creates the shared space in which this captured knowledge can flow between individuals across team and departmental boundaries, addressing a structural gap that neither centralised knowledge repositories nor existing AI tooling closes, even where partial solutions such as expert-finding systems exist. The paper evaluates centralised versus decentralised design approaches, proposes a federated architecture grounded in Nonaka and Takeuchi's (1995) Socialisation, Externalisation, Combination and Internalisation (SECI) model, and demonstrates a proof-of-concept implementation using Design Science Research (DSR) methodology. Measuring the enterprise benefit of federated tacit expertise sharing remains an open task for future work.",
-    "url": "https://arxiv.org/abs/2611.20988v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.20956v1",
-    "title": "From Vision to Interaction: Evaluating Dynamic Social Intelligence of VLM Agents in ALIVE-World",
-    "authors": [
-      "Yue Xu",
-      "Xiaoyu Qin",
-      "Sihan Zhao",
-      "Ze-en Xiong",
-      "Jia Jia"
-    ],
-    "published": "2026-11-16",
-    "summary": "As AI agents are increasingly deployed in real-world applications and take on social roles, dynamic social intelligence, the ability to continuously perceive multimodal cues, infer latent cognitive states, intervene through embodied actions, and ultimately achieve social goals, has become essential. However, existing evaluations largely fragment social intelligence into text-based abstractions, static reasoning tasks, or embodied simulators that lack social dynamics. These approaches fail to capture the multimodal, continuous, and interpersonal complexity of authentic human interactions. To bridge this gap, we introduce ALIVE-World, an embodied simulation environment supporting dynamic multimodal interactions encompassing egocentric vision, language, and non-verbal action. To provide socially grounded interactive feedback, we populate this environment with counterpart agents driven by a profile-conditioned, dual-system (intuitive-affective and logical-cognitive) architecture. Building upon this platform, we propose ALIVE-Bench to transform the assessment of social intelligence into a trackable quantitative framework. By deeply leveraging underlying environmental states and agents' internal variables, ALIVE-Bench systematically evaluates Vision-Language Model (VLM) agents across four critical dimensions: perception, understanding, influence, and outcome. Extensive evaluations reveal that dynamic social intelligence is fundamentally multi-dimensional and scenario-dependent. We identify a critical bottleneck between upstream perception and downstream social intervention, exposing VLM vulnerabilities in fine-grained proxemic awareness, adaptive intervention, and multi-party coordination. By uncovering these limitations and the diverse interaction strategies they produce, this benchmark provides actionable insights for the future behavioral alignment of multimodal agents.",
-    "url": "https://arxiv.org/abs/2611.20956v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.20924v1",
-    "title": "Navital Gym: Rule-Graded Agent Environments for Indian Workflows",
-    "authors": [
-      "Daksh Bathla"
-    ],
-    "published": "2026-11-16",
-    "summary": "AI agents are being deployed on Indian workflows such as payments, tax, forms, travel and customer support in Hindi and Hinglish. Public agent evaluations rarely cover these workflows, and many score with another language model. We present Navital Gym, a set of six open environments with 321 public tasks in five task families: trip planning, UPI payments and disputes, GST invoicing and returns, form filling (including a multi-document split) and customer support in Hindi, Hinglish and three experimental Indian languages. Every task is graded by named, deterministic rules that recompute the outcome from a synthetic sandbox world. No language model judges any score. We report one run per task for three models on all six environments, Claude Opus 5.5, Claude Sonnet 5.5 and Claude Haiku 4.5, and for Gemini 3.1 Flash-Lite on two (UPI and the Support core). Opus solves 315 of 321 tasks, Sonnet 302 and Haiku 205. Trip planning and Hindi/Hinglish support separate the models most. We also describe a private held-out set that is not published, and a 7B adapter trained in the gym. Code is Apache-2.0 and task data is CC BY 4.0. The rules are a documented simplification of Indian practice, not the live systems.",
-    "url": "https://arxiv.org/abs/2611.20924v1",
     "source": "arXiv"
   }
 ]
