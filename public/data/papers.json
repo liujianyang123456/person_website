@@ -1,5 +1,167 @@
 [
   {
+    "id": "2611.33012v1",
+    "title": "Can LLM Judges Catch Unsafe Clinical Actions? A Fault-Injection Study",
+    "authors": [
+      "Neda Ghafouri"
+    ],
+    "published": "2026-11-24",
+    "summary": "As clinical AI agents begin to interact with electronic health records (EHRs), large language models (LLMs) are increasingly used to evaluate their actions. But how reliably can these judges recognize clinically dangerous mistakes, especially when an agent appears to have completed its task successfully? We investigate this question using MedAgentBench by introducing controlled clinical errors into verified agent trajectories. The experiments include 416 faulty trajectories, eight error categories, and six open-weight LLM judges. By comparing each faulty trajectory with its correct counterpart, we measure whether judges genuinely recognize errors rather than simply flagging more actions as unsafe. The findings show that access to clinical evidence significantly improves judge reliability. When shown only the final answer, judges cannot distinguish errors that leave it unchanged, while flagging 56% of correct trajectories. With full trajectory information, the ability to distinguish unsafe actions from correct ones reaches a score of 0.75, and providing actual EHR responses improves discrimination by 0.39. Surprisingly, including the agent's reasoning does not improve overall performance and reduces detection of incorrectly reported clinical values by 0.18, which remain the hardest errors to detect. MedGemma performed worse than the general-purpose model and was the only judge to miss potentially dangerous medication overdoses. We also find that the benchmark's original grader accepts all 38 trajectories with an intentionally skipped laboratory check, while combining LLM judges with a rule-based checker informed by the full EHR record detects 97% of injected faults.",
+    "url": "https://arxiv.org/abs/2611.33012v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32958v1",
+    "title": "Attestation is All You Need: Toward a Zero-Trust Architecture for HPC AI Agents",
+    "authors": [
+      "Jie Li",
+      "Chenxu Niu",
+      "Tongyang Wang",
+      "Yong Chen"
+    ],
+    "published": "2026-11-24",
+    "summary": "AI agents are beginning to automate data analysis, orchestration, and simulation steering in HPC environments, but they introduce a security problem that existing cluster defenses do not address: the hijacked authorized agent. An adversary can subvert an agent through prompt injection, poisoned shared data, compromised tools, or multi-agent coordination, then exfiltrate sensitive data through legitimate encrypted LLM API traffic. We propose behavioral attestation as a runtime defense for this setting. Our system, AEGIS, compiles task-derived behavioral constraints, monitors agent actions with ebpf-based syscall interception, verifies evidence against constraint profiles, correlates behavior across agents, and triggers slurm-level containment. On the real attestation path, AEGIS detects all four implemented attack classes with sub-second median latency at a 1-second interval and low measured verifier overhead. Controlled experiments show full attack-suite coverage, stronger detection than representative baselines, and no observed false positives on the evaluated benign workflows.",
+    "url": "https://arxiv.org/abs/2611.32958v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32946v1",
+    "title": "ShellBench: What Matters More for AI Agents, Models, or Harness for Everyday Tasks",
+    "authors": [
+      "Vincent Koc",
+      "Aditya Washikar",
+      "Rishab Naveen Venkataraman",
+      "Onur Solmaz",
+      "Zhentong Fan",
+      "Xinyang Han",
+      "Toby Vincent John",
+      "Hao Li",
+      "Achyut Mukund",
+      "Biresh Chandra Biswas",
+      "Eshan Shukla",
+      "Louis Pan",
+      "Ivan Kudryavtsev",
+      "Patthigulla Sai Surendra",
+      "Krish Oberoi",
+      "Ayaan Zaidi",
+      "Hema Veeradhi",
+      "Taylor Agarwal",
+      "Erik Erlandson",
+      "Agustin Rivera",
+      "Jacob Tomlinson",
+      "Louka Ewington-Pitsos"
+    ],
+    "published": "2026-11-24",
+    "summary": "The use of AI agents among the general public has been increasing exponentially throughout 2026, though it is often hard for users to determine which configuration is most effective for their personal use. To help provide clarity here we introduce ShellBench, 100 day-to-day tasks based on more than 10 million user requests, each set in a realistic workspace with messy files and competing data sources, and graded for both correctness and safety. We evaluate 12 models across 5 agent harnesses at 3 reasoning levels for a total of 53,100 rollouts, 20% of which are on tasks designated for public release. We find that model choice impacts performance more than harness choice, but the three leading models differ by only 1.1 percentage points. GPT-6.1 Sol passed 61.4% of attempts at about one-sixth of GPT-6 Astra's estimated token cost per attempt, while GPT-6 Astra led at 62.5%. We also found that harness choice had little effect on either performance or safety with all harnesses scoring between 42.9 (Claude Code) and 45.2 (OpenClaw) for pass@1.",
+    "url": "https://arxiv.org/abs/2611.32946v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32884v1",
+    "title": "Lazy Agents Answer Against Their Own Beliefs: Reinforcement Learning with Verifiable Beliefs Teaches Them to Act on What They Believe",
+    "authors": [
+      "Richmond Sin Jing Xuan",
+      "Peilin Feng",
+      "Wenbin Wang",
+      "Soujanya Poria"
+    ],
+    "published": "2026-11-24",
+    "summary": "AI agents working on long tasks often commit to an answer before they have enough evidence, a behavior called laziness. In our evaluations, they frequently commit even while their stated belief still names several possible answers. An outcome reward at the end of the episode scores only the final answer, so it cannot teach the agent when to commit, because a lucky guess receives the same reward as an answer backed by evidence. During training, however, the simulator can compute the exact posterior over the answer at every step and tell whether the evidence is already enough. We propose Reinforcement Learning with Verifiable Beliefs (RLVB), which rewards the agent for taking further steps while this posterior still allows several answers and for committing once the evidence is sufficient. The reward needs no judge, critic or reward model, and it never reads the belief line the agent writes before each action. We also introduce Pro Worlds, a benchmark of visual puzzles where the agent views a large world through a small window. We evaluate three vision-language models on three benchmarks, two of which are never seen in training. RLVB improves the base model in all nine settings, by 17.1% on average. Under the outcome reward, GRPO and PPO fall below the base model on average. RLVB also outperforms PPO with a process reward from an LLM judge by 9.3% on average while using 1.6 times fewer GPU-hours. The trained agent answers with sufficient evidence in 51%, 12% and 74% of the episodes on the three benchmarks, against 8%, 0.4% and 36% for the base model. Its accuracy gain therefore comes from answering more often at high levels of evidence. The belief line shows how the agent reaches this evidence: it acts on its own belief. It commits at only 0.1 to 2.2% of the turns at which the evidence is insufficient and its line still names several answers, against 3 to 68% for the base model.",
+    "url": "https://arxiv.org/abs/2611.32884v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32811v1",
+    "title": "Interactive Neural Computers",
+    "authors": [
+      "Ross Murphy",
+      "Marcel Hedman",
+      "Gabriel Brostow"
+    ],
+    "published": "2026-11-24",
+    "summary": "Computers and their interfaces are usually treated as fixed, so a person, or increasingly an AI agent, must adapt to whatever the operating system presents. This is limiting when someone needs a different workflow, or an interface suited to hands-free use or a disability. We explore an overlooked alternative. Rather than training an agent to operate an existing computer, we train a generative model to be the computer, predicting each next screen from past screens and the user's mouse and keyboard actions. Treating a desktop as an interactive world model raises problems that natural-video world models largely avoid. Without a camera pose to index memory, the model must remember content that has left the screen without any geometric cues. Arithmetic in a terminal has to be exactly right, not merely plausible. Small interface text must also stay legible at interactive frame rates. Our Interactive Neural Computer is structured like a Neural Turing Machine and starts to address these problems with three modules trained end to end from pixels and actions. A surprise-gated slot memory, supervised by latent next-frame prediction (MEMORY-JEPA), stores what is off screen. An exploratory query bridge brings in the reasoning of a pretrained VLM, and a residual renderer predicts only the latent changes between frames. In long closed-loop rollouts, our model recalls occluded files in 64.2% of trials (chance is 33.3%), compared with at most 56.0% for recurrent and sliding-window baselines. It also raises terminal-text OCR accuracy from 1.3% to 50.1%. Finally, because the memory is explicit, it can be transplanted at test time to causally change what the model renders.",
+    "url": "https://arxiv.org/abs/2611.32811v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32686v1",
+    "title": "CAPTA: Identifying LLMs Behind AI Agents",
+    "authors": [
+      "Kailun Yan",
+      "Yue Huang",
+      "Sisi Duan"
+    ],
+    "published": "2026-11-24",
+    "summary": "Large language model (LLM)-based agents access remote services through tools to complete user tasks, often via API calls. In this setting, a remote service may want to identify the backend LLM of an agent to launch model-specific attacks, including prompt injection or selective delivery of manipulated content. However, the service cannot directly query the backend model and must instead collect observable responses through its interactions with the agent, making identification challenging. In this paper, we present Completely Automated Preference Test to tell LLMs Apart (CAPTA), a model identification approach inspired by CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart), which distinguishes humans from automated programs. CAPTA presents multiple-choice questions as verification challenges, using differences in models' selection preferences to identify the backend LLM. It selects questions based on cross-model option-generation diversity and uses LLM-guided search to optimize their option sets. Our evaluation shows that CAPTA achieves 99.0% mean identification accuracy with only 10 questions across 25 LLMs from 10 model families. We further evaluate CAPTA with four widely used agents and seven representative LLMs, achieving 99.7% mean identification accuracy across all 28 agent-LLM combinations with 30 submitted answers.",
+    "url": "https://arxiv.org/abs/2611.32686v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32520v1",
+    "title": "Reliability-aware AI Agent Execution in Collaborative Edge Computing: A World Model Approach",
+    "authors": [
+      "Xiangchun Chen",
+      "Jiannong Cao",
+      "Longxiang Gao",
+      "Xiaoming Wu",
+      "Yusheng Ji"
+    ],
+    "published": "2026-11-24",
+    "summary": "Collaborative edge computing supports AI agent applications by distributing execution across heterogeneous user-controlled devices with limited resources. This paper studies reliability-aware AI agent execution under node failures and wireless disruptions. These disruptions can make agent execution state unavailable or inconsistent, forcing recovery or recomputation that consumes the remaining deadline budget. Maintaining recoverable execution states can therefore improve request completion before deadlines. We formulate an online AI agent execution management problem that jointly selects resource allocations, state protection actions, and recovery targets to maximize the expected task success rate subject to resource, compatibility, and deadline constraints. We develop a world model that jointly captures evolving agent workflows and recoverable execution state under candidate management actions, accounting for node reliability, network conditions, and resource availability. The model enables the controller to simulate future execution and recovery trajectories under candidate actions and estimate their effects on execution progress and task completion before deadlines. We then employ world model-based model predictive control (WorldMPC) with Monte Carlo rollouts to jointly optimize resource allocation, state protection, and recovery decisions for long-term reliable agent execution under the dynamic environment. We evaluate the proposed approach on the simulation and real-world testbed using real-world and synthetic datasets. Experimental results show that WorldMPC improves task success rate over baselines in both simulation and real-world testbed.",
+    "url": "https://arxiv.org/abs/2611.32520v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32415v1",
+    "title": "Within-task hazards of AI agents: unidentified by time-horizon curves, identified by repeated runs",
+    "authors": [
+      "Ruiqi Zhao"
+    ],
+    "published": "2026-11-24",
+    "summary": "The time horizon of an AI agent is read off a curve: the probability that the agent completes a task, plotted against the time a human needs for it. Several recent analyses fit survival models to this curve and conclude that agents' hazard of failure declines as a task goes on. The curve cannot support that conclusion. Every log-logistic horizon curve with slope $β\\le1$ is a mixture of constant-hazard curves, and in a proportional-hazards frailty model the same curve is produced by every within-task Weibull shape $k\\geβ$. If runs of a task are conditionally independent, repeated runs restore identification within this model: the probability that two runs both succeed is the single-run curve shifted by $1/k$ on the $\\log_2$ time axis. Without the Weibull form, the horizontal distance between these two curves still bears on the direction of the hazard: if the average within-task hazard is non-increasing, the distance is at least one, and so is the population limit of a two-step estimator when the cross-section is log-logistic. We decompose the bias of that estimator into a violation of the shift and a first-step misspecification term, and examine five mechanisms that can break the shift. On METR's public run-level data, under stated assumptions that the data cannot verify, no model's 95% interval for $1/k$ lies entirely above one, and for the five frontier models in the TH1.0 release every interval from runs in different batches lies below one. Under the same assumptions, taken interval by interval and given a log-logistic cross-section, these intervals reject a non-increasing average hazard for the five models, whereas in TH1.1 the result depends on how human times were obtained. Whether $k>1$ reflects a hazard that rises within a task or tasks whose difficulty human time measures only loosely needs experiments that observe the same task at several lengths.",
+    "url": "https://arxiv.org/abs/2611.32415v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32389v1",
+    "title": "AgentBank: Banking on Blockchain Agentic Payments",
+    "authors": [
+      "Yuexin Xiang",
+      "Martin Perešíni",
+      "Yuchen Lei",
+      "Yuquan Li",
+      "Yuanzhe Zhang",
+      "Andreas Deppeler",
+      "Tsz Hon Yuen",
+      "Shiping Chen",
+      "Qin Wang",
+      "Burkhard Stiller"
+    ],
+    "published": "2026-11-24",
+    "summary": "AI agents increasingly pay for data and computation through protocols such as x402 and AP2, but individually funded wallets idle and require asset transfers for every payment. We present AgentBank, a smart-contract banking layer that lets agents spend bank liabilities under owner-issued mandates and on-chain spending limits. Internal payments update account balances without transferring assets, while pooled backing funds are allocated between reserves and yield-bearing strategies. We bound losses from compromised agent keys and analyze how correlated demand affects reserve requirements. Experiments show that AgentBank reduces idle liquidity by 52-77% relative to per-agent wallets and lowers gas costs for batched internal payments. Using historical DeFi liquidity data, we evaluate how reserve policies balance treasury returns against payment availability during market stress. We further examine the risks of automated bank runs and evaluate mechanisms to mitigate them.",
+    "url": "https://arxiv.org/abs/2611.32389v1",
+    "source": "arXiv"
+  },
+  {
+    "id": "2611.32321v1",
+    "title": "FigmaEval: A Benchmark for Evaluating AI Agents in Professional UI Design",
+    "authors": [
+      "Xinyue Huang",
+      "Yongyong Gao",
+      "Zhengyuan Pan",
+      "Zheng Wei",
+      "Xinya Liu",
+      "Duanyi Yan",
+      "Zhiyu Hang",
+      "Zheng Ma",
+      "Lewei Lu"
+    ],
+    "published": "2026-11-24",
+    "summary": "Recent advances in AI agents have enabled autonomous UI design using professional tools such as Figma, yet evaluating their design capabilities remains challenging due to the open-ended nature of design tasks and the absence of unique ground truths. We introduce FigmaEval, a benchmark for evaluating AI agents on professional UI design tasks, comprising 84 tasks and 783 screens derived from real-world Figma design files. FigmaEval adopts a constrained-specification, open-solution paradigm, standardizing task requirements and design resources while allowing agents to independently determine layouts, visual hierarchies, component composition, and visual presentation. To assess design quality beyond reference similarity, we develop 22 expert-grounded evaluation rubrics across six dimensions and introduce a human evaluation arena where professional designers compare agent-generated designs through blinded pairwise judgments. Evaluating eleven models under a unified Figma agent setup, we find substantial agreement between rubric-based assessments and human preferences, alongside distinct differences in design practices and quality--efficiency trade-offs. FigmaEval provides a framework for systematically assessing professional UI design capabilities and understanding the strengths and limitations of current AI agents.",
+    "url": "https://arxiv.org/abs/2611.32321v1",
+    "source": "arXiv"
+  },
+  {
     "id": "2611.31033v1",
     "title": "AI-Assisted Auto-formalization for Trustworthy Scientific Computing: Case Studies and Lessons Learned",
     "authors": [
@@ -583,160 +745,6 @@
     "published": "2026-11-17",
     "summary": "AI agents are governed by hundreds of natural language criteria, yet existing verifiers cannot efficiently evaluate an agent's output against a large set of such criteria and report which are satisfied, violated, or inapplicable. We introduce the VFM, a tree-attention verifier that encodes the shared context and target text, and scores N natural language criteria in parallel, returning independent per-criterion ternary verdicts. The VFM is pretrained on CriteriaBank, a corpus of 394K (context, target, criterion, verdict) tuples spanning over 321K distinct criterion strings. A finetuned VFM-4B outperforms GPT-5.4 on a synthetic governance benchmark. On the DynaBench multi-criterion benchmark, it outperforms DynaGuard-4B on trace-level failure detection, and its per-criterion verdicts localize the violated rule and support focused escalation to a larger chain-of-thought judge. We show that CriteriaBank pretraining improves cross-domain transfer, particularly in the low-data regime, while matching a strong direct-finetuning control at full data. On a single H100, VFM-4B evaluates 1,000 criteria against a 4K-token context in under 2s at <11 GB VRAM, making it suitable for runtime verification.",
     "url": "https://arxiv.org/abs/2611.23074v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.23058v1",
-    "title": "WIP: Exploring Student-Created AI Agents and Instructional Videos to Foster Engagement in Computing Education",
-    "authors": [
-      "Lucas G. Zangari",
-      "Olufisayo Omojokun",
-      "Pedro Guillermo Feijóo-García"
-    ],
-    "published": "2026-11-17",
-    "summary": "This work-in-progress (WIP) research-to-practice study examines the use of student-created artifacts to promote active learning in a large undergraduate Software Design and Engineering (SWE) course. Active learning strategies have been shown to significantly enhance student engagement, comprehension, and motivation, particularly in computing education. In this work, we explore the use of student-created artifacts to foster student engagement in higher-level Computer Science (CS) courses. Specifically, we examine the experiences of undergraduate and graduate CS students who participated in the creation of two types of artifacts: instructional video tutorials and conversational AI agents. The goal being to understand how designing these artifacts could support students in applying and learning course content. Students raised valuable insights regarding both experiences. Concerning the creation of instructional videos, they appreciated the interactivity brought through multimedia to their learning experiences, although some found the strategy to be time-consuming. Similarly, when designing conversational AI agents, students enjoyed the novelty and practical application of the task, while some encountered challenges related to the complexity of tools such as \\textit{Google Dialogflow ES}. We report on the potential of student-created artifacts to foster deeper engagement with course material, encouraging both creativity and critical thinking in computing education.",
-    "url": "https://arxiv.org/abs/2611.23058v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.22841v1",
-    "title": "Verifying Agents in Rubric-Graded Environments",
-    "authors": [
-      "Markus Dücker",
-      "Vaibhav Kumar",
-      "Yi Liu",
-      "Ronak Chaudhary",
-      "Andreas Plesner",
-      "Francisco Guzmán",
-      "Anish Athalye"
-    ],
-    "published": "2026-11-17",
-    "summary": "As AI agents take on increasingly open-ended and complex tasks, verifying their outputs has proven to be difficult. Rubric-graded agent environments, where a verifier judges multiple natural-language criteria against the deliverables and environment state changes produced by the agent, have emerged as a popular paradigm. We conduct the first systematic study of verifiers for rubric-graded agent environments. First, we create BankerVerifierBench (BVB), a meta-evaluation dataset of 2,464 human-judged rubric criteria across 24 investment-banking tasks. Next, we develop a methodology that derives from any rubric corpus the capabilities a verifier should possess, yielding a nine-capability taxonomy that we distill into three general design principles---reactive verification, environment alignment, and domain guidance---which we implement in Gandalf, an open-source verifier. Finally, we evaluate Gandalf against three existing verifiers on BVB. Gandalf matches or exceeds every baseline's F1 at lower cost: with Gemini 3 Flash it matches the strongest baseline's F1 (0.864 vs. 0.852) at one-fifth of its cost, and with GPT-5.4 models it improves F1 by over 0.12 at lower cost. Gandalf also generalizes to OpenClaw, a structurally different personal-productivity environment, where it again achieves the highest F1 (0.955 vs. 0.934 for the best baseline). We release BVB, Gandalf, and the code and data to reproduce our experiments.",
-    "url": "https://arxiv.org/abs/2611.22841v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.22632v1",
-    "title": "Groups of AI agents underuse resources despite shared evidence of increased capacity",
-    "authors": [
-      "Takahiro Ezaki",
-      "Naoto Imura",
-      "Katsuhiro Nishinari"
-    ],
-    "published": "2026-11-17",
-    "summary": "When AI agents share limited resources, such as computing services or public infrastructure, their individual choices affect how much work they complete as a group. Can sharing evidence of what is available let a group make full use of its resources after capacity changes? We tested this with language-model agents choosing between two simulated servers. One server recovered while its status report still listed it as unavailable. Each server had limited capacity per round, so rejected jobs required another attempt before the deadline. Telling agents that recovery was possible reduced missed deadlines. In controlled tests with Anthropic's Claude Haiku 5.5, no agent tried the recovered server after a rule reminder, yet all chose it when shown a successful request record. After sharing, all five models tested left capacity unused. Keeping the success record fixed, we gave agents numbers without instructions, using each value equally often but giving group members either identical or distinct numbers. With OpenAI's GPT-6.1 Sol or Google's Gemini 3.5 Flash-Lite, distinct numbers spread simultaneous requests across servers and increased job completions even though overall choice frequencies barely changed. Telling AI agents which resources are available leaves a second design challenge: helping them spread demand across those resources.",
-    "url": "https://arxiv.org/abs/2611.22632v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.22511v1",
-    "title": "LMLineage: Content Lineage and Context Governance for LLM Agents",
-    "authors": [
-      "Wei Hou",
-      "Jingxin Geng",
-      "Xin Chen",
-      "Zheqing Jiang"
-    ],
-    "published": "2026-11-17",
-    "summary": "Interpretability for AI agents should not be confined to understanding the model's internal weights. It must also cover the agent's reasoning and decision-making process over multi-source context. We present LMLineage, an out-of-band system that attributes every output sentence of an agent session to its supporting input spans with calibrated confidences, without requiring white-box access to the model or any additional inference passes. On top of the lineage metadata, we build concept-drift micro compaction: instead of waiting for the context-length limit and summarizing everything, the system detects when previously used input documents have stopped being referenced (\"drifted\") and surgically compacts only those, preserving user instructions verbatim. We evaluate on a multi-tier corpus: 71 gold annotated sentences from 10 Chinese web-QA cases, plus 90 turns of independently collected multi-turn sessions across three generator models (gpt-4o-mini, qwen3.8-27b, deepseek-v4-flash). Results show that (i) window-level embedding similarity is far better aligned with LLM paraphrasing than whole document or lexical matching; (ii) the greedy-window fast path is both faster and more accurate on average than exhaustive line-matching (a multiple-comparisons bias in the latter inflates web recall at the cost of overall accuracy); (iii) per-turn attribution completes in 1s on a single GPU, remaining stable as context accumulates to 40 turns; and (iv) concept-drift detection is conservative (0% false compaction) with recall bounded by attribution accuracy. We further describe the concept-drift micro compaction design and an interactive incident-tracing/memory-cleaning case study. A companion patent application covers the lineage construction method.",
-    "url": "https://arxiv.org/abs/2611.22511v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.22338v1",
-    "title": "Reliable Evaluation of AI Agents for Investment Research: A Framework for Performance and Validity Assessment",
-    "authors": [
-      "Dongnuan Tian",
-      "Yan Yu",
-      "Yangfan Liu",
-      "Wenjun Tang",
-      "Junting Kan",
-      "Xiang Wang",
-      "Sicong Liu",
-      "Yangyang Zhang",
-      "Shuanghong Li"
-    ],
-    "published": "2026-11-17",
-    "summary": "We consider the problem of evaluating AI agents undertaking investment-research tasks, where agents interact with external information sources and computational tools to produce financial analyses and research reports. An important challenge is that the quality of an agent's final output does not necessarily reflect the quality of its execution process, while the reliability of the resulting assessment also depends on the validity of the evaluation procedure. Furthermore, investment-research tasks differ considerably in their requirements for numerical accuracy, information retrieval, financial analysis and supporting evidence, making it difficult to assess agent performance using a uniform set of criteria. We propose a domain-oriented evaluation framework that distinguishes outcome quality from execution quality and accommodates these differences through task-specific criteria, deterministic validators and independent large language model judges. We also introduce an evaluation-validity mechanism that examines the integrity of evaluation inputs, reference information, supporting evidence and grading outputs, with expert review used to resolve identified deficiencies and significant grading disagreements. Numerical results show that the proposed framework can distinguish differences in agent performance across evaluation dimensions, while identifying potential reliability issues in the evaluation process. The associated implementation and evaluation materials will be made available on GitHub.",
-    "url": "https://arxiv.org/abs/2611.22338v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.22171v1",
-    "title": "Readie: Low-Latency Code Sandboxes for AI Agents",
-    "authors": [
-      "Arjun Sivaraman",
-      "Zhaoheng Li",
-      "Alan Shi",
-      "Sanjay Malisetty",
-      "Eugene Wu",
-      "Yongjoo Park"
-    ],
-    "published": "2026-11-17",
-    "summary": "From quantitative research to personal assistance, AI agents act by iteratively generating and executing code. To decouple the agent harness from code execution, many agents offload execution to dedicated systems called code sandboxes. However, existing code sandboxes suffer from slow startup. Whether they rely on custom snapshots or a single fat image, the root cause is the same: it is hard to build a compact, pre-warmed snapshot that can be shared across diverse agent-generated code while covering nearly all the artifacts (e.g., packages, datasets) it requires. In this work, we propose learned startup snapshots for low-latency code sandboxes. Our insight is that while it is hard for a single snapshot to be both compact and cover most workloads, a set of snapshots can achieve both. Each snapshot is small, initializes quickly, and covers a fraction of agent-generated code; together, the set covers most of it. We learn this set from a large training workload by formulating snapshot construction as an optimization problem and solving it with an approximation algorithm. Planned on 15K public and LLM-synthesized scripts, our system, Readie, reduces startup latency by 3-22$\\times$ and end-to-end runtime by 1.3-3.3$\\times$ compared to existing approaches at the same storage budget.",
-    "url": "https://arxiv.org/abs/2611.22171v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.22167v1",
-    "title": "AI Agents Executing an RMS and EMT Ride-Through Workflow on a 2,000-Bus Synthetic Texas Grid: A Case Study with Open-Source Tools",
-    "authors": [
-      "Tam Kemabonta",
-      "Brighton Ombuki",
-      "Vladimir Abdelnour"
-    ],
-    "published": "2026-11-17",
-    "summary": "This paper reports a case study of engineer-supervised AI agents executing a predefined RMS and EMT ride-through workflow on the 2,000-bus ACTIVSg2000 synthetic Texas grid with open-source tools. The test case is a 133 MW battery with a co-located 130 MW data-center load, assessed against ride-through criteria fixed before simulation and for loss of synchronism elsewhere in the grid. One agent ran 44 RMS cases and 15 without-project comparisons in ANDES; the other ran a 220-row EMT intake bench and an 84-row system study in DPsim and ParaEMT on a Kron-reduced area. Across the 44 RMS cases, 127 criterion cells fail, including loss of synchronism in all 44. Two findings concern the project plant. The battery keeps absorbing reactive power during sags on the light-load schedule (B3, as low as -19.8 Mvar on S4 T1), and the data-center load returns only at 5.00-5.56 s after long bolted faults (L3), which misses the ERCOT load-return requirement. In 13 of the 15 comparisons, which the authors selected after slips or speed-gate stops, the same machines slip without the project; the other 29 runs have no without-project comparison. RMS and EMT values differ in network, plant model, controls, operating point, and base, and so they are reported as separate, unaligned observations. The paper reports the errors the authors identified in the agent logs, 63 author messages, and 3.8 days from agent start to the integrated study report. The agents executed and documented the predefined ride-through and stability workflow, which covers one part of an interconnection study.",
-    "url": "https://arxiv.org/abs/2611.22167v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.22085v1",
-    "title": "ATLAS-Finance: Benchmarking AI Agents in Realistic Banking Environments",
-    "authors": [
-      "Elaine Lau",
-      "Antoine Pangas",
-      "Alexandre Finot",
-      "Collin Schweiker",
-      "Amir Bouzidi",
-      "Hui Wen Goh",
-      "Andrew Peter Martin",
-      "Jonas Mueller"
-    ],
-    "published": "2026-11-17",
-    "summary": "Professional work involves under-specified assignments, where relevant information is spread across workplace applications and may conflict or change over time. To evaluate how well frontier agents can perform economically valuable work in such settings, we introduce ATLAS-Finance, a benchmark of 100 end-to-end investment-banking tasks across 13 simulated firms. As in real banking workflows, agents must search email, chat, calendars, notes, and files to identify requirements, gather information, reconcile conflicts/updates, and then build complex financial models. Tasks were developed by experienced bankers based on their real deal work and take them 15-30 hours to complete. Agent deliverables are evaluated with expert-authored rubrics (median: 124.5 criteria) covering financial rationale and results, spreadsheet construction, completeness, and formatting. Despite completing substantial portions of the requested work, current agents rarely produce correct deliverables. Across today's frontier models, the best ones (Claude Opus and Fable) pass fewer than 11% of tasks.",
-    "url": "https://arxiv.org/abs/2611.22085v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.23476v1",
-    "title": "GUARD: Stabilizing Recursive Self-Improvement with Regret Guidance",
-    "authors": [
-      "Minghe Zhang",
-      "Xuetao Kang",
-      "Yifei Ming",
-      "Yanfei Chen",
-      "Han Yu",
-      "Yufan Zhuang",
-      "Chen-Yu Lee"
-    ],
-    "published": "2026-11-17",
-    "summary": "Autonomous AI agents pair a frozen base model with an editable harness of prompts, skills, tool rules, and memory. Recursive self-improvement (RSI) adapts this harness from experience without weight updates, yet self-editing without external graders often backfires: reflection and scalar scores conflate what an edit newly broke with what remains unsolved, causing local regressions, skill forgetting, and memory bloat. We introduce GUARD (Grader-free Unsupervised Environment Design [UED] with Adaptive Rule Distillation), a closed-loop framework for reference-free continual harness evolution. Our key insight is to decompose each task into pre-execution self-checks and guide harness updates via directional regret. Each round grades trajectories against these checks, pinning mastered rules while prioritizing newly broken behaviors, and selects among parallel candidate edits by critic-free group-relative fitness. A Soft-HURT gate then promotes an edit only when gains outweigh regressions, scoping specialized fixes to prevent over-triggering and guaranteeing non-regression on its gated buffer. At test time, one frozen harness runs in a single pass. Across benchmarks on memory, skill evolution, continual task streams, and domain reasoning, GUARD consistently improves performance without catastrophic forgetting or memory pollution while substantially cutting deployment token usage.",
-    "url": "https://arxiv.org/abs/2611.23476v1",
-    "source": "arXiv"
-  },
-  {
-    "id": "2611.23469v1",
-    "title": "QCCDCert: Formally Verified Compilation for QCCD Co-Design",
-    "authors": [
-      "John Zhuoyang Ye",
-      "Jens Palsberg",
-      "Ke Sun",
-      "Hartmut Haeffner"
-    ],
-    "published": "2026-11-17",
-    "summary": "Quantum charge-coupled device (QCCD) architectures enable scalable trapped-ion quantum computing by dynamically shuttling ions between specialized processing and storage zones. A QCCD can be built with many trap sizes and layouts. Comparing them requires compiling every program under each design's transport, capacity and control constraints, and trusting the target code of each compilation. We present a co-design framework built on one Lean-verified compiler. The hardware description and its operating rules are compiler inputs, so a single theorem covers every candidate design: the target code of every compilation preserves its program's behavior and obeys the hardware rules. Across 75 benchmark programs of 11 to 130 qubits, the best design found takes 66% less modeled execution time on average than the worst design of equal capacity. An AI agent that proposes devices based on our compiler's checked results beats the fastest of these designs on 71 of 75 programs. Our verified compiler provably avoids the 11 defects that we report in three previous compilers. It scales to hundreds of qubits, compiling 512-qubit programs for a 38-trap device in 1 to 29 minutes.",
-    "url": "https://arxiv.org/abs/2611.23469v1",
     "source": "arXiv"
   }
 ]
